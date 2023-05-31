@@ -1,12 +1,19 @@
 from sdl2 import *
 import ctypes
 import sdl2.ext
+import src.engine.files.system as config
+
 
 class Draw:
-    def setPixel(self, surface, x, y, color, ):
+    def __init__(self):
+        self.rendereroptions = config.RendererOptions()
+    
+    def setPixel(self, window, x, y, color):
+        surface = self.rendereroptions.getSurfaceFromWindow(window)
         sdl2.ext.fill(surface, color, (x, y, 1, 1))
         
-    def drawLine(self, surface, x1, y1, x2, y2, color):
+    def drawLine(self, window, x1, y1, x2, y2, color):
+        surface = self.rendereroptions.getSurfaceFromWindow(window)
         dx = abs(x2 - x1)
         dy = abs(y2 - y1)
         step_x = 1 if x1 < x2 else -1
@@ -26,3 +33,19 @@ class Draw:
             if error2 < dx:
                 error += dx
                 y1 += step_y
+                
+    def drawLineRect(self, window, x, y, width, height, color):
+        surface = self.rendereroptions.getSurfaceFromWindow(window)
+        # Draw the top line
+        self.drawLine(surface, x, y, x + width, y, color)
+        # Draw the bottom line
+        self.drawLine(surface, x, y + height, x + width, y + height, color)
+        # Draw the left line
+        self.drawLine(surface, x, y, x, y + height, color)
+        # Draw the right line
+        self.drawLine(surface, x + width, y, x + width, y + height, color)
+        
+    def drawRect(self, window, x, y, width, height, color):
+        for i in range(x, x + width):
+            for j in range(y, y + height):
+                self.setPixel(window, i, j, color)

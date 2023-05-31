@@ -14,11 +14,11 @@ class Window:
     
     def newWindow(self, title, width, height):
         self.window = SDL_CreateWindow(title.encode('utf-8'), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
-        customrenderer = CustomRenderer(self.window)
-        return customrenderer
+        return CustomRenderer(self.window)
 
     
     def refresh(self, window):
+        window = window.window
         SDL_UpdateWindowSurface(window)
         
         event = SDL_Event()
