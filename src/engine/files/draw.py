@@ -26,3 +26,7 @@ class Draw:
         SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
         rect = SDL_Rect(x, y, width, height)
         SDL_RenderFillRect(window.renderer, rect)
+    
+    def setBackgroundColor(self, window, color):
+        SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
+        sdl2.SDL_RenderClear(window.renderer)  # Clear the renderer with the specified color
