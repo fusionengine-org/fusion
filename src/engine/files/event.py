@@ -6,7 +6,6 @@ class Event:
     def __init__(self):
         self.event = sdl2.SDL_Event()
     def keyDown(self, key):
-        print("eteg")
         if self.event.type == sdl2.SDL_KEYDOWN:
             print("test")
             if self.event.key.keysym.sym == key:

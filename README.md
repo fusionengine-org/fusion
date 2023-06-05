@@ -27,6 +27,11 @@ Here is how:
   pip install pysdl2-dll
 '''
 
+If you want to install the libraries easier then continue to next step and after that run this command:
+'''bash 
+  make setup
+'''
+
 To get this into your project, you just get this repository into your 
 directory by running these command:
 
@@ -34,6 +39,11 @@ directory by running these command:
   git clone https://github.com/dimkauzh/fusion-engine
   cd fusion-engine
 ```
+
+If you want to run the example, then just run this command:
+'''bash
+ make example
+'''
 
 ## Community
 Our community is just growing, so if you want to help us with the project, 

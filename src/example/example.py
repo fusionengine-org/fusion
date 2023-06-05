@@ -5,15 +5,13 @@ from src.engine import main as engine
 
 main = engine.Main()
 
-window = main.window.newWindow("Hello World", 800, 600)
+window = main.window.newWindow("Example: 1", 800, 600)
 
 while main.window.running:
-    main.draw.drawRect(window, 100, 100, 400, 400, main.color.RED)
+    main.draw.drawRect(window, 100, 100, 400, 400, main.color.BLUE)
 
-    """
     if main.event.keyDown(main.keys.KEY_a):
         print("Key A pressed")
-    """
 
     main.window.refresh(window)
 

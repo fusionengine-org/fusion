@@ -20,16 +20,7 @@ class Window:
         self.window = SDL_CreateWindow(encoded_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
         self.running = True
         return CustomRenderer(self.window)
-
-    def whileRunningSYSTEM(self, window):
-        def loop():
-            while SDL_PollEvent(window.event) != 0:
-                if window.event.type == SDL_QUIT:
-                    self.running = False
-                    break
-        thread = threading.Thread(target=loop)
-        thread.start()
-
+    
     def refresh(self, window):
         SDL_UpdateWindowSurface(window.window)
         SDL_RenderPresent(window.renderer)
