@@ -4,11 +4,12 @@ import ctypes
 
 class Event:
     def __init__(self):
-        self.event = sdl2.SDL_Event()
-    def keyDown(self, key):
-        if self.event.type == sdl2.SDL_KEYDOWN:
-            print("test")
-            if self.event.key.keysym.sym == key:
+        pass
+        
+    def keyDown(self, key, window):
+        event = window.event
+        if event.type == sdl2.SDL_KEYDOWN:
+            if event.key.keysym.sym == key:
                 return True
             return False
         return False
