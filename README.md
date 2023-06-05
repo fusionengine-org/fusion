@@ -35,10 +35,10 @@ If you want to install the libraries easier then continue to next step and after
 To get this into your project, you just get this repository into your 
 directory by running these command:
 
-```bash
+'''bash
   git clone https://github.com/dimkauzh/fusion-engine
   cd fusion-engine
-```
+'''
 
 If you want to run the example, then just run this command:
 '''bash
