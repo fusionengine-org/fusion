@@ -1,27 +1,42 @@
 from sdl2 import *
 import ctypes
 import sdl2.ext
+import threading
+import time
 
 class CustomRenderer:
     def __init__(self, window):
         self.window = window
-        self.surface = SDL_GetWindowSurface(window)
+        self.event = SDL_Event()
+        self.renderer = SDL_CreateRenderer(self.window, -1, sdl2.SDL_RENDERER_ACCELERATED)
 
 class Window:
     def __init__(self):
         self.window = None
-        self.running = True
-    
+        self.running = False
+        
     def newWindow(self, title, width, height):
-        self.window = SDL_CreateWindow(title.encode('utf-8'), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
+        encoded_title = title.encode('utf-8')
+        self.window = SDL_CreateWindow(encoded_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
+        self.running = True
         return CustomRenderer(self.window)
 
-    
+    def whileRunningSYSTEM(self, window):
+        def loop():
+            while SDL_PollEvent(window.event) != 0:
+                if window.event.type == SDL_QUIT:
+                    self.running = False
+                    break
+        thread = threading.Thread(target=loop)
+        thread.start()
+
     def refresh(self, window):
-        window = window.window
-        SDL_UpdateWindowSurface(window)
-        
-        event = SDL_Event()
-        if SDL_PollEvent(event) != 0:
-            if event.type == SDL_QUIT:
+        SDL_UpdateWindowSurface(window.window)
+        SDL_RenderPresent(window.renderer)
+        if sdl2.SDL_PollEvent(window.event) != 0:
+            if window.event.type == sdl2.SDL_QUIT:
                 self.running = False
+
+        
+
+    
