@@ -23,7 +23,7 @@ class Draw:
         self.drawLine(surface, x + width, y, x + width, y + height, color)
         
     def drawRect(self, window, x, y, width, height, color):
-        SDL_RenderClear(window.renderer)
+        #SDL_RenderClear(window.renderer)
         SDL_SetRenderDrawColor(window.renderer, 255, 0, 0, 0)
         rect = SDL_Rect(x, y, width, height)
         SDL_RenderFillRect(window.renderer, rect)
