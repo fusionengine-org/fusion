@@ -22,28 +22,29 @@ Currently, in the folder example is a file called example.c. This the file where
 You need to have Python installed and these things:
 Make sure you have these apps/libraries installed: PySDL2 and PySDL2-DLL.
 Here is how:
-'''bash 
+```bash 
   pip install pysdl2
   pip install pysdl2-dll
-'''
+```
 
 If you want to install the libraries easier then continue to next step and after that run this command:
-'''bash 
+```bash 
   make setup
-'''
+```
 
 To get this into your project, you just get this repository into your 
 directory by running these command:
 
-'''bash
+```bash
   git clone https://github.com/dimkauzh/fusion-engine
   cd fusion-engine
-'''
+```
 
 If you want to run the example, then just run this command:
-'''bash 
+```bash 
  make example
-'''
+```
+
 ## Community
 Our community is just growing, so if you want to help us with the project, 
 it will be very helpful!
