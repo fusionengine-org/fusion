@@ -1,7 +1,7 @@
 # Fusion Engine 
 ![logo](https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png)
 
-Fusion is a game engine for creating graphical applications using the SDL2 library and the programming language C. It provides a simple interface for creating windows, 
+Fusion is a game engine for creating graphical applications using the PySDL2 library and the programming language Python. It provides a simple interface for creating windows, 
 rendering graphics, and handling user input. It is and engine to create 
 games fast and easy!
 
@@ -19,10 +19,13 @@ Currently, in the folder example is a file called example.c. This the file where
 
 
 ## Installation
-
-Make sure you have these apps/libraries installed: SDL2.
+You need to have Python installed and these things:
+Make sure you have these apps/libraries installed: PySDL2 and PySDL2-DLL.
 Here is how:
-  Go to [this website](https://github.com/libsdl-org/SDL/releases) and download the version you need, and install it, more on [this website](https://libsdl.org/)
+'''bash 
+  pip install pysdl2
+  pip install pysdl2-dll
+'''
 
 To get this into your project, you just get this repository into your 
 directory by running these command:
@@ -43,11 +46,10 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
 ## Future of this engine
-Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating(Finn) and BIG Thanks to him for doing that.
+Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating(Finn) and BIG Thanks to him for doing that. The original project began in C, but its now entirely rewritten in Python for its big userbase and ease of use (productivity).
 
 Our cool ideas:
-  - Add lua to script with lua in this engine
-  - Make a full GUI app (With something like GTK+)
+  - Make a full GUI app (With something like Kyvi)
 
 ## 🚀 About Me
 A 13 year old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
