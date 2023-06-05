@@ -3,12 +3,13 @@ import ctypes
 import sdl2.ext
 import threading
 import time
+import src.engine.files.system as system
 
 class CustomRenderer:
     def __init__(self, window):
         self.window = window
         self.event = SDL_Event()
-        self.renderer = SDL_CreateRenderer(self.window, -1, sdl2.SDL_RENDERER_ACCELERATED)
+        self.renderer = SDL_CreateRenderer(self.window, -1, system.RendererOptions().rendererflag)
 
 class Window:
     def __init__(self):
