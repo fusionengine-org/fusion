@@ -41,10 +41,9 @@ directory by running these command:
 '''
 
 If you want to run the example, then just run this command:
-'''bash
+'''bash 
  make example
 '''
-
 ## Community
 Our community is just growing, so if you want to help us with the project, 
 it will be very helpful!
