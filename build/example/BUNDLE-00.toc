@@ -1,0 +1,3 @@
+([('example',
+   '/Users/dmarhitych-pro/fusion-engine/build/dist/example',
+   'EXECUTABLE')],)

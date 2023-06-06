@@ -1,6 +1,4 @@
-import sdl2
-import sdl2.ext
-import ctypes
+from src.engine.files.imports import *
 
 class Event:
     def __init__(self):

@@ -1,6 +1,0 @@
-framework module ogg {
-  umbrella header "ogg.h"
-
-  export *
-  module * { export * }
-}

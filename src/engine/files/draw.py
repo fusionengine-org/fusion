@@ -1,12 +1,9 @@
-from sdl2 import *
-import ctypes
-import sdl2.ext
-import src.engine.files.system as config
-
+from src.engine.files.imports import *
+import src.engine.files.systems as sysconfig
 
 class Draw:
     def __init__(self):
-        self.rendereroptions = config.RendererOptions()
+        self.rendereroptions = sysconfig.RendererOptions()
     
     def drawLine(self, window, x1, y1, x2, y2, color):
         pass
@@ -29,4 +26,4 @@ class Draw:
     
     def setBackgroundColor(self, window, color):
         SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
-        sdl2.SDL_RenderClear(window.renderer)  # Clear the renderer with the specified color
+        sdl2.SDL_RenderClear(window.renderer)

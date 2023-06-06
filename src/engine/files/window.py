@@ -1,15 +1,11 @@
-from sdl2 import *
-import ctypes
-import sdl2.ext
-import threading
-import time
-import src.engine.files.system as system
+from src.engine.files.imports import *
+import src.engine.files.systems as sysconfig
 
 class CustomRenderer:
     def __init__(self, window):
         self.window = window
         self.event = SDL_Event()
-        self.renderer = SDL_CreateRenderer(self.window, -1, system.RendererOptions().rendererflag)
+        self.renderer = SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
 
 class Window:
     def __init__(self):
