@@ -1,7 +1,7 @@
 PYTHON_GLB = python
 PYTHON = venv/bin/python
 PIP = venv/bin/pip
-PYINSTALLER = pyinstaller
+PYINSTALLER = venv/bin/pyinstaller
 
 setup:
 	$(PYTHON_GLB) -m venv venv
