@@ -3,3 +3,5 @@
 venv/
 build/
 .vscode/
+.DS_Store
+```
