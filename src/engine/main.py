@@ -8,11 +8,9 @@ class Main:
         self.event = event.Event()
         self.keys = event.Keys()
         self.draw = draw.Draw()
-        
+
     def Quit(self, window):
-        SDL_FreeSurface(window.surface)
         SDL_DestroyRenderer(window.renderer)
         SDL_FlushEvent(window.event)
         SDL_DestroyWindow(window.window)
         SDL_Quit()
-        

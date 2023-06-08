@@ -1,11 +1,11 @@
-PYTHON = python
-PIP = pip
+PYTHON_GLB = python
+PYTHON = venv/bin/python
+PIP = venv/bin/pip
 PYINSTALLER = pyinstaller
 
 setup:
-	$(PIP) install pysdl2
-	$(PIP) install pysdl2-dll
-	$(PIP) install pyinstaller
+	$(PYTHON_GLB) -m venv venv
+	$(PIP) install -r requirements.txt
 	
 example: 
 	$(PYTHON) src/example/example.py

@@ -6,18 +6,19 @@ class Draw:
         self.rendereroptions = sysconfig.RendererOptions()
     
     def drawLine(self, window, x1, y1, x2, y2, color):
-        pass
+        SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
+        SDL_RenderDrawLine(window.renderer, x1, y1, x2, y2) 
                 
-    def drawLineRect(self, window, x, y, width, height, color):
-        surface = self.rendereroptions.getSurfaceFromWindow(window)
+    def drawLineRect(self, renderer, x, y, width, height, color):
+        rdr = window.renderer
         # Draw the top line
-        self.drawLine(surface, x, y, x + width, y, color)
+        self.drawLine(rdr, x, y, x + width, y, color)
         # Draw the bottom line
-        self.drawLine(surface, x, y + height, x + width, y + height, color)
+        self.drawLine(rdr, x, y + height, x + width, y + height, color)
         # Draw the left line
-        self.drawLine(surface, x, y, x, y + height, color)
+        self.drawLine(rdr, x, y, x, y + height, color)
         # Draw the right line
-        self.drawLine(surface, x + width, y, x + width, y + height, color)
+        self.drawLine(rdr, x + width, y, x + width, y + height, color)
         
     def drawRect(self, window, x, y, width, height, color):
         SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])

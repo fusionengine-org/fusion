@@ -1,16 +1,17 @@
 from src.engine.files.imports import *
 
+
 class Event:
     def __init__(self):
         pass
-        
+
     def keyDown(self, key, window):
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN:
             if event.key.keysym.sym == key:
                 return True
         return False
-        
+
 
 class Keys:
     def __init__(self):
@@ -250,4 +251,3 @@ class Keys:
         self.KEY_KBDILLUMUP = sdl2.SDLK_KBDILLUMUP
         self.KEY_EJECT = sdl2.SDLK_EJECT
         self.KEY_SLEEP = sdl2.SDLK_SLEEP
-
