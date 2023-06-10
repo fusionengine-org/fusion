@@ -11,6 +11,8 @@ class Event:
             if event.key.keysym.sym == key:
                 return True
         return False
+    def keyDownOnce(self, key, window):
+        pass
 
 
 class Keys:
