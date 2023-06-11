@@ -2,6 +2,7 @@ from sdl2 import *
 import sdl2
 import sdl2.ext
 import ctypes
+import time
 import src.engine.files.window as window
 import src.engine.files.draw as draw
 import src.engine.files.color as color

@@ -14,3 +14,7 @@ class RendererOptions:
             self.rendererflag = SDL_RENDERER_SOFTWARE
         elif type == "TARGETTEXTURE" or type == "targettexture":
             self.rendererflag = SDL_RENDERER_TARGETTEXTURE
+
+class System:
+    def __init__(self):
+        pass
