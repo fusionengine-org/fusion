@@ -6,6 +6,7 @@ from src.engine import main as engine
 main = engine.Main()
 
 window = main.window.newWindow("Example: 1", 800, 600)
+image = main.image.openImage(window, main.DEBUGIMAGE, 100, 100, 400, 400)
 
 while main.window.running:
     '''
@@ -15,6 +16,8 @@ while main.window.running:
     if main.event.keyDown(main.keys.KEY_a, window):
         print("Key A pressed")
     '''
+    
+    main.image.drawImage(image)
 
     main.window.refresh(window)
 

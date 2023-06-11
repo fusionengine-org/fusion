@@ -8,6 +8,9 @@ class Main:
         self.event = event.Event()
         self.keys = event.Keys()
         self.draw = draw.Draw()
+        self.image = image.Image()
+        
+        self.DEBUGIMAGE = "src/engine/debugfiles/test.png"
 
     def Quit(self, window):
         SDL_DestroyRenderer(window.renderer)
