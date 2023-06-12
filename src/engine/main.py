@@ -1,4 +1,5 @@
 from src.engine.files.imports import *
+import src.engine.files.systems as sysconfig
 
 class Main:
     def __init__(self):
@@ -9,19 +10,13 @@ class Main:
         self.keys = event.Keys()
         self.draw = draw.Draw()
         self.image = image.Image()
+        self.system = sysconfig.System()
+        self.rendereroptions = sysconfig.RendererOptions()
         
         self.DEBUGIMAGE = "src/engine/debugfiles/test.png"
-        self.get_delta_time.last_time = time.time()
-        self.DELTATIME = self.getDeltaTime()
 
     def Quit(self, window):
         SDL_DestroyRenderer(window.renderer)
         SDL_FlushEvent(window.event)
         SDL_DestroyWindow(window.window)
         SDL_Quit()
-    
-    def getDeltaTime(self):
-        current_time = time.time()
-        delta_time = current_time - self.get_delta_time.last_time
-        self.get_delta_time.last_time = current_time
-        return delta_time

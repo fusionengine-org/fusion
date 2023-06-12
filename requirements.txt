@@ -1,3 +1,4 @@
 pyinstaller
 pysdl2
 pysdl2-dll
+pymunk
