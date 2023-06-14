@@ -13,9 +13,18 @@ then it is in dev branch but there is no 'full version' of this project!
 I'm working hard to make first alpha version of it!
 
 First make sure you have everything installed, see chapter Installation.
-Currently, in the folder example is a file called example.c. This the file where you put your code in and require the engine file. Later it will become a library, but for now it is easier to develop the engine like this To run it just run the run.sh
+Currently, in the folder example is a file called example.py This the file where you put your code in and import the engine file. Later it will become a library, but for now it is easier to develop the engine like this To run it just run the ```make example```
 
 ## Installation
+
+### Setup (easiest
+To get this into your project, you just get this repository into your
+directory by running these command:
+
+```bash
+  git clone https://github.com/dimkauzh/fusion-engine
+  cd fusion-engine
+```
 
 You need to have Python installed.
 Make sure you have these apps/libraries installed: PySDL2 and PySDL2-DLL.
@@ -26,20 +35,13 @@ The easiest way to do that is to use our toolchain, here is how:
 ```
 
 This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyInstaller
-To get this into your project, you just get this repository into your
-directory by running these command:
-
-```bash
-  git clone https://github.com/dimkauzh/fusion-engine
-  cd fusion-engine
-```
 
 If you want to run the example, then just run this command:
 
 ```bash
  make example
 ```
-
+### Own Install
 If you want the libraries for yourself, then run these commands:
 
 ```bash
@@ -58,9 +60,17 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
-## Future of this engine
+## About
+Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
-Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating(Finn) and BIG Thanks to him for doing that. The original project began in C, but its now entirely rewritten in Python for its big userbase and ease of use (productivity). This is actually also my EuroPython project.
+ - PySDL2 is used for rendering and windowing
+ - PySDL2-DLL is used by PySDL2 for SDL2 binaries
+ - PyMunk is used for fysics simulation
+ - PyInstaller is used for building executables
+
+### Future of this engine
+
+Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating(Finn) and BIG Thanks to him for doing that. The original project began in C, but it's  entirely rewritten in Python for its big userbase and ease of use (productivity). This is actually also my EuroPython project.
 
 Our cool ideas:
 
