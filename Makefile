@@ -1,3 +1,6 @@
+#Define some variables
+EXAMPLE = 1
+
 # Define the operating system
 ifeq ($(OS),Windows_NT)
     DETECTED_OS := Windows
@@ -33,7 +36,7 @@ setup:
 	$(PIP) install -r requirements.txt
 
 example:
-	$(PYTHON) src/example/example.py
+	$(PYTHON) src/example/example$(EXAMPLE).py
 
 test:
 	$(PYTHON) src/test/test1.py
