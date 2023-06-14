@@ -1,8 +1,9 @@
 *.pyc
 **/__pycache__/
 venv/
-build/
 .vscode/
 .idea/
 **/.DS_Store
+build/output
+build/exe.win-amd64-3.10
 ```

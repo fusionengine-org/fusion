@@ -1,4 +1,4 @@
-pyinstaller
+cx_Freeze
 pysdl2
 pysdl2-dll
 pymunk
