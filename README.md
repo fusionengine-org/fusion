@@ -17,7 +17,8 @@ Currently, in the folder example is a file called example.py This the file where
 
 ## Installation
 
-### Setup (easiest
+### Setup (easiest)
+
 To get this into your project, you just get this repository into your
 directory by running these command:
 
@@ -41,8 +42,11 @@ If you want to run the example, then just run this command:
 ```bash
  make example
 ```
+
 For different examples, you add ```EXAMPLE=2``` and you change the number to the number of the example file
+
 ### Own Install
+
 If you want the libraries for yourself, then run these commands:
 
 ```bash
@@ -62,12 +66,13 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
 ## About
+
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
- - PySDL2 is used for rendering and windowing
- - PySDL2-DLL is used by PySDL2 for SDL2 binaries
- - PyMunk is used for fysics simulation
- - PyInstaller is used for building executables
+- PySDL2 is used for rendering and windowing
+- PySDL2-DLL is used by PySDL2 for SDL2 binaries
+- PyMunk is used for fysics simulation
+- PyInstaller is used for building executables
 
 ### Future of this engine
 
