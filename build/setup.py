@@ -21,13 +21,3 @@ setup(
     executables=executables
 )
 
-# Move the built executable to the desired output directory
-import os
-import shutil
-
-output_dir = "build/output"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-
-for executable in executables:
-    shutil.move(os.path.join("build", executable.target_name), output_dir)

@@ -29,7 +29,7 @@ else
 endif
 
 # Define targets and recipes
-.PHONY: setup example test create
+.PHONY: setup example test compile
 
 setup:
 	$(PYTHON_GLB) -m venv $(VENV_PATH)
@@ -41,6 +41,6 @@ example:
 test:
 	$(PYTHON) src/test/test1.py
 
-create:
+compile:
 	$(PYTHON) build/setup.py build
 
