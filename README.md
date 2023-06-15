@@ -41,6 +41,7 @@ If you want to run the example, then just run this command:
 ```bash
  make example
 ```
+For different examples, you add ```EXAMPLE=2``` and you change the number to the number of the example file
 ### Own Install
 If you want the libraries for yourself, then run these commands:
 
