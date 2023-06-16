@@ -2,10 +2,7 @@
 **/__pycache__/
 venv/
 .vscode/
-build/
 .idea/
 **/.DS_Store
-build/output
-build/exe.win-amd64-3.10
-!build/setup.py
-```
+/compile/*
+!/compile/setup.py
