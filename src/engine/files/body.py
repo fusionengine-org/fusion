@@ -5,7 +5,7 @@ class _RigidBody:
         self.body = data.DataBodies(window, x, y, width, height)
         
 class _StaticBody:
-    def __init__(self):
+    def __init__(self, window, x, y, width, height):
         self.space = pymunk.Space()
     
 class Entity:

@@ -9,3 +9,4 @@ class DataBodies:
         self.h = h
         self.space = pymunk.Space()
         self.body = pymunk.Body()
+        
