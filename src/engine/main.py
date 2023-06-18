@@ -10,6 +10,7 @@ class Main:
         self.keys = event.Keys()
         self.draw = draw.Draw()
         self.image = image.Image()
+        self.body = body
         self.system = sysconfig.System()
         self.rendereroptions = sysconfig.RendererOptions()
         
