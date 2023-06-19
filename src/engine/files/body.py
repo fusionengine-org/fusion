@@ -3,10 +3,24 @@ from src.engine.files.imports import *
 class _RigidBody:
     def __init__(self, window, x, y, width, height):
         self.body = data.DataBodies(window, x, y, width, height)
+        self.window = window
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.body = self._body.body
+        self.space = self._body.space
         
 class _StaticBody:
     def __init__(self, window, x, y, width, height):
-        self.space = pymunk.Space()
+        self._body = data.DataBodies(window, x, y, width, height)
+        self.window = window
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.body = self._body.body
+        self.space = self._body.space
     
 class Entity:
     def __init__(self, bodytype, window, x, y, width, height):
@@ -16,6 +30,8 @@ class Entity:
         self.rect.width = width
         self.rect.height = height
         self.window = window
+        self.gravity = 0
+        self._setBodyType(bodytype)
     
     def openImage(self, window, image, x, y, width, height):
         image.openImage(window, image, x, y, width, height)
@@ -26,9 +42,11 @@ class Entity:
         self.rect.width = width
         self.rect.height = height
         
-        
     def setGravity(self, gravity):
-        pass
+        self.gravity = gravity
     
     def _setBodyType(self, bodytype):
-        pass
+        if bodytype == "rigid" or bodytype == "Rigid":
+            self.body = _RigidBody(self.window, self.rect.x, self.rect.y, self.rect.width, self.rect.height)
+        else:
+            self.body = _StaticBody(self.window, self.rect.x, self.rect.y, self.rect.width, self.rect.height)
