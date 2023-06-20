@@ -17,7 +17,7 @@ Currently, in the folder example is a file called example.py This the file where
 
 ## Installation
 
-### Setup (easiest)
+#### Setup (easiest)
 
 To get this into your project, you just get this repository into your
 directory by running these command:
@@ -45,7 +45,7 @@ If you want to run the example, then just run this command:
 
 For different examples, you add ```EXAMPLE=2``` and you change the number to the number of the example file
 
-### Own Install
+#### Own Install
 
 If you want the libraries for yourself, then run these commands:
 
