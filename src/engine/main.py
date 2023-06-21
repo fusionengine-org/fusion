@@ -17,8 +17,8 @@ class Main:
         
         self.DEBUGIMAGE = "src/engine/debugfiles/test.png"
 
-    def Quit(self, window):
+    def quit(self, window):
         SDL_DestroyRenderer(window.renderer)
-        SDL_FlushEvent(window.event)
         SDL_DestroyWindow(window.window)
+        del window
         SDL_Quit()
