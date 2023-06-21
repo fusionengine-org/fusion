@@ -5,7 +5,7 @@ from src.engine import main as engine
 
 main = engine.Main()
 
-window = main.window.newWindow("Example: 1", 800, 600)
+window = main.window.newWindow("Example: 2", 800, 600)
 
 while main.window.running:
     main.draw.setBackgroundColor(window, main.color.WHITE)
