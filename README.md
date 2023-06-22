@@ -65,6 +65,13 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
+## Coming features
+We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
+- Fysics system using PyMunk
+- Delta-Time
+- Pip package
+- Ui
+
 ## About
 
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
@@ -72,11 +79,11 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 - PySDL2 is used for rendering and windowing
 - PySDL2-DLL is used by PySDL2 for SDL2 binaries
 - PyMunk is used for fysics simulation
-- PyInstaller is used for building executables
+- CX-Freeze is used for building executables
 
 ### Future of this engine
 
-Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating(Finn) and BIG Thanks to him for doing that. The original project began in C, but it's  entirely rewritten in Python for its big userbase and ease of use (productivity). This is actually also my EuroPython project.
+Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating (Finn) and BIG Thanks to him for doing that. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
 
 Our cool ideas:
 
