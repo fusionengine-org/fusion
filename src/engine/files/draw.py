@@ -27,4 +27,4 @@ class Draw:
     
     def setBackgroundColor(self, window, color):
         SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
-        sdl2.SDL_RenderClear(window.renderer)
+        SDL_RenderClear(window.renderer)
