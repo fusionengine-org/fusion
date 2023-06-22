@@ -65,6 +65,13 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
+## Coming features
+We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
+- Fysics system using PyMunk
+- Delta-Time
+- Pip package
+- Ui
+
 ## About
 
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
