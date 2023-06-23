@@ -44,3 +44,7 @@ test:
 compile:
 	$(PYTHON) build/setup.py build
 
+update:
+	$(PIP) uninstall -r requirements.txt
+	$(PIP) install -r requirements.txt
+

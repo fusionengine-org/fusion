@@ -14,6 +14,7 @@ class Main:
         self.body = body
         self.system = sysconfig.System()
         self.rendereroptions = sysconfig.RendererOptions()
+        self.shape = shape.Shapes()
         
         self.DEBUGIMAGE = "src/engine/debugfiles/test.png"
 
