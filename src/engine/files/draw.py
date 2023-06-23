@@ -9,7 +9,7 @@ class Draw:
         SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
         SDL_RenderDrawLine(window.renderer, x1, y1, x2, y2) 
                 
-    def drawLineRect(self, renderer, x, y, width, height, color):
+    def drawLineRect(self, window, x, y, width, height, color):
         rdr = window.renderer
         # Draw the top line
         self.drawLine(rdr, x, y, x + width, y, color)
