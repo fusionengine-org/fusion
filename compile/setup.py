@@ -1,6 +1,8 @@
 import sys
 from cx_Freeze import setup, Executable
 
+example = 3
+
 # Dependencies
 build_exe_options = {
     "packages": ["sdl2", "sdl2.ext", "pymunk"],
@@ -9,7 +11,7 @@ build_exe_options = {
 
 # Executable definition
 executables = [
-    Executable("src/example/example1.py", base=None)  # Specify the correct path to your main.py file
+    Executable("src/example/example" + str(example) + ".py", base=None)  # Specify the correct path to your main.py file
 ]
 
 # Setup configuration

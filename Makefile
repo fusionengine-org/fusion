@@ -42,7 +42,7 @@ test:
 	$(PYTHON) src/test/test1.py
 
 compile:
-	$(PYTHON) build/setup.py build
+	$(PYTHON) compile/setup.py build
 
 update:
 	$(PIP) uninstall -r requirements.txt

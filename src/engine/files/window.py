@@ -12,7 +12,6 @@ class Window:
         self.window = None
         self._running = False
         
-        
     def newWindow(self, title, width, height):
         encoded_title = title.encode('utf-8')
         self.window = SDL_CreateWindow(encoded_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
