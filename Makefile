@@ -1,7 +1,5 @@
-# Define some variables
 EXAMPLE = 1
 
-# Define the operating system
 ifeq ($(OS),Windows_NT)
 	DETECTED_OS := Windows
 else
@@ -14,7 +12,6 @@ else
 	endif
 endif
 
-# Set up virtual environment paths based on the operating system
 VENV_PATH := venv
 ifeq ($(DETECTED_OS),Windows)
 	PYTHON_GLB := python
@@ -28,7 +25,6 @@ else
 	INSTALLER := $(VENV_PATH)/bin/cxfreeze
 endif
 
-# Define targets and recipes
 .PHONY: setup example test compile
 
 setup:
