@@ -23,7 +23,7 @@ class _StaticBody:
         self.body = self._body.body
         self.space = self._body.space
     
-class Entity:
+class Entity: 
     def __init__(self, bodytype, window, x, y, width, height):
         self.image = None
         self.x = x
@@ -42,12 +42,30 @@ class Entity:
         self.y = y
         self.width = width
         self.height = height
-        
+
+    def newRect(self, window, color):
+        data.drawRect(self.window,
+                      self.x,
+                      self.y,
+                      self.width,
+                      self.height,
+                      color
+                      )
     def setGravity(self, gravity):
         self.gravity = gravity
     
     def _setBodyType(self, bodytype):
         if bodytype == "rigid" or bodytype == "Rigid":
-            self.body = _RigidBody(self.window, self.x, self.y, self.width, self.height)
+            self.body = _RigidBody(self.window,
+                                   self.x,
+                                   self.y,
+                                   self.width,
+                                   self.height
+                                   )
         else:
-            self.body = _StaticBody(self.window, self.x, self.y, self.width, self.height)
+            self.body = _StaticBody(self.window,
+                                    self.x,
+                                    self.y,
+                                    self.width,
+                                    self.height
+                                    )

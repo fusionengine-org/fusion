@@ -14,7 +14,12 @@ class Window:
         
     def newWindow(self, title, width, height):
         encoded_title = title.encode('utf-8')
-        self.window = SDL_CreateWindow(encoded_title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN)
+        self.window = SDL_CreateWindow(encoded_title,
+                                       SDL_WINDOWPOS_CENTERED,
+                                       SDL_WINDOWPOS_CENTERED,
+                                       width, height,
+                                       SDL_WINDOW_SHOWN
+                                       )
         self._running = True
         return _CustomRenderer(self.window)
     
@@ -30,5 +35,3 @@ class Window:
                 self._running = False
 
         
-
-    
