@@ -10,7 +10,6 @@ class _CustomShape:
         rect = SDL_Rect(x, y, width, height)
 
 class Shapes:
-
     def __init__(self):
         pass
     

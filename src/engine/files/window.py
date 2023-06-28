@@ -11,7 +11,10 @@ class Window:
     def __init__(self):
         self.window = None
         self._running = False
-        
+        self._NOW = SDL_GetPerformanceCounter();
+        self._LAST = 0;
+        self.DELTATIME = 0;   
+    
     def newWindow(self, title, width, height):
         encoded_title = title.encode('utf-8')
         self.window = SDL_CreateWindow(encoded_title,
@@ -30,6 +33,12 @@ class Window:
     def _refresh(self, window):
         SDL_UpdateWindowSurface(window.window)
         SDL_RenderPresent(window.renderer)
+        
+        self._LAST = self._NOW;
+        self._NOW = SDL_GetPerformanceCounter();
+
+        self.DELTATIME = (self._NOW - self._LAST)*1000 / SDL_GetPerformanceFrequency()
+                                  
         if sdl2.SDL_PollEvent(window.event) != 0:
             if window.event.type == sdl2.SDL_QUIT:
                 self._running = False

@@ -12,5 +12,4 @@ while main.window.running(window):
         
     main.image.drawImage(image)
 
-
 main.quit(window)
