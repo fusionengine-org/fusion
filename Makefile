@@ -25,7 +25,7 @@ else
 	INSTALLER := $(VENV_PATH)/bin/cxfreeze
 endif
 
-.PHONY: setup example test compile
+.PHONY: setup example test compile update
 
 setup:
 	$(PYTHON_GLB) -m venv $(VENV_PATH)
