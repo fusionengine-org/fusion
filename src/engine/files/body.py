@@ -1,5 +1,5 @@
-from src.engine.files.imports import *
-import src.engine.files.data as data
+from engine.files.imports import *
+import engine.files.data as data
 
 class _RigidBody:
     def __init__(self, window, x, y, width, height):

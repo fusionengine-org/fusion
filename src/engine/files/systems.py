@@ -1,4 +1,4 @@
-from src.engine.files.imports import *
+from engine.files.imports import *
 
 class RendererOptions:
     def __init__(self):
