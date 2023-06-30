@@ -35,7 +35,7 @@ The easiest way to do that is to use our toolchain, here is how:
   make setup
 ```
 
-This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyInstaller
+This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyMunk
 
 If you want to run the example, then just run this command:
 
@@ -52,6 +52,7 @@ If you want the libraries for yourself, then run these commands:
 ```bash
   pip install pysdl2
   pip install pysdl2-dll
+  pip install pymunk
 ```
 
 ## Community
@@ -93,7 +94,7 @@ This project began 1 may 2023. The original project began in C, but it's entirel
 
 Our cool ideas:
 
-- Make a full GUI app (With something like Kyvi)
+- Make a full GUI app (With something like Kyvi or TKinter) - Update: We are currenly working on it with tkinter
 
 ## 🚀 About Me
 
