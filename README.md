@@ -74,7 +74,7 @@ See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki)
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 - Fysics system using PyMunk (Being worked on)
 - Delta-Time (Finished!)
-- Pip package (Being worked on)
+- Pip package and SetupTools (Being worked on)
 - Ui (Being worked on)
 - If you have more ideas, please tell us them in our discord group!
 
@@ -85,7 +85,7 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 - PySDL2 is used for rendering and windowing
 - PySDL2-DLL is used by PySDL2 for SDL2 binaries
 - PyMunk is used for fysics simulation
-- CX-Freeze is used for building executables
+- CX-Freeze is used for building executables (Temporary, it will change when SetupTools is setup)
 
 ### Future of this engine
 
