@@ -32,7 +32,7 @@ setup:
 	$(PIP) install -r requirements.txt
 
 example:
-	$(PYTHON) src/example/example$(EXAMPLE).py
+	$(PYTHON) examples/example$(EXAMPLE).py
 
 test:
 	$(PYTHON) src/test/test1.py
