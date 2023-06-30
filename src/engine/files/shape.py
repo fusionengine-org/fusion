@@ -1,4 +1,4 @@
-from src.engine.files.imports import *
+from engine.files.imports import *
 
 class _CustomShape:
     def __init__(self, x, y, width, height, color):

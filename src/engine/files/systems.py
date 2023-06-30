@@ -1,5 +1,5 @@
-from src.engine.files.enums import RendererFlag
-from src.engine.files.imports import *
+from engine.files.imports import *
+from engine.files.enums import RendererFlag
 
 class RendererOptions:
     def __init__(self):
