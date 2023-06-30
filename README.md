@@ -90,7 +90,7 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 
 ### Future of this engine
 
-Because this project only began 1 may 2023, we don't have a big progress because I, Dimkauzh am the only developer, and we have one person that is working on discord moderating (Finn) and BIG Thanks to him for doing that. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
+This project began 1 may 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
 
 Our cool ideas:
 
