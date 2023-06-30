@@ -8,7 +8,7 @@ class CustomImage:
         self.rect = rect
 
 class Image: 
-    def openImage(self, window, image, x:int, y:int, width:int, height:int) -> CustomImages:
+    def openImage(self, window, image, x:int, y:int, width:int, height:int) -> CustomImage:
         image = sdl2.ext.load_image(image)
         texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, image)
         rect = sdl2.SDL_Rect(x, y, width, height)

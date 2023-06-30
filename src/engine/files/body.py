@@ -1,5 +1,5 @@
 from engine.files.enums import BodyType
-from engine.files.window import _Custom
+from engine.files.window import _CustomRenderer
 from engine.files.imports import *
 import engine.files.data as data
 
