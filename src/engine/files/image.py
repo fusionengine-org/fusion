@@ -1,4 +1,4 @@
-from src.engine.files.imports import *
+from engine.files.imports import *
 
 class CustomImage:
     def __init__(self, window, texture, rect) -> None:

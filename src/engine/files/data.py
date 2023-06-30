@@ -1,4 +1,4 @@
-from src.engine.files.imports import *
+from engine.files.imports import *
 
 class DataBodies:
     def __init__(self, window, x: int, y: int, w: int, h: int) -> None:

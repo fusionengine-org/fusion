@@ -1,5 +1,5 @@
-from src.engine.files.imports import *
-import src.engine.files.systems as sysconfig
+from engine.files.imports import *
+import engine.files.systems as sysconfig
 
 class _CustomRenderer:
     def __init__(self, window) -> None:

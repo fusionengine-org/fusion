@@ -1,7 +1,7 @@
 import os
 import sys
 sys.path.append(os.getcwd())
-from src.engine import main as engine
+from engine import main as engine
 
 main = engine.Main()
 

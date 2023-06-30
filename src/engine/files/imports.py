@@ -7,13 +7,13 @@ with warnings.catch_warnings():
 import ctypes
 import pymunk
 import time
-import src.engine.files.window as window
-import src.engine.files.draw as draw
-import src.engine.files.color as color
-import src.engine.files.event as event
-import src.engine.files.image as image
-import src.engine.files.body as body
-import src.engine.files.shape as shape
+import engine.files.window as window
+import engine.files.draw as draw
+import engine.files.color as color
+import engine.files.event as event
+import engine.files.image as image
+import engine.files.body as body
+import engine.files.shape as shape
 
 
 
