@@ -61,6 +61,11 @@ it will be very helpful!
 We have a discord server at this link (<https://discord.gg/Smg3CK4ZMc>)
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
+### Special thanks to these people❤️:
+ - Zenthm (Contributing)
+ - XCarCedo (Contributing)
+ - FBS_Gamer (Discord server)
+
 ## Documentation
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
