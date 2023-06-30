@@ -2,20 +2,20 @@ from engine.files.imports import *
 import engine.files.systems as sysconfig
 
 class _CustomRenderer:
-    def __init__(self, window):
+    def __init__(self, window) -> None:
         self.window = window
         self.event = SDL_Event()
         self.renderer = SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
 
 class Window:
-    def __init__(self):
+    def __init__(self) -> None:
         self.window = None
         self._running = False
         self._NOW = SDL_GetPerformanceCounter();
         self._LAST = 0;
         self.DELTATIME = 0;   
     
-    def newWindow(self, title, width, height):
+    def newWindow(self, title: str, width: int, height: int) -> _CustomRenderer:
         encoded_title = title.encode('utf-8')
         self.window = SDL_CreateWindow(encoded_title,
                                        SDL_WINDOWPOS_CENTERED,
@@ -26,11 +26,11 @@ class Window:
         self._running = True
         return _CustomRenderer(self.window)
     
-    def running(self, window):
+    def running(self, window) -> bool:
         self._refresh(window)
         return self._running
     
-    def _refresh(self, window):
+    def _refresh(self, window) -> None:
         SDL_UpdateWindowSurface(window.window)
         SDL_RenderPresent(window.renderer)
         

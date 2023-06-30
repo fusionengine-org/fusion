@@ -1,9 +1,10 @@
 from engine.files.enums import BodyType
+from engine.files.window import _Custom
 from engine.files.imports import *
 import engine.files.data as data
 
 class _RigidBody:
-    def __init__(self, window, x, y, width, height):
+    def __init__(self, window, x: int, y: int, width: int, height: int) -> None:
         self._body = data.DataBodies(window, x, y, width, height)
         self.window = window
         self.x = x
@@ -14,7 +15,7 @@ class _RigidBody:
         self.space = self._body.space
         
 class _StaticBody:
-    def __init__(self, window, x, y, width, height):
+    def __init__(self, window, x: int, y: int, width: int, height: int) -> None:
         self._body = data.DataBodies(window, x, y, width, height)
         self.window = window
         self.x = x
@@ -25,7 +26,7 @@ class _StaticBody:
         self.space = self._body.space
     
 class Entity: 
-    def __init__(self, bodytype, window, x, y, width, height):
+    def __init__(self, bodytype: BodyType, window, x: int, y: int, width: int, height: int) -> None:
         self.image = None
         self.x = x
         self.y = y
@@ -35,7 +36,7 @@ class Entity:
         self.gravity = 0
         self._setBodyType(bodytype)
     
-    def openImage(self, window, image, x, y, width, height):
+    def openImage(self, window, image, x: int, y: int, width: int, height: int) -> None:
         image.openImage(window, image, x, y, width, height)
         self.image = image
         self.window = window
@@ -44,7 +45,7 @@ class Entity:
         self.width = width
         self.height = height
 
-    def newRect(self, window, color):
+    def newRect(self, window, color: tuple) -> None:
         data.drawRect(self.window,
                       self.x,
                       self.y,
@@ -52,10 +53,10 @@ class Entity:
                       self.height,
                       color
                       )
-    def setGravity(self, gravity):
+    def setGravity(self, gravity: int) -> None:
         self.gravity = gravity
     
-    def _setBodyType(self, bodytype):
+    def _setBodyType(self, bodytype: BodyType) -> None:
         if bodytype == BodyType.RIGID_BODY:
             self.body = _RigidBody(self.window,
                                    self.x,

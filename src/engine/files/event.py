@@ -2,16 +2,16 @@ from engine.files.imports import *
 
 
 class Event:
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
-    def keyDown(self, key, window):
+    def keyDown(self, key: int, window) -> bool:
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN:
             if event.key.keysym.sym == key:
                 return True
         return False
-    def keyDownOnce(self, key, window):
+    def keyDownOnce(self, key: int, window) -> None:
         pass
 
 
