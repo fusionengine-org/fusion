@@ -72,11 +72,10 @@ See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki)
 
 ## Coming features
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
-- Fysics system using PyMunk
+- Fysics system using PyMunk (Being worked on)
 - Delta-Time (Finished!)
-- Set FPS functions
-- Pip package
-- Ui
+- Pip package (Being worked on)
+- Ui (Being worked on)
 - If you have more ideas, please tell us them in our discord group!
 
 ## About
