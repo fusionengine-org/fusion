@@ -1,16 +1,17 @@
 from engine.files.imports import *
+from engine.files.enums import RendererFlag
 
 class RendererOptions:
     def __init__(self):
         self.rendererflag = SDL_RENDERER_ACCELERATED
     def getSurfaceFromWindow(self, window):
         return window.surface
-    def setRendererFlag(self, type):
-        if type == "PRESENTVSYNC" or type == "presentvsync":
+    def setRendererFlag(self, flag):
+        if flag == RendererFlag.PREVENT_SYNC:
             self.rendererflag = SDL_RENDERER_PRESENTVSYNC
-        elif type == "software" or type == "SOFTWARE":
+        elif flag == RendererFlag.SOFTWARE:
             self.rendererflag = SDL_RENDERER_SOFTWARE
-        elif type == "TARGETTEXTURE" or type == "targettexture":
+        elif flag == RendererFlag.TARGET_TEXTURE:
             self.rendererflag = SDL_RENDERER_TARGETTEXTURE
         else:
             self.rendererflag = SDL_RENDERER_ACCELERATED

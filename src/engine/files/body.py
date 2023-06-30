@@ -1,3 +1,4 @@
+from engine.files.enums import BodyType
 from engine.files.imports import *
 import engine.files.data as data
 
@@ -55,14 +56,14 @@ class Entity:
         self.gravity = gravity
     
     def _setBodyType(self, bodytype):
-        if bodytype == "rigid" or bodytype == "Rigid":
+        if bodytype == BodyType.RIGID_BODY:
             self.body = _RigidBody(self.window,
                                    self.x,
                                    self.y,
                                    self.width,
                                    self.height
                                    )
-        else:
+        elif bodytype == BodyType.STATIC_BODY:
             self.body = _StaticBody(self.window,
                                     self.x,
                                     self.y,
