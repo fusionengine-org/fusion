@@ -44,3 +44,6 @@ update:
 	$(PIP) uninstall -r requirements.txt
 	$(PIP) install -r requirements.txt
 
+gui:
+	$(PYTHON) src/gui/gui.py
+
