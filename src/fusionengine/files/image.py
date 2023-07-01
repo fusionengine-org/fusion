@@ -1,4 +1,4 @@
-from engine.files.imports import *
+from fusionengine.files.imports import *
 
 class CustomImage:
     def __init__(self, window, texture, rect) -> None:

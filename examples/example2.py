@@ -1,7 +1,4 @@
-import os
-import sys
-sys.path.append(os.getcwd())
-from engine import main as engine
+from fusionengine import main as engine
 
 main = engine.Main()
 

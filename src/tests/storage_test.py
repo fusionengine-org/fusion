@@ -1,4 +1,4 @@
-from engine.files.storage import JsonStorage
+from fusionengine.files.storage import JsonStorage
 
 import os
 
