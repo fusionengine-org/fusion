@@ -16,7 +16,7 @@ class Main:
         self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
         
-        self.DEBUGIMAGE = "engine/debugfiles/test.png"
+        self.DEBUGIMAGE = "src/engine/debugfiles/test.png"
 
     def quit(self, window):
         SDL_DestroyRenderer(window.renderer)
