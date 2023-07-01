@@ -77,30 +77,6 @@ class JsonStorage:
                     else:
                         founded_entries.append(entry)
             return founded_entries
-
-
-        # founded_entries = []
-
-        # for i, entry in enumerate(self.storage):
-        #     passed_every_search = True
-        #     for sk, sv in search_dict.items():
-        #         if entry.get(sk) != sv:
-        #             passed_every_search = False
-
-        #     if passed_every_search:
-        #         if get_index:
-        #             # Return the result or results found with index
-        #             if first:
-        #                 return (i, entry)
-        #             else:
-        #                 founded_entries.append((i, entry))
-        #         else:
-        #             # Return the result or results found without index
-        #             if first:
-        #                 return entry
-        #             else:
-        #                 founded_entries.append(entry)
-        # return founded_entries
     def update(self, index: int, new_entry: dict[typing.Any, typing.Any]) -> bool:
         """Update the entry based on the index to new_dict
         
