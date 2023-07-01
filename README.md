@@ -32,7 +32,7 @@ Make sure you have these apps/libraries installed: PySDL2 and PySDL2-DLL.
 The easiest way to do that is to use our toolchain, here is how:
 
 ```bash
-  make setup
+  pip install -e .
 ```
 
 This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyMunk
@@ -40,20 +40,14 @@ This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyMunk
 If you want to run the example, then just run this command:
 
 ```bash
- make example
+ python examples/example1.py
 ```
 
-For different examples, you add ```EXAMPLE=2``` and you change the number to the number of the example file
+For different examples, you change the number to the number of the example file
 
 #### Own Install
 
-If you want the libraries for yourself, then run these commands:
-
-```bash
-  pip install pysdl2
-  pip install pysdl2-dll
-  pip install pymunk
-```
+Coming soon: Pip package
 
 ## Community
 
