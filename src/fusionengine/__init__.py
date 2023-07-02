@@ -1,3 +1,6 @@
+__author__ = "Dimkauzh"
+__version__ = "0.1.0"
+
 import fusionengine.files.data as data
 import fusionengine.files.systems as sysconfig
 
