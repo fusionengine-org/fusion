@@ -2,7 +2,7 @@ import glob
 import os
 import shutil
 
-from setuptools import Command, find_packages, setup
+from setuptools import Command, setup
 
 class clean(Command):
     user_options = []
@@ -29,13 +29,4 @@ class clean(Command):
             if os.path.exists(dir):
                 shutil.rmtree(dir)
 
-with open("requirements.txt", encoding="UTF-8") as f:
-    requirements = f.read().split()
-
-setup(
-    name = "fusion-engine",
-    install_requires = requirements,
-    packages = find_packages(where="src"),
-    package_dir = {"": "src"},
-    cmdclass = {"clean": clean},
-)
+setup(cmdclass={"clean": clean})
