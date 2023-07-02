@@ -1,4 +1,3 @@
-
 class InvalidType(Exception):
     pass
 

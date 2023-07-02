@@ -1,5 +1,5 @@
-from fusionengine.files.imports import *
 from fusionengine.files.enums import RendererFlag
+from fusionengine.files.imports import *
 
 class RendererOptions:
     def __init__(self) -> None:
