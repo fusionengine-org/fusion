@@ -14,9 +14,8 @@ I'm working hard to make first alpha version of it!
 
 ## Installation
 
-#### Setup (easiest)
-
 To install our package, run this:
+
 ```bash
   pip install fusion-engine
 ```
@@ -30,6 +29,7 @@ If you want to run the example, then just run this command:
 ```
 
 For different examples, you change the number to the number of the example file
+
 ## Community
 
 Our community is just growing, so if you want to help us with the project,
@@ -37,17 +37,20 @@ it will be very helpful!
 We have a discord server at this link (<https://discord.gg/Smg3CK4ZMc>)
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
-### Special thanks to these people❤️:
- - Zenthm (Contributing)
- - XCarCedo (Contributing)
- - FBS_Gamer (Discord server)
+### Special thanks to these people❤️
+
+- Zenthm (Contributing)
+- XCarCedo (Contributing)
+- FBS_Gamer (Discord server)
 
 ## Documentation
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
 ## Coming features
+
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
+
 - Fysics system using PyMunk (Being worked on)
 - Delta-Time (Finished!)
 - Pip package and SetupTools (Being worked on)
