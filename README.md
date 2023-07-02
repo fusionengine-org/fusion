@@ -12,9 +12,6 @@ Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 I'm working hard to make first alpha version of it!
 
-First make sure you have everything installed, see chapter Installation.
-Currently, in the folder example is a file called example.py This the file where you put your code in and import the engine file. Later it will become a library, but for now it is easier to develop the engine like this To run it just run the ```make example```
-
 ## Installation
 
 #### Setup (easiest)
