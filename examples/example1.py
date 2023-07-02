@@ -1,6 +1,6 @@
-from fusionengine import main as engine
+import fusionengine as fusion
 
-main = engine.Main()
+main = fusion.Main()
 
 window = main.window.newWindow("Example: 1", 800, 600)
 image = main.image.openImage(window, main.DEBUGIMAGE, 100, 100, 400, 400)
