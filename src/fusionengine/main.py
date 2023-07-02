@@ -1,6 +1,7 @@
-from fusionengine.files.imports import *
-import fusionengine.files.systems as sysconfig
 import fusionengine.files.data as data
+import fusionengine.files.systems as sysconfig
+
+from fusionengine.files.imports import *
 
 class Main:
     def __init__(self):

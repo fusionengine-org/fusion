@@ -1,8 +1,8 @@
-from pathlib import Path
-from fusionengine.files.exceptions import InvalidType, JsonStorageInvalidIndex
-
-import typing
 import json
+import typing
+from pathlib import Path
+
+from fusionengine.files.exceptions import InvalidType, JsonStorageInvalidIndex
 
 class JsonStorage:
     """JsonStorage is a storage class for saving json databases, currently all data is loaded from

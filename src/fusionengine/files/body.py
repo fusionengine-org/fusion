@@ -1,7 +1,7 @@
-from fusionengine.files.enums import BodyType
-from fusionengine.files.window import _CustomRenderer
-from fusionengine.files.imports import *
 import fusionengine.files.data as data
+
+from fusionengine.files.enums import BodyType
+from fusionengine.files.imports import *
 
 class _RigidBody:
     def __init__(self, window, x: int, y: int, width: int, height: int) -> None:

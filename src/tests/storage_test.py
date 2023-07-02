@@ -1,6 +1,6 @@
-from fusionengine.files.storage import JsonStorage
-
 import os
+
+from fusionengine.files.storage import JsonStorage
 
 def test_jsonstorage(cleanup):
 	my_db = JsonStorage("my_db.json")
