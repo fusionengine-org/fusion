@@ -33,11 +33,6 @@ If you want to run the example, then just run this command:
 ```
 
 For different examples, you change the number to the number of the example file
-
-#### Own Install
-
-Coming soon: Pip package
-
 ## Community
 
 Our community is just growing, so if you want to help us with the project,
