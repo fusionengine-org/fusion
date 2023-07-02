@@ -19,27 +19,16 @@ Currently, in the folder example is a file called example.py This the file where
 
 #### Setup (easiest)
 
-To get this into your project, you just get this repository into your
-directory by running these command:
-
+To install our package, run this:
 ```bash
-  git clone https://github.com/dimkauzh/fusion-engine
-  cd fusion-engine
+  pip install fusion-engine
 ```
-
-You need to have Python installed.
-Make sure you have these apps/libraries installed: PySDL2 and PySDL2-DLL.
-The easiest way to do that is to use our toolchain, here is how:
-
-```bash
-  pip install -e .
-```
-
-This will create a virtual enviorment with PySDL2, PySDL2-DLL and PyMunk
 
 If you want to run the example, then just run this command:
 
 ```bash
+ git clone https://github.com/dimkauzh/fusion-engine
+ cd fusion-engine
  python examples/example1.py
 ```
 
