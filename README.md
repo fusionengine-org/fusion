@@ -10,7 +10,7 @@ games fast and easy!
 
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
-I'm working hard to make first alpha version of it!
+We working hard to make first alpha version of it!
 
 ## Installation
 
