@@ -1,7 +1,8 @@
 from fusionengine.files.imports import *
+import fusionengine.files.window as window
 
 class DataBodies:
-    def __init__(self, window, x: int, y: int, w: int, h: int) -> None:
+    def __init__(self, window: window._CustomRenderer, x: int, y: int, w: int, h: int) -> None:
         self.window = window
         self.x = x
         self.y = y

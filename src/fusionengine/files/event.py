@@ -5,13 +5,13 @@ class Event:
     def __init__(self) -> None:
         pass
 
-    def keyDown(self, key: int, window:window._CustomRenderer) -> bool:
+    def keyDown(self, key: int, window: window._CustomRenderer) -> bool:
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN:
             if event.key.keysym.sym == key:
                 return True
         return False
-    def keyDownOnce(self, key: int, window:window._CustomRenderer) -> bool:
+    def keyDownOnce(self, key: int, window: window._CustomRenderer) -> bool:
         pass
 
 

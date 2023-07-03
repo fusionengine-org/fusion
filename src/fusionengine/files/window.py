@@ -3,7 +3,7 @@ import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
 
 class _CustomRenderer:
-    def __init__(self, window) -> None:
+    def __init__(self, window: SDL_CreateWindow) -> None:
         self.window = window
         self.event = SDL_Event()
         self.renderer = SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)

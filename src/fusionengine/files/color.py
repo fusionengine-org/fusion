@@ -1,3 +1,4 @@
+
 class Colors:
     def __init__(self):
         self.BLUE = (0, 0, 255, 255)
