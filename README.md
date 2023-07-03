@@ -20,7 +20,7 @@ To install our package, run this:
   pip install fusion-engine
 ```
 
-Our PyPi package is at this link (<https://pypi.org/project/fusion-engine/>)
+Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
 If you want to run the example, then just run this command:
 
@@ -36,7 +36,7 @@ For different examples, you change the number to the number of the example file
 
 Our community is just growing, so if you want to help us with the project,
 it will be very helpful!
-We have a discord server at this link (<https://discord.gg/Smg3CK4ZMc>)
+We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc)
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
 ### Special thanks to these people❤️
