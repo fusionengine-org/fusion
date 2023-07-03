@@ -1,19 +1,20 @@
 from fusionengine.files.imports import *
+import fusionengine.files.window as window
 
-class CustomImage:
-    def __init__(self, window, texture, rect) -> None:
+class _CustomImage:
+    def __init__(self, window:window._CustomRenderer, texture, rect) -> None:
         self.window = window
         self.renderer = window.renderer
         self.texture = texture
         self.rect = rect
 
 class Image: 
-    def openImage(self, window, image, x:int, y:int, width:int, height:int) -> CustomImage:
+    def openImage(self, window: window._CustomRenderer, image, x:int, y:int, width:int, height:int) -> _CustomImage:
         image = sdl2.ext.load_image(image)
         texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, image)
         rect = sdl2.SDL_Rect(x, y, width, height)
-        return CustomImage(window, texture, rect)
+        return _CustomImage(window, texture, rect)
     
-    def drawImage(self, image) -> None:
+    def drawImage(self, image:_CustomImage) -> None:
         sdl2.SDL_RenderClear(image.renderer)
         sdl2.SDL_RenderCopy(image.renderer, image.texture, None, image.rect)

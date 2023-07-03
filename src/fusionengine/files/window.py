@@ -27,11 +27,11 @@ class Window:
         self._running = True
         return _CustomRenderer(self.window)
     
-    def running(self, window) -> bool:
+    def running(self, window:_CustomRenderer) -> bool:
         self._refresh(window)
         return self._running
     
-    def _refresh(self, window) -> None:
+    def _refresh(self, window: _CustomRenderer) -> None:
         SDL_UpdateWindowSurface(window.window)
         SDL_RenderPresent(window.renderer)
         

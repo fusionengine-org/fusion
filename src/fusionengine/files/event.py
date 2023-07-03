@@ -1,17 +1,17 @@
 from fusionengine.files.imports import *
-
+import fusionengine.files.window as window
 
 class Event:
     def __init__(self) -> None:
         pass
 
-    def keyDown(self, key: int, window) -> bool:
+    def keyDown(self, key: int, window:window._CustomRenderer) -> bool:
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN:
             if event.key.keysym.sym == key:
                 return True
         return False
-    def keyDownOnce(self, key: int, window) -> None:
+    def keyDownOnce(self, key: int, window:window._CustomRenderer) -> bool:
         pass
 
 

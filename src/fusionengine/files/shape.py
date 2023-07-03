@@ -2,12 +2,12 @@ from fusionengine.files.imports import *
 
 class _CustomShape:
     def __init__(self, x:int, y:int, width:int, height:int, color: tuple) -> None:
-        x = x
-        y = y
-        width = width
-        height = height
-        color = color
-        rect = SDL_Rect(x, y, width, height)
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.color = color
+        self.rect = SDL_Rect(x, y, width, height)
 
 class Shapes:
     def __init__(self) -> None:
