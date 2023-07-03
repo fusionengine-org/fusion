@@ -20,6 +20,8 @@ To install our package, run this:
   pip install fusion-engine
 ```
 
+Our PyPi package is at this link (<https://pypi.org/project/fusion-engine/>)
+
 If you want to run the example, then just run this command:
 
 ```bash
