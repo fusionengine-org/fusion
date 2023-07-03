@@ -51,10 +51,10 @@ See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki)
 
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 
-- Fysics system using PyMunk (Being worked on)
+- Physics system using PyMunk (Being worked on)
 - Delta-Time (Finished!)
 - Pip package and SetupTools (Being worked on)
-- Ui (Being worked on)
+- UI (Being worked on)
 - If you have more ideas, please tell us them in our discord group!
 
 ## About
@@ -68,11 +68,11 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 
 ### Future of this engine
 
-This project began 1 may 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
+This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
 
 Our cool ideas:
 
-- Make a full GUI app (With something like Kyvi or TKinter) - Update: We are currenly working on it with tkinter
+- Make a full GUI app (With something like Kivy or Tkinter) - Update: We are currenly working on it with tkinter
 
 ## 🚀 About Me
 
