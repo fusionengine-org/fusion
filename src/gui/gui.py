@@ -1,4 +1,6 @@
 import tkinter as tk
+import src.gui.ui.main as ui
+
 
 class Menu:
     def __init__(self):
@@ -26,20 +28,6 @@ class Menu:
             l.pack()
         self.window.mainloop()
         
-    def get_center_window(self, window):
-        # get the screen dimension
-        screen_width = window.winfo_screenwidth()
-        screen_height = window.winfo_screenheight()
-
-        # find the center point
-        center_x = int(screen_width/2 - self.window_width / 2)
-        center_y = int(screen_height/2 - self.window_height / 2)
-        
-        return center_x, center_y
-
-    def load_icon(self):
-        icon = tk.PhotoImage(file ="src/gui/assets/icon/fe.png")
-        self.window.iconphoto(False, icon)
 
 if __name__ == "__main__":
     menu = Menu()
