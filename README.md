@@ -1,4 +1,4 @@
-# Fusion Engine
+# 🎮 Fusion Engine
 
 ![logo](https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png)
 
@@ -6,13 +6,13 @@ Fusion is a game engine for creating graphical applications using the PySDL2 lib
 rendering graphics, and handling user input. It is and engine to create
 games fast and easy!
 
-## Development
+## 💻 Development
 
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 We working hard to make first alpha version of it!
 
-## Installation
+## 💾 Installation
 
 To install our package, run this:
 
@@ -32,24 +32,24 @@ If you want to run the example, then just run this command:
 
 For different examples, you change the number to the number of the example file
 
-## Community
+## 👥 Community
 
 Our community is just growing, so if you want to help us with the project,
 it will be very helpful!
 We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc)
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
-### Special thanks to these people❤️
+### ❤️ Special thanks to these people
 
 - Zenthm (Contributing)
 - XCarCedo (Contributing)
 - FBS_Gamer (Discord server)
 
-## Documentation
+## 📃 Documentation
 
 See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
 
-## Coming features
+## 📯 Coming features
 
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 
@@ -72,7 +72,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
 
 - If you have more ideas, please tell us them in our discord group!
 
-## About
+## 🗄️ About
 
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
