@@ -55,7 +55,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
 
 - Physics system using PyMunk (Being worked on)
 - Delta-Time (Finished!)
-- Pip package and SetupTools (Being worked on)
+- Pip package and SetupTools (Finished!)
 - UI (Being worked on)
 - If you have more ideas, please tell us them in our discord group!
 
