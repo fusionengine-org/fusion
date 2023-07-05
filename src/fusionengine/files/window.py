@@ -16,7 +16,7 @@ class Window:
         self._LAST = 0;
         self.DELTATIME = 0;   
     
-    def newWindow(self, title: str, width: int, height: int) -> _CustomRenderer:
+    def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
         encoded_title = title.encode('utf-8')
         self.window = SDL_CreateWindow(encoded_title,
                                        SDL_WINDOWPOS_CENTERED,

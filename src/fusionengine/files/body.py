@@ -35,10 +35,10 @@ class Entity:
         self.height = height
         self.window = window
         self.gravity = 0
-        self._setBodyType(bodytype)
+        self._set_body_type(bodytype)
     
-    def openImage(self, window: window._CustomRenderer, image: image._CustomImage, x: int, y: int, width: int, height: int) -> None:
-        image.openImage(window, image, x, y, width, height)
+    def open_image(self, window: window._CustomRenderer, image: image._CustomImage, x: int, y: int, width: int, height: int) -> None:
+        image.open_image(window, image, x, y, width, height)
         self.image = image
         self.window = window
         self.x = x
@@ -46,18 +46,18 @@ class Entity:
         self.width = width
         self.height = height
 
-    def newRect(self, window: window._CustomRenderer, color: tuple) -> None:
-        data.drawRect(window,
+    def new_rect(self, window: window._CustomRenderer, color: tuple) -> None:
+        data.draw_rect(window,
                       self.x,
                       self.y,
                       self.width,
                       self.height,
                       color
                       )
-    def setGravity(self, gravity: int) -> None:
+    def set_gravity(self, gravity: int) -> None:
         self.gravity = gravity
     
-    def _setBodyType(self, bodytype: BodyType) -> None:
+    def _set_body_type(self, bodytype: BodyType) -> None:
         if bodytype == BodyType.RIGID_BODY:
             self.body = _RigidBody(self.window,
                                    self.x,
