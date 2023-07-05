@@ -20,7 +20,7 @@ class Main:
         self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
         
-        self.DEBUGIMAGE = "src/fusionengine/debugfiles/test.png"
+        self.DEBUGIMAGE = "src/fusionengine/debugfiles/fe.png"
 
     def quit(self, window):
         SDL_DestroyRenderer(window.renderer)
