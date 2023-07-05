@@ -18,14 +18,19 @@ class Window:
     
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
         encoded_title = title.encode('utf-8')
-        self.window = SDL_CreateWindow(encoded_title,
+        self.window_window = SDL_CreateWindow(encoded_title,
                                        SDL_WINDOWPOS_CENTERED,
                                        SDL_WINDOWPOS_CENTERED,
                                        width, height,
                                        SDL_WINDOW_SHOWN
                                        )
         self._running = True
-        return _CustomRenderer(self.window)
+        self.window = _CustomRenderer(self.window_window)
+        return self.window
+    
+    def loop(self, func):
+        while self.running(self.window):
+            func()
     
     def running(self, window:_CustomRenderer) -> bool:
         self._refresh(window)

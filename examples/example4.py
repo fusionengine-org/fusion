@@ -4,7 +4,8 @@ main = fusion.Main()
 
 window = main.window.new_window("Example: 4", 800, 600)
 
-while main.window.running(window):
+@main.window.loop
+def loop():
     pass
 
 main.quit(window)
