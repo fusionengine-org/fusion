@@ -80,6 +80,9 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 - PySDL2-DLL is used by PySDL2 for SDL2 binaries
 - PyMunk is used for fysics simulation
 - CX-Freeze is used for building executables (Temporary, it will change when SetupTools is setup)
+- TKinter for UI
+- Setuptools for PyPi package
+- Json for storing data
 
 This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
 
