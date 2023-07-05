@@ -36,7 +36,7 @@ For different examples, you change the number to the number of the example file
 
 Our community is just growing, so if you want to help us with the project,
 it will be very helpful!
-We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc)
+We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc).
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
 ### ❤️ Special thanks to these people
@@ -84,7 +84,7 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 - Setuptools for PyPi package
 - Json for storing data
 
-This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython project.
+This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project.
 
 ## 🚀 About Me
 
