@@ -35,10 +35,26 @@ class Entity:
         self.height = height
         self.window = window
         self.gravity = 0
-        self._set_body_type(bodytype)
-    
-    def open_image(self, window: window._CustomRenderer, image: image._CustomImage, x: int, y: int, width: int, height: int) -> None:
-        image.open_image(window, image, x, y, width, height)
+        if bodytype == BodyType.RIGID_BODY:
+            self.body = _RigidBody(self.window,
+                                   self.x,
+                                   self.y,
+                                   self.width,
+                                   self.height
+                                   )
+        else:
+            self.body = _StaticBody(self.window,
+                                    self.x,
+                                    self.y,
+                                    self.width,
+                                    self.height
+                                    )
+        self._set_body_data(self.x, self.y, self.width, self.height, self.body.space)
+        self.box = pymunk.Poly.create_box(self.body)
+
+    def image(self, window: window._CustomRenderer, image: image._CustomImage, x: int, y: int, width: int, height: int) -> None:
+        self._drawimage = image.open_image(window, image, x, y, width, height)
+        image.draw_image(self._drawimage)
         self.image = image
         self.window = window
         self.x = x
@@ -56,19 +72,8 @@ class Entity:
                       )
     def set_gravity(self, gravity: int) -> None:
         self.gravity = gravity
+        self.body.space.gravity = self.gravity
     
-    def _set_body_type(self, bodytype: BodyType) -> None:
-        if bodytype == BodyType.RIGID_BODY:
-            self.body = _RigidBody(self.window,
-                                   self.x,
-                                   self.y,
-                                   self.width,
-                                   self.height
-                                   )
-        elif bodytype == BodyType.STATIC_BODY:
-            self.body = _StaticBody(self.window,
-                                    self.x,
-                                    self.y,
-                                    self.width,
-                                    self.height
-                                    )
+    def _set_body_data(self, x, y, width, height, space) -> None:
+        space.position = x, y
+        

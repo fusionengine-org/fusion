@@ -1,5 +1,4 @@
 import fusionengine.files.systems as sysconfig
-
 from fusionengine.files.imports import *
 
 class _CustomRenderer:
@@ -14,23 +13,25 @@ class Window:
         self._running = False
         self._NOW = SDL_GetPerformanceCounter()
         self._LAST = 0
-        self.DELTATIME = 0 
+        self.DELTATIME = 0
+        self._entity = []
     
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
         encoded_title = title.encode('utf-8')
         self.window_window = SDL_CreateWindow(encoded_title,
                                        SDL_WINDOWPOS_CENTERED,
                                        SDL_WINDOWPOS_CENTERED,
-                                       width, height,
+                                       width,
+                                       height,
                                        SDL_WINDOW_SHOWN
                                        )
         self._running = True
         self.window = _CustomRenderer(self.window_window)
         return self.window
     
-    def loop(self, func):
+    def loop(self, your_loop):
         while self.running(self.window):
-            func()
+            your_loop()
     
     def running(self, window:_CustomRenderer) -> bool:
         self._refresh(window)
@@ -43,8 +44,10 @@ class Window:
         self._LAST = self._NOW
         self._NOW = SDL_GetPerformanceCounter()
 
+        
+        
         self.DELTATIME = (self._NOW - self._LAST)*1000 / SDL_GetPerformanceFrequency()
-                                  
+               
         if sdl2.SDL_PollEvent(window.event) != 0:
             if window.event.type == sdl2.SDL_QUIT:
                 self._running = False
