@@ -7,7 +7,6 @@ image = main.image.open_image(window, main.DEBUGIMAGE, 0, 0, 600, 600)
 
 @main.window.loop
 def loop():
-
     main.image.draw_image(image)
 
 main.quit(window)
