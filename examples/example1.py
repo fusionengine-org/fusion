@@ -2,8 +2,8 @@ import fusionengine as fusion
 
 main = fusion.Main()
 
-window = main.window.new_window("Example: 1", 800, 600)
-image = main.image.open_image(window, main.DEBUGIMAGE, 300, 200, 200, 200)
+window = main.window.new_window("Example: 1", 600, 600)
+image = main.image.open_image(window, main.DEBUGIMAGE, 0, 0, 600, 600)
 
 @main.window.loop
 def loop():
