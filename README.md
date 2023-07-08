@@ -63,7 +63,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [x] Delta-Time
   - [x] Pip package and SetupTools
   - [ ] Physics system using PyMunk
-- [ ] UI
+- [ ] UI (Rust)
   - [ ] Menu
   - [ ] Create project
   - [ ] Editor
