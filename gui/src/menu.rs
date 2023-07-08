@@ -1,12 +1,12 @@
 use gtk::*;
 use gtk::prelude::*;
 
-pub fn ui(app: &Application) {
-    // Create a window and set the title
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title("My GTK App")
-        .build();
 
-    window.present();
+pub fn menu(window: &ApplicationWindow) {
+    
+    let button = Button::with_label("Click me!");
+    button.connect_clicked(|_| {
+        eprintln!("Clicked!");
+    });
+    window.set_child(Some(&button));
 }
