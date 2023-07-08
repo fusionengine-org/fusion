@@ -1,26 +1,18 @@
 use gtk::prelude::*;
-use gtk::{glib, Application, ApplicationWindow};
+use gtk::*;
+mod menu;
 
-const APP_ID: &str = "org.gtk_rs.HelloWorld";
+const APP_ID: &str = "org.fusion-engine.gui";
 
 fn main() -> glib::ExitCode {
     // Create a new application
-    let app = Application::builder().application_id(APP_ID).build();
+    let app = Application::builder()
+        .application_id(APP_ID)
+        .build();
 
     // Connect to "activate" signal of `app`
-    app.connect_activate(build_ui);
+    app.connect_activate(menu::ui);
 
     // Run the application
     app.run()
-}
-
-fn build_ui(app: &Application) {
-    // Create a window and set the title
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title("My GTK App")
-        .build();
-
-    // Present window
-    window.present();
 }
