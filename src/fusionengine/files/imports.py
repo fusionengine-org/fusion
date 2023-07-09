@@ -1,8 +1,7 @@
 import warnings
 
-with warnings.catch_warnings():	
+with warnings.catch_warnings():
 	warnings.simplefilter("ignore")
-	from sdl2 import *
 	import sdl2
 	import sdl2.ext
 

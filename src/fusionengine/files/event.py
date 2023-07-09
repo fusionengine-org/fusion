@@ -12,7 +12,7 @@ class Event:
                 return True
         return False
     def key_down_once(self, key: int, window: window._CustomRenderer) -> bool:
-        pass
+        return False
 
 
 class Keys:

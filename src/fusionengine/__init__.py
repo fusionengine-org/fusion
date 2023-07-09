@@ -8,7 +8,7 @@ from fusionengine.files.imports import *
 
 class Main:
     def __init__(self):
-        SDL_Init(SDL_INIT_VIDEO)
+        sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
         self.window = window.Window()
         self.color = color.Colors()
         self.event = event.Event()
@@ -19,11 +19,11 @@ class Main:
         self.system = sysconfig.System()
         self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
-        
+
         self.DEBUGIMAGE = "src/fusionengine/debugfiles/fe.png"
 
     def quit(self, window):
-        SDL_DestroyRenderer(window.renderer)
-        SDL_DestroyWindow(window.window)
+        sdl2.SDL_DestroyRenderer(window.renderer)
+        sdl2.SDL_DestroyWindow(window.window)
         del window
-        SDL_Quit()
+        sdl2.SDL_Quit()
