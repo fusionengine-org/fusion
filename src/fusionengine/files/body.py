@@ -2,7 +2,7 @@ import fusionengine.files.data as data
 import fusionengine.files.window as window
 from fusionengine.files.enums import BodyType
 from fusionengine.files.imports import *
-import fusionengine.files.image as image
+import fusionengine.files.image as image_fe
 import fusionengine.files.draw as draw
 
 class _RigidBody:
@@ -36,6 +36,8 @@ class Entity:
         self.height = height
         self.window = window
         self.gravity = 0
+        self.image_fe = image_fe.Image()
+        self.draw_fe = draw.Draw()
 
         if bodytype == BodyType.RIGID_BODY:
             self.body = _RigidBody(self.window,
@@ -60,10 +62,10 @@ class Entity:
 
         self._addspaces()
 
-    def image(self, window: window._CustomRenderer, image: str, x: int, y: int, width: int, height: int) -> None:
-        drawimage = image.Image().open_image(window, image, x, y, width, height)
-        image.Image().draw_image(drawimage)
-        self.image = image
+    def image(self, window: window._CustomRenderer, image_path: str, x: int, y: int, width: int, height: int) -> None:
+        drawimage = self.image_fe.open_image(window, image, x, y, width, height)
+        self.image_fe.draw_image(drawimage)
+        self.image_path = image_path
         self.window = window
         self.x = x
         self.y = y
@@ -71,7 +73,7 @@ class Entity:
         self.height = height
 
     def new_rect(self, window: window._CustomRenderer, color: tuple) -> None:
-        data.Draw().draw_rect(window,
+        self.draw_fe.draw_rect(window,
                       self.x,
                       self.y,
                       self.width,

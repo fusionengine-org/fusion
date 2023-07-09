@@ -9,7 +9,6 @@ class _CustomRenderer:
 
 class Window:
     def __init__(self) -> None:
-        self.window = None
         self._running = False
         self._NOW = sdl2.SDL_GetPerformanceCounter()
         self._LAST = 0
