@@ -3,7 +3,7 @@ import fusionengine.files.window as window
 from fusionengine.files.enums import BodyType
 from fusionengine.files.imports import *
 import fusionengine.files.image as image_fe
-import fusionengine.files.draw as draw
+import fusionengine.files.draw as draw_fe
 
 class _RigidBody:
     def __init__(self, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
@@ -28,7 +28,7 @@ class _StaticBody:
         self.space = self._body.space
 
 class Entity:
-    def __init__(self, bodytype: BodyType, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
+    def __init__(self, bodytype: str, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
         self._addspace = []
         self.x = x
         self.y = y
@@ -37,7 +37,7 @@ class Entity:
         self.window = window
         self.gravity = 0
         self.image_fe = image_fe.Image()
-        self.draw_fe = draw.Draw()
+        self.draw_fe = draw_fe.Draw()
 
         if bodytype == BodyType.RIGID_BODY:
             self.body = _RigidBody(self.window,

@@ -63,6 +63,10 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [x] Delta-Time
   - [x] Pip package and SetupTools
   - [ ] Physics system using PyMunk
+    - [ ] Collision system
+    - [ ] Gravity
+    - [ ] Rendering
+    - [ ] Physics shapes
 - [ ] UI (Rust)
   - [ ] Menu
   - [ ] Create project
@@ -70,7 +74,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Code editor build in
   - [ ] Run game
 
-- If you have more ideas, please tell us them in our discord group!
+- If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc)!
 
 ## 🗄️ About
 
