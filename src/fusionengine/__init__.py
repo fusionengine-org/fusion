@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 import fusionengine.files.data as data
 import fusionengine.files.systems as sysconfig
