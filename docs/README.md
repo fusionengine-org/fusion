@@ -1,7 +1,7 @@
 ## Table of Contents
 - [Introduction](#Fusion-Engine)
 - [Installation](#Installation)
-- [Usage]([Docs](wiki.md))
+- [Usage](wiki.md)
 - [Contributing](#contributing)
 - [License](#license)
 
