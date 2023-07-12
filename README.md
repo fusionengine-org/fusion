@@ -7,5 +7,4 @@ rendering graphics, and handling user input. It is and engine to create
 games fast and easy!
 
 ## Website
-[For all information refer to our website:](https://dimkauzh.github.io/fusion-engine/)
-https://dimkauzh.github.io/fusion-engine/
+[For all information refer to our website](https://dimkauzh.github.io/fusion-engine/)
