@@ -8,7 +8,7 @@ games fast and easy!
 
 ## Table of Contents
 - [Installation](pages/install.md)
-- [Usage](wiki/wiki.md)
+- [Usage/Wiki](wiki/wiki.md)
 - [Information](pages/info.md)
 
 ## ❤️ Special thanks to these people
