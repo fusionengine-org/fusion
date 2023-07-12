@@ -6,7 +6,7 @@ Fusion is a game engine for creating graphical applications using the PySDL2 lib
 rendering graphics, and handling user input. It is and engine to create
 games fast and easy!
 
-### Website
+### 🌐 Website
 
 We have our own website with our docs on it. Things like information could be a little outdated, but the docs are hosted there. [See here](https://dimkauzh.github.io/fusion-engine/)
 
