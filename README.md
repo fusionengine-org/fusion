@@ -63,11 +63,20 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [x] Delta-Time
   - [x] Pip package and SetupTools
   - [ ] Physics system using PyMunk
+    - [x] Gravity
+    - [x] Rendering
     - [ ] Collision system
-    - [ ] Gravity
-    - [ ] Rendering
     - [ ] Physics shapes
-- [ ] UI (Rust)
+  - [ ] GUI library
+    - [x] Text
+    - [x] Drawing (Build in draw function)
+    - [ ] Buttons
+    - [ ] And more...
+  - [ ] Sound system
+    - [ ] Sound player
+    - [ ] File support
+    - [ ] And more...
+- [ ] UI (Using own GUI library)
   - [ ] Menu
   - [ ] Create project
   - [ ] Editor

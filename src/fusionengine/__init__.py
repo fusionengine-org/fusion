@@ -19,6 +19,7 @@ class Main:
         self.system = sysconfig.System()
         self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
+        self.ui = ui.UI()
 
         self.DEBUGIMAGE = "src/fusionengine/debugfiles/fe.png"
 
