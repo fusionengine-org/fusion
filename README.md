@@ -8,7 +8,7 @@ games fast and easy!
 
 ### Website
 
-For the most things, you can use our website where our docs are. [See here](https://dimkauzh.github.io/fusion-engine/)
+We have our own website with our docs on it. Things like information could be a little outdated, but the docs are hosted there. [See here](https://dimkauzh.github.io/fusion-engine/)
 
 ### 💻 Development
 
@@ -51,7 +51,7 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 ## 📃 Documentation
 
-See at [The wiki of the project](https://github.com/dimkauzh/fusion-engine/wiki) (Still in work!)
+See at [The wiki of the project](https://dimkauzh.github.io/fusion-engine/wiki/wiki.html) (Still in work!)
 
 ## 📯 Coming features
 
