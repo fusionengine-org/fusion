@@ -1,4 +1,12 @@
-# 🎮 Fusion Engine
+## Table of Contents
+- [Introduction](#Fusion-Engine)
+- [Installation](#Installation)
+- [Usage]([Docs](wiki.md))
+- [Contributing](#contributing)
+- [License](#license)
+
+
+# 🎮 Fusion-Engine
 
 ![logo](https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png)
 
