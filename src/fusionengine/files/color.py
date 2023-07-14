@@ -1,13 +1,12 @@
-
 class Colors:
     def __init__(self):
         self.BLUE = (0, 0, 255, 255)
         self.BLACK = (0, 0, 0, 255)
         self.WHITE = (255, 255, 255, 255)
-        self.GREEN = (255, 255, 255, 255)
+        self.GREEN = (0, 255, 0, 255)
         self.RED = (255, 0, 0, 255)
         self.YELLOW = (255, 255, 0, 255)
-        self.PURPLE = (255, 0, 255, 255)
+        self.PURPLE = (128, 0, 128, 255)
         self.CYAN = (0, 255, 255, 255)
         self.ORANGE = (255, 165, 0, 255)
         self.GRAY = (128, 128, 128, 255)
@@ -33,5 +32,5 @@ class Colors:
         self.MINT = (189, 252, 201, 255)
         self.SALMON = (250, 128, 114, 255)
         self.SCARLET = (255, 36, 0, 255)
-        self.TEAL = (0, 128, 128, 255)
         self.TOMATO = (255, 99, 71, 255)
+

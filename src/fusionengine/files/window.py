@@ -43,8 +43,6 @@ class Window:
         self._LAST = self._NOW
         self._NOW = sdl2.SDL_GetPerformanceCounter()
 
-
-
         self.DELTATIME = (self._NOW - self._LAST)*1000 / sdl2.SDL_GetPerformanceFrequency()
 
         if sdl2.SDL_PollEvent(window.event) != 0 and window.event.type == sdl2.SDL_QUIT:
