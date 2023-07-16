@@ -3,7 +3,7 @@ from fusionengine.files.imports import *
 import fusionengine.files.draw as draw
 
 class CustomButton:
-    def __init__(self, window, text, x, y, width, height, font_path_input, font_size_input, color, function_button):
+    def __init__(self, window, text, x, y, width, height, font_path_input, font_size_input, centre, color, function_button):
         self.window = window
         self.text = text
         self.x = x
@@ -33,14 +33,14 @@ class CustomButton:
 
         text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(), sdl2.SDL_Color(0, 0, 0))
         self.texture = sdl2.SDL_CreateTextureFromSurface(self.window.renderer, text_surface)
-        text_rect = sdl2.SDL_Rect(x, y, width, height)
+        text_rect = sdl2.SDL_Rect(x + centre, y + centre, width - centre * 2, height - centre * 2)
         sdl2.SDL_RenderCopy(self.window.renderer, self.texture, None, text_rect)
 
         sdl2.sdlttf.TTF_CloseFont(self.font)
         sdl2.SDL_FreeSurface(text_surface)
         sdl2.sdlttf.TTF_Quit()
 
-        if self.is_button_pressed() and callable(function_button):
+        if self.is_button_pressed and callable(function_button):
             function_button()
 
     def _handle_event(self):
@@ -55,6 +55,7 @@ class CustomButton:
 
         return _pressed
 
+    @property
     def is_button_pressed(self):
         return self._handle_event()
 
@@ -62,8 +63,8 @@ class Button:
     def __init__(self):
         self.color = None
 
-    def new_button(self, window, text, x, y, width, height, font_path, font_size, color, function_button):
-        return CustomButton(window, text, x, y, width, height, font_path, font_size, color, function_button)
+    def new_button(self, window, text, x, y, width, height, font_path, font_size, centre, color, function_button):
+        return CustomButton(window, text, x, y, width, height, font_path, font_size, centre, color, function_button)
 
 class Text:
     def __init__(self):
@@ -72,9 +73,3 @@ class UI:
     def __init__(self):
         self.button = Button()
         self.text = Text()
-
-
-
-
-        
-        
