@@ -17,8 +17,9 @@ def loop():
         main.fonts.NUNITO_LIGHT,
         "default",
         0,
-        main.color.GREEN,
-        lambda:
-            print("Hello World")
+        main.color.WHITE
     )
+    @button.button_pressed
+    def button_pressed():
+        print("Hello World")
     # print("loop")

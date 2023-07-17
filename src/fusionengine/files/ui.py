@@ -2,7 +2,7 @@ from fusionengine.files.imports import *
 import fusionengine.files.draw as draw
 
 class CustomButton:
-    def __init__(self, window, text, x, y, width, height, font_path, font_size_input, centre, color, function_button):
+    def __init__(self, window, text, x, y, width, height, font_path, font_size_input, centre, color_input):
         self.window = window
         self.text = text
         self.x = x
@@ -11,9 +11,7 @@ class CustomButton:
         self.height = height
         self.font_path = font_path
         self.font_size_input = font_size_input
-        self.color = color
-        self.function_button = function_button
-        self._background_color = (color[0], color[1], color[2], color[3])
+        self.color = (color_input[0], color_input[1], color_input[2], color_input[3])
         self.is_pressed = False
     
         if font_size_input == "default":
@@ -21,7 +19,7 @@ class CustomButton:
         else:
             font_size = font_size_input
 
-        draw.Draw().draw_rect(window, x, y, width, height, self._background_color)
+        draw.Draw().draw_rect(window, x, y, width, height, self.color)
 
         sdl2.sdlttf.TTF_Init()
         self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_size)
@@ -34,9 +32,6 @@ class CustomButton:
         sdl2.sdlttf.TTF_CloseFont(self.font)
         sdl2.SDL_FreeSurface(text_surface)
         sdl2.sdlttf.TTF_Quit()
-
-        if self.is_button_pressed() and callable(function_button):
-            function_button()
 
     def _handle_event(self):
         event = self.window.event
@@ -52,13 +47,20 @@ class CustomButton:
 
     def is_button_pressed(self):
         return self._handle_event()
+    
+    def set_color(self, color):
+        self.color = color
+
+    def button_pressed(self, func):
+        if self.is_button_pressed() and callable(func):
+            func()
 
 class Button:
     def __init__(self):
         self.color = None
 
-    def new_button(self, window, text, x, y, width, height, font_path, font_size, centre, color, function_button):
-        return CustomButton(window, text, x, y, width, height, font_path, font_size, centre, color, function_button)
+    def new_button(self, window, text, x, y, width, height, font_path, font_size, centre, color):
+        return CustomButton(window, text, x, y, width, height, font_path, font_size, centre, color)
 
 class Text:
     def __init__(self):
