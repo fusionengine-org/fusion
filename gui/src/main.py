@@ -14,7 +14,7 @@ def loop():
         25,
         200,
         100,
-        "default",
+        main.fonts.NUNITO_LIGHT,
         "default",
         0,
         main.color.GREEN,

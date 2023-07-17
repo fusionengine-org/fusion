@@ -20,6 +20,7 @@ class Main:
         self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
         self.ui = ui.UI()
+        self.fonts = fonts.Fonts()
 
         self.DEBUGIMAGE = "src/fusionengine/debugfiles/fe.png"
 

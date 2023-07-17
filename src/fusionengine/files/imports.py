@@ -18,3 +18,4 @@ import fusionengine.files.image as image
 import fusionengine.files.shape as shape
 import fusionengine.files.window as window
 import fusionengine.files.ui as ui
+import fusionengine.files.fonts as fonts

@@ -1,26 +1,21 @@
-from operator import is_
 from fusionengine.files.imports import *
 import fusionengine.files.draw as draw
 
 class CustomButton:
-    def __init__(self, window, text, x, y, width, height, font_path_input, font_size_input, centre, color, function_button):
+    def __init__(self, window, text, x, y, width, height, font_path, font_size_input, centre, color, function_button):
         self.window = window
         self.text = text
         self.x = x
         self.y = y
         self.width = width
         self.height = height
-        self.font_path_input = font_path_input
+        self.font_path = font_path
         self.font_size_input = font_size_input
         self.color = color
         self.function_button = function_button
         self._background_color = (color[0], color[1], color[2], color[3])
         self.is_pressed = False
     
-        if font_path_input == "default":
-            font_path = "src/fusionengine/fonts/nunito_sans_light.ttf"
-        else:
-            font_path = font_path_input
         if font_size_input == "default":
             font_size = 1000
         else:
@@ -40,7 +35,7 @@ class CustomButton:
         sdl2.SDL_FreeSurface(text_surface)
         sdl2.sdlttf.TTF_Quit()
 
-        if self.is_button_pressed and callable(function_button):
+        if self.is_button_pressed() and callable(function_button):
             function_button()
 
     def _handle_event(self):
@@ -55,7 +50,6 @@ class CustomButton:
 
         return _pressed
 
-    @property
     def is_button_pressed(self):
         return self._handle_event()
 
@@ -69,6 +63,21 @@ class Button:
 class Text:
     def __init__(self):
         pass
+
+    def print_text(self, window, text, x, y, width, height, font_path, font_size, color):
+        sdl2.sdlttf.TTF_Init()
+        self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_size)
+        sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
+
+        text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(), sdl2.SDL_Color(0, 0, 0))
+        self.texture = sdl2.SDL_CreateTextureFromSurface(self.window.renderer, text_surface)
+        text_rect = sdl2.SDL_Rect(x, y, width, height)
+        sdl2.SDL_RenderCopy(self.window.renderer, self.texture, None, text_rect)
+
+        sdl2.sdlttf.TTF_CloseFont(self.font)
+        sdl2.SDL_FreeSurface(text_surface)
+        sdl2.sdlttf.TTF_Quit()
+
 class UI:
     def __init__(self):
         self.button = Button()

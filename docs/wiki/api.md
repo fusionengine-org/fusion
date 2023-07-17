@@ -67,6 +67,30 @@ if you need keyboard input, then use this if statement with your own key (see ke
  if main.event.key_down(main.keys.KEY_a, window):
      print("Key A pressed")
 ```
+
+## User Interface (UI)
+Creating a small ui for your application/game is easy with our following tools:
+### Buttons
+To create a simple button we do the following:
+```python
+    button = main.ui.button.new_button(
+        window, # Give the window
+        "Hello World", # Text on your button
+        25, # X
+        25, # Y
+        200, # Width
+        100, # Height
+        main.fonts.NUNITO_LIGHT, # Font (here using one of the buildin fonts)
+        "default", # Font sharpness
+        0, # Test centering
+        main.color.GREEN, # Color for background
+        lambda: # Lambda function thats being executed when button is pressed
+            print("Hello World")
+    )
+```
+Important thing: the last argument (the lambda) is necessary if you run a function, you cannot run 
+the function directly there.
+
 ## Quit
 To quit the application, you run this command on the end of your code:
 ```python
