@@ -57,7 +57,7 @@ class CustomButton:
 
 class Button:
     def __init__(self):
-        self.color = None
+        pass
 
     def new_button(self, window, text, x, y, width, height, font_path, font_size, centre, color):
         return CustomButton(window, text, x, y, width, height, font_path, font_size, centre, color)
