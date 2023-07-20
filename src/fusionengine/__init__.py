@@ -21,8 +21,7 @@ class Main:
         self.shape = shape.Shapes()
         self.ui = ui.UI()
         self.fonts = fonts.Fonts()
-
-        self.DEBUGIMAGE = "src/fusionengine/debugfiles/fe.png"
+        self.debug = debug.DebugFiles()
 
     def quit(self, window):
         sdl2.SDL_DestroyRenderer(window.renderer)

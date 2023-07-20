@@ -66,15 +66,15 @@ class Text:
     def __init__(self):
         pass
 
-    def print_text(self, window, text, x, y, width, height, font_path, font_size, color):
+    def print_text(self, window, text, x, y, width, height, font_path, font_sharp, color):
         sdl2.sdlttf.TTF_Init()
-        self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_size)
+        self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_sharp)
         sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
 
-        text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(), sdl2.SDL_Color(0, 0, 0))
-        self.texture = sdl2.SDL_CreateTextureFromSurface(self.window.renderer, text_surface)
+        text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(), sdl2.SDL_Color(color[0], color[1], color[2], color[3]))
+        self.texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, text_surface)
         text_rect = sdl2.SDL_Rect(x, y, width, height)
-        sdl2.SDL_RenderCopy(self.window.renderer, self.texture, None, text_rect)
+        sdl2.SDL_RenderCopy(window.renderer, self.texture, None, text_rect)
 
         sdl2.sdlttf.TTF_CloseFont(self.font)
         sdl2.SDL_FreeSurface(text_surface)

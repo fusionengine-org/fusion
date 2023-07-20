@@ -74,7 +74,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] GUI library
     - [x] Text
     - [x] Drawing (Build in draw function)
-    - [ ] Buttons
+    - [x] Buttons
     - [ ] And more...
   - [ ] Sound system
     - [ ] Sound player
