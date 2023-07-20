@@ -80,6 +80,13 @@ We are working hard to implement very basic and complex stuff so our engine beco
     - [ ] Sound player
     - [ ] File support
     - [ ] And more...
+- [ ] CLI
+  - [ ] Create CLI to build your game
+  - [ ] Creates a full project
+  - [ ] Will create a full project dir
+
+### Features that maybe will be implemented
+
 - [ ] UI (Using own GUI library)
   - [ ] Menu
   - [ ] Create project
