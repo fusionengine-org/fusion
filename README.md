@@ -14,7 +14,7 @@ We have our own website with our docs on it. Things like information could be a 
 
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
-We working hard to make first alpha version of it!
+We're working hard to make first alpha version of it!
 
 ## 💾 Installation
 
@@ -103,8 +103,8 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 
 - PySDL2 is used for rendering and windowing
 - PySDL2-DLL is used by PySDL2 for SDL2 binaries
-- PyMunk is used for fysics simulation
-- TKinter for UI
+- PyMunk is used for physics simulation
+- Custom build in UI for UI
 - Setuptools for PyPi package
 - Json for storing data
 
@@ -116,4 +116,4 @@ We as fusion team support Ukraine and we hope it will win. Fusion engine is dedi
 
 ## 🚀 About Me
 
-A 13 year old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
+A 13-year-old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
