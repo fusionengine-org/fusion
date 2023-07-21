@@ -1,20 +1,22 @@
 from fusionengine.files.imports import *
 import fusionengine.files.draw as draw
+import fusionengine.files.window as windowfe
+
 
 class CustomButton:
-    def __init__(self, window, text, x, y, width, height, font_path, font_size_input, centre, color_input):
-        self.window = window
-        self.text = text
-        self.x = x
-        self.y = y
+    def __init__(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color_input: tuple) -> None:
+        self.window: windowfe._CustomRenderer = window
+        self.text: str = text
+        self.x: int = x
+        self.y: int = y
         self.width = width
         self.height = height
         self.font_path = font_path
-        self.font_size_input = font_size_input
+        self.font_size_input = font_sharp
         self.color = (color_input[0], color_input[1], color_input[2], color_input[3])
         self.is_pressed = False
-    
-        if font_size_input == "default":
+
+        if self.font_size_input == "default":
             font_size = 1000
         else:
             font_size = font_size_input
@@ -33,7 +35,7 @@ class CustomButton:
         sdl2.SDL_FreeSurface(text_surface)
         sdl2.sdlttf.TTF_Quit()
 
-    def _handle_event(self):
+    def _handle_event(self) -> bool:
         event = self.window.event
         _pressed = False
         if event.type == sdl2.SDL_MOUSEBUTTONDOWN:
@@ -45,25 +47,27 @@ class CustomButton:
 
         return _pressed
 
-    def is_button_pressed(self):
+    def is_button_pressed(self) -> bool:
         return self._handle_event()
-    
-    def set_color(self, color):
+
+    def set_color(self, color: tuple) -> None:
         self.color = color
 
-    def button_pressed(self, func):
+    def button_pressed(self, func: callable) -> None:
         if self.is_button_pressed() and callable(func):
             func()
 
+
 class Button:
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
-    def new_button(self, window, text, x, y, width, height, font_path, font_size, centre, color):
-        return CustomButton(window, text, x, y, width, height, font_path, font_size, centre, color)
+    def new_button(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color: tuple) -> CustomButton:
+        return CustomButton(window, text, x, y, width, height, font_path, font_sharp, centre, color)
+
 
 class Text:
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
     def print_text(self, window, text, x, y, width, height, font_path, font_sharp, color):
@@ -71,7 +75,8 @@ class Text:
         self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_sharp)
         sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
 
-        text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(), sdl2.SDL_Color(color[0], color[1], color[2], color[3]))
+        text_surface = sdl2.sdlttf.TTF_RenderText_Solid(self.font, text.encode(),
+                                                        sdl2.SDL_Color(color[0], color[1], color[2], color[3]))
         self.texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, text_surface)
         text_rect = sdl2.SDL_Rect(x, y, width, height)
         sdl2.SDL_RenderCopy(window.renderer, self.texture, None, text_rect)
@@ -80,7 +85,8 @@ class Text:
         sdl2.SDL_FreeSurface(text_surface)
         sdl2.sdlttf.TTF_Quit()
 
+
 class UI:
-    def __init__(self):
+    def __init__(self) -> None:
         self.button = Button()
         self.text = Text()
