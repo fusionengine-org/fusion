@@ -70,7 +70,7 @@ class Text:
     def __init__(self) -> None:
         pass
 
-    def print_text(self, window, text, x, y, width, height, font_path, font_sharp, color):
+    def print_text(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, color: tuple) -> None:
         sdl2.sdlttf.TTF_Init()
         self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_sharp)
         sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
