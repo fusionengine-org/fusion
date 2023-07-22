@@ -46,7 +46,6 @@ class Entity:
                                    self.width,
                                    self.height
                                    )
-            self._addspace.append(self.body.body)
         else:
             self.body = _StaticBody(self.window,
                                     self.x,
@@ -54,8 +53,7 @@ class Entity:
                                     self.width,
                                     self.height
                                     )
-            self._addspace.append(self.body.body)
-
+        self._addspace.append(self.body.body)
         self._set_body_data(self.x, self.y, self.width, self.height, self.body.space)
         self.box = pymunk.Poly.create_box(self.body.body)
         self._addspace.append(self.box)
