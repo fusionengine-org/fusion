@@ -19,7 +19,7 @@ class CustomButton:
         if self.font_size_input == "default":
             font_size = 1000
         else:
-            font_size = font_size_input
+            font_size = font_sharp
 
         draw.Draw().draw_rect(window, x, y, width, height, self.color)
 
@@ -59,7 +59,7 @@ class CustomButton:
 
 
 class Button:
-    def __init__(self) -> None:
+    def __init__(self) -> None: 
         pass
 
     def new_button(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color: tuple) -> CustomButton:
