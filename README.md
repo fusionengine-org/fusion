@@ -55,7 +55,7 @@ See at [The wiki of the project](https://dimkauzh.github.io/fusion-engine/wiki/w
 
 ## 📯 Coming features
 
-### Features we are working on
+### 🛠️ Features we are working on
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 
 - [x] Engine
@@ -86,7 +86,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Creates a full project
   - [ ] Will create a full project dir
 
-### Features that maybe will be implemented
+### 🔩 Features that maybe will be implemented
 
 - [ ] UI (Using own GUI library)
   - [ ] Menu
@@ -95,10 +95,11 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Code editor build in
   - [ ] Run game
 
-- If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
+💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
 
 ## 🗄️ About
 
+### ⚙️ Engine
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
 - PySDL2 is used for rendering and windowing
