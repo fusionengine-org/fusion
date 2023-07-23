@@ -17,5 +17,5 @@ class Image:
         return _CustomImage(window, texture, rect)
 
     def draw_image(self, image: _CustomImage) -> None:
-        sdl2.SDL_RenderClear(image.renderer)
+        #sdl2.SDL_RenderClear(image.renderer)
         sdl2.SDL_RenderCopy(image.renderer, image.texture, None, image.rect)

@@ -26,10 +26,12 @@ class Window:
                                        )
         self._running = True
         self.window = _CustomRenderer(self.window_window)
+
         return self.window
 
     def loop(self, your_loop):
-        while self.running(self.window):
+        while self._running:
+            self._refresh(self.window)
             your_loop()
 
     def running(self, window:_CustomRenderer) -> bool:
@@ -37,8 +39,14 @@ class Window:
         return self._running
 
     def _refresh(self, window: _CustomRenderer) -> None:
+        self.window = window
+
         sdl2.SDL_UpdateWindowSurface(window.window)
         sdl2.SDL_RenderPresent(window.renderer)
+
+        sdl2.SDL_SetRenderDrawColor(self.window.renderer, 0, 0, 0, 255)
+        sdl2.SDL_RenderClear(self.window.renderer)
+
 
         self._LAST = self._NOW
         self._NOW = sdl2.SDL_GetPerformanceCounter()
