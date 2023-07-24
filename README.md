@@ -38,6 +38,8 @@ if you want to get the latest changes then follow this instruction:
  pip install -e .
 ```
 
+### Run example
+
 If you want to run the example, then just run this command:
 
 ```bash
@@ -59,6 +61,7 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 - Zenthm (Contributing)
 - XCarCedo (Contributing)
+- Techsplosion (Bug hunter)
 - FBS_Gamer (Discord server)
 
 ## 📃 Documentation
