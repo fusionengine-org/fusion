@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fusion-engine"
-description = "This a fully custom engine based on Python and PySDL2, it's written in pure Python!"
+description = "A custom open-source game engine on Python and PySDL2, it's written in pure Python! It's easy and fast!"
 requires-python = ">=3.7"
 license = {text = "LICENSE.md"}
 authors = [{name = "Dimkauzh", email = "uzhdimka@gmail.com"}]
