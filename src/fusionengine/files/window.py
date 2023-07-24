@@ -6,6 +6,7 @@ class _CustomRenderer:
         self.window = window
         self.event = sdl2.SDL_Event()
         self.renderer = sdl2.SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
+        sdl2.SDL_SetRenderDrawBlendMode(self.renderer, sdl2.SDL_BLENDMODE_BLEND)
 
 class Window:
     def __init__(self) -> None:

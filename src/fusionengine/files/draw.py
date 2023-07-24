@@ -28,14 +28,15 @@ class Draw:
 
     def draw_rect(self, window: window._CustomRenderer, x: int, y: int, width: int, height: int, color: tuple) -> None:
         sdl2.SDL_SetRenderDrawColor(window.renderer,
-                                    color[0],
-                                    color[1],
-                                    color[2],
-                                    color[3]
-                                    )
+                                color[0],
+                                color[1],
+                                color[2],
+                                color[3]
+                                )
 
         rect = sdl2.SDL_Rect(x, y, width, height)
         sdl2.SDL_RenderFillRect(window.renderer, rect)
+
 
     def draw_own_rect(self, window: window._CustomRenderer, rect: shape._CustomShape) -> None:
         sdl2.SDL_SetRenderDrawColor(window.renderer,

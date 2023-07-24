@@ -18,6 +18,8 @@ We're working hard to make first alpha version of it!
 
 ## 💾 Installation
 
+### Using PyPi
+
 To install our package, run this:
 
 ```bash
@@ -25,6 +27,16 @@ To install our package, run this:
 ```
 
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
+
+### Latest build
+
+if you want to get the latest changes then follow this instruction:
+
+```bash
+ git clone https://github.com/dimkauzh/fusion-engine
+ cd fusion-engine
+ pip install -e .
+```
 
 If you want to run the example, then just run this command:
 
@@ -56,6 +68,7 @@ See at [The wiki of the project](https://dimkauzh.github.io/fusion-engine/wiki/w
 ## 📯 Coming features
 
 ### 🛠️ Features we are working on
+
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 
 - [x] Engine
@@ -100,6 +113,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
 ## 🗄️ About
 
 ### ⚙️ Engine
+
 Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
 - PySDL2 is used for rendering and windowing
@@ -112,6 +126,7 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project.
 
 ### 🇺🇦 Ukraine
+
 We as fusion team support Ukraine and we hope it will win. Fusion engine is dedicated to Ukraine fighting the Russian invasion.
 🇺🇦 Please support Ukraine! 🇺🇦
 
