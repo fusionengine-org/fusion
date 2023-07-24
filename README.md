@@ -1,5 +1,7 @@
 # 🎮 Fusion Engine
 
+## Introduction
+
 ![logo](https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png)
 
 Fusion is a game engine for creating graphical applications using the PySDL2 library and the programming language Python. It provides a simple coding interface for creating windows,
@@ -112,6 +114,10 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Run game
 
 💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
+
+## License
+
+See [Licence here](LICENCE.md)
 
 ## 🗄️ About
 
