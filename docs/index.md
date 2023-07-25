@@ -32,4 +32,6 @@ And after that you need to create a object of our engine to run functions of it:
   main = engine.Main()
 ```
 
+Click next to go to the next page!
+
 [Next](wiki/api.md)
