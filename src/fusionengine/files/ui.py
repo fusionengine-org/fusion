@@ -3,8 +3,9 @@ import fusionengine.files.draw as draw
 import fusionengine.files.window as windowfe
 
 
-class CustomButton:
+class _CustomButton:
     def __init__(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color_input: tuple) -> None:
+        """A class that creates a new custom button. (Not for the user)"""
         self.window: windowfe._CustomRenderer = window
         self.text: str = text
         self.x: int = x
@@ -36,6 +37,7 @@ class CustomButton:
         sdl2.sdlttf.TTF_Quit()
 
     def _handle_event(self) -> bool:
+        """Handles the event of the mouse."""
         event = self.window.event
         _pressed = False
         if event.type == sdl2.SDL_MOUSEBUTTONDOWN:
@@ -48,12 +50,15 @@ class CustomButton:
         return _pressed
 
     def is_button_pressed(self) -> bool:
+        """Returns if the button is pressed."""
         return self._handle_event()
 
     def set_color(self, color: tuple) -> None:
+        """Sets the color of the buttons background."""
         self.color = color
 
     def button_pressed(self, func: callable) -> None:
+        """Custom decorator function that executes a function when the button is pressed."""
         if self.is_button_pressed() and callable(func):
             func()
 
@@ -62,8 +67,9 @@ class Button:
     def __init__(self) -> None: 
         pass
 
-    def new_button(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color: tuple) -> CustomButton:
-        return CustomButton(window, text, x, y, width, height, font_path, font_sharp, centre, color)
+    def new_button(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, centre: int, color: tuple) -> _CustomButton:
+        """Creates a new button for your ui."""
+        return _CustomButton(window, text, x, y, width, height, font_path, font_sharp, centre, color)
 
 
 class Text:
@@ -71,6 +77,7 @@ class Text:
         pass
 
     def print_text(self, window: window._CustomRenderer, text: str, x: int, y: int, width: int, height: int, font_path: str, font_sharp: int, color: tuple) -> None:
+        """Prints text on the screen."""
         sdl2.sdlttf.TTF_Init()
         self.font = sdl2.sdlttf.TTF_OpenFont(font_path.encode("utf-8"), font_sharp)
         sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
@@ -88,5 +95,6 @@ class Text:
 
 class UI:
     def __init__(self) -> None:
+        """A class that creates a new ui."""
         self.button = Button()
         self.text = Text()

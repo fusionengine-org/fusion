@@ -28,7 +28,7 @@ class JsonStorage:
 
             self.storage.append(_dict)
             return True
-        except:
+        except Exception:
             return False
     def search(self, search_dict: dict[typing.Any, typing.Any],
         first: bool = False,

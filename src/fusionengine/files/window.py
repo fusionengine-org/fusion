@@ -3,6 +3,7 @@ from fusionengine.files.imports import *
 
 class _CustomRenderer:
     def __init__(self, window: sdl2.SDL_CreateWindow) -> None:
+        """A class that creates a new custom renderer. (Not for the user)"""
         self.window = window
         self.event = sdl2.SDL_Event()
         self.renderer = sdl2.SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
@@ -10,6 +11,7 @@ class _CustomRenderer:
 
 class Window:
     def __init__(self) -> None:
+        """A class that contains all the window functions."""
         self._running = False
         self._NOW = sdl2.SDL_GetPerformanceCounter()
         self._LAST = 0
@@ -17,6 +19,7 @@ class Window:
         self._entity = []
 
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
+        """Creates a new window."""
         encoded_title = title.encode('utf-8')
         self.window_window = sdl2.SDL_CreateWindow(encoded_title,
                                        sdl2.SDL_WINDOWPOS_CENTERED,
@@ -31,15 +34,18 @@ class Window:
         return self.window
 
     def loop(self, your_loop):
+        """A custom decorator function that turns a function into the main loop of the program."""
         while self._running:
             self._refresh(self.window)
             your_loop()
 
     def running(self, window:_CustomRenderer) -> bool:
+        """Returns if the window is running. Used for the main loop."""
         self._refresh(window)
         return self._running
 
     def _refresh(self, window: _CustomRenderer) -> None:
+        """Does all things for refreshing window. (Not for the user)"""
         self.window = window
 
         sdl2.SDL_UpdateWindowSurface(window.window)

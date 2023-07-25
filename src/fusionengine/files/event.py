@@ -6,17 +6,18 @@ class Event:
         pass
 
     def key_down(self, key: int, window: window._CustomRenderer) -> bool:
+        """Checks if a key is pressed down."""
         event = window.event
-        if event.type == sdl2.SDL_KEYDOWN:
-            if event.key.keysym.sym == key:
-                return True
-        return False
+        if event.type == sdl2.SDL_KEYDOWN and event.key.keysym.sym == key:
+            return True
+        
     def key_down_once(self, key: int, window: window._CustomRenderer) -> bool:
         return False
 
 
 class Keys:
     def __init__(self):
+        """A class that contains all the keys."""
         self.KEY_UNKNOWN = sdl2.SDLK_UNKNOWN
         self.KEY_RETURN = sdl2.SDLK_RETURN
         self.KEY_ESCAPE = sdl2.SDLK_ESCAPE

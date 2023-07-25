@@ -6,6 +6,7 @@ from fusionengine.files.imports import *
 
 class Main:
     def __init__(self):
+        """A class that contains all the functions and classes. You need to initialize this class to use the engine."""
         sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
         self.window = window.Window()
         self.color = color.Colors()
@@ -22,6 +23,7 @@ class Main:
         self.debug = debug.DebugFiles()
 
     def quit(self, window):
+        """Quits the engine."""
         sdl2.SDL_DestroyRenderer(window.renderer)
         sdl2.SDL_DestroyWindow(window.window)
         del window

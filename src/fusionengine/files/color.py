@@ -1,5 +1,6 @@
 class Colors:
     def __init__(self):
+        """A class that contains all the colors in RGBA format."""
         self.BLUE = (0, 0, 255, 255)
         self.BLACK = (0, 0, 0, 255)
         self.WHITE = (255, 255, 255, 255)
@@ -33,4 +34,13 @@ class Colors:
         self.SALMON = (250, 128, 114, 255)
         self.SCARLET = (255, 36, 0, 255)
         self.TOMATO = (255, 99, 71, 255)
+
+class ColorTools:
+    def __init__(self):
+        pass
+
+    def hex_to_rgba(self, hex):
+        """Converts (#)RRGGBB to [R, G, B, 255]."""
+        hex6 = hex.replace('#', '')
+        return int(hex6[:2], 16), int(hex6[2:4], 16), int(hex6[4:6], 16), 255
 

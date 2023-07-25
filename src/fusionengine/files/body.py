@@ -7,7 +7,8 @@ import fusionengine.files.draw as draw_fe
 
 class _RigidBody:
     def __init__(self, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
-        self._body = data.DataBodies(window, x, y, width, height)
+        """A class that creates a new rigid body. (Not for the user)"""
+        self._body = data._DataBodies(window, x, y, width, height)
         self.window = window
         self.x = x
         self.y = y
@@ -18,7 +19,8 @@ class _RigidBody:
 
 class _StaticBody:
     def __init__(self, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
-        self._body = data.DataBodies(window, x, y, width, height)
+        """A class that creates a new static body. (Not for the user)"""
+        self._body = data._DataBodies(window, x, y, width, height)
         self.window = window
         self.x = x
         self.y = y
@@ -29,6 +31,7 @@ class _StaticBody:
 
 class Entity:
     def __init__(self, bodytype: str, window: window._CustomRenderer, x: int, y: int, width: int, height: int) -> None:
+        """A class that creates a new entity."""
         self._addspace = []
         self.x = x
         self.y = y
@@ -61,6 +64,7 @@ class Entity:
         self._addspaces()
 
     def image(self, window: window._CustomRenderer, image_path: str, x: int, y: int, width: int, height: int) -> None:
+        """Gives the entity an image and laters draws it on the screen."""
         drawimage = self.image_fe.open_image(window, image, x, y, width, height)
         self.image_fe.draw_image(drawimage)
         self.image_path = image_path
@@ -71,6 +75,7 @@ class Entity:
         self.height = height
 
     def new_rect(self, window: window._CustomRenderer, color: tuple) -> None:
+        """Gives the entity a rectangle and later draws it on the screen."""
         self.draw_fe.draw_rect(window,
                       self.x,
                       self.y,
@@ -79,15 +84,19 @@ class Entity:
                       color
                       )
     def set_gravity(self, gravity: int) -> None:
+        """Sets the gravity of the entity."""
         self.gravity = gravity
         self.body.space.gravity = self.gravity
 
     def set_mass(self, mass: int) -> None:
+        """Sets the mass of the entity."""
         self.box.mass = mass
 
     def _set_body_data(self, x, y, width, height, space) -> None:
+        """Function that sets the body data. (Not for the user)"""
         space.position = x, y
 
     def _addspaces(self) -> None:
+        """Function that adds the spaces to the body list. (Not for the user)"""
         for space in self._addspace:
             self.body.space.add(space)
