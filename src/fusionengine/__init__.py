@@ -11,6 +11,7 @@ class Main:
         sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
         self.window = window.Window()
         self.color = color.Colors()
+        self.colortools = color.ColorTools()
         self.event = event.Event()
         self.keys = event.Keys()
         self.draw = draw.Draw()
