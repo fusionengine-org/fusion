@@ -65,7 +65,7 @@ class Entity:
 
     def image(self, window: window._CustomRenderer, image_path: str, x: int, y: int, width: int, height: int) -> None:
         """Gives the entity an image and laters draws it on the screen."""
-        drawimage = self.image_fe.open_image(window, image, x, y, width, height)
+        drawimage = self.image_fe.open_image(window, image_path, x, y, width, height)
         self.image_fe.draw_image(drawimage)
         self.image_path = image_path
         self.window = window
