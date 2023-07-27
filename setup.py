@@ -24,9 +24,25 @@ class clean(Command):
     def finalize_options(self):
         pass
 
+    def delete_c_files(self, directory):
+        for root, _, files in os.walk(directory):
+            for file in files:
+                if file.endswith(".c"):
+                    path = os.path.join(root, file)
+                    print("removing", path)
+                    os.remove(path)
+
     def run(self):
         removed_dirs = 0
         removed_files = 0
+
+        c_file_dirs = [
+            "src/fusionengine",
+            "src/fusionengine/files",
+        ]
+        for dir in c_file_dirs:
+            self.delete_c_files(dir)
+
         for dir in self.CLEAN_DIRS:
             dir = os.path.relpath(dir)
             for path in glob.glob(os.path.join(dir, "**/*"), recursive=True):
