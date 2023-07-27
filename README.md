@@ -26,14 +26,24 @@ To install our package, run this:
 
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
-### Latest build
+### Install from source
+
+if you want to install the package from source then you do it like this:
+
+```bash
+ git clone https://github.com/dimkauzh/fusion-engine
+ cd fusion-engine
+ python setup.py install
+```
+
+### Developer build
 
 if you want to get the latest changes then follow this instruction:
 
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine
  cd fusion-engine
- pip install -e .
+ python setup.py install_dev
 ```
 
 ### Run example
