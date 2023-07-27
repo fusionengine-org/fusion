@@ -2,7 +2,7 @@ import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
 
 class _CustomRenderer:
-    def __init__(self, window: sdl2.SDL_CreateWindow) -> None:
+    def __init__(self, window: sdl2.SDL_CreateWindow, title: str, width: int, height: int) -> None:
         """A class that creates a new custom renderer. (Not for the user)
 
         Args:
@@ -10,17 +10,14 @@ class _CustomRenderer:
         """        """"""
         self.window = window
 
-        self.width = None
-        self.height = None
+        self.title = title
+        self.width = width
+        self.height = height
+        self.size = (self.width, self.height)
 
         self.event = sdl2.SDL_Event()
         self.renderer = sdl2.SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
         sdl2.SDL_SetRenderDrawBlendMode(self.renderer, sdl2.SDL_BLENDMODE_BLEND)
-
-        sdl2.SDL_GetWindowSize(self.window, self.width, self.height)
-        self.title = sdl2.SDL_GetWindowTitle(self.window)
-
-        self.size = (self.width, self.height)
 
 class Window:
     def __init__(self) -> None:
@@ -52,7 +49,7 @@ class Window:
                                        sdl2.SDL_WINDOW_SHOWN
                                        )
         self._running = True
-        self.window = _CustomRenderer(self.window_window)
+        self.window = _CustomRenderer(self.window_window, title, width, height)
 
         return self.window
 
