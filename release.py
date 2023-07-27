@@ -84,5 +84,5 @@ extensions = [
 
 ]
 
-def setup_release():
-    setup(ext_modules=extensions)
+
+setup(ext_modules=extensions)
