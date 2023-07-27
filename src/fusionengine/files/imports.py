@@ -20,3 +20,4 @@ import fusionengine.files.window as window
 import fusionengine.files.ui as ui
 import fusionengine.files.fonts as fonts
 import fusionengine.files.debug as debug
+import fusionengine.files.vector as vector

@@ -23,6 +23,7 @@ class Main:
         self.ui = ui.UI()
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
+        self.vector = vector.Vectors()
 
     def quit(self, window):
         """Quits the engine.
