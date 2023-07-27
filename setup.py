@@ -34,6 +34,18 @@ class clean(Command):
                 shutil.rmtree(dir)
         print(f"removed {removed_files} files and {removed_dirs} directories")
 
+class release(Command):
+    user_options = []
 
+    def initialize_options(self):
+        pass
 
-setup(cmdclass={"clean": clean})
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        os.system("python setup.py clean")
+        os.system("python setup.py sdist bdist_wheel")
+        os.system("python -m twine upload dist/*")
+
+setup(cmdclass={"clean": clean, "release": release})
