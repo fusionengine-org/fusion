@@ -73,7 +73,9 @@ See at [our website](https://dimkauzh.github.io/fusion-engine/)
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
 
 - [x] Engine
-  - [x] Create window
+  - [x] Window
+    - [x] Create window
+    - [x] Get data from window
   - [x] Draw shapes
   - [x] Draw images
   - [x] Input
@@ -81,6 +83,12 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [x] Rendering options
   - [x] Delta-Time
   - [x] Pip package and SetupTools
+  - [x] Cython
+    - [x] Implement cython for extra speed
+    - [x] Dev version without cython
+  - [ ] Vectors (stores x and y coordinates)
+    - [x] Create vector
+    - [ ] Vector build into entity (vectors but with width and height)
   - [ ] Physics system using PyMunk
     - [x] Gravity
     - [x] Rendering
@@ -123,8 +131,9 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 
 - PySDL2 is used for rendering and windowing
 - PySDL2-DLL is used by PySDL2 for SDL2 binaries
+- Cython for compiling and speed-up
 - PyMunk is used for physics simulation
-- Custom build in UI for UI
+- Custom UI library based on PySDL2 for UI
 - Setuptools for PyPi package
 - Json for storing data
 
