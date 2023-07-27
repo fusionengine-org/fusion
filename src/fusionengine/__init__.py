@@ -30,7 +30,7 @@ class Main:
 
         Args:
             window: Your window
-        """        
+        """
         sdl2.SDL_DestroyRenderer(window.renderer)
         sdl2.SDL_DestroyWindow(window.window)
         del window
