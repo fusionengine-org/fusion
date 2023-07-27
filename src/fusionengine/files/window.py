@@ -9,12 +9,18 @@ class _CustomRenderer:
             window (sdl2.SDL_CreateWindow): An created sdl2 window
         """        """"""
         self.window = window
+
         self.width = None
         self.height = None
+
         self.event = sdl2.SDL_Event()
         self.renderer = sdl2.SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
         sdl2.SDL_SetRenderDrawBlendMode(self.renderer, sdl2.SDL_BLENDMODE_BLEND)
+
         sdl2.SDL_GetWindowSize(self.window, self.width, self.height)
+        self.title = sdl2.SDL_GetWindowTitle(self.window)
+
+        self.size = (self.width, self.height)
 
 class Window:
     def __init__(self) -> None:
