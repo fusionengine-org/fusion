@@ -31,7 +31,7 @@ Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 if you want to install the package from source then you do it like this:
 
 ```bash
- git clone https://github.com/dimkauzh/fusion-engine
+ git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
  python setup.py install
 ```
@@ -41,7 +41,7 @@ if you want to install the package from source then you do it like this:
 if you want to get the latest changes then follow this instruction:
 
 ```bash
- git clone https://github.com/dimkauzh/fusion-engine
+ git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
  python setup.py install_dev
 ```
@@ -51,7 +51,7 @@ if you want to get the latest changes then follow this instruction:
 If you want to run the example, then just run this command:
 
 ```bash
- git clone https://github.com/dimkauzh/fusion-engine
+ git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
  python examples/example1.py
 ```
@@ -71,6 +71,8 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 - XCarCedo (Contributing)
 - Techsplosion (Bug hunter)
 - FBS_Gamer (Discord server)
+
+And our community of course!
 
 ## 📃 Documentation
 
