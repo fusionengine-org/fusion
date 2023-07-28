@@ -1,5 +1,6 @@
 import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
+import time
 
 
 class _CustomRenderer:
@@ -27,10 +28,10 @@ class Window:
     def __init__(self) -> None:
         """A class that contains all the window functions."""
         self._running = False
-        self._NOW = sdl2.SDL_GetPerformanceCounter()
-        self._LAST = 0
+        self._LAST = time.time()
         self.DELTATIME = 0
         self._entity = []
+        self._fps = 60
 
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
         """Creates a new window.
@@ -79,6 +80,14 @@ class Window:
         self._refresh(window)
         return self._running
 
+    def set_fps(self, fps: int) -> None:
+        """Sets the desired frames per second for the game loop.
+
+        Args:
+            fps (int): The desired frames per second
+        """
+        self._fps = fps
+
     def _refresh(self, window: _CustomRenderer) -> None:
         """Does all things for refreshing window. (Not for the user)
 
@@ -93,10 +102,15 @@ class Window:
         sdl2.SDL_SetRenderDrawColor(self.window.renderer, 0, 0, 0, 255)
         sdl2.SDL_RenderClear(self.window.renderer)
 
-        self._LAST = self._NOW
-        self._NOW = sdl2.SDL_GetPerformanceCounter()
-
-        self.DELTATIME = (self._NOW - self._LAST) * 1000 / sdl2.SDL_GetPerformanceFrequency()
+        now = time.time()
+        self.DELTATIME = (now - self._LAST) * 1000
+        self._LAST = now
 
         if sdl2.SDL_PollEvent(window.event) != 0 and window.event.type == sdl2.SDL_QUIT:
             self._running = False
+
+        # Control frame rate
+        target_frame_time = 1000 / self._fps
+        elapsed_frame_time = self.DELTATIME
+        if elapsed_frame_time < target_frame_time:
+            time.sleep((target_frame_time - elapsed_frame_time) / 1000.0)
