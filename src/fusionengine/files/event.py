@@ -1,6 +1,7 @@
 from fusionengine.files.imports import *
 import fusionengine.files.window as window
 
+
 class Event:
     def __init__(self) -> None:
         pass
@@ -10,7 +11,8 @@ class Event:
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN and event.key.keysym.sym == key:
             return True
-        
+        return False
+
     def key_down_once(self, key: int, window: window._CustomRenderer) -> bool:
         return False
 

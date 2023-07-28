@@ -1,13 +1,14 @@
 import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
 
+
 class _CustomRenderer:
     def __init__(self, window: sdl2.SDL_CreateWindow, title: str, width: int, height: int) -> None:
         """A class that creates a new custom renderer. (Not for the user)
 
         Args:
             window (sdl2.SDL_CreateWindow): An created sdl2 window
-        """        """"""
+        """
         self.window = window
 
         self.title = title
@@ -16,13 +17,15 @@ class _CustomRenderer:
         self.size = (self.width, self.height)
 
         self.event = sdl2.SDL_Event()
-        self.renderer = sdl2.SDL_CreateRenderer(self.window, -1, sysconfig.RendererOptions().rendererflag)
+        self.renderer = sdl2.SDL_CreateRenderer(
+            self.window, -1, sysconfig.RendererOptions().rendererflag
+        )
         sdl2.SDL_SetRenderDrawBlendMode(self.renderer, sdl2.SDL_BLENDMODE_BLEND)
+
 
 class Window:
     def __init__(self) -> None:
-        """A class that contains all the window functions.
-        """        """"""
+        """A class that contains all the window functions."""
         self._running = False
         self._NOW = sdl2.SDL_GetPerformanceCounter()
         self._LAST = 0
@@ -30,7 +33,7 @@ class Window:
         self._entity = []
 
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
-        """ Creates a new window.
+        """Creates a new window.
 
         Args:
             title (str): Your window title
@@ -40,30 +43,31 @@ class Window:
         Returns:
             window: Custom window class with all you need features
         """
-        encoded_title = title.encode('utf-8')
-        self.window_window = sdl2.SDL_CreateWindow(encoded_title,
-                                       sdl2.SDL_WINDOWPOS_CENTERED,
-                                       sdl2.SDL_WINDOWPOS_CENTERED,
-                                       width,
-                                       height,
-                                       sdl2.SDL_WINDOW_SHOWN
-                                       )
+        encoded_title = title.encode("utf-8")
+        self.window_window = sdl2.SDL_CreateWindow(
+            encoded_title,
+            sdl2.SDL_WINDOWPOS_CENTERED,
+            sdl2.SDL_WINDOWPOS_CENTERED,
+            width,
+            height,
+            sdl2.SDL_WINDOW_SHOWN,
+        )
         self._running = True
         self.window = _CustomRenderer(self.window_window, title, width, height)
 
         return self.window
 
-    def loop(self, your_loop: callable):
-        """A custom decorator function that turns a function into the main loop of the program.
+    def loop(self, your_loop) -> None:
+        """A while loop decorator function.
 
         Args:
-            your_loop (callable): Your main loop function (with decorator before it)
+            your_loop (callable): Your main loop function
         """
         while self._running:
             self._refresh(self.window)
             your_loop()
 
-    def running(self, window:_CustomRenderer) -> bool:
+    def running(self, window: _CustomRenderer) -> bool:
         """Returns if the window is running. Used for the main loop.
 
         Args:
@@ -71,7 +75,7 @@ class Window:
 
         Returns:
             bool: returns true if the window is running else false
-        """        
+        """
         self._refresh(window)
         return self._running
 
@@ -80,7 +84,7 @@ class Window:
 
         Args:
             window: Your window
-        """        
+        """
         self.window = window
 
         sdl2.SDL_UpdateWindowSurface(window.window)
@@ -89,11 +93,10 @@ class Window:
         sdl2.SDL_SetRenderDrawColor(self.window.renderer, 0, 0, 0, 255)
         sdl2.SDL_RenderClear(self.window.renderer)
 
-
         self._LAST = self._NOW
         self._NOW = sdl2.SDL_GetPerformanceCounter()
 
-        self.DELTATIME = (self._NOW - self._LAST)*1000 / sdl2.SDL_GetPerformanceFrequency()
+        self.DELTATIME = (self._NOW - self._LAST) * 1000 / sdl2.SDL_GetPerformanceFrequency()
 
         if sdl2.SDL_PollEvent(window.event) != 0 and window.event.type == sdl2.SDL_QUIT:
             self._running = False

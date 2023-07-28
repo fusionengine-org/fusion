@@ -4,10 +4,10 @@ __version__ = "0.3.0"
 import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
 
+
 class Main:
     def __init__(self):
-        """A class that contains all the functions and classes. You need to initialize this class to use the engine.
-        """
+        """A class that contains all the functions for the engine."""
         sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
         self.window = window.Window()
         self.color = color.Colors()

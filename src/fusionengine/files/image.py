@@ -2,16 +2,28 @@ from fusionengine.files.imports import *
 import fusionengine.files.window as window
 import fusionengine.files.shape as shape
 
+
 class _CustomImage:
-    def __init__(self, window: window._CustomRenderer, texture, rect: shape._CustomShape) -> None:
+    def __init__(
+        self, window: window._CustomRenderer, texture, rect: shape._CustomShape
+    ) -> None:
         """A class that creates a new custom image. (Not for the user)"""
         self.window = window
         self.renderer = window.renderer
         self.texture = texture
         self.rect = rect
 
+
 class Image:
-    def open_image(self, window: window._CustomRenderer, image, x: int, y: int, width: int, height: int) -> _CustomImage:
+    def open_image(
+        self,
+        window: window._CustomRenderer,
+        image,
+        x: int,
+        y: int,
+        width: int,
+        height: int,
+    ) -> _CustomImage:
         """Opens an image. Can be later rendered with draw_image."""
         image = sdl2.ext.load_image(image)
         texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, image)

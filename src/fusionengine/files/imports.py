@@ -1,9 +1,9 @@
 import warnings
 
 with warnings.catch_warnings():
-	warnings.simplefilter("ignore")
-	import sdl2
-	import sdl2.ext
+    warnings.simplefilter("ignore")
+    import sdl2
+    import sdl2.ext
 
 import ctypes
 import time
