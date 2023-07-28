@@ -6,7 +6,7 @@ class Event:
     def __init__(self) -> None:
         pass
 
-    def key_down(self, window: window._CustomRenderer, key: int) -> bool:
+    def key_down(self, key: int, window: window._CustomRenderer) -> bool:
         """Checks if a key is pressed down."""
         event = window.event
         if event.type == sdl2.SDL_KEYDOWN and event.key.keysym.sym == key:
