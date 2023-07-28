@@ -16,16 +16,16 @@ def loop():
 
     player.new_rect(window, main.color.AQUA)
 
-    if main.event.key_down(window, main.keys.KEY_UP):
+    if main.event.key_down(main.keys.KEY_UP, window):
         player.y = int(player.y - speed)
 
-    elif main.event.key_down(window, main.keys.KEY_DOWN):
+    elif main.event.key_down(main.keys.KEY_DOWN, window):
         player.y = int(player.y + speed)
 
-    elif main.event.key_down(window, main.keys.KEY_RIGHT):
+    elif main.event.key_down(main.keys.KEY_RIGHT, window):
         player.x = int(player.x + speed)
 
-    elif main.event.key_down(window, main.keys.KEY_LEFT):
+    elif main.event.key_down(main.keys.KEY_LEFT, window):
         player.x = int(player.x - speed)
 
 
