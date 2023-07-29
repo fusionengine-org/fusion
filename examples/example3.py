@@ -27,6 +27,3 @@ def loop():
 
     elif main.event.key_down(main.keys.KEY_LEFT, window):
         player.x = int(player.x - speed)
-
-
-main.quit(window)

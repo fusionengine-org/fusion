@@ -1,9 +1,8 @@
-import warnings
+import os
 
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore")
-    import sdl2
-    import sdl2.ext
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
+
+import pygame as pg
 
 import ctypes
 import time

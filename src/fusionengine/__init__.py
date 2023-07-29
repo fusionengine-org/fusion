@@ -1,14 +1,15 @@
 __author__ = "Dimkauzh"
 __version__ = "0.3.0"
 
-import fusionengine.files.systems as sysconfig
 from fusionengine.files.imports import *
+import fusionengine.files.systems as sysconfig
 
 
 class Main:
     def __init__(self):
         """A class that contains all the functions for the engine."""
-        sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
+        pg.init()
+
         self.window = window.Window()
         self.color = color.Colors()
         self.colortools = color.ColorTools()
@@ -16,22 +17,10 @@ class Main:
         self.keys = event.Keys()
         self.draw = draw.Draw()
         self.image = image.Image()
-        self.body = body
+        # self.body = body
         self.system = sysconfig.System()
-        self.rendereroptions = sysconfig.RendererOptions()
         self.shape = shape.Shapes()
-        self.ui = ui.UI()
+        # self.ui = ui.UI()
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
-
-    def quit(self, window):
-        """Quits the engine.
-
-        Args:
-            window: Your window
-        """
-        sdl2.SDL_DestroyRenderer(window.renderer)
-        sdl2.SDL_DestroyWindow(window.window)
-        del window
-        sdl2.SDL_Quit()

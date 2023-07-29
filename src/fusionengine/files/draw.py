@@ -6,46 +6,36 @@ import fusionengine.files.shape as shape
 
 
 class Draw:
-    def __init__(self) -> None:
-        self.rendereroptions = sysconfig.RendererOptions()
-
     def draw_line(
         self, window: window._CustomRenderer, x1: int, y1: int, x2: int, y2: int, color: tuple
     ) -> None:
         """Draws a line on the screen."""
-        sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
-
-        sdl2.SDL_RenderDrawLine(window.renderer, x1, y1, x2, y2)
+        pg.draw.line(window.window, color, (x1, y1), (x2, y2))
 
     def draw_line_rect(
         self, window: window._CustomRenderer, x: int, y: int, width: int, height: int, color: tuple
     ) -> None:
         """Draws a rectangle that exists of lines on the screen."""
-        rdr = window.renderer
-        self.draw_line(rdr, x, y, x + width, y, color)
-        self.draw_line(rdr, x, y + height, x + width, y + height, color)
-        self.draw_line(rdr, x, y, x, y + height, color)
-        self.draw_line(rdr, x + width, y, x + width, y + height, color)
+        rdr = window.window
+        pg.draw.line(rdr, color, (x, y), (x + width, y))
+        pg.draw.line(rdr, color, (x, y + height), (x + width, y + height))
+        pg.draw.line(rdr, color, (x, y), (x, y + height))
+        pg.draw.line(rdr, color, (x + width, y), (x + width, y + height))
 
     def draw_rect(
         self, window: window._CustomRenderer, x: int, y: int, width: int, height: int, color: tuple
     ) -> None:
         """Draws a rectangle on the screen."""
-        sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
-
-        rect = sdl2.SDL_Rect(x, y, width, height)
-        sdl2.SDL_RenderFillRect(window.renderer, rect)
+        s = pg.Surface((width, height), pg.SRCALPHA)
+        s.fill((color[0], color[1], color[2], color[3]))
+        window.window.blit(s, (x, y))
 
     def draw_own_rect(self, window: window._CustomRenderer, rect: shape._CustomShape) -> None:
         """Draws your rectangle on the screen."""
-        sdl2.SDL_SetRenderDrawColor(
-            window.renderer, rect.color[0], rect.color[1], rect.color[2], rect.color[3]
-        )
-
-        sdl2.SDL_RenderFillRect(window.renderer, rect.rect)
+        pg.draw.rect(window.window, rect.color, rect.rect)
 
     def set_background_color(self, window: window._CustomRenderer, color: tuple) -> None:
         """Sets the background color of the screen."""
-        sdl2.SDL_SetRenderDrawColor(window.renderer, color[0], color[1], color[2], color[3])
-
-        sdl2.SDL_RenderClear(window.renderer)
+        s = pg.Surface((window.width, window.height), pg.SRCALPHA)
+        s.fill((color[0], color[1], color[2], color[3]))
+        window.window.blit(s, (0, 0))

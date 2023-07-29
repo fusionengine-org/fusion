@@ -4,14 +4,12 @@ import fusionengine.files.shape as shape
 
 
 class _CustomImage:
-    def __init__(
-        self, window: window._CustomRenderer, texture, rect: shape._CustomShape
-    ) -> None:
+    def __init__(self, window: window._CustomRenderer, texture, x: int, y: int) -> None:
         """A class that creates a new custom image. (Not for the user)"""
         self.window = window
-        self.renderer = window.renderer
         self.texture = texture
-        self.rect = rect
+        self.x = x
+        self.y = y
 
 
 class Image:
@@ -25,11 +23,10 @@ class Image:
         height: int,
     ) -> _CustomImage:
         """Opens an image. Can be later rendered with draw_image."""
-        image = sdl2.ext.load_image(image)
-        texture = sdl2.SDL_CreateTextureFromSurface(window.renderer, image)
-        rect = sdl2.SDL_Rect(x, y, width, height)
-        return _CustomImage(window, texture, rect)
+        texture = pg.image.load(image).convert()
+        texture = pg.transform.scale(texture, (width, height))
+        return _CustomImage(window, texture, x, y)
 
     def draw_image(self, image: _CustomImage) -> None:
         """Draws your image (opened with open_image) on the screen."""
-        sdl2.SDL_RenderCopy(image.renderer, image.texture, None, image.rect)
+        image.window.window.blit(image.texture, (image.x, image.y))

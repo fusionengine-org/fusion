@@ -1,3 +1,2 @@
-pysdl2
-pysdl2-dll
+pygame-ce
 pymunk
