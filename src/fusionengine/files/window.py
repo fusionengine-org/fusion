@@ -15,13 +15,11 @@ class _CustomRenderer:
         self.width = width
         self.height = height
         self.size = (self.width, self.height)
-        self.event = pg.event.get()
 
 
 class Window:
     def __init__(self) -> None:
         """A class that contains all the window functions."""
-        print("running")
         self._running = False
         self._fps = 60
         self.clock = pg.time.Clock()
@@ -37,21 +35,14 @@ class Window:
         Returns:
             window: Custom window class with all you need features
         """
-        # try:
-        print("window created")
-        self.window_window = pg.display.set_mode((width, height))
+        try:
+            window_window = pg.display.set_mode((width, height))
+            pg.display.set_caption(title)
+            self._running = True
+            self.window = _CustomRenderer(window_window, title, width, height)
 
-        # except Exception:
-        #    print("Error: Can't create a window.")
-
-        # try:
-        pg.display.set_caption(title)
-
-        # except Exception:
-        #    print("Error: Can't set the window title.")
-
-        self._running = True
-        self.window = _CustomRenderer(self.window_window, title, width, height)
+        except Exception:
+            print("Error: Can't create a window.")
 
         return self.window
 

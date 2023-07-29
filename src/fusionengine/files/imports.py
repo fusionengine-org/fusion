@@ -1,6 +1,8 @@
-import pygame as pg
+import os
 
-# pg.init()
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
+
+import pygame as pg
 
 import ctypes
 import time

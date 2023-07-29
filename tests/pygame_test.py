@@ -1,11 +1,6 @@
 import pygame
 
-pygame.display.init()
-print("Display init")
-pygame.font.init()
-print("font init")
-pygame.mixer.init()
-print("mixer init")
+pygame.init()
 
 screen = pygame.display.set_mode((500, 500))
 
