@@ -1,9 +1,6 @@
-import warnings
+import pygame as pg
 
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore")
-    import sdl2
-    import sdl2.ext
+# pg.init()
 
 import ctypes
 import time
