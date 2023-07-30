@@ -1,2 +1,3 @@
 pygame-ce
+pygame_gui
 pymunk

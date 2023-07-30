@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "0.3.0"
+__version__ = "1.0.0"
 
 from fusionengine.files.imports import *
 import fusionengine.files.systems as sysconfig
@@ -20,7 +20,7 @@ class Main:
         # self.body = body
         self.system = sysconfig.System()
         self.shape = shape.Shapes()
-        # self.ui = ui.UI()
+        self.ui = ui.UI()
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()

@@ -7,7 +7,7 @@ window = main.window.new_window("Fusion Engine", 800, 600)
 
 @main.window.loop
 def loop():
-    main.draw.set_background_color(window, (main.color.BLUE))
+    #main.draw.set_background_color(window, (main.color.BLUE))
 
     button = main.ui.button.new_button(
         window,
