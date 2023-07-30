@@ -42,4 +42,3 @@ fusionengine = ["**/*.png"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-exclude = ["old_gui"]

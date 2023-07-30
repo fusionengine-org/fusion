@@ -3,6 +3,7 @@ import os
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
 
 import pygame as pg
+import pygame_gui as gui
 
 import ctypes
 import time
