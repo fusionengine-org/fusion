@@ -1,20 +1,3 @@
-<html>
-<head>
-  <!-- Other head elements here -->
-
-  <!-- Add the favicon -->
-  <link rel="icon" type="image/x-icon" href="icons/fe.png">
-  <!-- Or use the following for ICO format -->
-  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
-  <!-- Or use the following for SVG format -->
-  <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg"> -->
-</head>
-<body>
-  <!-- Your Markdown content here -->
-</body>
-</html>
-
-
 <h1 align="center">🚀 Fusion Engine</h1>
 
 <p align="center">
