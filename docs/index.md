@@ -1,3 +1,8 @@
+<head>
+  <title>Fusion Engine</title>
+  <link rel="icon" type="image/x-icon" href="icons/fe.png">
+</head>
+
 <h1 align="center">🚀 Fusion Engine</h1>
 
 <p align="center">
