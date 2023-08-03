@@ -1,4 +1,10 @@
-# 🎮 Fusion Engine
+<h1 align="center">Fusion Engine</h1>
+
+<p align="center">
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine"></a>
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/fusion-engine"></a>
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - License" src="https://img.shields.io/badge/Licence%20-%20MIT%20-%20MIT"></a>
+</p>
 
 ## Introduction
 
