@@ -1,4 +1,4 @@
-<h1 align="center">Fusion Engine</h1>
+<h1 align="center">🚀 Fusion Engine</h1>
 
 <p align="center">
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine"></a>
