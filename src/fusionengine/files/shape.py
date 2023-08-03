@@ -9,7 +9,7 @@ class _CustomShape:
         self.width = width
         self.height = height
         self.color = color
-        self.rect = rect = pg.Rect(x, y, width, height)
+        self.rect = pg.Rect(x, y, width, height)
 
 
 class Shapes:
@@ -19,3 +19,7 @@ class Shapes:
     def new_rect(self, x: int, y: int, width: int, height: int, color: tuple) -> _CustomShape:
         """Creates a new rectangle. Can be later rendered with draw_own_rect."""
         return _CustomShape(x, y, width, height, color)
+
+    def new_rect_button(self, x, y, width, height):
+        """Creates a new rectangle button. Can be later rendered with draw_own_rect."""
+        return _CustomShape(x, y, width, height, ())
