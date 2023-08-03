@@ -158,6 +158,9 @@ Fusion Engine is currently (6/14/2023) build with Python and some Python librari
 
 This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project.
 
+### ⭐ Star history
+<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=#dimkauzh/fusion-engine&Date" frameBorder="0"></iframe>
+
 ### 🇺🇦 Ukraine
 
 We as fusion team support Ukraine and we hope it will win. Fusion engine is dedicated to Ukraine fighting the Russian invasion.
