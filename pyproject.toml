@@ -6,11 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "fusion-engine"
 description = "A custom open-source game engine on Python and PySDL2, it's written in pure Python! It's easy and fast!"
 requires-python = ">=3.7"
-license = {text = "LICENSE.md"}
+license = {text = "MIT"}
 authors = [{name = "Dimkauzh", email = "uzhdimka@gmail.com"}]
-keywords = ["game", "python", "gamedev", "game-engine", "sdl2",
-    "game-development", "pure-python", "sdl2-mixer", "sdl2-ttf", "sdl2-image",
-    "python-game", "pysdl2", "sdl2-library", "python-game-library",
+keywords = ["game", "python", "gamedev", "game-engine", "pygame",
+    "game-development", "pure-python", "pygame-mixer", "pygame-ttf", "pygame-image",
+    "python-game", "pygame-library", "python-game-library",
     "python-game-engine", "python-games"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
