@@ -10,6 +10,7 @@ def send_discord_webhook(message):
     response = webhook.execute()
 
 version = fusion.__version__
+author = fusion.__author__
 
-message = f"Fusion Engine {version} of package has been released to PyPI! Check it out at https://pypi.org/project/fusion-engine/{version}"
+message = f"Fusion Engine {version} of package has been released to PyPI by {author}! Check it out at https://pypi.org/project/fusion-engine/{version}"
 send_discord_webhook(message)

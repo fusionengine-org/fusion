@@ -7,6 +7,7 @@ import pygame_gui as gui
 
 import ctypes
 import time
+import sys
 
 import pymunk
 
