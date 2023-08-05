@@ -32,10 +32,12 @@ There is basically no difference, they all are doing the same thing, you use wha
 
 ## Default message
 If you tried using our engine you may have encountered this message being printed to terminal:
+
 ```bash
 Fusion Engine 1.0.2 (Pygame-ce 2.3.0, Python 3.11.4)
 Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine
 ```
+
 To disable this behavior, you just give the main class when initting this argument: ``` message=False ```, like this:
 ```python
 import fusionengine as fusion
