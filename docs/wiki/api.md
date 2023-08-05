@@ -101,7 +101,7 @@ Then you need to render it (In the best situation this will happen in your loop)
 main.image.draw_image(image)
 ```
 
-## Create entity (being worked on)
+## Create entity WARNING: PRE ALPHA (may now even be available)
 
 If you want a player or an enemy or some moving object in your game, you can use an entity, thats an object that does some physics for you
 and helps you manage things in your game:
@@ -128,18 +128,14 @@ Creating a small ui for your application/game is easy with our following tools:
 To create a simple button we do the following:
 
 ```python
-    your_button = main.ui.button.new_button(
-        window, # Give the window
-        "Hello World", # Text on your button
-        25, # X
-        25, # Y
-        200, # Width
-        100, # Height
-        main.fonts.NUNITO_LIGHT, # Font (here using one of the buildin fonts)
-        "default", # Font sharpness
-        0, # Test centering
-        main.color.GREEN, # Color for background
-    )
+
+# Create the button outside the loop
+button = main.ui.button.new_button(
+    window,
+    main.shape.new_rect_button(200, 200, 200, 200),
+    "Hello World"
+)
+
 ```
 
 #### Button clicked
@@ -147,18 +143,16 @@ To create a simple button we do the following:
 If you want to check if your button was pressed or is being pressed, then you do that this way:
 
 ```python
-@your_button.button_pressed
-def button_pressed():
-    ... # Do your stuff
+@main.window.loop
+def loop():
+    if button.button_pressed():
+        ... # Do your stuff
 ```
 
 ## Quit
 
-To quit the application, you run this command on the end of your code:
+The quitting of the engine is done automaticly for you, so you dont have to worry about it.
 
-```python
-main.quit(window)
-```
 
 [Back](wiki.md)
 [Next](color_api.md)
