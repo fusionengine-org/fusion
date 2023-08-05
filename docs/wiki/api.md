@@ -76,6 +76,7 @@ main.shape.new_rect(x, y, width, height, color)
 ## Draw rectangle
 
 If you just want to draw a rectangle to test or to use it for your game/app, then you have two options:
+
 Option one: just draw a rectangle
 
 ```python
@@ -154,7 +155,6 @@ def loop():
 ## Quit
 
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
-
 
 [Back](wiki.md)
 [Next](color_api.md)
