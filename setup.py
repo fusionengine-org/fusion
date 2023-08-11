@@ -77,9 +77,6 @@ class install(Command):
     def finalize_options(self):
         pass
     def run(self):
-        sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-        from release import setup_release
-
         os.system("python release.py")
 
 class install_dev(Command):
