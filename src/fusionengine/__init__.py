@@ -17,7 +17,7 @@ class Main:
         self.keys = event.Keys()
         self.draw = draw.Draw()
         self.image = image.Image()
-        # self.body = body
+        self.body = body
         self.system = sysconfig.System()
         self.shape = shape.Shapes()
         self.ui = ui.UI()
@@ -25,7 +25,9 @@ class Main:
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
 
-        if args != ('message=False',):
+        if args != ("message=False",):
             python_version = sys.version.split()[0]
-            print(f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})")
+            print(
+                f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})"
+            )
             print("Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine")

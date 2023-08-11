@@ -3,7 +3,9 @@ from fusionengine.files.imports import *
 
 
 class _CustomRenderer:
-    def __init__(self, window: pg.Surface, title: str, width: int, height: int, manager) -> None:
+    def __init__(
+        self, window: pg.Surface, title: str, width: int, height: int, manager
+    ) -> None:
         """A class that creates a new custom renderer. (Not for the user)
 
         Args:
@@ -17,6 +19,7 @@ class _CustomRenderer:
         self.size = (self.width, self.height)
 
         self.manager = manager
+
 
 class Window:
     def __init__(self) -> None:
@@ -41,7 +44,9 @@ class Window:
             pg.display.set_caption(title)
             self.manager = gui.UIManager((800, 600))
             self._running = True
-            self.window = _CustomRenderer(window_window, title, width, height, self.manager)
+            self.window = _CustomRenderer(
+                window_window, title, width, height, self.manager
+            )
 
         except Exception:
             print("Error: Can't create a window.")
@@ -89,9 +94,9 @@ class Window:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 self._running = False
-            
+
             self.manager.process_events(event)
-        
+
         self.manager.update(self.DELTATIME)
         self.manager.draw_ui(window.window)
 

@@ -6,7 +6,7 @@ import fusionengine.files.shape as shape
 
 class _CustomButton:
     def __init__(
-        self, window: window._CustomRenderer, rect: shape._CustomShape, text: str
+        self, window: windowfe._CustomRenderer, rect: shape._CustomShape, text: str
     ) -> None:
         """A class that creates a new custom button. (Not for the user)"""
 
@@ -20,13 +20,15 @@ class _CustomButton:
         self.button = gui.elements.UIButton(
             relative_rect=rect.rect, text="Say Hello", manager=self.manager
         )
+
     def button_pressed(self) -> bool:
         """Returns if the button is pressed."""
         return self.button.check_pressed()
 
+
 class Button:
     def new_button(
-        self, window: window._CustomRenderer, rect: shape._CustomShape, text: str
+        self, window: windowfe._CustomRenderer, rect: shape._CustomShape, text: str
     ) -> _CustomButton:
         """Creates a new button for your ui."""
         return _CustomButton(window, rect, text)
@@ -35,7 +37,7 @@ class Button:
 class Text:
     def print_text(
         self,
-        window: window._CustomRenderer,
+        window: windowfe._CustomRenderer,
         text: str,
         x: int,
         y: int,
