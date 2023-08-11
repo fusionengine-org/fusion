@@ -77,7 +77,7 @@ class install(Command):
     def finalize_options(self):
         pass
     def run(self):
-        os.system("python release.py")
+        os.system("python release.py install")
 
 class install_dev(Command):
     user_options = []
