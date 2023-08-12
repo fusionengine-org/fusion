@@ -23,7 +23,7 @@ We made this website only for the docs, and nothing more. Here you can find the 
 
 Welcome to the Fusion Engine wiki!
 Here you will find everything you need to start with Fusion Engine! For examples, you can find them on the example page, and for the API, look into the API page.
-Because Fusion Engine is under development, this wiki won't be updated frequently, and some pages might be unfilled.
+Because Fusion Engine is still under development, this wiki won't be updated frequently, and some pages might be unfilled.
 
 ## 📯 Coming features
 
