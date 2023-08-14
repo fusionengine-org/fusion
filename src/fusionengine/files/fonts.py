@@ -2,5 +2,5 @@ class Fonts:
     def __init__(self):
         """A class that contains all the build-in fonts."""
         self.NUNITO_LIGHT = "src/fusionengine/fonts/nunito_sans_light.ttf",
-        self.SAIRACONDENSED-EXTRABOLD = "src/fusionengine/fonts/SairaCondensed-ExtraBold.ttf"
+        self.SAIRACONDENSED_EXTRABOLD = "src/fusionengine/fonts/SairaCondensed-ExtraBold.ttf"
 

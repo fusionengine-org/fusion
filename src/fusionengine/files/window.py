@@ -42,7 +42,12 @@ class Window:
         try:
             window_window = pg.display.set_mode((width, height))
             pg.display.set_caption(title)
+
             self.manager = gui.UIManager((800, 600))
+
+            programIcon = pg.image.load("src/fusionengine/debugfiles/fe.png")
+            pg.display.set_icon(programIcon)
+
             self._running = True
             self.window = _CustomRenderer(
                 window_window, title, width, height, self.manager
@@ -52,6 +57,17 @@ class Window:
             print("Error: Can't create a window.")
 
         return self.window
+    
+    def change_icon(self, image_path):
+        """Changes icon
+        
+        Args:
+            Icon_Path (str): Path to your icon
+
+        """
+        
+        programIcon = pg.image.load(image_path)
+        pg.display.set_icon(programIcon)
 
     def loop(self, your_loop) -> None:
         """A while loop decorator function.
