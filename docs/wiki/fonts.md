@@ -5,6 +5,10 @@ Nunito Sans Light:
 ```python
 main.fonts.NUNITO_LIGHT
 ```
+Saira Condensed Extrabold:
+```python
+main.fonts.SAIRACONDENSED-EXTRABOLD
+```
 
 There will be more fonts available in the future.
 [Back](keys.md)
