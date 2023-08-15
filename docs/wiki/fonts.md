@@ -7,7 +7,7 @@ main.fonts.NUNITO_LIGHT
 ```
 Saira Condensed Extrabold:
 ```python
-main.fonts.SAIRACONDENSED-EXTRABOLD
+main.fonts.SAIRACONDENSED_EXTRABOLD
 ```
 
 There will be more fonts available in the future.

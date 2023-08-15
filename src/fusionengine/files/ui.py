@@ -46,11 +46,16 @@ class Text:
         color: tuple,
     ) -> None:
         """Prints text on the screen."""
-        
-        font = pg.font.SysFont(font_path, font_size)
+
+        if os.path.exists(font_path):
+            font = pg.font.Font(font_path, font_size)
+        else:
+            font = pg.font.SysFont(font_path, font_size)
+
         txtsurf = font.render(text, True, color)
 
         window.window.blit(txtsurf, (x, y))
+
 
 class UI:
     def __init__(self) -> None:

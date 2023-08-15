@@ -57,15 +57,15 @@ class Window:
             print("Error: Can't create a window.")
 
         return self.window
-    
+
     def change_icon(self, image_path):
         """Changes icon
-        
+
         Args:
             Icon_Path (str): Path to your icon
 
         """
-        
+
         programIcon = pg.image.load(image_path)
         pg.display.set_icon(programIcon)
 
