@@ -104,14 +104,33 @@ Then you need to render it (In the best situation this will happen in your loop)
 main.image.draw_image(image)
 ```
 
-## Create entity WARNING: PRE ALPHA (may now even be available)
+## Create entity WARNING: PRE ALPHA (It's in really early stages)
 
-If you want a player or an enemy or some moving object in your game, you can use an entity, thats an object that does some physics for you
-and helps you manage things in your game:
+If you want a player or an enemy or some moving object in your game, you can use an entity, thats an object that
+helps you manage things in your game:
 
 ```python
-entity = main.body.Entity("rigid", window, 100, 100, 50, 50)
+#                                  x    y    w   h
+entity = main.body.Entity(window, 100, 100, 50, 50)
 ```
+
+### Draw rect with entity
+
+If you want to draw a rectangle that is basically in your entity, then you do it like this:
+
+```python
+entity.draw_image(main.color.BLACK)
+
+```
+
+### Draw image with entity
+
+If you want to draw a image on your entity, then you do this:
+
+```python
+entity.image("image_path")
+```
+
 
 ## Keyboard input
 

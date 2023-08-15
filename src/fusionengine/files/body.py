@@ -69,24 +69,13 @@ class Entity:
 
     def image(
         self,
-        window: window._CustomRenderer,
         image_path: str,
-        x: int,
-        y: int,
-        width: int,
-        height: int,
     ) -> None:
         """Gives the entity an image and laters draws it on the screen."""
-        drawimage = self.image_fe.open_image(window, image_path, x, y, width, height)
+        drawimage = self.image_fe.open_image(self.window, image_path, self.x, self.y, self.width, self.height)
         self.image_fe.draw_image(drawimage)
-        self.image_path = image_path
-        self.window = window
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
 
-    def draw_rect(self, window: window._CustomRenderer, color: tuple) -> None:
+    def draw_rect(self, color: tuple) -> None:
         """Gives the entity a rectangle and later draws it on the screen."""
-        self.draw_fe.draw_rect(window, self.x, self.y, self.width, self.height, color)
+        self.draw_fe.draw_rect(self.window, self.x, self.y, self.width, self.height, color)
 
