@@ -171,6 +171,21 @@ def loop():
         ... # Do your stuff
 ```
 
+### Rendering text
+If you want to render some fonts, then you can do it like this:
+
+ - Option 1: Render text with build into fusion or your own font
+```python
+#                                            x   y         font              size      color
+main.ui.text.print_text(window, "Your text", 10, 10, main.fonts.NUNITO_LIGHT, 20, main.color.WHITE)
+```
+
+ - Option 2: Render text with system font
+Its the same option 1, but you change the font to name of the font, like this:
+```python
+main.ui.text.print_text(window, "Your text", 10, 10, "Arial", 20, main.color.WHITE)
+```
+
 ## Quit
 
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
