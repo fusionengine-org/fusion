@@ -168,5 +168,5 @@ compile/
 **/.DS_Store
 
 # Discord webhooks
-discord/send_webhook.py
+discord/
 
