@@ -1,5 +1,6 @@
 import fusionengine as fusion
 
+
 class DebugFiles:
     def __init__(self):
         """A class that contains all the debug files."""

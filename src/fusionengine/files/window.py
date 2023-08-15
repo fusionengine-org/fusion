@@ -1,4 +1,5 @@
 import fusionengine.files.systems as sysconfig
+import fusionengine.files.debug as debugfe
 from fusionengine.files.imports import *
 
 
@@ -45,7 +46,7 @@ class Window:
 
             self.manager = gui.UIManager((800, 600))
 
-            programIcon = pg.image.load("src/fusionengine/debugfiles/fe.png")
+            programIcon = pg.image.load(debugfe.DebugFiles().DEBUGIMAGE)
             pg.display.set_icon(programIcon)
 
             self._running = True
