@@ -15,6 +15,8 @@ button = main.ui.button.new_button(
 def loop():
     main.draw.set_background_color(window, (main.color.BLUE))
 
+    main.ui.text.print_text(window, "test", 10, 10, "Arial", 267, main.color.WHITE)
+
     if button.button_pressed():
         print("Hello World")
 

@@ -41,18 +41,16 @@ class Text:
         text: str,
         x: int,
         y: int,
-        width: int,
-        height: int,
         font_path: str,
         font_size: int,
         color: tuple,
     ) -> None:
         """Prints text on the screen."""
-        font = pg.font.Font(font_path, font_size)
-        text_surface = font.render(text, True, color)
-        text_rect = text_surface.get_rect(center=(x, y))
-        window.window.blit(text_surface, text_rect)
+        
+        font = pg.font.SysFont(font_path, font_size)
+        txtsurf = font.render(text, True, color)
 
+        window.window.blit(txtsurf, (x, y))
 
 class UI:
     def __init__(self) -> None:

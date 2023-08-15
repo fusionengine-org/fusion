@@ -166,3 +166,7 @@ cython_debug/
 # Others
 compile/
 **/.DS_Store
+
+# Discord webhooks
+discord/send_webhook.py
+
