@@ -18,10 +18,6 @@ extensions = [
         sources=["src/fusionengine/files/color.py"],
     ),
     Extension(
-        "fusionengine.files.data",
-        sources=["src/fusionengine/files/data.py"],
-    ),
-    Extension(
         "fusionengine.files.debug",
         sources=["src/fusionengine/files/debug.py"],
     ),
