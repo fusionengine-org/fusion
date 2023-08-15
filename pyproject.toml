@@ -13,7 +13,7 @@ keywords = ["game", "python", "gamedev", "game-engine", "pygame",
     "python-game", "pygame-library", "python-game-library",
     "python-game-engine", "python-games"]
 classifiers = [
-    "Development Status :: 2 - Alpha",
+    "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: MacOS",

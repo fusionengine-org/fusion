@@ -106,19 +106,17 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [x] Cython
     - [x] Implement cython for extra speed
     - [x] Dev version without cython
-  - [ ] Vectors (stores x and y coordinates)
+  - [x] Vectors (stores x and y coordinates)
     - [x] Create vector
-    - [ ] Vector build into entity (vectors but with width and height)
+  - [x] GUI library
+    - [x] Text
+    - [x] Drawing (Build in draw function)
+    - [x] Buttons
   - [ ] Physics system using PyMunk
     - [x] Gravity
     - [x] Rendering
     - [ ] Collision system
     - [ ] Physics shapes
-  - [ ] GUI library
-    - [x] Text
-    - [x] Drawing (Build in draw function)
-    - [x] Buttons
-    - [ ] And more...
   - [ ] Sound system
     - [ ] Sound player
     - [ ] File support
