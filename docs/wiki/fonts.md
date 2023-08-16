@@ -11,4 +11,6 @@ main.fonts.SAIRACONDENSED_EXTRABOLD
 ```
 
 There will be more fonts available in the future.
-[Back](keys.md)
+
+[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/keys.html>)
+[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)

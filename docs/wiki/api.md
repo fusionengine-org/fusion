@@ -190,5 +190,5 @@ main.ui.text.print_text(window, "Your text", 10, 10, "Arial", 20, main.color.WHI
 
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
 
-[Back](wiki.md)
-[Next](color_api.md)
+[Back](https://dimkauzh.github.io/fusion-engine/docs/index.html)
+[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)

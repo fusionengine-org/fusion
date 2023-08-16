@@ -46,5 +46,5 @@ If you want your own color, you just give your function a tuple argument with RG
 ```python
 main.draw.drawRect(window, 100, 100, 400, 400, (255, 255, 255, 0))
 ```
-[Back](api.md)
-[Next](keys.md)
+[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/api.html>)
+[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)

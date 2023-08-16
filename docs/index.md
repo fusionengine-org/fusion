@@ -2,10 +2,10 @@
 Choose what api you need or click next to get send to the first api page
 
  - [Setting up](#setting-up)
- - [Api](wiki/api.md)
- - [Color Api](wiki/color_api.md)
- - [Font Api](wiki/fonts.md)
- - [Key Api](wiki/keys.md)
+ - [Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/api.html>)
+ - [Color Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)
+ - [Font Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)
+ - [Key Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/keys.html>)
 
 
 ## 💻 Setting up
@@ -28,4 +28,4 @@ And after that you need to create a object of our engine to run functions of it:
   main = engine.Main()
 ```
 
-[Next](api.md)
+[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/api.html>)
