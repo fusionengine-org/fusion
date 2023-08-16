@@ -36,7 +36,7 @@ Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
 ### Install from source
 
-if you want to install the package from source then you do it like this:
+if you want to install the package from source and get the latest changes then you do it like this:
 
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
@@ -46,7 +46,7 @@ if you want to install the package from source then you do it like this:
 
 ### Developer build
 
-if you want to get the latest changes then follow this instruction:
+if you want to get the non-cython build and the latest changes then follow this instruction:
 
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
