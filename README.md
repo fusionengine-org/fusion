@@ -21,6 +21,10 @@ games fast and easy!
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 We're working hard to make first release version of it!
+### Website
+
+Our website is at this [link](<http://docs.fusion-engine.tech/>)
+
 
 ## 🗜️ Table of Contents
 
@@ -94,7 +98,7 @@ And our community of course!
 
 ## 📃 Documentation
 
-See at [our websites docs section](https://dimkauzh.github.io/fusion-engine/docs/index.html)
+See at [our websites docs section](http://docs.fusion-engine.tech/)
 
 ## 📯 Coming features
 
