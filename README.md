@@ -21,7 +21,7 @@ games fast and easy!
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 We're working hard to make first release version of it!
-### Website
+### Our Website is hosted at this link
 
 Our website is at this [link](<http://docs.fusion-engine.tech/>)
 
