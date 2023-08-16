@@ -24,7 +24,7 @@ class Main:
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
-        self.fusion-math = fusion-math.Math()
+        self.fusion-math == fusion-math.Math()
 
         if args != ("message=False",):
             python_version = sys.version.split()[0]
