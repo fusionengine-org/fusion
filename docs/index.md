@@ -1,6 +1,5 @@
-
-
 <h1 align="center">🚀 Fusion Engine</h1>
+
 <p align="center">
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/fusion-engine"></a>
@@ -13,17 +12,85 @@
 </p>
 
 
-Fusion is a free open-source game engine for creating graphical applications using the PySDL2 library and the programming language Python. It provides a simple coding interface for creating windows, rendering graphics, and handling user input. It is an engine to create games fast and easy!
+Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
+rendering graphics, and handling user input. It is and engine to create
+games fast and easy!
 
-## 📚 This Website
 
-We made this website only for the docs, and nothing more. Here you can find the docs for the Fusion Engine API. Please keep in mind Fusion Engine is unfinished.
+### 💻 Development
 
-## 📖 Wiki
+Keep in mind that this project is in work, so if you want to see code,
+then it is in dev branch but there is no 'full version' of this project!
+We're working hard to make first alpha version of it!
 
-Welcome to the Fusion Engine wiki!
-Here you will find everything you need to start with Fusion Engine! For examples, you can find them on the example page, and for the API, look into the API page.
-Because Fusion Engine is still under development, this wiki won't be updated frequently, and some pages might be unfilled.
+## 🗜️ Table of Contents
+
+ - [Installation](#installation)
+ - [Community](#community)
+ - [Documentation](wiki/docs.md)
+ - [Coming features](#coming-features)
+ - [License](#license)
+ - [About](#about)
+
+## 💾 Installation
+
+### Using PyPi
+
+To install our package, run this:
+
+```bash
+  pip install fusion-engine
+```
+
+Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
+
+### Install from source
+
+if you want to install the package from source then you do it like this:
+
+```bash
+ git clone https://github.com/dimkauzh/fusion-engine.git
+ cd fusion-engine
+ python setup.py install
+```
+
+### Developer build
+
+if you want to get the latest changes then follow this instruction:
+
+```bash
+ git clone https://github.com/dimkauzh/fusion-engine.git
+ cd fusion-engine
+ python setup.py install_dev
+```
+
+### Run example
+
+If you want to run the example, then just run this command:
+
+```bash
+ git clone https://github.com/dimkauzh/fusion-engine.git
+ cd fusion-engine
+ python examples/example1.py
+```
+
+For different examples, you change the number to the number of the example file
+
+## 👥 Community
+
+Our community is just growing, so if you want to help us with the project,
+it will be very helpful!
+We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc).
+Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
+
+### ❤️ Special thanks to these people
+
+- Zenthm (Contributing)
+- XCarCedo (Contributing)
+- Techsplosion (Bug hunter)
+- FBS_Gamer (Discord server)
+
+And our community of course!
 
 ## 📯 Coming features
 
@@ -74,27 +141,42 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Code editor build in
   - [ ] Run game
 
+💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
 
-### 💻 Using it for Your Project
+## License
 
-To install it run this:
+See [Licence here](LICENCE.md)
 
-```bash
-  pip install fusion-engine
-```
+## 🗄️ About
 
-Then import:
+### ⚙️ Engine
 
-```python
-  import fusionengine as engine
-```
+Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
 
-And after that you need to create a object of our engine to run functions of it:
+- Pygame is used for rendering, windowing, events and more
+- Cython for compiling and speed-up
+- PyMunk is used for physics simulation
+- Custom UI library based on Pygame_gui for UI
+- Setuptools for PyPi package
+- Json for storing data
 
-```python
-  main = engine.Main()
-```
+This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project.
 
-Click next to go to the next page!
+### ⭐ Star History
 
-[Next](wiki/api.md)
+<a href="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&Timeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline" />
+  </picture>
+</a>
+
+### 🇺🇦 Ukraine
+
+We as fusion team support Ukraine and we hope it will win. Fusion engine is dedicated to Ukraine fighting the Russian invasion.
+🇺🇦 Please support Ukraine! 🇺🇦
+
+## 🚀 About Me
+
+A 13-year-old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.

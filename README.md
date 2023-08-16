@@ -22,6 +22,15 @@ Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 We're working hard to make first alpha version of it!
 
+## 🗜️ Table of Contents
+
+ - [Installation](#installation)
+ - [Community](#community)
+ - [Documentation](wiki/docs.md)
+ - [Coming features](#coming-features)
+ - [License](#license)
+ - [About](#about)
+
 ## 💾 Installation
 
 ### Using PyPi
