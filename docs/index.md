@@ -92,6 +92,14 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 And our community of course!
 
+## ❤️ Special thanks to these people
+ - Zenthm (Contributing)
+ - XCarCedo (Contributing)
+ - nmsderp (Contributing)
+ - Techsplosion (Bug hunter)
+ - FBS_Gamer (Discord server)
+And our community of course!
+
 ## 📯 Coming features
 
 ### 🛠️ Features we are working on
