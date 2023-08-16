@@ -26,7 +26,7 @@ We're working hard to make first release version of it!
 
  - [Installation](#installation)
  - [Community](#community)
- - [Documentation](docs/index.md)
+ - [Documentation](#documentation)
  - [Coming features](#coming-features)
  - [License](#license)
  - [About](#about)
@@ -94,7 +94,7 @@ And our community of course!
 
 ## 📃 Documentation
 
-See at [our website](https://dimkauzh.github.io/fusion-engine/docs/index.html)
+See at [our websites docs section](https://dimkauzh.github.io/fusion-engine/docs/index.html)
 
 ## 📯 Coming features
 

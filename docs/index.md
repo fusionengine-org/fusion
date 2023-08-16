@@ -2,10 +2,10 @@
 Choose what api you need or click next to get send to the first api page
 
  - [Setting up](#setting-up)
- - [Api](api.md)
- - [Color Api](color_api.md)
- - [Font Api](fonts.md)
- - [Key Api](keys.md)
+ - [Api](wiki/api.md)
+ - [Color Api](wiki/color_api.md)
+ - [Font Api](wiki/fonts.md)
+ - [Key Api](wiki/keys.md)
 
 
 ## 💻 Setting up
