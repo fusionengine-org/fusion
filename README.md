@@ -77,6 +77,7 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 - Zenthm (Contributing)
 - XCarCedo (Contributing)
+- nmsderp (Contributing)
 - Techsplosion (Bug hunter)
 - FBS_Gamer (Discord server)
 
