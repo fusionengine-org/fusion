@@ -1,4 +1,6 @@
-# 🗜️ Table of Contents
+# Fusion Engine Documentation
+
+## 🗜️ Table of Contents
 Choose what api you need or click next to get send to the first api page
 
  - [Setting up](#setting-up)
