@@ -192,3 +192,6 @@ The quitting of the engine is done automaticly for you, so you dont have to worr
 
 [Back](https://dimkauzh.github.io/fusion-engine/docs/index.html)
 [Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)
+
+
+[Back to main page](https://dimkauzh.github.io/fusion-engine/docs/index.html)

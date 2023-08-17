@@ -1,4 +1,4 @@
-from setuptools import setup, Extension, find_packages
+from setuptools import setup, Extension
 import os
 
 # Get a list of all .py files in the src/fusionengine directory
