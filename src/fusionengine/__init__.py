@@ -24,10 +24,11 @@ class Main:
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
+        self.fusion-math == fusion-math.Math()
 
         if args != ("message=False",):
             python_version = sys.version.split()[0]
             print(
                 f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})"
             )
-            print("Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine")
+            print("Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine. Check out our website at https://fusion-engine.tech/")
