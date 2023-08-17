@@ -6,7 +6,7 @@ Choose what api you need or click next to get send to the first api page
  - [Color Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)
  - [Font Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)
  - [Key Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/keys.html>)
- - [Math Api (Very W.I.P)](<https://dimkauzh.github.io/fusion-engine/docs/wiki/math.html>)
+ - [Math Api](<https://dimkauzh.github.io/fusion-engine/docs/wiki/math.html>)
 
 
 ## 💻 Setting up
