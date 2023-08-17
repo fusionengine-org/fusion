@@ -1,7 +1,3 @@
-<head>
-    <link rel="icon" type="image/png" href="gui/assets/icon/fe.png">
-</head>
-
 <h1 align="center">🚀 Fusion Engine</h1>
 
 <p align="center">
