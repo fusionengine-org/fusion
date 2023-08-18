@@ -128,15 +128,10 @@ We are working hard to implement very basic and complex stuff so our engine beco
     - [x] Text
     - [x] Drawing (Build in draw function)
     - [x] Buttons
-  - [ ] Physics system using PyMunk
-    - [x] Gravity
-    - [x] Rendering
-    - [ ] Collision system
-    - [ ] Physics shapes
-  - [ ] Sound system
-    - [ ] Sound player
-    - [ ] File support
-    - [ ] And more...
+  - [x] Sound system
+    - [x] Sound player
+    - [x] File support
+    - [x] And more...
 - [ ] CLI
   - [ ] Create CLI to build your game
   - [ ] Creates a full project
@@ -150,6 +145,12 @@ We are working hard to implement very basic and complex stuff so our engine beco
   - [ ] Editor
   - [ ] Code editor build in
   - [ ] Run game
+
+- [ ] Physics system using PyMunk
+  - [ ] Gravity
+  - [ ] Rendering
+  - [ ] Collision system
+  - [ ] Physics shapes
 
 💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
 
