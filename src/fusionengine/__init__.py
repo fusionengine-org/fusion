@@ -25,10 +25,13 @@ class Main:
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
         self.math = math.Math()
+        self.sound = sound.Sound()
 
         if args != ("message=False",):
             python_version = sys.version.split()[0]
             print(
                 f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})"
             )
-            print("Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine. Check out our website at https://fusion-engine.tech/")
+            print(
+                "Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine. Check out our website at https://fusion-engine.tech/"
+            )
