@@ -1,4 +1,4 @@
-## Types of PI in fusion engine
+## Types of PI in Fusion Engine
 These are used for certain miscellaneous math things.
 
 Full version of pi (3.141592653589793238462643383279502884197):
@@ -9,7 +9,7 @@ A slightly smaller version that python's math library uses (3.141592653589793):
 ```python
 	main.math.SMALLERPI
 ```
-An extermly shortened version of pi (3.14):
+An extremely shortened version of pi (3.14):
 ```python
 	main.math.SMALLPI
 ```
