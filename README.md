@@ -24,8 +24,9 @@ games fast and easy!
 - [Website](#website)
 - [Installation](#installation)
 - [Community](#community)
-- [Documentation](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
-- [API](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
+- [Tutorials](http://tutorials.fusion-engine.tech/)
+- [Documentation](http://docs.fusion-engine.tech/)
+- [Wiki](http://docs.fusion-engine.tech/)
 - [Coming features](#coming-features)
 - [License](#license)
 - [About](#about)
@@ -101,9 +102,14 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 
 And our community of course!
 
-## 📃 Documentation
+## Tutorials
+Are you exited to start with fusion engine but you dont know where to start? Then maybe its worth looking though one of our tutorials! We tried to make them as simple as possible but still very informative. You can find them [here](<http://tutorials.fusion-engine.tech/>)
 
-See at [our websites docs section](http://docs.fusion-engine.tech/)
+
+## 📃 Documentation And WIKI
+
+Do you need to figure out how to use a function or just want to know what it does? Then our wiki are perfect for you! But do you want to know if there is a specific function? Then the docs are perfect for you!
+See at [our websites docs/wiki section](http://docs.fusion-engine.tech/)
 
 ## 📯 Coming features
 
