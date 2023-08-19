@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "1.1.2"
+__version__ = "1.1.4"
 
 from fusionengine.files.imports import *
 import fusionengine.files.systems as sysconfig

@@ -55,6 +55,7 @@ class clean(Command):
                 shutil.rmtree(dir)
         print(f"removed {removed_files} files and {removed_dirs} directories")
 
+
 class release(Command):
     user_options = []
 
@@ -70,22 +71,31 @@ class release(Command):
         os.system("python -m twine upload dist/*")
         os.system("python discord/send_webhook.py")
 
+
 class install(Command):
     user_options = []
+
     def initialize_options(self):
         pass
+
     def finalize_options(self):
         pass
+
     def run(self):
         os.system("python release.py install")
 
+
 class install_dev(Command):
     user_options = []
+
     def initialize_options(self):
         pass
+
     def finalize_options(self):
         pass
+
     def run(self):
         os.system("pip install -e .")
+
 
 setup(cmdclass={"clean": clean, "release": release, "install": install, "install_dev": install_dev})
