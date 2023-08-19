@@ -18,24 +18,27 @@ Fusion is a game engine for creating graphical applications using the Pygame lib
 rendering graphics, and handling user input. It is and engine to create
 games fast and easy!
 
-### 💻 Development
+## 🗜️ Table of Contents
+
+- [Development](#development)
+- [Website](#website)
+- [Installation](#installation)
+- [Community](#community)
+- [Documentation](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
+- [API](<https://dimkauzh.github.io/fusion-engine/docs/index.html>
+- [Coming features](#coming-features)
+- [License](#license)
+- [About](#about)
+
+
+## 💻 Development
 
 Keep in mind that this project is in work, so if you want to see code,
 then it is in dev branch but there is no 'full version' of this project!
 We're working hard to make first release version of it!
-### Our Website is hosted at this link
+## Website
 
-Our website is at this [link](<http://docs.fusion-engine.tech/>)
-
-
-## 🗜️ Table of Contents
-
- - [Installation](#installation)
- - [Community](#community)
- - [Documentation](#documentation)
- - [Coming features](#coming-features)
- - [License](#license)
- - [About](#about)
+Our website is at this [link](<http://fusion-engine.tech/>)
 
 ## 💾 Installation
 
