@@ -7,8 +7,9 @@ Navigating through these tutorials is as easy as a summer breeze. Take a look at
 ## Let's Begin the Exploration
 🚀 Ready to embark on a learning expedition? We're here to accompany you every step of the way. These tutorials aren't just lessons; they're gateways to empowerment and understanding.
 
-### Unveiling the Tutorials
-🗺️ Tutorial 1: Setting Everything Up
+## Unveiling the Tutorials
+
+### 🗺️ Tutorial 1: Setting Everything Up
 Ahoy, brave learner! Get ready to uncover the magic behind the Fusion Engine. This first tutorial will walk you through the setup process, ensuring you're all geared up to dive into the world of creative possibilities.
 
 [Start your journey: Tutorial 1](<dimkauzh.github.io/fusion-engine/docs/tutorials/setup.html>)
