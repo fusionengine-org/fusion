@@ -9,7 +9,7 @@ class Event:
     def key_down_once(self, key: int, window: window._CustomRenderer) -> bool:
         return False
 
-    def key_down(self, key, window):
+    def key_down(self, key):
         keys = pg.key.get_pressed()
         return keys[key]
 

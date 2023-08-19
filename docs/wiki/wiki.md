@@ -73,9 +73,44 @@ main.shape.new_rect(x, y, width, height, color)
 
 - More shapes will be coming soon
 
+## Window icon
+So you want to change the icon of your window? Well, its easy:
+
+```python
+main.window.change_icon("path_to_icon")
+```
+
+## Set FPS
+To set the framerate of your window, you use this:
+
+```python
+main.window.set_fps(60)
+
+```
+
+## Vectors
+
+### Vector2d
+
+If you want to create a 2d vector that stores x and y, then you do this:
+
+```python
+
+vector = main.vector.new_vector2d(10, 10)
+```
+
+## Draw a line
+To draw a line, you use this:
+
+```python
+#                           x1   y1   x2   y2       color
+main.draw.draw_line(window, 100, 100, 200, 200, main.color.BLUE)
+```
+
+
 ## Draw rectangle
 
-If you just want to draw a rectangle to test or to use it for your game/app, then you have two options:
+If you just want to draw a rectangle to test or to use it for your game/app, then you have 3 options:
 
 Option one: just draw a rectangle
 
@@ -88,6 +123,14 @@ Second option: draw predefined rectangle:
 ```python
 main.draw.draw_own_rect(window, your_rect)
 ```
+
+Third option: Draw a rectangle of lines
+    
+```python
+#                                 x    y    w    h        color
+main.draw.draw_line_rect(window, 100, 100, 400, 400, main.color.BLUE)
+```
+
 
 ## Draw image
 
@@ -131,13 +174,90 @@ If you want to draw a image on your entity, then you do this:
 entity.image("image_path")
 ```
 
+## Sound
+
+### Load sound
+
+To load a sound you do this:
+
+```python
+your_sound = main.sound.load_sound("path_to_sound")
+```
+
+### Play sound
+
+To play your loaded sound you use this:
+
+```python
+your_sound.play()
+```
+
+### Stop sound
+To stop your playing sound you use this:
+```python
+your_sound.stop()
+```
+
+### Backround music
+To start playing background music you use this:
+```python
+main.sound.play_background_music("path_to_sound")
+```
+
+
+## Storage system
+### Init
+
+```python
+my_db = JsonStorage("my_db.json")
+```
+This how you initialize your json storage system
+
+### Insertion
+
+```python
+my_db.insert({"first_name": "john", "last_name": "wick", "gold": 50})
+my_db.insert({"first_name": "alexander", "last_name": "wick", "gold": 20})
+```
+The code inserts two entries into the storage. The inserted data contains information about individuals' first names, last names, and gold amounts.
+
+### Reading
+
+```python
+Copy code
+my_db.search({"last_name": "wick"})
+my_db.search({"last_name": "wick"}, get_index=True)
+```
+The code demonstrates reading operations. It searches for entries with the last name "wick" and retrieves results with and without index information.
+
+### Updating
+
+```python
+alex['gold'] += 20
+my_db.update(alex_index, alex)
+```
+The code showcases how to update data in the storage. In this case, it increases the "gold" value for an entry with the first name "alexander" by 20.
+
+### Deleting
+
+```python
+my_db.delete(john_index)
+```
+The code demonstrates deletion of data by removing an entry with the first name "john" from the storage.
+
+### Saving to Disk
+```python
+my_db.save()
+```
+The code shows how to save the modified data back to the storage file on disk.
+
 
 ## Keyboard input
 
 if you need keyboard input, then use this if statement with your own key (see key tab for all key names):
 
 ```python
- if main.event.key_down(main.keys.KEY_a, window):
+ if main.event.key_down(main.keys.KEY_a):
      print("Key A pressed")
 ```
 
@@ -191,7 +311,7 @@ main.ui.text.print_text(window, "Your text", 10, 10, "Arial", 20, main.color.WHI
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
 
 [Back](https://dimkauzh.github.io/fusion-engine/docs/index.html)
-[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color_api.html>)
+[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color.html>)
 
 
 [Back to main page](https://dimkauzh.github.io/fusion-engine/docs/index.html)

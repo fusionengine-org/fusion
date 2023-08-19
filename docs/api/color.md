@@ -1,10 +1,7 @@
-## Using colors
-Our engine has some build in predefined colors so it's a bit easier for you with colors, to acess the colors you run:
-```python
-main.color.WHITE
-```
-## All colors
-The color name is always in capital letters. Here are all predefined colors:
+# Color API
+
+## Color
+### main.color
 ```python
 BLUE = (0, 0, 255, 255)
 BLACK = (0, 0, 0, 255)
@@ -42,10 +39,10 @@ TEAL = (0, 128, 128, 255)
 TOMATO = (255, 99, 71, 255)
 CRIMSON = (220, 20, 60, 0.8)
 ```
-## Custom color
-If you want your own color, you just give your function a tuple argument with RGBA colors, here is an example:
+## Colortools
+### main.colortools
 ```python
-main.draw.drawRect(window, 100, 100, 400, 400, (255, 255, 255, 0))
+hex_to_rgba(hex)
 ```
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/api.html>)
-[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)
+
+[Back](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
