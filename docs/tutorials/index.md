@@ -12,12 +12,12 @@ Navigating through these tutorials is as easy as a summer breeze. Take a look at
 ### 🗺️ Tutorial 1: Setting Everything Up
 Ahoy, brave learner! Get ready to uncover the magic behind the Fusion Engine. This first tutorial will walk you through the setup process, ensuring you're all geared up to dive into the world of creative possibilities.
 
-[Start your journey: Tutorial 1](<dimkauzh.github.io/fusion-engine/docs/tutorials/setup.html>)
+[Start your journey: Tutorial 1](<http://fusion-engine.tech/docs/tutorials/setup.html>)
 
 ### 🎨 Tutorial 2: Basic Rendering
 Calling all aspiring artists and tech enthusiasts! Tutorial 2 is your canvas to experiment and explore. We'll guide you through the basics of rendering, letting you create and visualize like never before.
 
-[Start your journey: Tutorial 2](<dimkauzh.github.io/fusion-engine/docs/tutorials/basics.html>)
+[Start your journey: Tutorial 2](<http://fusion-engine.tech/docs/tutorials/basics.html>)
 
 ## Learning Can Be Exciting Too!
 No need to be daunted by the unknown. As you embark on these tutorials, remember that learning is a journey of excitement and growth. With each tutorial you conquer, you're leveling up your Fusion Engine skills!
