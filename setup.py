@@ -72,7 +72,7 @@ class release(Command):
         os.system("python discord/send_webhook.py")
 
 
-class install(Command):
+class install_local(Command):
     user_options = []
 
     def initialize_options(self):
@@ -83,6 +83,7 @@ class install(Command):
 
     def run(self):
         os.system("python release.py install")
+        pass
 
 
 class install_dev(Command):
@@ -98,4 +99,11 @@ class install_dev(Command):
         os.system("pip install -e .")
 
 
-setup(cmdclass={"clean": clean, "release": release, "install": install, "install_dev": install_dev})
+setup(
+    cmdclass={
+        "clean": clean,
+        "release": release,
+        "install_local": install_local,
+        "install_dev": install_dev,
+    }
+)
