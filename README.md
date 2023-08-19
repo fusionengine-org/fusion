@@ -59,7 +59,7 @@ if you want to install the package from source and get the latest changes then y
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
- python setup.py install
+ python setup.py install_local
 ```
 
 ### Developer build
