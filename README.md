@@ -25,7 +25,7 @@ games fast and easy!
 - [Installation](#installation)
 - [Community](#community)
 - [Documentation](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
-- [API](<https://dimkauzh.github.io/fusion-engine/docs/index.html>
+- [API](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
 - [Coming features](#coming-features)
 - [License](#license)
 - [About](#about)
