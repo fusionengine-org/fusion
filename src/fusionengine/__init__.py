@@ -1,8 +1,9 @@
 __author__ = "Dimkauzh"
-__version__ = "1.1.5"
+__version__ = "2.0.0"
 
 from fusionengine.files.imports import *
 import fusionengine.files.systems as sysconfig
+import fusionengine.files.sound as sound
 
 
 class Main:

@@ -21,7 +21,7 @@ class _CustomMusic:
         self.sound.fadeout(time)
 
 
-class Music:
+class Sound:
     def __init__(self) -> None:
         pass
 
