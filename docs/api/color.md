@@ -38,6 +38,7 @@ SCARLET = (255, 36, 0, 255)
 TEAL = (0, 128, 128, 255)
 TOMATO = (255, 99, 71, 255)
 CRIMSON = (220, 20, 60, 0.8)
+AZURE = (0, 128, 255, 0.8)
 ```
 ## Colortools
 ### main.colortools
