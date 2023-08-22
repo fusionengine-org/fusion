@@ -5,6 +5,7 @@ import shutil
 import base64
 import json
 import urllib.request
+import subprocess
 
 from setuptools import Command, setup
 
@@ -66,10 +67,21 @@ class release(Command):
         pass
 
     def run(self):
-        os.system("python setup.py clean")
-        os.system("python release.py sdist bdist_wheel")
-        os.system("python -m twine upload dist/*")
-        os.system("python discord/send_webhook.py")
+        def run_command(command):
+            try:
+                subprocess.run(command, shell=True, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Command failed: {command}")
+                print(e)
+                raise SystemExit(1)  # Exit the script with an error code
+
+        try:
+            run_command("python setup.py clean")
+            run_command("python release.py sdist bdist_wheel")
+            run_command("python -m twine upload dist/*")
+            run_command("python discord/send_webhook.py")
+        except SystemExit:
+            print("Script execution failed.")
 
 
 class install_local(Command):
