@@ -167,6 +167,3 @@ cython_debug/
 compile/
 **/.DS_Store
 
-# Discord webhooks
-discord/
-
