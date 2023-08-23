@@ -4,3 +4,5 @@ class Math:
         self.SMALLERPI = 3.141592653589793
         self.SMALLPI = 3.14
         self.EULERNUMBER = 2.718281828459045
+    def FLOOR(value):
+        return(math.floor(value))

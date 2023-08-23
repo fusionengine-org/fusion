@@ -13,6 +13,11 @@ An extremely shortened version of pi (3.14):
 ```python
 	main.math.SMALLPI
 ```
+
+This allows you to get the floor value of a number.
+```python
+main.math.FLOOR(3.4)
+```
 ## Euler's Number
 You can read more about it [here.](https://en.wikipedia.org/wiki/E_(mathematical_constant))
 ```python
