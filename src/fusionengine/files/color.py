@@ -35,6 +35,7 @@ class Colors:
         self.SCARLET = (255, 36, 0, 255)
         self.TOMATO = (255, 99, 71, 255)
         self.CRIMSON = (220, 20, 60, 255)
+        self.AZURE = (0, 128, 255, 255)
 
 
 class ColorTools:
