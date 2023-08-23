@@ -34,7 +34,7 @@ class Colors:
         self.SALMON = (250, 128, 114, 255)
         self.SCARLET = (255, 36, 0, 255)
         self.TOMATO = (255, 99, 71, 255)
-        self.CRIMSON = (220, 20, 60, 0.8)
+        self.CRIMSON = (220, 20, 60, 255)
 
 
 class ColorTools:
