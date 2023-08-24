@@ -1,18 +1,5 @@
 # API
 
-## Table of contents
- - [Main](#main)
- - [Window](#window)
- - [Event](#event)
- - [Draw](#draw)
- - [Image](#image)
- - [Body](#body)
- - [Shape](#shape)
- - [UI](#ui)
- - [Debug](#debug)
- - [Vector](#vector)
- - [Sound](#sound)
-
 ## Window
 ### main.window
 ```python
