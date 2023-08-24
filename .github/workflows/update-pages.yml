@@ -33,4 +33,4 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install mkdocs
     - name: Build and deploy pages
-      run: python -m mkdocs gh-deploy
+      run: sudo python -m mkdocs gh-deploy
