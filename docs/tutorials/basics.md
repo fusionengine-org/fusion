@@ -56,5 +56,5 @@ def loop():
 ```
 
 ## Ending
-This was our basic tutorial to images. There are (or will be) more tutorials, so check them our. Or otherwise you could check our [docs](https://dimkauzh.github.io/fusion-engine/docs/index.html) for more information. Happy coding!
+This was our basic tutorial to images. There are (or will be) more tutorials, so check them our. Or otherwise you could check our [docs](docs.fusion-engine.tech) for more information. Happy coding!
 
