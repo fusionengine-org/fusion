@@ -1,6 +1,7 @@
 site_name: Fusion Engine
 summary: Fusion Engine documentation
 site_url: https://docs.fusion-engine.tech
+site_description: Fusion Engine documentation
 
 nav:
   - Home: 'index.md'
