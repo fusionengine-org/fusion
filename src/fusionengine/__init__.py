@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "3.0.0"
+__version__ = "3.0.1"
 
 from fusionengine.files.imports import *
 import fusionengine.files.systems as sysconfig
@@ -25,7 +25,7 @@ class Main:
         self.fonts = fonts.Fonts()
         self.debug = debug.DebugFiles()
         self.vector = vector.Vectors()
-        self.math = math.Math()
+        self.math = math_fe.Math()
         self.sound = sound.Sound()
 
         if args != ("message=False",):

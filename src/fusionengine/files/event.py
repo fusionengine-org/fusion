@@ -6,7 +6,7 @@ class Event:
     def __init__(self) -> None:
         self.clicked = False
 
-    def key_down_once(self, key: int) -> bool:
+    def key_down_once(self, key):
         if self.key_down(key) and not self.clicked:
             self.clicked = True
             return True

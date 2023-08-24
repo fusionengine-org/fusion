@@ -1,4 +1,5 @@
 from setuptools import setup, Extension
+from Cython.Build import cythonize
 import os
 
 py_files = []
@@ -13,4 +14,4 @@ extensions = [
     Extension(module_name, sources=[module_path]) for module_name, module_path in py_files
 ]
 
-setup(ext_modules=extensions, include_package_data=True)
+setup(ext_modules=cythonize(extensions), include_package_data=True)
