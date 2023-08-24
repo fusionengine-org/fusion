@@ -7,17 +7,6 @@ So have luck!
 
 ## Table of contents
  - [Main API](api.md)
-    - Main
-    - Window
-    - Event
-    - Draw
-    - Image
-    - Body
-    - Shape
-    - UI
-    - Debug
-    - Vector
-    - Sound
  - [Color API](color.md)
  - [Font API](fonts.md)
  - [Key API](keys.md)
