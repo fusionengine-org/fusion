@@ -4,10 +4,15 @@ import fusionengine.files.window as window
 
 class Event:
     def __init__(self) -> None:
-        pass
+        self.clicked = False
 
     def key_down_once(self, key: int) -> bool:
-        return False
+        if self.key_down(key) and not self.clicked:
+            self.clicked = True
+            return True
+        elif not self.key_down(key):
+            self.clicked = False
+            return False
 
     def key_down(self, key):
         keys = pg.key.get_pressed()
