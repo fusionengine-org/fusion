@@ -11,9 +11,6 @@ name: Updates documentation
 on:
   push:
     branches: [ "dev" ]
-    paths:
-      - "**.md"
-      - "mkdocs.yml"
 
   pull_request:
     branches: [ "dev" ]
