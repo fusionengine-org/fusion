@@ -9,8 +9,10 @@
 name: Updates documentation
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
 
 permissions:
   contents: read
