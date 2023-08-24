@@ -1,5 +1,5 @@
 site_name: Fusion Engine Documentation
-description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
+site_description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
 
 nav:
   - Home: 'index.md'
