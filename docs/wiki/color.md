@@ -54,6 +54,3 @@ If you have a hex color and want to convert it to rgba you can use this function
 ```python
 main.colortools.hex_to_rgba(hex)
 ```
-
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/wiki.html>)
-[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)

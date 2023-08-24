@@ -23,4 +23,3 @@ You can read more about it [here.](https://en.wikipedia.org/wiki/E_(mathematical
 ```python
 	main.math.EULERNUMBER
 ```
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/keys.html>)

@@ -239,5 +239,3 @@
 	KEY_EJECT = sdl2.SDLK_EJECT
 	KEY_SLEEP = sdl2.SDLK_SLEEP
 ```
-
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)

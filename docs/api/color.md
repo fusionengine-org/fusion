@@ -45,5 +45,8 @@ AZURE = (0, 128, 255, 255)
 ```python
 hex_to_rgba(hex)
 ```
+<<<<<<< Updated upstream
 
 [Back](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)
+=======
+>>>>>>> Stashed changes

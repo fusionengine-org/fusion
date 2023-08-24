@@ -1,9 +1,9 @@
 # Basic rendering tutorial
 
 ## Introduction
-This is a tutorial so you would understand the basics of the engine and how it works. In this tutorial we will learn how to render a window and draw some images on it. If you want to learn more, then go to [our docs](,https://dimkauzh.github.io/fusion-engine/docs/index.html.) and select wiki.
+This is a tutorial so you would understand the basics of the engine and how it works. In this tutorial we will learn how to render a window and draw some images on it. If you want to learn more, then go to [our docs](docs.fusion-engine.tech) and select wiki.
 
-This tutorial also expect you to have everything setup, if not, head over to [tutorial 1: setting everything up](<imkauzh.github.io/fusion-engine/docs/tutorials/setup.html>)
+This tutorial also expect you to have everything setup, if not, head over to [tutorial 1: setting everything up](setup.md)
 
 ## Creating a window
 

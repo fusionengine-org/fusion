@@ -1,4 +1,40 @@
-# Api docs
+# Main Wiki
+
+ - [Create Window](#create-window)
+ - [Start Loop](#start-loop)
+ - [Default Message](#default-message)
+ - [Set Background Color](#set-background-color)
+ - [DeltaTime](#deltatime)
+ - [Predefined Shapes](#predefined-shapes)
+ - [Window Icon](#window-icon)
+ - [Set FPS](#set-fps)
+ - [Vectors](#vectors)
+    - [Vector2d](#vector2d)
+ - [Draw a Line](#draw-a-line)
+ - [Draw Rectangle](#draw-rectangle)
+ - [Draw Image](#draw-image)
+ - [Create Entity](#create-entity)
+    - [Draw Rect with Entity](#draw-rect-with-entity)
+    - [Draw Image with Entity](#draw-image-with-entity)
+ - [Sound](#sound)
+    - [Load Sound](#load-sound)
+    - [Play Sound](#play-sound)
+    - [Stop Sound](#stop-sound)
+    - [Background Music](#background-music)
+ - [Storage System](#storage-system)
+    - [Init](#init)
+    - [Insertion](#insertion)
+    - [Reading](#reading)
+    - [Updating](#updating)
+    - [Deleting](#deleting)
+    - [Saving to Disk](#saving-to-disk)
+ - [Keyboard Input](#keyboard-input)
+ - [User Interface (UI)](#user-interface-ui)
+    - [Buttons](#buttons)
+        - [Button Clicked](#button-clicked)
+    - [Rendering Text](#rendering-text)
+ - [Using Pygame](#using-pygame)
+ - [Quit](#quit)
 
 ## Create window
 
@@ -315,9 +351,3 @@ Make sure your not using main (the initialized class) but the module itself.
 ## Quit
 
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
-
-[Back](https://dimkauzh.github.io/fusion-engine/docs/index.html)
-[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/color.html>)
-
-
-[Back to main page](https://dimkauzh.github.io/fusion-engine/docs/index.html)

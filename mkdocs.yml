@@ -1,0 +1,7 @@
+site_name: Fusion Engine
+
+nav:
+  - Home: 'index.md'
+  - Wiki: 'wiki/index.md'
+  - Api: 'api/index.md'
+  - Tutorial: 'tutorials/index.md'

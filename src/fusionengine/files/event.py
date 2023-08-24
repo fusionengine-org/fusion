@@ -6,7 +6,7 @@ class Event:
     def __init__(self) -> None:
         pass
 
-    def key_down_once(self, key: int, window: window._CustomRenderer) -> bool:
+    def key_down_once(self, key: int) -> bool:
         return False
 
     def key_down(self, key):

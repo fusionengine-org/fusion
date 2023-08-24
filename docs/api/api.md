@@ -103,4 +103,3 @@ set_volume(volume: int)
 fadeout(time: str)
 ```
 
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/index.html>)

@@ -238,5 +238,3 @@ We use PySDL2 for this, here are our key bindings to the sdl2 keys:
 	KEY_EJECT = sdl2.SDLK_EJECT
 	KEY_SLEEP = sdl2.SDLK_SLEEP
 ```
-[Back](<https://dimkauzh.github.io/fusion-engine/docs/wiki/fonts.html>)
-[Next](<https://dimkauzh.github.io/fusion-engine/docs/wiki/math.html>)
