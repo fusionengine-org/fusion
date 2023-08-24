@@ -29,6 +29,8 @@
     - [Deleting](#deleting)
     - [Saving to Disk](#saving-to-disk)
  - [Keyboard Input](#keyboard-input)
+    - [Keydown](#keydown)
+    - [Keydown Once](#keydown-once)
  - [User Interface (UI)](#user-interface-ui)
     - [Buttons](#buttons)
         - [Button Clicked](#button-clicked)
@@ -290,12 +292,24 @@ The code shows how to save the modified data back to the storage file on disk.
 
 ## Keyboard input
 
+### Keydown
+
 if you need keyboard input, then use this if statement with your own key (see key tab for all key names):
 
 ```python
  if main.event.key_down(main.keys.KEY_a):
      print("Key A pressed")
 ```
+
+### Keydown once
+
+If you need keydown to be only once, then you use this:
+
+```python
+if main.event.key_down_once(main.keys.KEY_a):
+    print("Key A pressed")
+```
+
 
 ## User Interface (UI)
 

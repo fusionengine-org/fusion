@@ -26,6 +26,7 @@ set_fps(self, fps: int)
 ### main.event
 ```python
 key_down(key)
+key_down_once(key)
 ```
 
 ## Draw
