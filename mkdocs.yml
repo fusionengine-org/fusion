@@ -1,8 +1,26 @@
 site_name: Fusion Engine Documentation
-description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
+site_description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
 
 nav:
   - Home: 'index.md'
   - Wiki: 'wiki/index.md'
   - Api: 'api/index.md'
   - Tutorial: 'tutorials/index.md'
+
+theme:
+  name: material
+  palette:
+
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
