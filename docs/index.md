@@ -9,7 +9,7 @@ And in tutorials we made some tutorials for you to better understand fusion!
 
 ### Wiki
  - [Setting up](#setting-up)
- - [Api](wiki/index.md)
+ - [Wiki](wiki/index.md)
 
 ### Api
  - [Setting up](#setting-up)

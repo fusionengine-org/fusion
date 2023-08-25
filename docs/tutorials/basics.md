@@ -1,7 +1,7 @@
 # Basic rendering tutorial
 
 ## Introduction
-This is a tutorial so you would understand the basics of the engine and how it works. In this tutorial we will learn how to render a window and draw some images on it. If you want to learn more, then go to [our docs](docs.fusion-engine.tech) and select wiki.
+This is a tutorial so you would understand the basics of the engine and how it works. In this tutorial we will learn how to render a window and draw some images on it. If you want to learn more, then go to [our docs](https://docs.fusion-engine.tech) and select wiki.
 
 This tutorial also expect you to have everything setup, if not, head over to [tutorial 1: setting everything up](setup.md)
 
@@ -56,5 +56,5 @@ def loop():
 ```
 
 ## Ending
-This was our basic tutorial to images. There are (or will be) more tutorials, so check them our. Or otherwise you could check our [docs](docs.fusion-engine.tech) for more information. Happy coding!
+This was our basic tutorial to images. There are (or will be) more tutorials, so check them our. Or otherwise you could check our [docs](<https://docs.fusion-engine.tech>) for more information. Happy coding!
 
