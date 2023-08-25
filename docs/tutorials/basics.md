@@ -5,6 +5,9 @@ This is a tutorial so you would understand the basics of the engine and how it w
 
 This tutorial also expect you to have everything setup, if not, head over to [tutorial 1: setting everything up](setup.md)
 
+The Final Product Should Look like This:
+![gif](https://u.cubeupload.com/Mr_rudy/20230825184950.gif)
+
 ## Creating a window
 
 So if you read tutorial 1 you know we have the main variable running our engine object. So now we create a window with the help of that main object:
