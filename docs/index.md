@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Fusion Engine Documentation
 
 ## 🗜️ Table of Contents

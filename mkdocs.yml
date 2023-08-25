@@ -1,6 +1,10 @@
 site_name: Fusion Engine Documentation
 site_description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
 
+repo_name: dimkauzh/fusion-engine
+repo_url: https://github.com/dimkauzh/fusion-engine
+
+
 nav:
   - Home: 'index.md'
   - Wiki: 'wiki/index.md'
@@ -9,6 +13,9 @@ nav:
 
 theme:
   name: material
+  features:
+    - navigation.path
+
   palette:
 
   # Palette toggle for light mode
