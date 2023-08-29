@@ -1,11 +1,15 @@
 <h1 align="center">🚀 Fusion Engine</h1>
 
 <p align="center">
-<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine"></a>
-<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/fusion-engine"></a>
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine?color=blue"></a>
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - License" src="https://img.shields.io/pypi/l/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
+<a href="https://github.com/dimkauzh/fusion-engine"><img alt="Lines of code" src="https://tokei.rs/b1/github/dimkauzh/fusion-engine?category=lines"></a>
+<a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
+<a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
 </p>
+
 
 
 
@@ -38,7 +42,7 @@ then it is in dev branch but there is no 'full version' of this project!
 We're working hard to make first release version of it!
 ## Website
 
-Our website is at this [link](<http://fusion-engine.tech/>)
+Our website is at this [link](<https://fusion-engine.tech/>)
 
 ## 💾 Installation
 
@@ -102,13 +106,13 @@ Need to contact us? Just DM the Owner or CEO in discord and we will try to react
 And our community of course!
 
 ## Tutorials
-Are you exited to start with fusion engine but you dont know where to start? Then maybe its worth looking though one of our tutorials! We tried to make them as simple as possible but still very informative. You can find them [here](<http://tutorials.fusion-engine.tech/>)
+Are you exited to start with fusion engine but you dont know where to start? Then maybe its worth looking though one of our tutorials! We tried to make them as simple as possible but still very informative. You can find them [here](<https://docs.fusion-engine.tech/>)
 
 
 ## 📃 Documentation And WIKI
 
 Do you need to figure out how to use a function or just want to know what it does? Then our wiki are perfect for you! But do you want to know if there is a specific function? Then the docs are perfect for you!
-See at [our websites docs/wiki section](http://docs.fusion-engine.tech/)
+See at [our websites docs/wiki section](https://docs.fusion-engine.tech/)
 
 ## 📯 Coming features
 
