@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fusion-engine"
-description = "A custom open-source game engine on Python and PySDL2, it's written in pure Python! It's easy and fast!"
+description = "A custom open-source game engine on Python and Pygame, it's written in pure Python! It's easy and fast!"
 requires-python = ">=3.7"
-license = {text = "GNU GENERAL PUBLIC LICENSE"}
+license = {text = "GNU GPLv3", file = "LICENSE.md"}
 authors = [{name = "Dimkauzh", email = "uzhdimka@gmail.com"}]
 keywords = ["game", "python", "gamedev", "game-engine", "pygame",
     "game-development", "pure-python", "pygame-mixer", "pygame-ttf", "pygame-image",
