@@ -10,6 +10,7 @@ nav:
   - Wiki: 'wiki/index.md'
   - Api: 'api/index.md'
   - Tutorial: 'tutorials/index.md'
+  - Todo: 'index.md'
 
 theme:
   name: material
