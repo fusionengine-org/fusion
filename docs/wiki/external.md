@@ -10,6 +10,11 @@ Make sure your not using main (the initialized class) but the module itself.
 ## Using Codon Compiler
 So you heard of [codon](https://docs.exaloop.io/codon/), a python compiler with can compile your python code to machine code, which makes your code a lot faster But how do you use it? Well, its easy! You just install it and then modify these things in your code:
 
+Imports:
+```python
+from python import fusionengine as fusion
+```
+
 Loop:
 You need to modify our loop to support codon, so you need to change it to this:
 ```python
