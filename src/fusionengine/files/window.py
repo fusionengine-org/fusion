@@ -95,6 +95,15 @@ class Window:
         """
         self._fps = fps
 
+    def force_quit(self) -> None:
+        """Force quits the window.
+
+        Args:
+            window: Your window
+        """
+        self._running = False
+        del self.window
+
     def _refresh(self, window: _CustomRenderer) -> None:
         """Does all things for refreshing window. (Not for the user)
 

@@ -7,6 +7,7 @@ new_window(title: str, width: int, height: int)
 change_icon(image_path: str)
 loop(your_loop_func)
 set_fps(self, fps: int)
+force_quit()
 ```
 
 ## Event

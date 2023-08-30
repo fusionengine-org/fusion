@@ -321,3 +321,10 @@ main.ui.text.print_text(window, "Your text", 10, 10, "Arial", 20, main.color.WHI
 ## Quit
 
 The quitting of the engine is done automaticly for you, so you dont have to worry about it.
+
+### Force to quit
+If you want to force quit due to some reason, its pretty easy:
+```python
+main.window.force_quit()
+```
+
