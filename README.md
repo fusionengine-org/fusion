@@ -34,12 +34,6 @@ rendering graphics, and handling user input. It is and engine to create games fa
 - [License](#license)
 - [About](#about)
 
-
-## 💻 Development
-
-Keep in mind that this project is in work, so if you want to see code,
-then it is in dev branch but there is no 'full version' of this project!
-We're working hard to make first release version of it!
 ## Website
 
 Our website is at this [link](<https://fusion-engine.tech/>)
