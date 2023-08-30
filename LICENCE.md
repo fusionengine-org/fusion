@@ -1,4 +1,4 @@
-GNU General Public License version 3.0 (GNU GPL v3, GPLv3)
+GNU General Public License v3.0
 
 Copyright (C) 2023  Dima Marhitych
 
