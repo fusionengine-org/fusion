@@ -1,3 +1,5 @@
+GNU General Public License version 3.0 (GNU GPL v3, GPLv3)
+
 Copyright (C) 2023  Dima Marhitych
 
 This program is free software: you can redistribute it and/or modify
