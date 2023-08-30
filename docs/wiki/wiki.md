@@ -317,12 +317,6 @@ Its the same option 1, but you change the font to name of the font, like this:
 ```python
 main.ui.text.print_text(window, "Your text", 10, 10, "Arial", 20, main.color.WHITE)
 ```
-## Using pygame
-If you cant find some function you need in this engine, the you could use pygame as the engine is build on pygame. You dont need to import pygame, as that can make so issues, you just use:
-```python
-fusion.pg
-```
-Make sure your not using main (the initialized class) but the module itself.
 
 ## Quit
 

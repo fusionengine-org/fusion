@@ -23,6 +23,10 @@ And in tutorials we made some tutorials for you to better understand fusion!
 
 ### Tutorials
  - [Tutorials](tutorials/index.md)
+
+### Todo list and changelog
+ - [3.0.0](changelog/3_0_0.md)
+ - [4.0.0](changelog/4_0_0.md)
  
 
 ## 💻 Setting up

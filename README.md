@@ -118,49 +118,7 @@ See at [our websites docs/wiki section](https://docs.fusion-engine.tech/)
 
 ### 🛠️ Features we are working on
 
-We are working hard to implement very basic and complex stuff so our engine becomes more rigid. These features are worked on or will be worked on:
-
-#### 3.0.0 and later
-
-- [x] Engine
-  - [x] Window
-    - [x] Create window
-    - [x] Get data from window
-  - [x] Draw shapes
-  - [x] Draw images
-  - [x] Input
-  - [x] Storage system
-  - [x] Rendering options
-  - [x] Delta-Time
-  - [x] Pip package and SetupTools
-  - [x] Cython
-    - [x] Implement cython for extra speed
-    - [x] Dev version without cython
-  - [x] Vectors (stores x and y coordinates)
-    - [x] Create vector
-  - [x] GUI library
-    - [x] Text
-    - [x] Drawing (Build in draw function)
-    - [x] Buttons
-  - [x] Sound system
-    - [x] Sound player
-    - [x] File support
-    - [x] And more...
-
-### 4.0.0 and later
-
-- [ ] UI (Using TKinter)
-  - [ ] Menu
-  - [ ] Create project
-  - [ ] Editor
-  - [ ] Code editor build in
-  - [ ] Run game
-
-- [ ] Physics system using PyMunk
-  - [ ] Gravity
-  - [ ] Rendering
-  - [ ] Collision system
-  - [ ] Physics shapes
+We are working hard to implement very basic and complex stuff so our engine becomes more rigid. To see our changelog and todo list, please go [to our docs](https://docs.fusion-engine.tech/)
 
 💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
 

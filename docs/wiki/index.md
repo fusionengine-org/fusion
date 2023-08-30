@@ -8,6 +8,7 @@ So have luck!
 ### Table of contents
 
  - [Main Wiki](wiki.md)
+ - [External tools Wiki](external.md)
  - [Color Wiki](color.md)
  - [Font Wiki](fonts.md)
  - [Key Wiki](keys.md)
