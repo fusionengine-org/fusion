@@ -21,4 +21,8 @@ author = fusion.__author__
 
 message = f"Fusion Engine {version} of package has been released to PyPI by {author}! Check it out at https://pypi.org/project/fusion-engine/{version}"
 
+print("Sending webhook...")
+
 send_discord_webhook(message)
+
+print("Webhook sent!")
