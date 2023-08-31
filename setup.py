@@ -108,7 +108,7 @@ class install_dev(Command):
         pass
 
     def run(self):
-        os.system("pip install -e .")
+        os.system("python -m pip install -e .")
 
 
 setup(
