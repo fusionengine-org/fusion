@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Keys API
 ## main.keys
 

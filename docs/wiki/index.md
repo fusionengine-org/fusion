@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 # Wiki
 
 Welcome to our wiki! Here you will find all function with their small explanaion and how to use them.

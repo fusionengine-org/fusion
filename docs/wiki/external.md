@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 # External tools
 
 ## Using pygame

@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 # Dive into the World of Fusion Engine Tutorials!
 Greetings, fellow learners! 🌟 If you're here, you're in for a treat. We've crafted these tutorials to make your journey through the intricacies of the Fusion Engine not only informative but also enjoyable. Let's roll up our sleeves and get started on this adventure of learning and fun!
 

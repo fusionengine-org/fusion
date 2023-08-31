@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Api
 
 Welcome to our api! Here you will find all functions that exist in fusion engine and what arguments they get.

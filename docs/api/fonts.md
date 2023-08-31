@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Font API
 
 ## main.font

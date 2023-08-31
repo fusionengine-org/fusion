@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Main Wiki
 
 ## Create window

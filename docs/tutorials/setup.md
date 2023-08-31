@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 # Setting everything up
 
 ## Introduction

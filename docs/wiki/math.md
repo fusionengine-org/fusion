@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 ## Types of PI in Fusion Engine
 These are used for certain miscellaneous math things.
 

@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+
 ## Keys
 We use PySDL2 for this, here are our key bindings to the sdl2 keys:
 ```python

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Math API
 ## main.math
 
