@@ -76,10 +76,10 @@ class release(Command):
                 raise SystemExit(1)  # Exit the script with an error code
 
         try:
-            run_command("python setup.py clean")
-            run_command("python release.py sdist bdist_wheel")
-            run_command("python -m twine upload dist/*")
-            run_command("python discord/send_webhook.py")
+            run_command("python3 setup.py clean")
+            run_command("python3 release.py sdist bdist_wheel")
+            run_command("python3 -m twine upload dist/*")
+            run_command("python3 discord/send_webhook.py")
         except SystemExit:
             print("Script execution failed.")
 
@@ -94,7 +94,7 @@ class install_local(Command):
         pass
 
     def run(self):
-        os.system("python release.py install")
+        os.system("python3 release.py install")
         pass
 
 
@@ -108,7 +108,7 @@ class install_dev(Command):
         pass
 
     def run(self):
-        os.system("python -m pip install -e .")
+        os.system("python3 -m pip install -e .")
 
 
 setup(
