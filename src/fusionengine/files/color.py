@@ -17,7 +17,7 @@ class Colors:
         self.SILVER = (192, 192, 192, 255)
         self.GOLD = (255, 215, 0, 255)
         self.BRONZE = (205, 127, 50, 255)
-        self.LIME = (0, 255, 0, 255)
+        self.LIME = (128, 255, 0, 255)
         self.OLIVE = (128, 128, 0, 255)
         self.TEAL = (0, 128, 128, 255)
         self.NAVY = (0, 0, 128, 255)
@@ -41,58 +41,58 @@ class Colors:
 class ColorTools:
     def __init__(self):
         pass
-
+    
     def hex_to_rgba(self, hex):
         """Converts (#)RRGGBB to [R, G, B, 255]."""
         hex6 = hex.replace("#", "")
         return int(hex6[:2], 16), int(hex6[2:4], 16), int(hex6[4:6], 16), 255
-
-    def hsv_to_rgb(hue, sat, val, alpha: int) -> tuple[int, int, int, int]:
+    
+    def hsv_to_rgb(self, hue, sat, val, alpha: int) -> tuple[int, int, int, int]:
         """Takes in HSV values and ouputs red, green and blue values.
         Hue is from 0 to 360 (float).
         Saturation and value are from 0 to 1 (float).
         Alpha is from 0 to 255 (int)."""
         if hue <= 60:
             hue_red = 255
-    
+
         elif 60 <= hue <= 120:
             hue_red = 255 * ((-hue / 60) + 2)
-    
+
         elif 120 <= hue <= 240:
             hue_red = 0
-    
+
         elif 240 <= hue <= 300:
             hue_red = ((hue / 60) - 4)
-    
+
         elif 300 <= hue <= 360:
             hue_red = 255
-    
+
         if hue <= 60:
             hue_green = 255 * (hue / 60)
-    
+
         elif 60 <= hue <= 180:
             hue_green = 255
-    
+
         elif 180 <= hue <= 240:
             hue_green = 255 * ((-hue / 60) + 4)
-    
+
         elif 240 <= hue <= 360:
             hue_green = 0
-    
+
         if hue <= 120:
             hue_blue = 0
-    
+
         elif 120 <= hue <= 180:
             hue_blue = 255 * ((hue / 60) - 2)
-    
+
         elif 180 <= hue <= 300:
             hue_blue = 255
-    
+
         elif 300 <= hue <= 360:
             hue_blue = 255 * ((-hue / 60) + 6)
-    
+
         red = val * (sat * hue_red + (255 - 255 * sat))
         green = val * (sat * hue_green + (255 - 255 * sat))
         blue = val * (sat * hue_blue + (255 - 255 * sat))
-    
+
         return int(red), int(green), int(blue), alpha
