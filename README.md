@@ -23,7 +23,7 @@ rendering graphics, and handling user input. It is and engine to create games fa
 ## 🗜️ Table of Contents
 
 - [Development](#development)
-- [Website](#website)
+- [Website](https://fusion-engine.tech/)
 - [Installation](#installation)
 - [Community](#community)
 - [Tutorials](https://docs.fusion-engine.tech/)
