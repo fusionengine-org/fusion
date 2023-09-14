@@ -10,3 +10,6 @@ class Math:
 
     def FLOOR(self, value):
         return math.floor(value)
+    # yay exponets
+    def POWER(base, exponent):
+        return pow(base, exponent)

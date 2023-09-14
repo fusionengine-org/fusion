@@ -19,10 +19,18 @@ An extremely shortened version of pi (3.14):
 ```python
 	main.math.SMALLPI
 ```
-
+## Other Math Components
 This allows you to get the floor value of a number.
 ```python
 main.math.FLOOR(3.4)
+```
+This allows you to use exponets in Fusion Engine.
+<br>
+![gif](../assets/images/8-squared.gif)
+
+Replace exponent and base to what you desire.
+```python
+	main.math.POWER(exponent, base)
 ```
 ## Euler's Number
 You can read more about it [here.](https://en.wikipedia.org/wiki/E_(mathematical_constant))
