@@ -1,6 +1,4 @@
-import fusionengine.files.systems as sysconfig
 import fusionengine.files.window as window
-
 from fusionengine.files.imports import *
 import fusionengine.files.shape as shape
 
@@ -13,7 +11,7 @@ class Draw:
         y1: int,
         x2: int,
         y2: int,
-        color: tuple,
+        color: tuple
     ) -> None:
         """Draws a line on the screen."""
         pg.draw.line(window.window, color, (x1, y1), (x2, y2))
