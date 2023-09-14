@@ -9,8 +9,8 @@ hide:
 ## 🗜️ Table of Contents
 Welcome to fusion engine documentation! We have seperated the documentation in some parts: main, api, wiki and tutorial. 
 Wiki is made if you need to know what a function does.
-Api is made if you need to know if a function exist and what arguments it takes
-And in tutorials we made some tutorials for you to better understand fusion!
+Api is made if you need to know if a function exist and what arguments it takes,
+and in tutorials we made some tutorials for you to better understand fusion!
 
 
 ### Wiki
