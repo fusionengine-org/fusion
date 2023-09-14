@@ -41,12 +41,12 @@ class Colors:
 class ColorTools:
     def __init__(self):
         pass
-    
+
     def hex_to_rgba(self, hex):
         """Converts (#)RRGGBB to [R, G, B, 255]."""
         hex6 = hex.replace("#", "")
         return int(hex6[:2], 16), int(hex6[2:4], 16), int(hex6[4:6], 16), 255
-    
+
     def hsv_to_rgb(self, hue, sat, val, alpha: int) -> tuple[int, int, int, int]:
         """Takes in HSV values and ouputs red, green and blue values.
         Hue is from 0 to 360 (float).
@@ -62,7 +62,7 @@ class ColorTools:
             hue_red = 0
 
         elif 240 <= hue <= 300:
-            hue_red = ((hue / 60) - 4)
+            hue_red = (hue / 60) - 4
 
         elif 300 <= hue <= 360:
             hue_red = 255

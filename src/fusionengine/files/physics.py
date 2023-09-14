@@ -3,7 +3,9 @@ from fusionengine.files.imports import *
 
 
 class _CustomBody:
-    def __init__(self, window: window._CustomRenderer, x: int, y: int, w: int, h: int) -> None:
+    def __init__(
+        self, window: window._CustomRenderer, x: int, y: int, w: int, h: int
+    ) -> None:
         """A class that creates a new custom bodies. (Not for the user)"""
         self.window = window
         self.x = x

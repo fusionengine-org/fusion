@@ -111,11 +111,27 @@ class install_dev(Command):
         os.system("python3 -m pip install -e .")
 
 
+class reinstall_dev(Command):
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        os.system("python3 setup.py clean")
+        os.system("python3 -m pip uninstall fusionengine")
+        os.system("python3 -m pip install -e .")
+
+
 setup(
     cmdclass={
         "clean": clean,
         "release": release,
         "install_local": install_local,
         "install_dev": install_dev,
+        "reinstall_dev": reinstall_dev,
     }
 )

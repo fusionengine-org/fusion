@@ -36,4 +36,6 @@ class Entity:
 
     def draw_rect(self, color: tuple) -> None:
         """Gives the entity a rectangle and later draws it on the screen."""
-        self.draw_fe.draw_rect(self.window, self.x, self.y, self.width, self.height, color)
+        self.draw_fe.draw_rect(
+            self.window, self.x, self.y, self.width, self.height, color
+        )
