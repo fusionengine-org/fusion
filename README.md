@@ -10,8 +10,6 @@
 </p>
 
 
-
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png" alt="logo">
 </p>
@@ -26,9 +24,9 @@ rendering graphics, and handling user input. It is and engine to create games fa
 - [Website](https://fusion-engine.tech/)
 - [Installation](#installation)
 - [Community](#community)
-- [Tutorials](https://docs.fusion-engine.tech/)
-- [Documentation](https://docs.fusion-engine.tech/)
-- [Wiki](https://docs.fusion-engine.tech/)
+- [Tutorials](<https://docs.fusion-engine.tech/>)
+- [Documentation](<https://docs.fusion-engine.tech/>)
+- [Wiki](<https://docs.fusion-engine.tech/>)
 - [Coming features](#coming-features)
 - [License](#license)
 - [About](#about)
@@ -85,7 +83,7 @@ For different examples, you change the number to the number of the example file
 
 Our community is just growing, so if you want to help us with the project,
 it will be very helpful!
-We have a discord server at this [link](https://discord.gg/Smg3CK4ZMc).
+We have a discord server at this [link](<https://discord.gg/Smg3CK4ZMc>).
 Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
 
 ### ❤️ Special thanks to these people
@@ -105,13 +103,13 @@ Are you exited to start with fusion engine but you dont know where to start? The
 ## 📃 Documentation And WIKI
 
 Do you need to figure out how to use a function or just want to know what it does? Then our wiki are perfect for you! But do you want to know if there is a specific function? Then the docs are perfect for you!
-See at [our websites docs/wiki section](https://docs.fusion-engine.tech/)
+See at [our websites docs/wiki section](<https://docs.fusion-engine.tech/>)
 
 ## 📯 Coming features
 
-We are working hard to implement very basic and complex stuff so our engine becomes more rigid. To see our changelog and todo list, please go [to our docs](https://docs.fusion-engine.tech/)
+We are working hard to implement very basic and complex stuff so our engine becomes more rigid. To see our changelog and todo list, please go [to our docs](<https://docs.fusion-engine.tech/>)
 
-💡 - If you have more ideas, please tell us them in our [discord group](https://discord.gg/Smg3CK4ZMc) or create an issue!
+💡 - If you have more ideas, please tell us them in our [discord group](<https://discord.gg/Smg3CK4ZMc>) or create an issue!
 
 ## License
 
@@ -152,4 +150,4 @@ We as fusion team support Ukraine and we hope it will win. Fusion engine is dedi
 A 13-year-old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
 
 ## Other Credit
-The audio "music.mp3" is a built in audio into fusion engine, the source of it can be located [here](https://freesound.org/people/DaveJf/sounds/685599/).
+The audio "music.mp3" is a built in audio into fusion engine, the source of it can be located [here](<https://freesound.org/people/DaveJf/sounds/685599/>).
