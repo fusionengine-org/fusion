@@ -30,3 +30,9 @@ class Image:
     def draw_image(self, image: _CustomImage) -> None:
         """Draws your image (opened with open_image) on the screen."""
         image.window.window.blit(image.texture, (image.x, image.y))
+
+    def draw_image_file(self, window: window._CustomRenderer, path: str, x: int, y: int, width: int, height: int):
+        """Draw image directly from provided path."""
+        texture = pg.image.load(image).convert()
+        texture = pg.transform.scale(texture, (width, height))
+        window.window.blit(texture, x, y)
