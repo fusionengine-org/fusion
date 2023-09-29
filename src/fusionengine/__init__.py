@@ -27,6 +27,7 @@ class Main:
         self.vector = vector.Vectors()
         self.math = math_fe.Math()
         self.sound = sound.Sound()
+        self.sfxlib = sfx.SfxLib()
 
         if args != ("message=False",):
             python_version = sys.version.split()[0]

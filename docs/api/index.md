@@ -15,3 +15,4 @@ So have luck!
  - [Color API](color.md)
  - [Font API](fonts.md)
  - [Key API](keys.md)
+ - [SFX Library](sfx.md)

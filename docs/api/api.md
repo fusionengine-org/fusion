@@ -81,6 +81,7 @@ new_vector2d(x: int, y: int)
 ```
 
 ## Sound
+You can use sounds from the [SFX Library here](sfx.md)
 ### main.sound
 ```python
 load_sound(sound_path: str)

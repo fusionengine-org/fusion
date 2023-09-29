@@ -23,3 +23,4 @@ import fusionengine.files.fonts as fonts
 import fusionengine.files.debug as debug
 import fusionengine.files.vector as vector
 import fusionengine.files.math as math_fe
+import fusionengine.files.sfx as sfx
