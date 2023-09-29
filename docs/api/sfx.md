@@ -4,7 +4,7 @@ hide:
 ---
 
 # SFX Library 
-## Below are [CC0](https://creativecommons.org/publicdomain/zero/1.0/) sounds that are built into fusion engine.
+## Below are [CC0](https://creativecommons.org/public-domain/cc0/) sounds that are built into fusion engine.
 
 ## Slap:
 
