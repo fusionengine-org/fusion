@@ -26,6 +26,7 @@ class Window:
         """A class that contains all the window functions."""
         self._running = False
         self._fps = 60
+        self._quittable = True
         self.clock = pg.time.Clock()
 
     def new_window(self, title: str, width: int, height: int) -> _CustomRenderer:
@@ -100,12 +101,17 @@ class Window:
 
     def force_quit(self) -> None:
         """Force quits the window.
-
+        Specifically, stops and deletes window.
         Args:
             window: Your window
         """
-        self._running = False
-        del self.window
+        if self._quittable:
+            self._running = False
+            del self.window
+
+    def toggle_quittable(self) -> None:
+        """Toggles whether the window is quittable."""
+        self._quittable = not self._quittable
 
     def _refresh(self, window: _CustomRenderer) -> None:
         """Does all things for refreshing window. (Not for the user)
@@ -117,7 +123,7 @@ class Window:
         self.DELTATIME = self.clock.tick(self._fps)
 
         for event in pg.event.get():
-            if event.type == pg.QUIT:
+            if event.type == pg.QUIT and self._quittable:
                 self._running = False
 
             self.manager.process_events(event)
