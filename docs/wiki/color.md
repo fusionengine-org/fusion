@@ -10,6 +10,8 @@ Our engine has some build in predefined colors so it's a bit easier for you with
 main.color.WHITE
 ```
 ## All colors
+<details><summary>Deprecated</summary>
+
 The color name is always in capital letters. Here are all predefined colors:
 ```python
 BLUE = (0, 0, 255, 255)
@@ -49,6 +51,10 @@ TOMATO = (255, 99, 71, 255)
 CRIMSON = (220, 20, 60, 255)
 AZURE = (0, 128, 255, 255)
 ```
+</details>
+
+The color name is always capitalised as per [PEP 8 → Constants](https://peps.python.org/pep-0008/#constants). All colors are defined and named (with capitalised form) as per [Sublime Text → Docs → Color Schemes → Appendix - CSS Colors](https://www.sublimetext.com/docs/color_schemes.html#appendix-css-colors).
+
 ## Custom color
 If you want your own color, you just give your function a tuple argument with RGBA colors, here is an example:
 ```python
