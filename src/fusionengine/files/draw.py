@@ -5,13 +5,7 @@ import fusionengine.files.shape as shape
 
 class Draw:
     def draw_line(
-        self,
-        window: window._CustomRenderer,
-        x1: int,
-        y1: int,
-        x2: int,
-        y2: int,
-        color: tuple
+        self, window: window._CustomRenderer, x1: int, y1: int, x2: int, y2: int, color: tuple
     ) -> None:
         """Draws a line on the screen."""
         pg.draw.line(window.window, color, (x1, y1), (x2, y2))
@@ -46,16 +40,15 @@ class Draw:
         s.fill((color[0], color[1], color[2], color[3]))
         window.window.blit(s, (x, y))
 
-    def draw_own_rect(
-        self, window: window._CustomRenderer, rect: shape._CustomShape
-    ) -> None:
+    def draw_own_rect(self, window: window._CustomRenderer, rect: shape._CustomShape) -> None:
         """Draws your rectangle on the screen."""
         pg.draw.rect(window.window, rect.color, rect.rect)
 
-    def set_background_color(
-        self, window: window._CustomRenderer, color: tuple
-    ) -> None:
+    def set_background_color(self, window: window._CustomRenderer, color: tuple) -> None:
         """Sets the background color of the screen."""
         s = pg.Surface((window.width, window.height), pg.SRCALPHA)
         s.fill((color[0], color[1], color[2], color[3]))
         window.window.blit(s, (0, 0))
+
+    def set_pixel(self, window: window._CustomRenderer, x, y, color):
+        window.window.set_at((x, y), color)
