@@ -7,11 +7,8 @@ load_dotenv()
 
 
 def send_discord_webhook(message):
-    webhook = os.environ.get("DISCORD_WEBHOOK")
-
-    if webhook:
-        webhook = DiscordWebhook(url=webhook, content=message)
-        webhook.execute()
+    if (webhook := os.environ.get("DISCORD_WEBHOOK")):
+        DiscordWebhook(url=webhook, content=message).execute()
     else:
         print("Discord webhook URL not found in environment variables.")
 

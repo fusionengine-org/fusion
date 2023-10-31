@@ -148,6 +148,3 @@ We as fusion team support Ukraine and we hope it will win. Fusion engine is dedi
 ## 🚀 About Me
 
 A 13-year-old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
-
-## Other Credit
-The audio "music.mp3" is a built in audio into fusion engine, the source of it can be located [here](<https://freesound.org/people/DaveJf/sounds/685599/>).

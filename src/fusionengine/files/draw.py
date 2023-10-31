@@ -59,7 +59,7 @@ class Draw:
         """Draw an arbitrary polygon outline.
         WARNING: This will lag the game more and more as the number of corners increase, as this is an O(n)/call function.
         """
-        for i, (x1, y2) in enumerate(corners[:-1]):  # need to exclude last corner for IndexError
+        for i, (x1, y1) in enumerate(corners[:-1]):  # need to exclude last corner for IndexError
             x2, y2 = corners[i + 1]  # tuple unpacking
             self.draw_line(window, x1, y1, x2, y2, color)
 
