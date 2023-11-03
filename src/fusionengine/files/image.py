@@ -23,7 +23,7 @@ class Image:
         height: int,
     ) -> _CustomImage:
         """Opens an image. Can be later rendered with draw_image."""
-        texture = pg.image.load(image).convert()
+        texture = pg.image.load(image).convert_alpha()
         texture = pg.transform.scale(texture, (width, height))
         return _CustomImage(window, texture, x, y)
 
@@ -31,8 +31,10 @@ class Image:
         """Draws your image (opened with open_image) on the screen."""
         image.window.window.blit(image.texture, (image.x, image.y))
 
-    def draw_image_file(self, window: window._CustomRenderer, path: str, x: int, y: int, width: int, height: int):
+    def draw_image_file(
+        self, window: window._CustomRenderer, path: str, x: int, y: int, width: int, height: int
+    ):
         """Draw image directly from provided path."""
-        texture = pg.image.load(image).convert()
+        texture = pg.image.load(path)
         texture = pg.transform.scale(texture, (width, height))
-        window.window.blit(texture, x, y)
+        window.window.blit(texture, (x, y))
