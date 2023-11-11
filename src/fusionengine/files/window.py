@@ -1,5 +1,6 @@
-import fusionengine.files.debug as debugfe
-from fusionengine.files.imports import *
+import fusionengine.files.debug as fe_debug
+import pygame as pg
+import pygame_gui as gui
 
 
 class Window:
@@ -9,16 +10,21 @@ class Window:
         self._quittable = True
         self.clock = pg.time.Clock()
 
+        self.title = title
+        self.width = width
+        self.height = height
+
         try:
             self.window = pg.display.set_mode((width, height))
             pg.display.set_caption(title)
 
             self.manager = gui.UIManager((800, 600))
 
-            program_icon = pg.image.load(debugfe.DebugFiles().DEBUGIMAGE)
+            program_icon = pg.image.load(fe_debug.DebugFiles().DEBUGIMAGE)
             pg.display.set_icon(program_icon)
 
             self._running = True
+
         except Exception:
             print("Error: Can't create a window.")
 

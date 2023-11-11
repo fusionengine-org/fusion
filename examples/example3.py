@@ -1,29 +1,27 @@
 import fusionengine as fusion
 
-main = fusion.Main()
+window = fusion.window.Window("Example: 3", 800, 600)
 
-window = main.window.new_window("Example: 3", 800, 600)
-
-player = main.body.Entity("rigid", window, 70, 40, 50, 50)
+player = fusion.body.Entity(window, 70, 40, 50, 50)
 
 
 speed = 10
 
 
-@main.window.loop
+@window.loop
 def loop():
-    main.draw.set_background_color(window, main.color.WHITE)
+    fusion.draw.set_background_color(window, fusion.color.WHITE)
 
-    player.new_rect(window, main.color.AQUA)
+    player.load_rect(fusion.color.AQUA)
 
-    if main.event.key_down(main.keys.KEY_UP, window):
+    if fusion.event.key_down(fusion.keys.KEY_UP):
         player.y = int(player.y - speed)
 
-    elif main.event.key_down(main.keys.KEY_DOWN, window):
+    elif fusion.event.key_down(fusion.keys.KEY_DOWN):
         player.y = int(player.y + speed)
 
-    elif main.event.key_down(main.keys.KEY_RIGHT, window):
+    elif fusion.event.key_down(fusion.keys.KEY_RIGHT):
         player.x = int(player.x + speed)
 
-    elif main.event.key_down(main.keys.KEY_LEFT, window):
+    elif fusion.event.key_down(fusion.keys.KEY_LEFT):
         player.x = int(player.x - speed)

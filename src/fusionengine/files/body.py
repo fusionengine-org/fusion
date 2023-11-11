@@ -1,14 +1,12 @@
 import fusionengine.files.window as window
-from fusionengine.files.enums import BodyType
-from fusionengine.files.imports import *
-import fusionengine.files.image as image_fe
-import fusionengine.files.draw as draw_fe
+import fusionengine.files.image as image
+import fusionengine.files.shape as shape
 
 
 class Entity:
     def __init__(
         self,
-        window: window._CustomRenderer,
+        window: window.Window,
         x: int,
         y: int,
         width: int,
@@ -21,21 +19,22 @@ class Entity:
         self.height = height
         self.window = window
         self.gravity = 0
-        self.image_fe = image_fe.Image()
-        self.draw_fe = draw_fe.Draw()
 
-    def image(
+    def load_image(
         self,
         image_path: str,
     ) -> None:
         """Gives the entity an image and laters draws it on the screen."""
-        drawimage = self.image_fe.open_image(
+        self.main_image = image.Image(
             self.window, image_path, self.x, self.y, self.width, self.height
         )
-        self.image_fe.draw_image(drawimage)
 
-    def draw_rect(self, color: tuple) -> None:
+    def draw_image(self) -> None:
+        self.main_image.draw()
+
+    def load_rect(self, color: tuple) -> None:
         """Gives the entity a rectangle and later draws it on the screen."""
-        self.draw_fe.draw_rect(
-            self.window, self.x, self.y, self.width, self.height, color
-        )
+        self.main_rect = shape.Rect(self.window, self.x, self.y, self.width, self.height, color)
+
+    def draw_rect(self) -> None:
+        self.main_rect.draw()

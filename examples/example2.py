@@ -1,14 +1,12 @@
 import fusionengine as fusion
 
-main = fusion.Main()
-
-window = main.window.new_window("Example: 2", 800, 600)
+window = fusion.window.Window("Example: 2", 800, 600)
 
 
-@main.window.loop
+@window.loop
 def loop():
-    main.draw.set_background_color(window, (main.color.VIOLET))
-    main.draw.draw_rect(window, 100, 100, 400, 400, main.color.BLUE)
+    fusion.draw.set_background_color(window, (fusion.color.VIOLET))
+    fusion.draw.draw_rect(window, 100, 100, 400, 400, fusion.color.BLUE)
 
-    if main.event.key_down(main.keys.KEY_a):
+    if fusion.event.key_down(fusion.keys.KEY_a):
         print("Key A pressed")

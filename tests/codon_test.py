@@ -1,10 +1,7 @@
 from python import fusionengine as fusion
 
+window = fusion.window.Window("Example: 1", 600, 600)
+image = fusion.image.Image(window, fusion.debug.DEBUGIMAGE, 0, 0, 600, 600)
 
-main = fusion.Main()
-
-window = main.window.new_window("Example: 1", 600, 600)
-image = main.image.open_image(window, main.debug.DEBUGIMAGE, 0, 0, 600, 600)
-
-while main.window.running(window):
-    main.image.draw_image(image)
+while window.running():
+    image.draw()

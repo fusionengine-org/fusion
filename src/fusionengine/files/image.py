@@ -1,40 +1,35 @@
-from fusionengine.files.imports import *
 import fusionengine.files.window as window
-import fusionengine.files.shape as shape
-
-
-class _CustomImage:
-    def __init__(self, window: window._CustomRenderer, texture, x: int, y: int) -> None:
-        """A class that creates a new custom image. (Not for the user)"""
-        self.window = window
-        self.texture = texture
-        self.x = x
-        self.y = y
+import pygame as pg
 
 
 class Image:
-    def open_image(
+    def __init__(
         self,
-        window: window._CustomRenderer,
-        image,
+        window: window.Window,
+        image_path,
         x: int,
         y: int,
         width: int,
         height: int,
-    ) -> _CustomImage:
+    ) -> None:
         """Opens an image. Can be later rendered with draw_image."""
-        texture = pg.image.load(image).convert_alpha()
-        texture = pg.transform.scale(texture, (width, height))
-        return _CustomImage(window, texture, x, y)
+        image = pg.image.load(image_path).convert_alpha()
+        self.texture = pg.transform.scale(image, (width, height))
+        self.x = x
+        self.y = y
+        self.window = window
+        self.width = width
+        self.height = height
 
-    def draw_image(self, image: _CustomImage) -> None:
+    def draw(self) -> None:
         """Draws your image (opened with open_image) on the screen."""
-        image.window.window.blit(image.texture, (image.x, image.y))
+        self.window.window.blit(self.texture, (self.x, self.y))
 
-    def draw_image_file(
-        self, window: window._CustomRenderer, path: str, x: int, y: int, width: int, height: int
-    ):
-        """Draw image directly from provided path."""
-        texture = pg.image.load(path)
-        texture = pg.transform.scale(texture, (width, height))
-        window.window.blit(texture, (x, y))
+
+def draw_image_file(
+    self, window: window.Window, path: str, x: int, y: int, width: int, height: int
+):
+    """Draw image directly from provided path."""
+    texture = pg.image.load(path)
+    texture = pg.transform.scale(texture, (width, height))
+    window.window.blit(texture, (x, y))

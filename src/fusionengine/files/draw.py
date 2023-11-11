@@ -1,18 +1,17 @@
 import fusionengine.files.window as window
-from fusionengine.files.imports import *
-import fusionengine.files.shape as shape
+import pygame as pg
 
 
 class Draw:
     def draw_line(
-        self, window: window._CustomRenderer, x1: int, y1: int, x2: int, y2: int, color: tuple
+        self, window: window.Window, x1: int, y1: int, x2: int, y2: int, color: tuple
     ) -> None:
         """Draws a line on the screen."""
         pg.draw.line(window.window, color, (x1, y1), (x2, y2))
 
     def draw_line_rect(
         self,
-        window: window._CustomRenderer,
+        window: window.Window,
         x: int,
         y: int,
         width: int,
@@ -28,7 +27,7 @@ class Draw:
 
     def draw_rect(
         self,
-        window: window._CustomRenderer,
+        window: window.Window,
         x: int,
         y: int,
         width: int,
@@ -40,11 +39,7 @@ class Draw:
         s.fill((color[0], color[1], color[2], color[3]))
         window.window.blit(s, (x, y))
 
-    def draw_own_rect(self, window: window._CustomRenderer, rect: shape._CustomShape) -> None:
-        """Draws your rectangle on the screen."""
-        pg.draw.rect(window.window, rect.color, rect.rect)
-
-    def set_background_color(self, window: window._CustomRenderer, color: tuple) -> None:
+    def set_background_color(self, window: window.Window, color: tuple) -> None:
         """Sets the background color of the screen."""
         s = pg.Surface((window.width, window.height), pg.SRCALPHA)
         s.fill(color)
@@ -52,7 +47,7 @@ class Draw:
 
     def draw_arbitrary_polygon_outline(
         self,
-        window: window._CustomRenderer,
+        window: window.Window,
         corners: tuple[tuple[int, int]],
         color: tuple[int, int, int, int],
     ) -> None:
@@ -63,5 +58,5 @@ class Draw:
             x2, y2 = corners[i + 1]  # tuple unpacking
             self.draw_line(window, x1, y1, x2, y2, color)
 
-    def set_pixel(self, window: window._CustomRenderer, x, y, color):
+    def set_pixel(self, window: window.Window, x, y, color):
         window.window.set_at((x, y), color)

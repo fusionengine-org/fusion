@@ -1,8 +1,12 @@
-from fusionengine.files.imports import *
+import pygame as pg
+
+import fusionengine.files.window as fe_window
 
 
-class _CustomShape:
-    def __init__(self, x: int, y: int, width: int, height: int, color: tuple) -> None:
+class Rect:
+    def __init__(
+        self, window: fe_window.Window, x: int, y: int, width: int, height: int, color: tuple
+    ) -> None:
         """A class that creates a new custom shape. (Not for the user)"""
         self.x = x
         self.y = y
@@ -10,18 +14,8 @@ class _CustomShape:
         self.height = height
         self.color = color
         self.rect = pg.Rect(x, y, width, height)
+        self.window = window
 
-
-class Shapes:
-    def __init__(self) -> None:
-        pass
-
-    def new_rect(
-        self, x: int, y: int, width: int, height: int, color: tuple
-    ) -> _CustomShape:
+    def draw(self) -> None:
         """Creates a new rectangle. Can be later rendered with draw_own_rect."""
-        return _CustomShape(x, y, width, height, color)
-
-    def new_rect_button(self, x, y, width, height):
-        """Creates a new rectangle button. Can be later rendered with draw_own_rect."""
-        return _CustomShape(x, y, width, height, ())
+        pg.draw.rect(self.window.window, self.color, self.rect)

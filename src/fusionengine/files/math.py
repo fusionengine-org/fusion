@@ -1,4 +1,4 @@
-from fusionengine.files.imports import *
+import math
 
 
 class Math:

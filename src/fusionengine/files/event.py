@@ -1,5 +1,4 @@
-from fusionengine.files.imports import *
-import fusionengine.files.window as window
+import pygame as pg
 
 
 class Event:
