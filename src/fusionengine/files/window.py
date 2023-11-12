@@ -20,7 +20,7 @@ class Window:
 
             self.manager = gui.UIManager((800, 600))
 
-            program_icon = pg.image.load(fe_debug.DebugFiles().DEBUGIMAGE)
+            program_icon = pg.image.load(fe_debug.DEBUGIMAGE)
             pg.display.set_icon(program_icon)
 
             self._running = True

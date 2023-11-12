@@ -1,4 +1,4 @@
-from fusionengine.files.imports import *
+import pygame as pg
 
 
 class Sound:

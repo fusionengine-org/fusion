@@ -1,25 +1,25 @@
 __author__ = "Dimkauzh"
-__version__ = "3.0.8"
+__version__ = "4.0.0"
 
 import sys
 import os
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
-import fusionengine.files.window as fe_window
-import fusionengine.files.image as fe_image
-import fusionengine.files.debug as fe_debug
-import fusionengine.files.color as fe_color
-import fusionengine.files.event as fe_event
-import fusionengine.files.draw as fe_draw
-import fusionengine.files.shape as fe_shape
-import fusionengine.files.body as fe_body
-import fusionengine.files.systems as fe_sysconfig
-import fusionengine.files.ui as fe_ui
-import fusionengine.files.fonts as fe_fonts
-import fusionengine.files.vector as fe_vector
-import fusionengine.files.math as fe_math
-import fusionengine.files.sound as fe_sound
+from fusionengine.files.window import *
+from fusionengine.files.image import *
+from fusionengine.files.debug import *
+from fusionengine.files.color import *
+from fusionengine.files.event import *
+from fusionengine.files.draw import *
+from fusionengine.files.shape import *
+from fusionengine.files.body import *
+from fusionengine.files.systems import *
+from fusionengine.files.ui import *
+from fusionengine.files.fonts import *
+from fusionengine.files.vector import *
+from fusionengine.files.math import *
+from fusionengine.files.sound import *
 
 import pygame as pg
 
@@ -27,22 +27,6 @@ message = True
 
 pg.init()
 
-window = fe_window
-color = fe_color.Colors()
-colortools = fe_color.ColorTools()
-event = fe_event.Event()
-keys = fe_event.Keys()
-draw = fe_draw.Draw()
-image = fe_image
-body = fe_body
-system = fe_sysconfig.System()
-shape = fe_shape
-ui = fe_ui
-fonts = fe_fonts.Fonts()
-debug = fe_debug.DebugFiles()
-vector = fe_vector
-math = fe_math.Math()
-sound = fe_sound
 
 if os.environ.get("FUSION_HIDE_PROMPT") is None:
     python_version = sys.version.split()[0]
