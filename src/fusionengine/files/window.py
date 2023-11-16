@@ -1,6 +1,7 @@
 import fusionengine.files.debug as fe_debug
 import pygame as pg
 import pygame_gui as gui
+from pygame.locals import DOUBLEBUF
 
 
 class Window:
@@ -15,10 +16,10 @@ class Window:
         self.height = height
 
         try:
-            self.window = pg.display.set_mode((width, height))
+            self.window = pg.display.set_mode((width, height), DOUBLEBUF, 16)
             pg.display.set_caption(title)
 
-            self.manager = gui.UIManager((800, 600))
+            self.manager = gui.UIManager((width, height))
 
             program_icon = pg.image.load(fe_debug.DEBUGIMAGE)
             pg.display.set_icon(program_icon)
@@ -99,6 +100,4 @@ class Window:
         self.manager.update(self.DELTATIME)
         self.manager.draw_ui(self.window)
 
-        pg.display.flip()
-
-        self.window.fill((0, 0, 0))
+        pg.display.update()
