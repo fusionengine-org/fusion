@@ -17,7 +17,7 @@ and in tutorials we made some tutorials for you to better understand fusion!
 
 ### Wiki
  - [Setting up](#setting-up)
- - [Wiki](wiki/index.md)
+ - [Wiki](v4/wiki/index.md)
 
 
 ### Api

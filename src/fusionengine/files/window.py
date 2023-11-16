@@ -74,9 +74,8 @@ class Window:
         Args:
             window: Your window
         """
-        if self._quittable:
-            self._running = False
-            del self.window
+        self._running = False
+        del self.window
 
     def toggle_quittable(self) -> None:
         """Toggles whether the window is quittable."""

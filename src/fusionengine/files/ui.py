@@ -7,9 +7,9 @@ import os
 
 
 class Button:
-    def __init__(self, window: fe_window.Window, rect: fe_shape.Rect, text: str) -> None:
+    def __init__(self, rect: fe_shape.Rect, text: str) -> None:
         """Creates a button."""
-        self.manager = window.manager
+        self.manager = rect.window.manager
         self.text = text
         self.x = rect.x
         self.y = rect.y

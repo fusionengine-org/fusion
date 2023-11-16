@@ -6,7 +6,6 @@ hide:
 # Color API
 
 ## Color
-### main.color
 ```python
 ALICEBLUE = (240, 248, 255, 255)
 ANTIQUEWHITE = (250, 235, 215, 255)

@@ -14,10 +14,10 @@ class Sound:
     def get_volume(self):
         return self.sound.get_volume()
 
-    def set_volume(self, volume):
+    def set_volume(self, volume: int):
         self.sound.set_volume(volume)
 
-    def fadeout(self, time):
+    def fadeout(self, time: int):
         self.sound.fadeout(time)
 
 

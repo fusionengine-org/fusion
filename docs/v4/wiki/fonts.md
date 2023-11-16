@@ -9,11 +9,11 @@ Our engine has some build in fonts, the following fonts are available:
 
 Nunito Sans Light:
 ```python
-main.fonts.NUNITO_LIGHT
+fusion.NUNITO_LIGHT
 ```
 Saira Condensed Extrabold:
 ```python
-main.fonts.SAIRACONDENSED_EXTRABOLD
+fusion.SAIRACONDENSED_EXTRABOLD
 ```
 
 There will be more fonts available in the future.

@@ -27,44 +27,40 @@ key_down_once(key)
 
 ## Draw
 ```python
-draw_line(window: window.Window, x1: int, y1: int, x2: int, y2: int, color: tuple)
-draw_line_rect(window: window.Window, x: int, y: int, width: int, height: int, color: tuple)
-draw_rect(window: window.Window, x: int, y: int, width: int, height: int, color: tuple)
-set_background_color(window: window.Window, color: tuple)
-set_pixel(window: window.Window, x: int, y: int, color: tuple)
+draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: tuple)
+draw_line_rect(window: Window, x: int, y: int, width: int, height: int, color: tuple)
+draw_rect(window: Window, x: int, y: int, width: int, height: int, color: tuple)
+set_background_color(window: Window, color: tuple)
+set_pixel(window: Window, x: int, y: int, color: tuple)
 ```
 
 ## Image
 ```python
-Image(window: window.Window, image_path: str, x: int, y: int, width: int, height: int)
+Image(window: Window, image_path: str, x: int, y: int, width: int, height: int)
 ```
 
 ## Body
 ```python
-Entity(window: window.Window, x: int, y: int, width: int, height: int)
+Entity(window: Window, x: int, y: int, width: int, height: int)
 ```
 
 ## Shape
-### main.shape
 ```python
-new_rect(x: int, y: int, width: int, height: int, color: tuple)
-new_rect_button(x, y, width, height)
+Rect(window: Window, x: int, y: int, width: int, height: int, color: tuple) -> your_rect
+```
+your_rect:
+```python
+draw()
 ```
 
 ## UI
-### main.ui
-#### main.ui.button
 ```python
-new_button(window: window.Window, rect: shape.Rect, text: str)
+Button(rect: Rect, text: str) -> your_button
+Text(window: Window, text: str, x: int, y: int, font_path: str, font_size: int, color: tuple)
 ```
-Some button functions:
+your_button:
 ```python
 your_button.button_pressed() -> bool
-```
-
-#### main.ui.text
-```python
-print_text(window: window.Window, text: str, x: int, y: int, font_path: str, font_size: int, color: tuple)
 ```
 
 ## Debug files
@@ -73,20 +69,17 @@ DEBUGIMAGE
 ```
 
 ## Vector
-### main.vector
 ```python
-new_vector2d(x: int, y: int)
+Vector2D(x: int, y: int)
+Vector3D(x: int, y: int, z: int)
 ```
 
 ## Sound
-### main.sound
 ```python
-load_sound(sound_path: str)
-play_background_music(sound_path: str)
-set_volume_global(volume)
+Sound(sound_path: str) -> your_sound
+BackgroundMusic(sound_path: str) -> your_backgroundmusic
 ```
-
-### Loaded sound API
+your_sound:
 ```python
 play()
 stop()
@@ -94,6 +87,11 @@ get_volume()
 set_volume(volume: int)
 fadeout(time: str)
 ```
+your_backgroundmusic:
+```python
+set_volume(volume: int)
+```
+
 
 # Math
 ```python
