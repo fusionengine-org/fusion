@@ -18,7 +18,7 @@
 Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
-> *There is a massive rewrite going on to v4* For the latest updates and rewrites go to the main branch. The v3 branch will be updated with bugfixes.
+> *There is a rewrite of the api to v4* For the latest updates and latest V4, go to the main branch. V3 will still bugfixes. This is the V3 branch
 
 
 ## 🗜️ Table of Contents
