@@ -13,8 +13,8 @@ nav:
 theme:
   name: material
 
-  logo: assets/logo/fe.png
-  favicon: assets/logo/fe.png
+  logo: v4/assets/logo/fe.png
+  favicon: v4/assets/logo/fe.png
 
   features:
     - navigation.path

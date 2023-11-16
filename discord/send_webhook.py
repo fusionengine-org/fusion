@@ -1,13 +1,10 @@
 from discord_webhook import DiscordWebhook
 import fusionengine as fusion
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 def send_discord_webhook(message):
-    if (webhook := os.environ.get("DISCORD_WEBHOOK")):
+    if webhook := os.environ.get("DISCORD_WEBHOOK"):
         DiscordWebhook(url=webhook, content=message).execute()
     else:
         print("Discord webhook URL not found in environment variables.")
