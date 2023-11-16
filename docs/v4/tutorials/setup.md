@@ -23,11 +23,5 @@ Now we need to import fusion-engine to our project. We do it like this:
   import fusionengine as engine
 ```
 
-## Setting up
-So after inporting we need to do some setup. We need to create a object of our engine so we can use it. We do it like this:
-```python
-  main = engine.Main()
-```
-
 ## Ending
 That was it, our engine is now setup! Now every function works from our main variable, as you might see later.
