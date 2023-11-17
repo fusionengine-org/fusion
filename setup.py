@@ -1,10 +1,6 @@
 import glob
 import os
-import sys
 import shutil
-import base64
-import json
-import urllib.request
 import subprocess
 
 from setuptools import Command, setup
@@ -77,7 +73,7 @@ class release(Command):
 
         try:
             run_command("python3 setup.py clean")
-            run_command("python3 release.py sdist bdist_wheel")
+            run_command("python3 -m build")
             run_command("python3 -m twine upload dist/*")
             run_command("python3 discord/send_webhook.py")
         except SystemExit:
@@ -94,44 +90,7 @@ class install_local(Command):
         pass
 
     def run(self):
-        os.system("python3 release.py install")
-        pass
-
-
-class install_dev(Command):
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
         os.system("python3 -m pip install -e .")
 
 
-class reinstall_dev(Command):
-    user_options = []
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        os.system("python3 setup.py clean")
-        os.system("python3 -m pip uninstall fusionengine")
-        os.system("python3 -m pip install -e .")
-
-
-setup(
-    cmdclass={
-        "clean": clean,
-        "release": release,
-        "install_local": install_local,
-        "install_dev": install_dev,
-        "reinstall_dev": reinstall_dev,
-    }
-)
+setup(cmdclass={"clean": clean, "release": release, "install_local": install_local})

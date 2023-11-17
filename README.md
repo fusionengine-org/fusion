@@ -47,7 +47,7 @@ To install our package, run this:
 
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
-### Install from source
+### Install from source/devel
 
 if you want to install the package from source and get the latest changes then you do it like this:
 
@@ -55,16 +55,6 @@ if you want to install the package from source and get the latest changes then y
  git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
  python setup.py install_local
-```
-
-### Developer build
-
-if you want to get the non-cython build and the latest changes then follow this instruction:
-
-```bash
- git clone https://github.com/dimkauzh/fusion-engine.git
- cd fusion-engine
- python setup.py install_dev
 ```
 
 ### Run example
@@ -119,16 +109,7 @@ See [Licence here](LICENCE.md)
 
 ### ⚙️ Engine
 
-Fusion Engine is currently (6/14/2023) build with Python and some Python libraries:
-
-- Pygame is used for rendering, windowing, events and more
-- Cython for compiling and speed-up
-- PyMunk is used for physics simulation
-- Custom UI library based on Pygame_gui for UI
-- Setuptools for PyPi package
-- Json for storing data
-
-This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project.
+This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project. But after some time, the community has grown, and fusion had a lot of big releases. It was becoming a big project with a giant codebase.
 
 ### ⭐ Star History
 
