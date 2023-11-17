@@ -101,3 +101,5 @@ class Window:
         self.manager.draw_ui(self.window)
 
         pg.display.update()
+
+        self.window.fill((0, 0, 0))
