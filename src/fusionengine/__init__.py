@@ -21,6 +21,7 @@ from fusionengine.files.fonts import *
 from fusionengine.files.vector import *
 from fusionengine.files.math import *
 from fusionengine.files.sound import *
+from fusionengine.files.scene import *
 
 
 import pygame as pg

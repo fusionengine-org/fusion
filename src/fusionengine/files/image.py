@@ -27,7 +27,7 @@ class Image:
 
 
 def draw_image_file(
-    self, window: window.Window, path: str, x: int, y: int, width: int, height: int
+    window: window.Window, path: str, x: int, y: int, width: int, height: int
 ):
     """Draw image directly from provided path."""
     texture = pg.image.load(path)
