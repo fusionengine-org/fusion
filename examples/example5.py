@@ -1,24 +1,28 @@
 import fusionengine as fusion
 
-window = fusion.Window("Example: 1", 600, 600)
-image = fusion.Image(window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
 
-manager = fusion.SceneManager(window)
+class Example(fusion.SceneManager):
+    def __init__(self):
+        self.window = fusion.Window("Example: 1", 600, 600)
+        self.init(self.window)
+
+        self.image = fusion.Image(self.window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
+
+        self.add_scene(fusion.Scene("image", self.draw_i))
+        self.add_scene(fusion.Scene("rect", self.draw_r))
+
+        self.loop()
+
+    def draw_i(self):
+        self.image.draw()
+
+    def draw_r(self):
+        fusion.draw_rect(self.window, 0, 0, 50, 50, fusion.RED)
+
+    def loop(self):
+        while self.window.running():
+            self.window.set_fps(60)
+            self.start()
 
 
-def draw_i():
-    image.draw()
-
-
-def draw_r():
-    fusion.draw_rect(window, 0, 0, 50, 50, fusion.RED)
-
-
-manager.add_scene(fusion.Scene("image", draw_i))
-manager.add_scene(fusion.Scene("rect", draw_r))
-
-
-@window.loop
-def loop():
-    window.set_fps(60)
-    manager.start()
+Example()

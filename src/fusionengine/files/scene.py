@@ -1,4 +1,3 @@
-import pygame as pg
 import fusionengine.files.window as fe_window
 
 
@@ -15,7 +14,7 @@ class Scene:
 
 
 class SceneManager:
-    def __init__(self, window: fe_window.Window):
+    def init(self, window: fe_window.Window):
         self.window = window
         self.scenes = {}
 
@@ -34,3 +33,8 @@ class SceneManager:
     def start(self):
         for scene in list(self.scenes.values()):
             scene.run()
+
+    def loop(self, function, window):
+        @window.loop
+        def wrapper():
+            function()
