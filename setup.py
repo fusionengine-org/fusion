@@ -80,7 +80,7 @@ class release(Command):
             print("Script execution failed.")
 
 
-class install_local(Command):
+class ci_check(Command):
     user_options = []
 
     def initialize_options(self):
@@ -90,7 +90,20 @@ class install_local(Command):
         pass
 
     def run(self):
-        os.system("python3 -m pip install -e .")
+        def run_command(command):
+            try:
+                subprocess.run(command, shell=True, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"Command failed: {command}")
+                print(e)
+                raise SystemExit(1)  # Exit the script with an error code
+
+        try:
+            run_command("python3 setup.py clean")
+            run_command("python3 -m build")
+        except SystemExit:
+            print("Script execution failed.")
 
 
-setup(cmdclass={"clean": clean, "release": release, "install_local": install_local})
+
+setup(cmdclass={"clean": clean, "release": release, "ci_check": ci_check})
