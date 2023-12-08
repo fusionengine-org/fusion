@@ -1,11 +1,11 @@
-import fusionengine.files.debug as fe_debug
+import fusionengine.tools.debug as fe_debug
 import pygame as pg
 import pygame_gui as gui
 from pygame.locals import DOUBLEBUF
 
 
 class Window:
-    def __init__(self, title="Fusion Engine", width=800, height=600) -> None:
+    def __init__(self, title: str, width: int, height: int) -> None:
         self._running = False
         self._fps = 60
         self._quittable = True

@@ -1,12 +1,11 @@
 import pygame as pg
 
-import fusionengine.files.window as fe_window
-import fusionengine.files.color as fe_color
+import fusionengine.core.window as fe_window
 
 
 class Rect:
     def __init__(
-        self, window: fe_window.Window, x: int, y: int, width: int, height: int, color=fe_color.BLUE
+        self, window: fe_window.Window, x: int, y: int, width: int, height: int, color: tuple
     ) -> None:
         """A class that creates a new custom shape. (Not for the user)"""
         self.x = x

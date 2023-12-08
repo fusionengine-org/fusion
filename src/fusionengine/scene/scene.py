@@ -1,4 +1,4 @@
-import fusionengine.files.window as fe_window
+import fusionengine.core.window as fe_window
 
 
 class Scene:

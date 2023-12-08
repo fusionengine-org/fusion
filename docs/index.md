@@ -12,6 +12,9 @@ Wiki is made if you need to know what a function does.
 Api is made if you need to know if a function exist and what arguments it takes,
 and in tutorials we made some tutorials for you to better understand fusion!
 
+## Todo list and changelog
+ - [v4](changelog/v4.md)
+ - [v3](changelog/v3.md)
 
 ## v4
 
@@ -40,10 +43,6 @@ and in tutorials we made some tutorials for you to better understand fusion!
 
 ### Tutorials
  - [Tutorials](v3/tutorials/index.md)
-
-### Todo list and changelog
- - [v3](changelog/v3.md)
- - [v4](changelog/v4.md)
  
 
 ## 💻 Setting up

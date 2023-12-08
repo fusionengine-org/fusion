@@ -1,27 +1,50 @@
 __author__ = "Dimkauzh"
-__version__ = "4.0.6"
+__version__ = "4.1.0"
 
 import sys
 import os
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
-from fusionengine.files.window import *
-from fusionengine.files.image import *
-from fusionengine.files.debug import *
-from fusionengine.files.color import *
-from fusionengine.files.event import *
-from fusionengine.files.draw import *
-from fusionengine.files.shape import *
-from fusionengine.files.body import *
-from fusionengine.files.systems import *
-from fusionengine.files.storage import *
-from fusionengine.files.ui import *
-from fusionengine.files.fonts import *
-from fusionengine.files.vector import *
-from fusionengine.files.math import *
-from fusionengine.files.sound import *
-from fusionengine.files.scene import *
+# Core
+from fusionengine.core.window import *
+from fusionengine.core.image import *
+from fusionengine.core.draw import *
+from fusionengine.core.shape import *
+
+# Events
+from fusionengine.events.event import *
+from fusionengine.events.keys import *
+
+# Colors
+from fusionengine.colors.color import *
+from fusionengine.colors.colortools import *
+
+# Physics
+from fusionengine.physics.body import *
+
+# Storage
+from fusionengine.storage.storage import *
+
+# UI
+from fusionengine.ui.ui import *
+
+# Fonts
+from fusionengine.fonts.fonts import *
+
+# Math
+from fusionengine.math.vector import *
+from fusionengine.math.math import *
+
+# Sound
+from fusionengine.sound.sound import *
+
+# Scene
+from fusionengine.scene.scene import *
+
+# Tools
+from fusionengine.tools.systems import *
+from fusionengine.tools.debug import *
 
 
 import pygame as pg
