@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "4.0.5"
+__version__ = "4.0.6"
 
 import sys
 import os
