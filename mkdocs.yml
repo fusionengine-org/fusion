@@ -6,9 +6,9 @@ repo_url: https://github.com/dimkauzh/fusion-engine
 
 nav:
   - Home: 'index.md'
-  - Wiki: 'wiki/index.md'
-  - Api: 'api/index.md'
-  - Tutorial: 'tutorials/index.md'
+  - Wiki: 'v4/wiki/index.md'
+  - Api: 'v4/api/index.md'
+  - Tutorial: 'v4/tutorials/index.md'
 
 theme:
   name: material
