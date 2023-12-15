@@ -8,3 +8,4 @@ image = fusion.Image(window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
 def loop():
     window.set_fps(60)
     image.draw()
+

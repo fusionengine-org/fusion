@@ -1,6 +1,6 @@
-import fusionengine.files.window as window
-import fusionengine.files.image as image
-import fusionengine.files.shape as shape
+import fusionengine.core.window as window
+import fusionengine.core.image as image
+import fusionengine.core.shape as shape
 
 
 class Entity:

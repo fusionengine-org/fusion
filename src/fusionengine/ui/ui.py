@@ -1,5 +1,5 @@
-import fusionengine.files.window as fe_window
-import fusionengine.files.shape as fe_shape
+import fusionengine.core.window as fe_window
+import fusionengine.core.shape as fe_shape
 
 import pygame as pg
 import pygame_gui as gui
@@ -7,7 +7,7 @@ import os
 
 
 class Button:
-    def __init__(self, rect: fe_shape.Rect, text: str, anchors=None, ) -> None:
+    def __init__(self, rect: fe_shape.Rect, text: str) -> None:
         """Creates a button."""
         self.manager = rect.window.manager
         self.text = text
@@ -17,7 +17,7 @@ class Button:
         self.height = rect.height
 
         self.button = gui.elements.UIButton(
-            relative_rect=rect.rect, text=text, manager=self.manager, anchors=anchors
+            relative_rect=rect.rect, text=text, manager=self.manager
         )
 
     def button_pressed(self) -> bool:

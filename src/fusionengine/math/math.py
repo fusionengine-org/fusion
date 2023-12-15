@@ -7,5 +7,5 @@ SMALLPI = 3.14
 EULERNUMBER = 2.718281828459045
 
 
-def FLOOR(self, value):
+def FLOOR(value):
     return math.floor(value)
