@@ -1,4 +1,6 @@
-<h1 align="center">🚀 Fusion Engine</h1>
+<p align="center">
+  <img src="https://github.com/dimkauzh/fusion-engine/assets/106883655/183ab172-2c3e-49b5-ba31-7c1ad63e564a" alt="logo">
+</p>
 
 <p align="center">
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine?color=blue"></a>
@@ -7,11 +9,6 @@
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
 <a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
-</p>
-
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png" alt="logo">
 </p>
 
 
@@ -54,7 +51,7 @@ if you want to install the package from source and get the latest changes then y
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
- python setup.py install_local
+ python setup.py install
 ```
 
 ### Run example
@@ -125,7 +122,3 @@ This project began May 1, 2023. The original project began in C, but it's entire
 
 We as fusion team support Ukraine and we hope it will win. Fusion engine is dedicated to Ukraine fighting the Russian invasion.
 🇺🇦 Please support Ukraine! 🇺🇦
-
-## 🚀 About Me
-
-A 13-year-old game developer with much passion about game development. So I made this project to grow my programming skills and just make a tool that I can use for myself or a tool for other people to help them develop games.
