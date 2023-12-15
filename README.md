@@ -1,4 +1,6 @@
-<h1 align="center">🚀 Fusion Engine</h1>
+<p align="center">
+  <img src="https://github.com/dimkauzh/fusion-engine/assets/106883655/c189d786-e417-4bc1-8ff4-52fef3f130df" alt="logo">
+</p>
 
 <p align="center">
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI" src="https://img.shields.io/pypi/v/fusion-engine?color=blue"></a>
@@ -7,11 +9,6 @@
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
 <a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
-</p>
-
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/106883655/233103547-5693b2a3-22b9-4b68-ac2a-7220f16d48df.png" alt="logo">
 </p>
 
 
