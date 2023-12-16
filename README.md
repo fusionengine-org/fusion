@@ -9,6 +9,7 @@
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
 <a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
+<a href="https://github.com/dimkauzh/fusion-engine"><img alt="Lines of code" src="https://tokei.rs/b1/github/dimkauzh/fusion-engine?category=lines"></a>
 </p>
 
 
