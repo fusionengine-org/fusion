@@ -11,6 +11,7 @@
 <a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
 </p>
 
+> *Our main website is currently down for maintainance!!!*
 
 Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
