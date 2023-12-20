@@ -20,7 +20,7 @@ So firstly we need to install fusion-engine. We have our package hoster at pypi 
 ## Importing
 Now we need to import fusion-engine to our project. We do it like this:
 ```python
-  import fusionengine as engine
+  import fusionengine as fusion
 ```
 
 ## Ending

@@ -4,7 +4,6 @@ hide:
 ---
 
 # Fusion engine tutorials
-## Unveiling the Tutorials
 Welcome to our tutorials! Here you will find step by step tutorials so you can understand fusion engine better! There are couple tutorials to get you started with basics and some are more advanced so you can create your first game with ease!
 
 ## Table of contents

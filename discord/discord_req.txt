@@ -1,3 +1,2 @@
 fusion-engine
-python-dotenv
 discord_webhook
