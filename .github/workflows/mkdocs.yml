@@ -13,20 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check for changes in mkdocs.yml or docs folder
-        id: check_changes
-        run: |
-          if git diff-tree --name-only -r ${{ github.event.before }}^..${{ github.sha }} | grep -E 'mkdocs.yml|docs/'; then
-            echo "CHANGES=true" >> $GITHUB_ENV
-          else
-            echo "CHANGES=false" >> $GITHUB_ENV
-          fi
-
-      - name: Install dependencies (if needed)
-        if: env.CHANGES == 'true'
+      - name: Install dependencies
         run: pip install mkdocs-material
 
-      - name: Deploy (if needed)
-        if: env.CHANGES == 'true'
+      - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
 
