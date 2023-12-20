@@ -16,7 +16,7 @@ jobs:
       - name: Check for changes in mkdocs.yml or docs folder
         id: check_changes
         run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E 'mkdocs.yml|docs/'; then
+          if git diff-tree --name-only -r ${{ github.event.before }} ${{ github.sha }} | grep -E 'mkdocs.yml|docs/'; then
             echo "CHANGES=true" >> $GITHUB_ENV
           else
             echo "CHANGES=false" >> $GITHUB_ENV
