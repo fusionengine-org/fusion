@@ -4,7 +4,7 @@ import os
 
 
 def send_discord_webhook(message):
-    if webhook := os.environ.get("DISCORD_WEBHOOK"):
+    if webhook := os.environ.get("FUSION_WEBHOOK"):
         DiscordWebhook(url=webhook, content=message).execute()
     else:
         print("Discord webhook URL not found in environment variables.")
