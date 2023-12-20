@@ -4,7 +4,7 @@ import os
 
 
 def send_discord_webhook(message):
-    if webhook := os.environ.get("DISCORD_WEBHOOK"):
+    if webhook := os.environ.get("FUSION_WEBHOOK"):
         DiscordWebhook(url=webhook, content=message).execute()
     else:
         print("Discord webhook URL not found in environment variables.")
@@ -13,7 +13,8 @@ def send_discord_webhook(message):
 version = fusion.__version__
 author = fusion.__author__
 
-message = f"Fusion Engine {version} of package has been released to PyPI by {author}! Check it out at https://pypi.org/project/fusion-engine/{version}"
+message1 = f"Fusion Engine {version} of package has been released to PyPI by {author}! Check it out at https://pypi.org/project/fusion-engine/{version}"
+message = "test"
 
 print("Sending webhook...")
 
