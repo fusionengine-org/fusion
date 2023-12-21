@@ -41,9 +41,11 @@ from fusionengine.math.math import *
 
 # Sound
 from fusionengine.sound.sound import *
+from fusionengine.sound.background import *
 
 # Scene
 from fusionengine.scene.scene import *
+from fusionengine.scene.manager import *
 
 # Tools
 from fusionengine.tools.systems import *
