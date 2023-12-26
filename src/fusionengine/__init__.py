@@ -51,6 +51,9 @@ from fusionengine.scene.manager import *
 from fusionengine.tools.systems import *
 from fusionengine.tools.debug import *
 
+# Animation
+from fusionengine.animation.animation import *
+
 
 import pygame as pg
 import pygame_gui as gui

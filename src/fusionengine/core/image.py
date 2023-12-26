@@ -1,11 +1,11 @@
-import fusionengine.core.window as window
+from fusionengine.core.window import Window
 import pygame as pg
 
 
 class Image:
     def __init__(
         self,
-        window: window.Window,
+        window: Window,
         image_path,
         x: int,
         y: int,
@@ -27,7 +27,7 @@ class Image:
 
 
 def draw_image_file(
-    window: window.Window, path: str, x: int, y: int, width: int, height: int
+    window: Window, path: str, x: int, y: int, width: int, height: int
 ):
     """Draw image directly from provided path."""
     texture = pg.image.load(path)

@@ -69,6 +69,9 @@ class Window:
         """
         self._fps = fps
 
+    def get_fps(self) -> int:
+        return self._fps
+
     def force_quit(self) -> None:
         """Force quits the window.
         Specifically, stops and deletes window.
