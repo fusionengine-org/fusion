@@ -291,7 +291,7 @@ The code shows how to save the modified data back to the storage file on disk.
 if you need keyboard input, then use this if statement with your own key (see key tab for all key names):
 
 ```python
- if fusion.key_down(fusion.KEY_a):
+ if fusion.Key(fusion.KEY_a).key_down():
      print("Key A pressed")
 ```
 
@@ -300,7 +300,7 @@ if you need keyboard input, then use this if statement with your own key (see ke
 If you need keydown to be only once, then you use this:
 
 ```python
-if fusion.key_down_once(fusion.KEY_a):
+if fusion.Key(fusion.KEY_a).key_down_once():
     print("Key A pressed")
 ```
 
