@@ -14,16 +14,16 @@ def loop():
 
     player.load_rect(fusion.AQUA)
 
-    if fusion.key_down(fusion.KEY_UP):
+    if fusion.Key(fusion.KEY_UP).key_down():
         player.y = int(player.y - speed)
 
-    elif fusion.key_down(fusion.KEY_DOWN):
+    elif fusion.Key(fusion.KEY_DOWN).key_down():
         player.y = int(player.y + speed)
 
-    elif fusion.key_down(fusion.KEY_RIGHT):
+    elif fusion.Key(fusion.KEY_RIGHT).key_down():
         player.x = int(player.x + speed)
 
-    elif fusion.key_down(fusion.KEY_LEFT):
+    elif fusion.Key(fusion.KEY_LEFT).key_down():
         player.x = int(player.x - speed)
 
     player.draw_rect()

@@ -2,6 +2,9 @@ from fusionengine.core.window import Window
 
 class Animation:
     def __init__(self, window: Window, images: tuple, speed: int) -> None:
+        """
+        
+        """
         self.frame = 0
         self.anim = images
         
