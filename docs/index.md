@@ -78,7 +78,7 @@ There pages aren't maintained anymore and won't be. Please head over to the Wiki
  - [API](v4/api/api.md)
 
  
-### Api
+### V3 Api
  - [Setting up](#setting-up-v3)
  - [API](v3/api/api.md)
 

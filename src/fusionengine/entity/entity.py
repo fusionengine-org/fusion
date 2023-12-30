@@ -1,8 +1,6 @@
 from fusionengine.core.window import Window
 from fusionengine.core.image import Image
 from fusionengine.core.shape import Rect
-from fusionengine.animation.animation import Animation
-
 
 class Entity:
     def __init__(
@@ -20,6 +18,7 @@ class Entity:
         self.height = height
         self.window = window
         self.gravity = 0
+        self.frame = 0
 
     def load_image(
         self,
@@ -30,14 +29,20 @@ class Entity:
             self.window, image_path, self.x, self.y, self.width, self.height
         )
 
-    def load_animation(self, window: Window, images: tuple, speed: int):
-        self.anim = Animation(window, images, speed)
+    def load_animation(self, images: tuple):
+        self.images = images
 
     def draw_animation(self):
-        self.anim.draw()
+        self.images[self.frame].draw()
 
     def draw_image(self) -> None:
         self.main_image.draw()
+
+    def set_frame(self, frame: int):
+        self.frame = frame
+
+    def get_frame(self, frame: int) -> int:
+        return frame
 
     def load_rect(self, color: tuple) -> None:
         """Gives the entity a rectangle and later draws it on the screen."""
