@@ -55,10 +55,6 @@ And your done!
  - [Wiki](v4/wiki/index.md)
 
 
-### Api
- - [Setting up](#setting-up)
- - [API](v4/api/api.md)
-
 ### Tutorials
  - [Tutorials](v4/tutorials/index.md)
 
@@ -71,13 +67,22 @@ The wiki, api and tutorials to the old v3 version of fusion, which is not being 
  - [Wiki](v3/wiki/index.md)
 
 
-### Api
- - [Setting up](#setting-up-v3)
- - [API](v3/api/api.md)
-
 ### Tutorials
  - [Tutorials](v3/tutorials/index.md)
  
+
+## Api
+There pages aren't maintained anymore and won't be. Please head over to the Wiki pages, tutorials or examples.
+### Api
+ - [Setting up](#setting-up)
+ - [API](v4/api/api.md)
+
+ 
+### V3 Api
+ - [Setting up](#setting-up-v3)
+ - [API](v3/api/api.md)
+
+
 
 ## 💻 Setting up v3
 

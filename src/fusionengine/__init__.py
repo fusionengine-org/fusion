@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "4.1.0"
+__version__ = "4.2.0"
 
 import sys
 import os
@@ -20,6 +20,9 @@ from fusionengine.events.keys import *
 from fusionengine.colors.color import *
 from fusionengine.colors.colortools import *
 
+# Entity
+from fusionengine.entity.entity import *
+
 # Physics
 from fusionengine.physics.body import *
 
@@ -38,13 +41,18 @@ from fusionengine.math.math import *
 
 # Sound
 from fusionengine.sound.sound import *
+from fusionengine.sound.background import *
 
 # Scene
 from fusionengine.scene.scene import *
+from fusionengine.scene.manager import *
 
 # Tools
 from fusionengine.tools.systems import *
 from fusionengine.tools.debug import *
+
+# Animation
+from fusionengine.animation.animation import *
 
 
 import pygame as pg

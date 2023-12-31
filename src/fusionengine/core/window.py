@@ -9,7 +9,7 @@ class Window:
         self._running = False
         self._fps = 60
         self._quittable = True
-        self.clock = pg.time.Clock()
+        self._clock = pg.time.Clock()
 
         self.title = title
         self.width = width
@@ -69,6 +69,9 @@ class Window:
         """
         self._fps = fps
 
+    def get_fps(self) -> int:
+        return self._fps
+
     def force_quit(self) -> None:
         """Force quits the window.
         Specifically, stops and deletes window.
@@ -89,7 +92,7 @@ class Window:
             window: Your window
         """
 
-        self.DELTATIME = self.clock.tick(self._fps)
+        self.DELTATIME = self._clock.tick(self._fps)
 
         for event in pg.event.get():
             if event.type == pg.QUIT and self._quittable:
