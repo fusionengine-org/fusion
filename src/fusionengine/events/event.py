@@ -21,12 +21,12 @@ class Key:
             self.clicked = False
             return False
 
-@deprecated
+@deprecated(version="5.0.0")
 def key_down(key):
     keys = pg.key.get_pressed()
     return keys[key]
 
-@deprecated
+@deprecated(version="5.0.0")
 def key_down_once(key):
     global clicked
     if key_down(key) and not clicked:
@@ -35,3 +35,5 @@ def key_down_once(key):
     elif not key_down(key):
         clicked = False
         return False
+
+
