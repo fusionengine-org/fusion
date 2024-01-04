@@ -1,8 +1,8 @@
-import fusionengine.core.window as fe_window
-from fusionengine.scene.scene import Scene
+from fusionengine.engine.window import Window
+from fusionengine.engine.scene import Scene
 
 class SceneManager:
-    def init(self, window: fe_window.Window):
+    def init(self, window: Window):
         self.window = window
         self.scenes = {}
 

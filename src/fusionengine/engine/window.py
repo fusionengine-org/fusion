@@ -1,4 +1,4 @@
-import fusionengine.tools.debug as fe_debug
+from fusionengine.engine.debug import DEBUGIMAGE
 import pygame as pg
 import pygame_gui as gui
 from pygame.locals import DOUBLEBUF
@@ -6,6 +6,13 @@ from pygame.locals import DOUBLEBUF
 
 class Window:
     def __init__(self, title: str, width: int, height: int) -> None:
+        """Creates a a base window for your game. This is the main window you will use for your application.
+
+        Args:
+            title (str): The title of your window
+            width (int): The width of your window
+            height (int): The height of your window
+        """        
         self._running = False
         self._fps = 60
         self._quittable = True
@@ -21,7 +28,7 @@ class Window:
 
             self.manager = gui.UIManager((width, height))
 
-            program_icon = pg.image.load(fe_debug.DEBUGIMAGE)
+            program_icon = pg.image.load(DEBUGIMAGE)
             pg.display.set_icon(program_icon)
 
             self._running = True
@@ -29,7 +36,7 @@ class Window:
         except Exception:
             print("Error: Can't create a window.")
 
-    def change_icon(self, image_path):
+    def change_icon(self, image_path: str) -> None:
         """Changes icon
 
         Args:
@@ -41,19 +48,16 @@ class Window:
         pg.display.set_icon(programIcon)
 
     def loop(self, your_loop) -> None:
-        """A while loop decorator function.
+        """A while loop decorator function. The main way to start a main loop.
 
         Args:
-            your_loop (callable): Your main loop function
+            your_loop (function): Your main loop function
         """
         while self.running():
             your_loop()
 
     def running(self) -> bool:
         """Returns if the window is running. Used for the main loop.
-
-        Args:
-            window: Your window
 
         Returns:
             bool: returns true if the window is running else false
@@ -70,27 +74,24 @@ class Window:
         self._fps = fps
 
     def get_fps(self) -> int:
+        """Returns the current desired frames per second for the game
+
+        Returns:
+            int: The current desired FPS
+        """        
+        
         return self._fps
 
     def force_quit(self) -> None:
-        """Force quits the window.
-        Specifically, stops and deletes window.
-        Args:
-            window: Your window
-        """
+        """Force quits the window. Specifically, stops and deletes window."""
         self._running = False
-        del self.window
 
     def toggle_quittable(self) -> None:
         """Toggles whether the window is quittable."""
         self._quittable = not self._quittable
 
     def _refresh(self) -> None:
-        """Does all things for refreshing window. (Not for the user)
-
-        Args:
-            window: Your window
-        """
+        """Does all things for refreshing window. (Not for the user)"""
 
         self.DELTATIME = self._clock.tick(self._fps)
 

@@ -1,5 +1,5 @@
-import fusionengine.core.window as fe_window
-import fusionengine.core.shape as fe_shape
+from fusionengine.engine.window import Window
+from fusionengine.engine.shape import Rect
 
 import pygame as pg
 import pygame_gui as gui
@@ -7,7 +7,7 @@ import os
 
 
 class Button:
-    def __init__(self, rect: fe_shape.Rect, text: str) -> None:
+    def __init__(self, rect: Rect, text: str) -> None:
         """Creates a button."""
         self.manager = rect.window.manager
         self.text = text
@@ -27,7 +27,7 @@ class Button:
 class Text:
     def __init__(
         self,
-        window: fe_window.Window,
+        window: Window,
         text: str,
         x: int,
         y: int,

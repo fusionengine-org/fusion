@@ -1,4 +1,4 @@
-from fusionengine.core.window import Window
+from fusionengine.engine.window import Window
 import pygame as pg
 
 

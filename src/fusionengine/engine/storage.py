@@ -2,7 +2,7 @@ import json
 import typing
 from pathlib import Path
 
-from fusionengine.tools.exceptions import InvalidType, JsonStorageInvalidIndex
+from fusionengine.engine.exceptions import InvalidType, JsonStorageInvalidIndex
 
 
 class JsonStorage:

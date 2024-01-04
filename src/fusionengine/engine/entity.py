@@ -1,6 +1,6 @@
-from fusionengine.core.window import Window
-from fusionengine.core.image import Image
-from fusionengine.core.shape import Rect
+from fusionengine.engine.window import Window
+from fusionengine.engine.image import Image
+from fusionengine.engine.shape import Rect
 
 class Entity:
     def __init__(

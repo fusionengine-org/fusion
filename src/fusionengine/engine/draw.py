@@ -1,9 +1,11 @@
-import fusionengine.core.window as window
+import fusionengine.engine.window as window
 import pygame as pg
 
 
 def draw_line(window: window.Window, x1: int, y1: int, x2: int, y2: int, color: tuple) -> None:
-    """Draws a line on the screen."""
+    """
+    Draws a line on the screen.
+    """
     pg.draw.line(window.window, color, (x1, y1), (x2, y2))
 
 

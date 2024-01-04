@@ -1,5 +1,5 @@
 import pygame as pg
-from fusionengine.tools.deprecations import deprecated
+from fusionengine.engine.deprecations import deprecated
 
 
 clicked = False

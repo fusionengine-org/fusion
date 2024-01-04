@@ -1,5 +1,10 @@
 def hex_to_rgba(hex):
-    """Converts (#)RRGGBB to [R, G, B, 255]."""
+    """Converts (#)RRGGBB to [R, G, B, 255].
+    
+    args:
+        Hex: Your hex color
+    """
+
     hex6 = hex.replace("#", "")
     return int(hex6[:2], 16), int(hex6[2:4], 16), int(hex6[4:6], 16), 255
 
@@ -8,7 +13,12 @@ def hsv_to_rgb(hue, sat, val, alpha: int) -> tuple[int, int, int, int]:
     """Takes in HSV values and ouputs red, green and blue values.
     Hue is from 0 to 360 (float).
     Saturation and value are from 0 to 1 (float).
-    Alpha is from 0 to 255 (int)."""
+    Alpha is from 0 to 255 (int).
+    """
+    hue_red = 0
+    hue_green = 0
+    hue_blue = 0
+
     if hue <= 60:
         hue_red = 255
 
