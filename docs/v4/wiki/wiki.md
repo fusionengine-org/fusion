@@ -39,7 +39,7 @@ There is basically no difference, they all are doing the same thing, you use wha
 If you tried using our engine you may have encountered this message being printed to terminal:
 
 ```bash
-Fusion Engine 1.0.2 (Pygame-ce 2.3.0, Python 3.11.4)
+Fusion Engine 4.0.0 (Pygame-ce 2.4.0, Python 3.11.7)
 Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine
 ```
 
@@ -336,19 +336,30 @@ The code shows how to save the modified data back to the storage file on disk.
 if you need keyboard input, then use this if statement with your own key (see key tab for all key names):
 
 ```python
- if fusion.Key(fusion.KEY_a).key_down():
-     print("Key A pressed")
+if fusion.key_down(fusion.KEY_a):
+    print("Key A pressed")
+```
+
+Or you can do it this way:
+```python
+if fusion.Key(fusion.KEY_a).key_down():
+    print("Key A pressed")
 ```
 
 ### Keydown once
 
 If you need keydown to be only once, then you use this:
+```python
+if fusion.key_down_once(fusion.KEY_a):
+    print("Key A pressed")
 
+```
+
+Or you can do it this way:
 ```python
 if fusion.Key(fusion.KEY_a).key_down_once():
     print("Key A pressed")
 ```
-
 
 ## User Interface (UI)
 

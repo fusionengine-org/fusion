@@ -21,6 +21,7 @@ KEY_COMMA = pg.K_COMMA
 KEY_MINUS = pg.K_MINUS
 KEY_PERIOD = pg.K_PERIOD
 KEY_SLASH = pg.K_SLASH
+
 KEY_0 = pg.K_0
 KEY_1 = pg.K_1
 KEY_2 = pg.K_2
@@ -31,6 +32,7 @@ KEY_6 = pg.K_6
 KEY_7 = pg.K_7
 KEY_8 = pg.K_8
 KEY_9 = pg.K_9
+
 KEY_COLON = pg.K_COLON
 KEY_SEMICOLON = pg.K_SEMICOLON
 KEY_LESS = pg.K_LESS
@@ -44,6 +46,7 @@ KEY_RIGHTBRACKET = pg.K_RIGHTBRACKET
 KEY_CARET = pg.K_CARET
 KEY_UNDERSCORE = pg.K_UNDERSCORE
 KEY_BACKQUOTE = pg.K_BACKQUOTE
+
 KEY_a = pg.K_a
 KEY_b = pg.K_b
 KEY_c = pg.K_c
@@ -70,7 +73,36 @@ KEY_w = pg.K_w
 KEY_x = pg.K_x
 KEY_y = pg.K_y
 KEY_z = pg.K_z
+
+KEY_A = pg.K_a
+KEY_B = pg.K_b
+KEY_C = pg.K_c
+KEY_D = pg.K_d
+KEY_E = pg.K_e
+KEY_F = pg.K_f
+KEY_G = pg.K_g
+KEY_H = pg.K_h
+KEY_I = pg.K_i
+KEY_J = pg.K_j
+KEY_K = pg.K_k
+KEY_L = pg.K_l
+KEY_M = pg.K_m
+KEY_N = pg.K_n
+KEY_O = pg.K_o
+KEY_P = pg.K_p
+KEY_Q = pg.K_q
+KEY_R = pg.K_r
+KEY_S = pg.K_s
+KEY_T = pg.K_t
+KEY_U = pg.K_u
+KEY_V = pg.K_v
+KEY_W = pg.K_w
+KEY_X = pg.K_x
+KEY_Y = pg.K_y
+KEY_Z = pg.K_z
+
 KEY_CAPSLOCK = pg.K_CAPSLOCK
+
 KEY_F1 = pg.K_F1
 KEY_F2 = pg.K_F2
 KEY_F3 = pg.K_F3
@@ -83,6 +115,10 @@ KEY_F9 = pg.K_F9
 KEY_F10 = pg.K_F10
 KEY_F11 = pg.K_F11
 KEY_F12 = pg.K_F12
+KEY_F13 = pg.K_F13
+KEY_F14 = pg.K_F14
+KEY_F15 = pg.K_F15
+
 KEY_PRINTSCREEN = pg.K_PRINT
 KEY_SCROLLLOCK = pg.K_SCROLLLOCK
 KEY_PAUSE = pg.K_PAUSE
@@ -102,6 +138,7 @@ KEY_KP_MULTIPLY = pg.K_KP_MULTIPLY
 KEY_KP_MINUS = pg.K_KP_MINUS
 KEY_KP_PLUS = pg.K_KP_PLUS
 KEY_KP_ENTER = pg.K_KP_ENTER
+
 KEY_KP_1 = pg.K_KP1
 KEY_KP_2 = pg.K_KP2
 KEY_KP_3 = pg.K_KP3
@@ -112,12 +149,10 @@ KEY_KP_7 = pg.K_KP7
 KEY_KP_8 = pg.K_KP8
 KEY_KP_9 = pg.K_KP9
 KEY_KP_0 = pg.K_KP0
+
 KEY_KP_PERIOD = pg.K_KP_PERIOD
 KEY_POWER = pg.K_POWER
 KEY_KP_EQUALS = pg.K_KP_EQUALS
-KEY_F13 = pg.K_F13
-KEY_F14 = pg.K_F14
-KEY_F15 = pg.K_F15
 KEY_HELP = pg.K_HELP
 KEY_MENU = pg.K_MENU
 KEY_SYSREQ = pg.K_SYSREQ

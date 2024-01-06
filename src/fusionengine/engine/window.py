@@ -37,7 +37,7 @@ class Window:
             print("Error: Can't create a window.")
 
     def change_icon(self, image_path: str) -> None:
-        """Changes icon
+        """Changes icon of the window.
 
         Args:
             Icon_Path (str): Path to your icon
