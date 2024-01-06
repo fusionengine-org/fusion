@@ -20,7 +20,7 @@ def loop():
     elif fusion.Key(fusion.KEY_DOWN).key_down():
         player.y = int(player.y + speed)
 
-    elif fusion.Key(fusion.KEY_RIGHT).key_down():
+    if fusion.Key(fusion.KEY_RIGHT).key_down():
         player.x = int(player.x + speed)
 
     elif fusion.Key(fusion.KEY_LEFT).key_down():
