@@ -78,7 +78,7 @@ class Vector2D:
 
     def __truediv__(self, other):
         if isinstance(other, (int, float)):
-            return Vector2D(self.x / other, self.y / other)
+            return Vector3D(self.x / other, self.y / other)
         else:
             return NotImplemented
 
