@@ -7,5 +7,14 @@ SMALLPI = 3.14
 EULERNUMBER = 2.718281828459045
 
 
-def FLOOR(value):
+def FLOOR(value: float) -> float:
+    """
+    Get the floor value
+
+    Args:
+        value (float): The value to get the floor of
+
+    Returns:
+        float: The floor value
+    """
     return math.floor(value)

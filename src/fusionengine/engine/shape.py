@@ -5,9 +5,25 @@ from fusionengine.engine.window import Window
 
 class Rect:
     def __init__(
-        self, window: Window, x: int, y: int, width: int, height: int, color: tuple
+        self,
+        window: Window,
+        x: int,
+        y: int,
+        width: int,
+        height: int,
+        color: tuple[int, int, int, int],
     ) -> None:
-        """A class that creates a new custom shape. (Not for the user)"""
+        """
+        A class that creates a new rect shape.
+
+        Args:
+            window (Window): Your window
+            x (int): X coordinate of the rect
+            y (int): Y coordinate of the rect
+            width (int): Width of the rect
+            height (int): Height of the rect
+            color (tuple[int, int, int, int]): Color of the rect
+        """
         self.x = x
         self.y = y
         self.width = width
@@ -17,5 +33,7 @@ class Rect:
         self.window = window
 
     def draw(self) -> None:
-        """Creates a new rectangle. Can be later rendered with draw_own_rect."""
+        """
+        Draw the rectangle
+        """
         pg.draw.rect(self.window.window, self.color, self.rect)

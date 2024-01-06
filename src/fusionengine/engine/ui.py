@@ -8,7 +8,13 @@ import os
 
 class Button:
     def __init__(self, rect: Rect, text: str) -> None:
-        """Creates a button."""
+        """
+        Creates a button.
+
+        Args:
+            rect (Rect): The rect of the button (defines the shape of the button)
+            text (str): The text of the button
+        """
         self.manager = rect.window.manager
         self.text = text
         self.x = rect.x
@@ -21,6 +27,12 @@ class Button:
         )
 
     def button_pressed(self) -> bool:
+        """
+        Returns true if the button is pressed.
+
+        Returns:
+            bool: If the button is pressed, returns True
+        """
         return self.button.check_pressed()
 
 
@@ -35,7 +47,18 @@ class Text:
         font_size: int,
         color: tuple,
     ) -> None:
-        """Prints text on the screen."""
+        """
+        Prints text on the screen.
+
+        Args:
+            window (Window): Your window
+            text (str): The text you want to print
+            x (int): X coordinate of the text
+            y (int): Y coordinate of the text
+            font_path (str): The path to the font file
+            font_size (int): The size of the font
+            color (tuple): The color of the text
+        """
 
         if os.path.exists(font_path):
             font = pg.font.Font(font_path, font_size)

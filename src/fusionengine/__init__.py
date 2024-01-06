@@ -60,8 +60,6 @@ import pygame_gui as gui
 
 message = True
 
-pg.init()
-
 
 if os.environ.get("FUSION_HIDE_PROMPT") is None:
     python_version = sys.version.split()[0]

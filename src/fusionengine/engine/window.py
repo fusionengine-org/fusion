@@ -3,16 +3,22 @@ import pygame as pg
 import pygame_gui as gui
 from pygame.locals import DOUBLEBUF
 
+import ctypes
+
 
 class Window:
     def __init__(self, title: str, width: int, height: int) -> None:
-        """Creates a a base window for your game. This is the main window you will use for your application.
+        """
+        Creates a a base window for your game. This is the main window you will use for your application.
 
         Args:
             title (str): The title of your window
             width (int): The width of your window
             height (int): The height of your window
-        """        
+        """
+
+        pg.init()
+
         self._running = False
         self._fps = 60
         self._quittable = True
@@ -37,7 +43,8 @@ class Window:
             print("Error: Can't create a window.")
 
     def change_icon(self, image_path: str) -> None:
-        """Changes icon of the window.
+        """
+        Changes icon of the window.
 
         Args:
             Icon_Path (str): Path to your icon
@@ -48,7 +55,8 @@ class Window:
         pg.display.set_icon(programIcon)
 
     def loop(self, your_loop) -> None:
-        """A while loop decorator function. The main way to start a main loop.
+        """
+        A while loop decorator function. The main way to start a main loop.
 
         Args:
             your_loop (function): Your main loop function
@@ -57,7 +65,8 @@ class Window:
             your_loop()
 
     def running(self) -> bool:
-        """Returns if the window is running. Used for the main loop.
+        """
+        Returns if the window is running. Used for the main loop.
 
         Returns:
             bool: returns true if the window is running else false
@@ -66,7 +75,8 @@ class Window:
         return self._running
 
     def set_fps(self, fps: int) -> None:
-        """Sets the desired frames per second for the game loop.
+        """
+        Sets the desired frames per second for the game loop.
 
         Args:
             fps (int): The desired frames per second
@@ -74,24 +84,31 @@ class Window:
         self._fps = fps
 
     def get_fps(self) -> int:
-        """Returns the current desired frames per second for the game
+        """
+        Returns the current desired frames per second for the game
 
         Returns:
             int: The current desired FPS
-        """        
-        
+        """
+
         return self._fps
 
     def force_quit(self) -> None:
-        """Force quits the window. Specifically, stops and deletes window."""
+        """
+        Force quits the window. Specifically, stops and deletes window.
+        """
         self._running = False
 
     def toggle_quittable(self) -> None:
-        """Toggles whether the window is quittable."""
+        """
+        Toggles whether the window is quittable.
+        """
         self._quittable = not self._quittable
 
     def _refresh(self) -> None:
-        """Does all things for refreshing window. (Not for the user)"""
+        """
+        Does all things for refreshing window. (Do not use!)
+        """
 
         self.DELTATIME = self._clock.tick(self._fps)
 

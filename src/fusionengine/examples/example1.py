@@ -7,5 +7,3 @@ image = fusion.Image(window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
 @window.loop
 def loop():
     image.draw()
-
-
