@@ -167,3 +167,4 @@ cython_debug/
 compile/
 **/.DS_Store
 
+.pypirc

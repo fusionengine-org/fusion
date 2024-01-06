@@ -1,2 +1,2 @@
-include src/fusionengine/debugfiles/*
-include src/fusionengine/fonts/*
+include src/fusionengine/external/*
+
