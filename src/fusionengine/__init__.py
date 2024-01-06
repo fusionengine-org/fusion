@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "4.2.0"
+__version__ = "4.2.1"
 
 import sys
 import os
@@ -7,52 +7,52 @@ import os
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
 # Core
-from fusionengine.core.window import *
-from fusionengine.core.image import *
-from fusionengine.core.draw import *
-from fusionengine.core.shape import *
+from fusionengine.engine.window import *
+from fusionengine.engine.image import *
+from fusionengine.engine.draw import *
+from fusionengine.engine.shape import *
 
 # Events
-from fusionengine.events.event import *
-from fusionengine.events.keys import *
+from fusionengine.engine.event import *
+from fusionengine.engine.keys import *
 
 # Colors
-from fusionengine.colors.color import *
-from fusionengine.colors.colortools import *
+from fusionengine.engine.color import *
+from fusionengine.engine.colortools import *
 
 # Entity
-from fusionengine.entity.entity import *
+from fusionengine.engine.entity import *
 
 # Physics
-from fusionengine.physics.body import *
+from fusionengine.engine.physics import *
 
 # Storage
-from fusionengine.storage.storage import *
+from fusionengine.engine.storage import *
 
 # UI
-from fusionengine.ui.ui import *
+from fusionengine.engine.ui import *
 
 # Fonts
-from fusionengine.fonts.fonts import *
+from fusionengine.engine.fonts import *
 
 # Math
-from fusionengine.math.vector import *
-from fusionengine.math.math import *
+from fusionengine.engine.vector import *
+from fusionengine.engine.math import *
 
 # Sound
-from fusionengine.sound.sound import *
-from fusionengine.sound.background import *
+from fusionengine.engine.sound import *
+from fusionengine.engine.background import *
 
 # Scene
-from fusionengine.scene.scene import *
-from fusionengine.scene.manager import *
+from fusionengine.engine.scene import *
+from fusionengine.engine.manager import *
 
 # Tools
-from fusionengine.tools.systems import *
-from fusionengine.tools.debug import *
+from fusionengine.engine.systems import *
+from fusionengine.engine.debug import *
 
 # Animation
-from fusionengine.animation.animation import *
+from fusionengine.engine.animation import *
 
 
 import pygame as pg
@@ -60,12 +60,12 @@ import pygame_gui as gui
 
 message = True
 
-pg.init()
-
 
 if os.environ.get("FUSION_HIDE_PROMPT") is None:
     python_version = sys.version.split()[0]
-    print(f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})")
     print(
-        "Welcome to Fusion Engine! https://github.com/dimkauzh/fusion-engine. Check out our website at https://fusion-engine.tech/"
+        f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})"
+    )
+    print(
+        "Welcome to Fusion Engine! Check out our website at https://fusion-engine.tech/"
     )

@@ -40,7 +40,7 @@ Our website is at this [link](<https://fusion-engine.tech/>)
 To install our package, run this:
 
 ```bash
-  pip install fusion-engine
+ pip install fusion-engine
 ```
 
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
@@ -56,13 +56,26 @@ if you want to install the package from source and get the latest changes then y
 ```
 
 ### Run example
+The examples are located [here](https://github.com/dimkauzh/fusion-engine/tree/main/src/fusionengine/examples)
+If you want to run the example, then follow these instructions:
 
-If you want to run the example, then just run this command:
+#### Fusion engine v4.2.1 and later
+First, make sure you have fusion engine installed. Then you can run the first example with the following command:
+```bash
+ python -m fusionengine.examples.example1
+```
+For other examples, you can modify the command to run the other example. Just change the number of the example.
 
+#### Fusion engine v4.2.0 and earlier
+You will need to clone the Fusion engine repo to run the exampes. To do that run this command:
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
- python examples/example1.py
+```
+
+Then you can run the example with the following command:
+```bash
+ python src/fusionengine/examples/example1.py
 ```
 
 For different examples, you change the number to the number of the example file
