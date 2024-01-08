@@ -1,11 +1,13 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 name = "fusion-engine"
+dynamic = ["version"]
 description = "A custom open-source game engine on Python and Pygame, it's written in pure Python! It's easy and fast!"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
+readme = {file = "README.md", content-type = "text/markdown"}
 license = {text = "GNU GPLv3"}
 authors = [{name = "Dimkauzh", email = "uzhdimka@gmail.com"}]
 keywords = ["game", "python", "gamedev", "game-engine", "pygame",
@@ -30,15 +32,19 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
     "Topic :: Multimedia :: Video",
 ]
-dynamic = ["version", "readme", "dependencies"]
+dependencies = [
+    "pygame-ce>=2.4.0",
+    "pygame-gui>=0.6.9",
+    "pymunk>=6.6.0",
+]
+includes = ["**/*.png"]
 
-[tool.setuptools.dynamic]
-version = {attr = "fusionengine.__version__"}
-readme = {file = ["README.md"], content-type = "text/markdown"}
-dependencies = {file = "requirements.txt"}
+[tool.pdm]
+package-type = "library"
 
-[tool.setuptools.package-data]
-fusionengine = ["**/*.png"]
+[tool.pdm.build]
+package-dir = "src"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.pdm.version]
+source = "file"
+path = "src/fusionengine/__init__.py"
