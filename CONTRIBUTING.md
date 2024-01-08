@@ -8,3 +8,8 @@ We are happy and welcome if you want to contribute to fusion engine. But please 
 ## Not following these rules
 If we see a pull request that doesn't follow these rules, we will tell you that, and close the pull request. 
 We allow you to re-open a new pull request, but we expect you to have your code fixed.
+
+## Some technologies we are using
+- PDM: We are using pdm for our main interaction with the library.
+- pyproject.toml: Pythons way for setting up a project. A replacement for setup.py
+- pygame-ce, pygame_gui and pymunk: We are using all three of these libraries to develop fusion engine.

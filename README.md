@@ -52,7 +52,7 @@ if you want to install the package from source and get the latest changes then y
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
  cd fusion-engine
- python setup.py install
+ pip install .
 ```
 
 ### Run example
@@ -82,20 +82,14 @@ For different examples, you change the number to the number of the example file
 
 ## 👥 Community
 
-Our community is just growing, so if you want to help us with the project,
-it will be very helpful!
 We have a discord server at this [link](<https://discord.gg/Smg3CK4ZMc>).
-Need to contact us? Just DM the Owner or CEO in discord and we will try to react as fast as possible
+Need to contact us? Just #dimkauzh in discord and he will try to react as fast as possible
 
-### ❤️ Special thanks to these people
-
-- Zenthm (Contributing)
-- XCarCedo (Contributing)
-- nmsderp (Contributing)
-- Techsplosion (Contributor)
-- FBS_Gamer (Discord server)
-
-And our community of course!
+## Contributing
+Our community is just growing, so if you want to help us with the project,
+it will be very helpful! We are welcome to all people who want to contribute, but you do need to follow the [contribution rules](CONTRIBUTING.md)
+Special thanks to all the contributors, they made the project even better!
+And thanks to our community of course!
 
 ## Tutorials
 Are you exited to start with fusion engine but you dont know where to start? Then maybe its worth looking though one of our tutorials! We tried to make them as simple as possible but still very informative. You can find them [here](<https://docs.fusion-engine.tech/>)
