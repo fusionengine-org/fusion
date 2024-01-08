@@ -12,6 +12,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+
+    - name: Configure Git Credentials
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email 41898281+github-actions[bot]@users.noreply.github.com
 
     - name: Set up Python
       uses: actions/setup-python@v2
