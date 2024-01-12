@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "4.2.3"
+__version__ = "4.3.0"
 
 import sys
 import os
@@ -23,9 +23,6 @@ from fusionengine.engine.colortools import *
 # Entity
 from fusionengine.engine.entity import *
 
-# Physics
-from fusionengine.engine.physics import *
-
 # Storage
 from fusionengine.engine.storage import *
 
@@ -48,7 +45,6 @@ from fusionengine.engine.scene import *
 from fusionengine.engine.manager import *
 
 # Tools
-from fusionengine.engine.systems import *
 from fusionengine.engine.debug import *
 
 # Animation

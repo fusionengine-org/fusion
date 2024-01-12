@@ -2,9 +2,9 @@ import pymunk
 import pygame
 
 class RigidBody:
-    def __init__():
+    def __init__(self):
         pass
 
-class StatiBody:
-    def __init__():
+class StaticBody:
+    def __init__(self):
         pass

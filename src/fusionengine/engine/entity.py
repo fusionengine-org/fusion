@@ -1,6 +1,7 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.image import Image
 from fusionengine.engine.shape import Rect
+from fusionengine.engine.physics import RigidBody, StaticBody
 
 
 class Entity:
@@ -13,7 +14,7 @@ class Entity:
         height: int,
     ) -> None:
         """
-        A class that creates a new entity.
+        A class that creates a new entity. If set_body isn't called, it will automatically become a StaticBody
 
         Args:
             window (Window): Your window
@@ -29,6 +30,13 @@ class Entity:
         self.window = window
         self.gravity = 0
         self.frame = 0
+        self.body = None
+
+    def set_body(self, body_type: str) -> None:
+        body = body_type.lower()
+
+        if body = "rigid" or body = "rigidbody":
+            self.body = RigidBody
 
     def load_image(
         self,
