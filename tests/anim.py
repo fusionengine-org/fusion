@@ -10,4 +10,3 @@ anim = fusion.Animation(window, [image1, image2], 3)
 @window.loop
 def loop():
     anim.draw()
-

@@ -97,7 +97,7 @@ class Vector2D:
         """
         The method normalizes this vector and displays the unit vector.
         """
-        magnitude = math.sqrt(self.x ** 2 + self.y ** 2)
+        magnitude = math.sqrt(self.x**2 + self.y**2)
         self.x = self.x / abs(magnitude)
         self.y = self.y / abs(magnitude)
 
@@ -233,12 +233,14 @@ class Vector3D:
         The method normalizes this vector and displays the unit vector.
         """
 
-        magnitude = math.sqrt(self.x ** 2 + self.y ** 2 + self.z ** 2)
+        magnitude = math.sqrt(self.x**2 + self.y**2 + self.z**2)
         self.x = self.x / abs(magnitude)
         self.y = self.y / abs(magnitude)
         self.z = self.z / abs(magnitude)
 
-    def from_tuple(self, value: tuple[int, int, int] | tuple[float, float, float]) -> None:
+    def from_tuple(
+        self, value: tuple[int, int, int] | tuple[float, float, float]
+    ) -> None:
         """
         Setting vector values from tuple
         Args:
