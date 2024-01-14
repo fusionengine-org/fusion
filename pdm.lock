@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:1545417ea116b131516eb8685c8fc98324b7009f03addd5d146ea77f37cec47d"
+content_hash = "sha256:bce239cca94f5f5d54bb926828c2ad5f5446e9ebd57a6000c6b99bc8ef7f1ba1"
 
 [[package]]
 name = "cffi"
