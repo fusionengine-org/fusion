@@ -51,3 +51,16 @@ path = "src/fusionengine/__init__.py"
 
 [tool.pdm.dev-dependencies]
 lint = ["ruff"]
+
+[tool.ruff]
+extend-exclude = ["tests"]
+select = ["ALL"]
+ignore = [
+    "D1",
+    "D203",
+    "D212",
+    "E402",
+    "F403",
+    "S",
+    "T20",
+]
