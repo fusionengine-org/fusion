@@ -52,6 +52,9 @@ path = "src/fusionengine/__init__.py"
 [tool.pdm.dev-dependencies]
 lint = ["ruff"]
 
+[tool.pdm.scripts]
+lint = {cmd = "ruff check"}
+
 [tool.ruff]
 extend-exclude = ["tests"]
 select = ["ALL"]
