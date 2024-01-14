@@ -58,7 +58,7 @@ source = "file"
 path = "src/fusionengine/__init__.py"
 
 [tool.pdm.dev-dependencies]
-lint = ["ruff"]
+lint = ["black"]
 
 [tool.pdm.scripts]
 example1 = "python src/fusionengine/examples/example1.py"
@@ -66,9 +66,4 @@ example2 = "python src/fusionengine/examples/example2.py"
 example3 = "python src/fusionengine/examples/example3.py"
 example4 = "python src/fusionengine/examples/example4.py"
 example5 = "python src/fusionengine/examples/example5.py"
-lint = { cmd = "ruff check" }
-
-[tool.ruff]
-extend-exclude = ["tests"]
-select = ["ALL"]
-ignore = ["D1", "D203", "D212", "E402", "F403", "S", "T20"]
+lint = "black ."
