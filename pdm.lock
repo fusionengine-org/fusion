@@ -5,7 +5,7 @@
 groups = ["default", "lint"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:2cc65d13980dee81530360d7be13370e7009521b9e4ef660b008b4c280689e18"
+content_hash = "sha256:0a61b7e7d7c2bef79b009a85abf58c48f7198fb95c988d99da96e375012ef580"
 
 [[package]]
 name = "black"
@@ -341,6 +341,32 @@ files = [
     {file = "pymunk-6.6.0-pp39-pypy39_pp73-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:59991310cb1a6f201878e9519cbb36ff746f825c9fac49fa76cf8c85b64bf7ad"},
     {file = "pymunk-6.6.0-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:c7513caf1add221cfa1228c12e14e0997a7212e583a59f517b68e72b1f02e08f"},
     {file = "pymunk-6.6.0.tar.gz", hash = "sha256:89be7b6ba237e313c440edfb99612de59bf119e43976d5c76802907cb7a3911c"},
+]
+
+[[package]]
+name = "pysdl2"
+version = "0.9.16"
+summary = "Python SDL2 bindings"
+groups = ["default"]
+files = [
+    {file = "PySDL2-0.9.16.tar.gz", hash = "sha256:1027406badbecdd30fe56e800a5a76ad7d7271a3aec0b7acf780ee26a00f2d40"},
+]
+
+[[package]]
+name = "pysdl2-dll"
+version = "2.28.5"
+summary = "Pre-built SDL2 binaries for PySDL2"
+groups = ["default"]
+files = [
+    {file = "pysdl2-dll-2.28.5.tar.gz", hash = "sha256:0015912b9ed50e5e45a6dbd85a4a3f67b7ace796cac4a055fb5424800f4a63e7"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-macosx_10_11_universal2.whl", hash = "sha256:2242a86f86e1170145d485911803a814cb2c1e17b44aca42290e71f9d839ccf7"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-macosx_10_11_x86_64.whl", hash = "sha256:e8d7688173b30a77067011ad2b7d30f4c2ed417613ed489a117a3a608f9479b3"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-manylinux2014_i686.whl", hash = "sha256:3ac04353b17832ecedcab7903e8fc1e556645417d34898bbfbb193e3c44caea9"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-manylinux2014_x86_64.whl", hash = "sha256:99e3baa4155fa1a6e544daeca81c136e6b5ea4915b2c1574fa821c819021878a"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:83f0fe6c5ceeb1b18779577038e14e937311f523d2129cd4da7cde3e01ada92a"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:fc08fb6a53e72c7199215535711169c95fe62ea2af9d2ae0ddede2db5de71cf4"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-win32.whl", hash = "sha256:6911eff43668ee717f9c2e06d0ed1b93d43c07a439bd0def5604beeb00dfc931"},
+    {file = "pysdl2_dll-2.28.5-py2.py3-none-win_amd64.whl", hash = "sha256:5c245e18249b6c458a7b93b120afdd06487dfa4f19c8174b4d6de970f63e3142"},
 ]
 
 [[package]]

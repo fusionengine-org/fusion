@@ -1,50 +1,65 @@
 import pygame
-import pygame._sdl2 as pgsdl2
-import sdl2
+from pygame.locals import *
+from sdl2 import *
 
-# Initialize SDL2 subsystems
-sdl2.SDL_Init(sdl2.SDL_INIT_VIDEO)
 
-# Create a SDL2 window
-sdl_window = sdl2.SDL_CreateWindow(
-    b"Pygame with SDL2 Window",
-    sdl2.SDL_WINDOWPOS_UNDEFINED,
-    sdl2.SDL_WINDOWPOS_UNDEFINED,
-    800,
-    600,
-    sdl2.SDL_WINDOW_SHOWN,
-)
+def main():
+    pygame.init()
+    pygame.display.set_caption("Mixed Rendering Example")
 
-# Initialize Pygame
-pygame.init()
+    width, height = 800, 600
+    pygame_window = pygame.display.set_mode(
+        (width, height), pygame.DOUBLEBUF | pygame.HWSURFACE
+    )
 
-# Get the SDL window handle from Pygame
-sdl_window_handle = pygame._sdl2.video.getSDLWindow(sdl_window)
+    SDL_Init(SDL_INIT_VIDEO)
+    sdl_window = SDL_CreateWindowFrom(pygame.display.get_wm_info()["window"])
+    renderer = SDL_CreateRenderer(
+        sdl_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC
+    )
 
-# Bind the Pygame display surface to the SDL2 window
-display = pygame.display.set_mode(
-    (800, 600), flags=pygame.SDL_WINDOW_OPENGL, hwnd=sdl_window_handle
-)
+    running = True
+    clock = pygame.time.Clock()
 
-# Run the game loop
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+    # Create a Pygame surface for rendering
+    pygame_surface = pygame.Surface((width, height), pygame.SRCALPHA)
 
-    # Clear the display
-    display.fill((0, 0, 0))
+    # Create a PySDL2 texture for rendering
+    texture = SDL_CreateTexture(
+        renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, width, height
+    )
 
-    # Draw a red rectangle using Pygame
-    pygame.draw.rect(display, (255, 0, 0), (100, 100, 200, 150))
+    while running:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                running = False
 
-    # Update the display
-    pygame.display.flip()
+        # PySDL2 rendering
+        SDL_SetRenderTarget(renderer, texture)
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0)
+        SDL_RenderClear(renderer)
+        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 128)
+        SDL_RenderDrawLine(renderer, 0, 0, width, height)
+        SDL_RenderDrawLine(renderer, width, 0, 0, height)
+        SDL_SetRenderTarget(renderer, None)
 
-# Clean up
-pygame.quit()
+        # Update the Pygame surface with the PySDL2 texture pixels
+        pixels, pitch = SDL_LockTexture(texture, None, None)
+        pygame_surface = pygame.image.fromstring(pixels, (width, height), "RGBA", True)
+        SDL_UnlockTexture(texture)
 
-# Destroy the SDL2 window
-sdl2.SDL_DestroyWindow(sdl_window)
-sdl2.SDL_Quit()
+        # Draw the Pygame surface onto the Pygame window
+        pygame_window.blit(pygame_surface, (0, 0))
+        pygame.display.flip()
+
+        clock.tick(60)
+
+    SDL_DestroyTexture(texture)
+    SDL_DestroyRenderer(renderer)
+    SDL_DestroyWindow(sdl_window)
+    SDL_Quit()
+    pygame.quit()
+
+
+if __name__ == "__main__":
+    main()

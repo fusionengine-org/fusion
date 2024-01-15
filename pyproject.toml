@@ -44,7 +44,13 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
     "Topic :: Multimedia :: Video",
 ]
-dependencies = ["pygame-ce>=2.4.0", "pygame-gui>=0.6.9", "pymunk>=6.6.0"]
+dependencies = [
+    "pygame-ce>=2.4.0",
+    "pygame-gui>=0.6.9",
+    "pymunk>=6.6.0",
+    "pysdl2>=0.9.16",
+    "pysdl2-dll>=2.28.5",
+]
 includes = ["**/*.png", "**/*.ttf"]
 
 [tool.pdm]
@@ -66,4 +72,5 @@ example2 = "python src/fusionengine/examples/example2.py"
 example3 = "python src/fusionengine/examples/example3.py"
 example4 = "python src/fusionengine/examples/example4.py"
 example5 = "python src/fusionengine/examples/example5.py"
+rewrite = "python tests/rewrite.py"
 lint = "black ."
