@@ -5,7 +5,9 @@ pg.init()
 pg.display.set_mode((800, 600))
 
 manager = pygame_gui.UIManager((800, 600))
-hello_button = pygame_gui.elements.UIButton(relative_rect=pg.Rect((350, 275), (100, 50)), text='Hello', manager=manager)
+hello_button = pygame_gui.elements.UIButton(
+    relative_rect=pg.Rect((350, 275), (100, 50)), text="Hello", manager=manager
+)
 
 running = True
 
@@ -19,7 +21,7 @@ while running:
     manager.update(1.0 / 60.0)
 
     if hello_button.check_pressed():
-        print('Hello World!')
+        print("Hello World!")
 
     manager.draw_ui(pg.display.get_surface())
 

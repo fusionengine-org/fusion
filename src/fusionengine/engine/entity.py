@@ -13,7 +13,7 @@ class Entity:
         height: int,
     ) -> None:
         """
-        A class that creates a new entity.
+        A class that creates a new entity. If set_body isn't called, it will automatically become a StaticBody
 
         Args:
             window (Window): Your window
@@ -29,6 +29,7 @@ class Entity:
         self.window = window
         self.gravity = 0
         self.frame = 0
+        self.body = None
 
     def load_image(
         self,

@@ -3,8 +3,6 @@ import pygame as pg
 import pygame_gui as gui
 from pygame.locals import DOUBLEBUF
 
-import ctypes
-
 
 class Window:
     def __init__(self, title: str, width: int, height: int) -> None:
