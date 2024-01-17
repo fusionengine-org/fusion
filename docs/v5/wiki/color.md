@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
----
-
-
 ## Using colors
 Our engine has some build in predefined colors so it's a bit easier for you with colors, to acess the colors you run:
 ```python

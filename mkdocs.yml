@@ -1,20 +1,55 @@
 site_name: Fusion Engine Documentation
 site_description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
 
-repo_name: dimkauzh/fusion-engine
-repo_url: https://github.com/dimkauzh/fusion-engine
+repo_name: fusion-engine
+repo_url: https://github.com/fusionengine-org/fusion-engine
 
 nav:
   - Home: 'index.md'
-  - Wiki: 'v4/wiki/index.md'
-  - Api: 'v4/api/index.md'
-  - Tutorial: 'v4/tutorials/index.md'
+
+  - Wiki:
+    - Window with fusion: 'v5/wiki/window.md'
+    - Rendering with fusion: 'v5/wiki/rendering.md'
+    - Events and Keys: 'v5/wiki/events-keys.md'
+    - Color and colortools: 'v5/wiki/color.md'
+    - Managing sounds and music: 'v5/wiki/music.md'
+    - Scenes, entities and animations: 'v5/wiki/scene.md'
+    - Storage system: 'v5/wiki/storage.md'
+    - UI module: 'v5/wiki/ui.md'
+    - Math and Vectors: 'v5/wiki/math.md'
+    - Build in Fonts: 'v5/wiki/fonts.md'
+    - Extra stuff: 'v5/wiki/extra.md'
+    - External tools: 'v5/wiki/external.md'
+  - Tutorials: 'v5/tutorials/index.md'
+
+  - Legacy:
+    - Start: 'legacy/index.md'
+    - v3:
+      - Wiki: 'legacy/v3/wiki/wiki.md'
+      - Api: 'legacy/v3/api/index.md'
+      - Tutorial: 'legacy/v3/tutorials/index.md'
+
+    - v4:
+      - Window with fusion: 'legacy/v4/wiki/window.md'
+      - Rendering with fusion: 'legacy/v4/wiki/rendering.md'
+      - Events and Keys: 'legacy/v4/wiki/events-keys.md'
+      - Color and colortools: 'legacy/v4/wiki/color.md'
+      - Managing sounds and music: 'legacy/v4/wiki/music.md'
+      - Scenes, entities and animations: 'legacy/v4/wiki/scene.md'
+      - Storage system: 'legacy/v4/wiki/storage.md'
+      - UI module: 'legacy/v4/wiki/ui.md'
+      - Math and Vectors: 'legacy/v4/wiki/math.md'
+      - Build in Fonts: 'legacy/v4/wiki/fonts.md'
+      - Extra stuff: 'legacy/v4/wiki/extra.md'
+      - External tools: 'legacy/v4/wiki/external.md'
+      - Tutorial: 'legacy/v4/tutorials/index.md'
+
 
 theme:
   name: material
 
-  logo: v4/assets/logo/fe.png
-  favicon: v4/assets/logo/fe.png
+  logo: v5/assets/logo/fe.png
+  favicon: v5/assets/logo/fe.png
 
   features:
     - navigation.path

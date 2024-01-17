@@ -1,3 +1,18 @@
+class Color:
+    def __init__(self, r: int, g: int, b: int, a: int) -> None:
+        """
+        Creates a color object.
+
+        Args:
+            color (tuple[int, int, int, int]): The color in RGBA format
+        """
+        self.list = [r, g, b, a]
+        self.r = r
+        self.g = g
+        self.b = b
+        self.a = a
+
+
 def hex_to_rgba(hex: str) -> tuple[int, int, int, int]:
     """
     Converts (#)RRGGBB to [R, G, B, 255].

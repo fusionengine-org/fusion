@@ -1,9 +1,3 @@
----
-hide:
-  - navigation
----
-
-
 # External tools
 
 ## Using pygame
@@ -12,7 +6,7 @@ If you cant find some function you need in this engine, the you could use pygame
 fusion.pg
 ```
 
-## Using pygame
+## Using pygame-gui
 If you cant find some gui functions, you can use pygame gui, as the engine is using pygame_gui library. You dont need to import pygame gui, as that can make some issues, you just use:
 ```python
 fusion.gui
