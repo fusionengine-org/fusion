@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 
 ## Fonts
 Our engine has some build in fonts, the following fonts are available:

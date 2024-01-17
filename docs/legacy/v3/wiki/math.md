@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 
 
 ## Types of PI in Fusion Engine

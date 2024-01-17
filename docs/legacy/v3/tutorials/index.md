@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 
 # Fusion engine tutorials
 ## Unveiling the Tutorials

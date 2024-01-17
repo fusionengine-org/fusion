@@ -22,26 +22,7 @@ Fusion is a game engine for creating graphical applications using the Pygame lib
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
 ## 👋 Welcome
-Welcome to fusion engine documentation! We have seperated the documentation in some parts: main, api, wiki and tutorial. 
-Wiki is made if you need to know what a function does.
-Api is made if you need to know if a function exist and what arguments it takes,
-and in tutorials we made some tutorials for you to better understand fusion!
-
-## 💻 Setting up
-
-To install it run this:
-
-```bash
-  pip install fusion-engine
-```
-
-Then import:
-
-```python
-  import fusionengine as fusion
-```
-And your done!
-
-## Next step
-You can now use fusion engine. To get started, head over to the 'Getting Started' section in the navigation bar. You can also choose the wiki or tutorials section in the navigation bar.
+Welcome to fusion engine documentation! We have seperated the documentation in two parts: wiki and tutorial. 
+Wiki is made if you need to know what a function does. And in tutorials we made some tutorials for you to better understand fusion!
+To get started, head over to the 'Getting Started' section in the navigation bar. You can also choose the wiki or tutorials section in the navigation bar.
 

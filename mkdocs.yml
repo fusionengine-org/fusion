@@ -6,7 +6,7 @@ repo_url: https://github.com/fusionengine-org/fusion-engine
 
 nav:
   - Home: 'index.md'
-
+  - Getting Started: 'get-started.md'
   - Wiki:
     - Window with fusion: 'v5/wiki/window.md'
     - Rendering with fusion: 'v5/wiki/rendering.md'
@@ -20,7 +20,10 @@ nav:
     - Build in Fonts: 'v5/wiki/fonts.md'
     - Extra stuff: 'v5/wiki/extra.md'
     - External tools: 'v5/wiki/external.md'
-  - Tutorials: 'v5/tutorials/index.md'
+  - Tutorials:
+    - Setting up Fusion Engine: 'v5/tutorials/setup.md'
+    - Basic rendering and windowing with Fusion: 'v5/tutorials/basics.md'
+    - Small moving character: 'v5/tutorials/character.md'
 
   - Legacy:
     - Start: 'legacy/index.md'

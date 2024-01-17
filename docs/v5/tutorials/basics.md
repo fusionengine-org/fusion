@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 
 # Basic rendering tutorial
 
@@ -41,7 +36,7 @@ def loop():
 ## Drawing image
 So we still need to draw our image after loading it, and you can do that easily inside a loop like this:
 ```python
-@main.window.loop
+@window.loop
 def loop():
     image.draw()
 
