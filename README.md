@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/dimkauzh/fusion-engine/assets/106883655/183ab172-2c3e-49b5-ba31-7c1ad63e564a" alt="logo">
+  <img src="icon/fusion-banner2.png" alt="logo">
 </p>
 
 <p align="center">
