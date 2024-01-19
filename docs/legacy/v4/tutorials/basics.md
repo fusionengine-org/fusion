@@ -1,9 +1,4 @@
----
-hide:
-  - navigation
----
-
-
+<img src="icon/fusion-banner2.png" alt="logo">
 # Basic rendering tutorial
 
 ## Introduction

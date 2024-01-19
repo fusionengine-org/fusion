@@ -7,7 +7,8 @@ This is a tutorial so you would understand the basics of the engine and how it w
 This tutorial also expect you to have everything setup, if not, head over to [tutorial 1: setting everything up](setup.md)
 
 The Final Product Should Look like This:
-![gif](../assets/gifs/example.gif)
+
+<img src="../../assets/tutorials/result.png" alt="logo" width="400" height="400">
 
 ## Creating a window
 

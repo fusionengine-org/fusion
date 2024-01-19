@@ -1,4 +1,4 @@
-# Main Wiki
+# Windowing
 
 ## Create window
 
