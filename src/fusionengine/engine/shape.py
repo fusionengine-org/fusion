@@ -1,6 +1,7 @@
 import pygame as pg
 
 from fusionengine.engine.window import Window
+from fusionengine.engine.color import Color
 
 
 class Rect:
@@ -11,7 +12,7 @@ class Rect:
         y: int,
         width: int,
         height: int,
-        color: tuple[int, int, int, int],
+        color: Color,
     ) -> None:
         """
         A class that creates a new rect shape.
@@ -28,7 +29,7 @@ class Rect:
         self.y = y
         self.width = width
         self.height = height
-        self.color = color
+        self.color = color.tuple
         self.rect = pg.Rect(x, y, width, height)
         self.window = window
 

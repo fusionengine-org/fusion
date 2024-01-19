@@ -1,5 +1,6 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
+from fusionengine.engine.color import Color
 
 import pygame as pg
 import pygame_gui as gui
@@ -45,7 +46,7 @@ class Text:
         y: int,
         font_path: str,
         font_size: int,
-        color: tuple,
+        color: Color,
     ) -> None:
         """
         Prints text on the screen.
@@ -60,11 +61,20 @@ class Text:
             color (tuple): The color of the text
         """
 
+        self.text = text
+        self.color = color
+        self.window = window.window
+        self.x = x
+        self.y = y
+
         if os.path.exists(font_path):
-            font = pg.font.Font(font_path, font_size)
+            self.font = pg.font.Font(font_path, font_size)
         else:
-            font = pg.font.SysFont(font_path, font_size)
+            self.font = pg.font.SysFont(font_path, font_size)
 
-        txtsurf = font.render(text, True, color)
-
-        window.window.blit(txtsurf, (x, y))
+    def draw(self) -> None:
+        """
+        Draws the loaded font
+        """
+        txtsurf = self.font.render(self.text, True, self.color.tuple)
+        self.window.blit(txtsurf, (self.x, self.y))

@@ -1,8 +1,9 @@
 from fusionengine.engine.window import Window
+from fusionengine.engine.color import Color
 import pygame as pg
 
 
-def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: tuple) -> None:
+def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: Color) -> None:
     """
     Draw a line on the screen
 
@@ -12,9 +13,9 @@ def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: tuple) 
         y1 (int): The y position of the first point
         x2 (int): The x position of the second point
         y2 (int): The y position of the second point
-        color (tuple): The color of the line
+        color (Color): The color of the line
     """
-    pg.draw.line(window.window, color, (x1, y1), (x2, y2))
+    pg.draw.line(window.window, color.tuple, (x1, y1), (x2, y2))
 
 
 def draw_line_rect(
@@ -23,7 +24,7 @@ def draw_line_rect(
     y: int,
     width: int,
     height: int,
-    color: tuple[int, int, int, int],
+    color: Color,
 ) -> None:
     """
     Draws a rectangle that exists of lines on the screen.
@@ -34,13 +35,13 @@ def draw_line_rect(
         y (int): Y coordinate of the rectangle
         width (int): Width of the rectangle
         height (int): Height of the rectangle
-        color (tuple[int, int, int, int]): Color of the rectangle
+        color (Color): Color of the rectangle
     """
     rdr = window.window
-    pg.draw.line(rdr, color, (x, y), (x + width, y))
-    pg.draw.line(rdr, color, (x, y + height), (x + width, y + height))
-    pg.draw.line(rdr, color, (x, y), (x, y + height))
-    pg.draw.line(rdr, color, (x + width, y), (x + width, y + height))
+    pg.draw.line(rdr, color.tuple, (x, y), (x + width, y))
+    pg.draw.line(rdr, color.tuple, (x, y + height), (x + width, y + height))
+    pg.draw.line(rdr, color.tuple, (x, y), (x, y + height))
+    pg.draw.line(rdr, color.tuple, (x + width, y), (x + width, y + height))
 
 
 def draw_rect(
@@ -49,7 +50,7 @@ def draw_rect(
     y: int,
     width: int,
     height: int,
-    color: tuple[int, int, int, int],
+    color: Color,
 ) -> None:
     """
     Draws a rectangle on the screen.
@@ -60,11 +61,11 @@ def draw_rect(
         y (int): Y coordinate of the rectangle
         width (int): Width of the rectangle
         height (int): Height of the rectangle
-        color (tuple[int, int, int, int]): Color of the rectangle
+        color (Color): Color of the rectangle
     """
 
     s = pg.Surface((width, height), pg.SRCALPHA)
-    s.fill((color[0], color[1], color[2], color[3]))
+    s.fill((color.tuple[0], color.tuple[1], color.tuple[2], color.tuple[3]))
     window.window.blit(s, (x, y))
 
 
@@ -74,7 +75,7 @@ def set_background_color(window: Window, color: tuple[int, int, int, int]) -> No
 
     Args:
         window (Window): Your window
-        color (tuple[int, int, int, int]): The color of the background
+        color (Color): The color of the background
     """
     s = pg.Surface((window.width, window.height), pg.SRCALPHA)
     s.fill(color)
@@ -82,7 +83,7 @@ def set_background_color(window: Window, color: tuple[int, int, int, int]) -> No
 
 
 def draw_arbitrary_polygon_outline(
-    window: Window, corners: tuple[tuple[int, int]], color: tuple[int, int, int, int]
+    window: Window, corners: tuple[tuple[int, int]], color: Color
 ) -> None:
     """
     Draw an arbitrary polygon outline.
@@ -91,7 +92,7 @@ def draw_arbitrary_polygon_outline(
     Args:
         window (Window): Your window
         corners (tuple[tuple[int, int]]): The corners of the polygon
-        color (tuple[int, int, int, int]): The color of the polygon
+        color (Color): The color of the polygon
     """
 
     for i, (x1, y1) in enumerate(corners[:-1]):
@@ -99,7 +100,7 @@ def draw_arbitrary_polygon_outline(
         draw_line(window, x1, y1, x2, y2, color)
 
 
-def set_pixel(window: Window, x: int, y: int, color: tuple[int, int, int, int]) -> None:
+def set_pixel(window: Window, x: int, y: int, color: Color) -> None:
     """
     Set a specific pixel on the window
 
@@ -107,6 +108,6 @@ def set_pixel(window: Window, x: int, y: int, color: tuple[int, int, int, int]) 
         window (Window): Your window
         x (int): The x coordinate of the pixel
         y (int): The y coordinate of the pixel
-        color (tuple[int, int, int, int]): The color of the pixel
+        color (Color): The color of the pixel
     """
-    window.window.set_at((x, y), color)
+    window.window.set_at((x, y), color.tuple)

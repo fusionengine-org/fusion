@@ -18,7 +18,6 @@ from fusionengine.engine.keys import *
 
 # Colors
 from fusionengine.engine.color import *
-from fusionengine.engine.colortools import *
 
 # Entity
 from fusionengine.engine.entity import *
@@ -38,7 +37,6 @@ from fusionengine.engine.math import *
 
 # Sound
 from fusionengine.engine.sound import *
-from fusionengine.engine.background import *
 
 # Scene
 from fusionengine.engine.scene import *

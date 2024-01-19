@@ -1,6 +1,7 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.image import Image
 from fusionengine.engine.shape import Rect
+from fusionengine.engine.color import Color
 
 
 class Entity:
@@ -84,7 +85,7 @@ class Entity:
         """
         return self.frame
 
-    def load_rect(self, color: tuple) -> None:
+    def load_rect(self, color: Color) -> None:
         """
         Gives the entity a rectangle and later draws it on the screen.
 
