@@ -5,7 +5,7 @@
 groups = ["default", "lint"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:ed128dc345196843fb3a2e709ea200ce7ba2a2c29bb935ab0e3bb187b0bd8663"
+content_hash = "sha256:36dd1bfc12726c2c8a64fd51d0480b66ec80e4f6f4f935576f059147ff424341"
 
 [[package]]
 name = "babel"
@@ -686,6 +686,16 @@ files = [
     {file = "pymunk-6.6.0-pp39-pypy39_pp73-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:59991310cb1a6f201878e9519cbb36ff746f825c9fac49fa76cf8c85b64bf7ad"},
     {file = "pymunk-6.6.0-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:c7513caf1add221cfa1228c12e14e0997a7212e583a59f517b68e72b1f02e08f"},
     {file = "pymunk-6.6.0.tar.gz", hash = "sha256:89be7b6ba237e313c440edfb99612de59bf119e43976d5c76802907cb7a3911c"},
+]
+
+[[package]]
+name = "pyopengl"
+version = "3.1.7"
+summary = "Standard OpenGL bindings for Python"
+groups = ["default"]
+files = [
+    {file = "PyOpenGL-3.1.7-py3-none-any.whl", hash = "sha256:a6ab19cf290df6101aaf7470843a9c46207789855746399d0af92521a0a92b7a"},
+    {file = "PyOpenGL-3.1.7.tar.gz", hash = "sha256:eef31a3888e6984fd4d8e6c9961b184c9813ca82604d37fe3da80eb000a76c86"},
 ]
 
 [[package]]

@@ -1,5 +1,7 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.color import Color
+import fusionengine.backend.gl as gl
+
 import pygame as pg
 
 
@@ -15,7 +17,16 @@ def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: Color) 
         y2 (int): The y position of the second point
         color (Color): The color of the line
     """
-    pg.draw.line(window.window, color.tuple, (x1, y1), (x2, y2))
+
+    gl.LineWidth(1)
+
+    gl.Begin(gl.LINES)
+
+    gl.Color4f(color.r, color.g, color.b, color.a)
+    gl.Vertex2f(x1, y1)
+    gl.Vertex2f(x2, y2)
+
+    gl.End()
 
 
 def draw_line_rect(
@@ -37,11 +48,10 @@ def draw_line_rect(
         height (int): Height of the rectangle
         color (Color): Color of the rectangle
     """
-    rdr = window.window
-    pg.draw.line(rdr, color.tuple, (x, y), (x + width, y))
-    pg.draw.line(rdr, color.tuple, (x, y + height), (x + width, y + height))
-    pg.draw.line(rdr, color.tuple, (x, y), (x, y + height))
-    pg.draw.line(rdr, color.tuple, (x + width, y), (x + width, y + height))
+    draw_line(window, x, y, x + width, y, color)
+    draw_line(window, x, y + height, x + width, y + height, color)
+    draw_line(window, x, y, x, y + height, color)
+    draw_line(window, x + width, y, x + width, y + height, color)
 
 
 def draw_rect(
@@ -64,12 +74,18 @@ def draw_rect(
         color (Color): Color of the rectangle
     """
 
-    s = pg.Surface((width, height), pg.SRCALPHA)
-    s.fill((color.tuple[0], color.tuple[1], color.tuple[2], color.tuple[3]))
-    window.window.blit(s, (x, y))
+    gl.Begin(gl.QUADS)
+
+    gl.Color4f(color.r, color.g, color.b, color.a)
+    gl.Vertex2f(x, y)
+    gl.Vertex2f(x + width, y)
+    gl.Vertex2f(x + width, y + height)
+    gl.Vertex2f(x, y + height)
+
+    gl.End()
 
 
-def set_background_color(window: Window, color: tuple[int, int, int, int]) -> None:
+def set_background_color(window: Window, color: Color) -> None:
     """
     Sets the background color of the screen.
 
@@ -77,9 +93,7 @@ def set_background_color(window: Window, color: tuple[int, int, int, int]) -> No
         window (Window): Your window
         color (Color): The color of the background
     """
-    s = pg.Surface((window.width, window.height), pg.SRCALPHA)
-    s.fill(color)
-    window.window.blit(s, (0, 0))
+    gl.ClearColor(color.r, color.g, color.b, color.a)
 
 
 def draw_arbitrary_polygon_outline(
@@ -110,4 +124,9 @@ def set_pixel(window: Window, x: int, y: int, color: Color) -> None:
         y (int): The y coordinate of the pixel
         color (Color): The color of the pixel
     """
-    window.window.set_at((x, y), color.tuple)
+    gl.Begin(gl.POINTS)
+
+    gl.Color4f(color.r, color.g, color.b, color.a)
+    gl.Vertex2f(x, y)
+
+    gl.End()

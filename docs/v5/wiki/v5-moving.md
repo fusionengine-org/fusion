@@ -25,3 +25,6 @@ mytext = fusion.Text(your_window,
 def loop():
     mytext.draw()
 ```
+
+## Build in fonts
+There are no build in font anymore in fusion. Instead use system fonts or your own custom font.

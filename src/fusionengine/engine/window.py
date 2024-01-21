@@ -1,7 +1,9 @@
 from fusionengine.engine.debug import DEBUGIMAGE
+import fusionengine.backend.gl as gl
+
 import pygame as pg
 import pygame_gui as gui
-from pygame.locals import DOUBLEBUF
+from pygame.locals import DOUBLEBUF, OPENGL
 
 
 class Window:
@@ -27,8 +29,13 @@ class Window:
         self.height = height
 
         try:
-            self.window = pg.display.set_mode((width, height), DOUBLEBUF, 16)
+            self.window = pg.display.set_mode((width, height), DOUBLEBUF | OPENGL)
             pg.display.set_caption(title)
+
+            gl.MatrixMode(gl.PROJECTION)
+            gl.LoadIdentity()
+            gl.Ortho(0, width, height, 0, -1, 1)
+            gl.MatrixMode(gl.MODELVIEW)
 
             self.manager = gui.UIManager((width, height))
 
@@ -114,11 +121,8 @@ class Window:
             if event.type == pg.QUIT and self._quittable:
                 self._running = False
 
-            self.manager.process_events(event)
+        pg.display.flip()
+        pg.time.wait(10)
 
-        self.manager.update(self.DELTATIME)
-        self.manager.draw_ui(self.window)
-
-        pg.display.update()
-
-        self.window.fill((0, 0, 0))
+        gl.Clear(gl.DEPTH_BUFFER_BIT)
+        gl.Clear(gl.COLOR_BUFFER_BIT)
