@@ -101,9 +101,9 @@ class Window:
 
         return self._fps
 
-    def force_quit(self) -> None:
+    def quit(self) -> None:
         """
-        Force quits the window. Specifically, stops and deletes window.
+        Quits the window. Specifically, stops and deletes window.
         """
         self._running = False
 
@@ -122,7 +122,7 @@ class Window:
 
         for event in pg.event.get():
             if event.type == pg.QUIT and self._quittable:
-                self._running = False
+                self.quit()
 
         pg.display.flip()
         pg.time.wait(10)

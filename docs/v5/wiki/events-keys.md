@@ -1,6 +1,11 @@
 # Events and keys
 
 ## Keyboard input
+## Get mouse position
+If  you need to get the mouse position within the window, you can use a function like this:
+```python
+mouse_x, mouse_y = fusion.get_mouse_pos()
+```
 
 ### Keydown
 

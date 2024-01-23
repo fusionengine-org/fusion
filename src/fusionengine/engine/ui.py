@@ -20,11 +20,16 @@ class Button:
         font: str = DEBUGFONT,
     ) -> None:
         """
-        Creates a button.
+        Creates a button. You can get its events using is_pressed() function or you can draw it using draw() function.
 
         Args:
-            rect (Rect): The rect of the button (defines the shape of the button)
-            text (str): The text of the button
+            x (int): X pos
+            y (int): Y pos
+            width (int): Width
+            height (int): Height
+            font_size (int): Font size
+            text (str): Text
+            font (str, optional): Your Font. Defaults to the default font (DEBUGFONT).
         """
         self.rect_color = GRAY
         self.rect = Rect(x, y, 500, 500, self.rect_color)
@@ -94,7 +99,6 @@ class Text:
         Prints text on the screen.
 
         Args:
-            window (Window): Your window
             text (str): The text you want to print
             x (int): X coordinate of the text
             y (int): Y coordinate of the text

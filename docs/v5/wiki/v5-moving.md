@@ -33,14 +33,7 @@ So instead of using a tuple, you use a object of Color class. This is appleid to
 ## Drawing text
 Normally if you used the text class, then you used it inside a loop. The new way is to load it ouside the loop and then render it inside the loop. Here is a example
 ```python
-my_text = fusion.Text(your_window,
-                    "test", 
-                    10,
-                    10,
-                    "Arial",
-                    12,
-                    fusion.BLUE
-)
+my_text = fusion.Text("test", 10, 10, "Arial", 12, fusion.BLUE)
 
 @your_window.loop
 def loop():
@@ -73,7 +66,7 @@ Making button is now different than before. Now you don't pass a rect, instead y
 
 So like this:
 ```python
-my_button = fusion.Button(window, 15, 15, 200, 200, 20, "Test")
+my_button = fusion.Button(15, 15, 200, 200, 20, "Test")
 ```
 
 ### Drawing it
@@ -84,3 +77,15 @@ Drawing the button is really easy, just like this:
 def loop():
     my_button.draw()
 ```
+
+### Gettig if clicked
+If you want to get if a button is pressed, just do it this new way:
+```python
+@window.loop
+def loop():
+    if your_button.is_pressed():
+        ... # Do your stuff
+```
+
+## Force quit naming
+The force_quit() function inside the window class has been changed to quit() instead. It operates the same way as before.

@@ -9,7 +9,7 @@ The color name is always capitalised as per [PEP 8 → Constants](https://peps.p
 ## Custom color
 If you want your own color, you just give your function a Color object as argument with RGBA colors, here is an example:
 ```python
-fusion.draw_rect(window, 100, 100, 400, 400, fusion.Color(255, 255, 255, 255))
+fusion.draw_rect(100, 100, 400, 400, fusion.Color(255, 255, 255, 255))
 ```
 
 ## Hex to rgba

@@ -1,8 +1,7 @@
-import pygame as pg
-
-from fusionengine.engine.window import Window
 from fusionengine.engine.color import Color, BLUE
 from fusionengine.engine.draw import draw_rect
+
+import pygame as pg
 
 
 class Rect:
@@ -18,7 +17,6 @@ class Rect:
         A class that creates a new rect shape.
 
         Args:
-            window (Window): Your window
             x (int): X coordinate of the rect
             y (int): Y coordinate of the rect
             width (int): Width of the rect

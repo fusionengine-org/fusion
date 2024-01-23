@@ -42,9 +42,7 @@ class Entity:
         Args:
             image_path (str): The path to the image
         """
-        self.main_image = Image(
-            self.window, image_path, self.x, self.y, self.width, self.height
-        )
+        self.main_image = Image(image_path, self.x, self.y, self.width, self.height)
 
     def load_animation(self, images: tuple) -> None:
         """
@@ -92,9 +90,7 @@ class Entity:
         Args:
             color (tuple): The color of the rectangle
         """
-        self.main_rect = Rect(
-            self.window, self.x, self.y, self.width, self.height, color
-        )
+        self.main_rect = Rect(self.x, self.y, self.width, self.height, color)
 
     def draw_rect(self) -> None:
         """

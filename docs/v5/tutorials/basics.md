@@ -21,7 +21,7 @@ The first argument that we give our function is our title, second argument is ou
 ## Pre-loading image
 We will now pre-load a image so we can draw it later on our window. We do it like this:
 ```python
-image = fusion.Image(window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
+image = fusion.Image(fusion.DEBUGIMAGE, 0, 0, 600, 600)
 ```
 Fist argument is our window, second is our image path, third is our x position, fourth is our y position, fifth is our width and sixth is our height. As you maybe see were using fusion.DEBUGIMAGE, which is a build in image into our engine for testing purposes. We will use it for our tutorial
 
@@ -50,7 +50,7 @@ Here is our full code that we could through this tutorial:
 import fusionengine as fusion
 
 window = fusion.Window("Example: 1", 600, 600)
-image = fusion.Image(window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
+image = fusion.Image(fusion.DEBUGIMAGE, 0, 0, 600, 600)
 
 
 @window.loop

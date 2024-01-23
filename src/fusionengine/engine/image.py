@@ -19,7 +19,6 @@ class Image:
         Opens an image. Can be later rendered with draw_image.
 
         Args:
-            window (Window): Your window
             image_path (str): The path to the image
             x (int): X coordinate of the image
             y (int): Y coordinate of the image
@@ -82,7 +81,6 @@ def draw_image(path: str, x: int, y: int, width: int, height: int):
     Draws a image directly from provided path.
 
     Args:
-        window (Window): Your window
         image_path (str): The path to the image
         x (int): X coordinate of the image
         y (int): Y coordinate of the image

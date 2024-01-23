@@ -4,7 +4,7 @@
 If you want to set a background color, you use this function before all draw functions:
 
 ```python
-fusion.set_background_color(window, fusion.WHITE)
+fusion.set_background_color(fusion.WHITE)
 ```
 
 
@@ -15,13 +15,13 @@ We have some predefined shapes that can be used and be drew on the screen. Here 
 Rectangle:
 
 ```python
-your_shape = fusion.Rect(window, x, y, width, height)
+your_shape = fusion.Rect(x, y, width, height, color)
 ```
 
 ### Drawing the shape
 To draw your shape, you use this:
 ```python
-your_shape.draw(color)
+your_shape.draw()
 ```
 
 - More shapes will be coming soon
@@ -32,7 +32,7 @@ To draw a line, you use this:
 
 ```python
 #                        x1   y1   x2   y2      color
-fusion.draw_line(window, 100, 100, 200, 200, fusion.BLUE)
+fusion.draw_line(100, 100, 200, 200, fusion.BLUE)
 ```
 
 ## Draw rectangle
