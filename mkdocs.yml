@@ -1,20 +1,97 @@
 site_name: Fusion Engine Documentation
-site_description: A custom open-source game engine on Python and Pygame, it’s written in pure Python! It’s easy and fast!
+site_description: A custom open-source game engine on OpenGL and Python, it’s written in pure Python! It’s easy and fast!
 
-repo_name: dimkauzh/fusion-engine
-repo_url: https://github.com/dimkauzh/fusion-engine
+repo_name: fusion-engine
+repo_url: https://github.com/fusionengine-org/fusion-engine
 
 nav:
   - Home: 'index.md'
-  - Wiki: 'v4/wiki/index.md'
-  - Api: 'v4/api/index.md'
-  - Tutorial: 'v4/tutorials/index.md'
+
+  - Getting Started: 'get-started.md'
+
+  - Wiki:
+    - Window with fusion: 'v5/wiki/window.md'
+    - Rendering with fusion: 'v5/wiki/rendering.md'
+    - Events and Keys: 'v5/wiki/events-keys.md'
+    - Color and colortools: 'v5/wiki/color.md'
+    - Managing sounds and music: 'v5/wiki/music.md'
+    - Scenes, entities and animations: 'v5/wiki/scene.md'
+    - Storage system: 'v5/wiki/storage.md'
+    - UI module: 'v5/wiki/ui.md'
+    - Math and Vectors: 'v5/wiki/math.md'
+    - Extra stuff: 'v5/wiki/extra.md'
+    - External tools: 'v5/wiki/external.md'
+    - Moving from v4 to v5: 'v5/wiki/v5-moving.md'
+
+  - Tutorials:
+    - Setting up Fusion Engine: 'v5/tutorials/setup.md'
+    - Basics of Fusion Engine: 'v5/tutorials/basics.md'
+    - Small moving character: 'v5/tutorials/character.md'
+
+    
+  - Changelog:
+    - v5: 'changelog/v5.md'
+    - v4: 'changelog/v4.md'
+    - v3: 'changelog/v3.md'
+
+  - Legacy:
+    - Start: 'legacy/index.md'
+    - v3:
+      - Wiki:
+        - Main page: 'legacy/v3/wiki/wiki.md'
+        - Keys page: 'legacy/v3/wiki/keys.md'
+        - Color page: 'legacy/v3/wiki/color.md'
+        - Math page: 'legacy/v3/wiki/math.md'
+        - Fonts page: 'legacy/v3/wiki/fonts.md'
+        - External page: 'legacy/v3/wiki/external.md'
+
+      - Api:
+        - Main page: 'legacy/v3/api/index.md'
+        - API page: 'legacy/v3/api/api.md'
+        - Color page: 'legacy/v3/api/color.md'
+        - Keys page: 'legacy/v3/api/keys.md'
+        - Fonts page: 'legacy/v3/api/fonts.md'
+        - Math page: 'legacy/v3/api/math.md'
+
+
+      - Tutorial:
+        - Main page: 'legacy/v3/tutorials/index.md'
+        - Setup: 'legacy/v3/tutorials/setup.md'
+        - Basics: 'legacy/v3/tutorials/basics.md'
+
+    - v4:
+      - Wiki:
+        - Window with fusion: 'legacy/v4/wiki/window.md'
+        - Rendering with fusion: 'legacy/v4/wiki/rendering.md'
+        - Events and Keys: 'legacy/v4/wiki/events-keys.md'
+        - Color and colortools: 'legacy/v4/wiki/color.md'
+        - Managing sounds and music: 'legacy/v4/wiki/music.md'
+        - Scenes, entities and animations: 'legacy/v4/wiki/scene.md'
+        - Storage system: 'legacy/v4/wiki/storage.md'
+        - UI module: 'legacy/v4/wiki/ui.md'
+        - Math and Vectors: 'legacy/v4/wiki/math.md'
+        - Build in Fonts: 'legacy/v4/wiki/fonts.md'
+        - Extra stuff: 'legacy/v4/wiki/extra.md'
+        - External tools: 'legacy/v4/wiki/external.md'
+
+      - Tutorial:
+        - Setup: 'legacy/v4/tutorials/setup.md'
+        - Basics: 'legacy/v4/tutorials/basics.md'
+
+      - API:
+        - Main Page: 'legacy/v4/api/index.md'
+        - Api Page: 'legacy/v4/api/api.md'
+        - Color Page: 'legacy/v4/api/color.md'
+        - Keys Page: 'legacy/v4/api/keys.md'
+        - Fonts Page: 'legacy/v4/api/fonts.md'
+        
+
 
 theme:
   name: material
 
-  logo: v4/assets/logo/fe.png
-  favicon: v4/assets/logo/fe.png
+  logo: v5/assets/logo/fe.png
+  favicon: v5/assets/logo/fe.png
 
   features:
     - navigation.path

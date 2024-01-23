@@ -1,39 +1,38 @@
-import pygame as pg
+from fusionengine.engine.color import Color, BLUE
+from fusionengine.engine.draw import draw_rect
 
-from fusionengine.engine.window import Window
+import pygame as pg
 
 
 class Rect:
     def __init__(
         self,
-        window: Window,
         x: int,
         y: int,
         width: int,
         height: int,
-        color: tuple[int, int, int, int],
+        color: Color = BLUE,
     ) -> None:
         """
         A class that creates a new rect shape.
 
         Args:
-            window (Window): Your window
             x (int): X coordinate of the rect
             y (int): Y coordinate of the rect
             width (int): Width of the rect
             height (int): Height of the rect
-            color (tuple[int, int, int, int]): Color of the rect
+            color (Color): Color of the rect
         """
         self.x = x
         self.y = y
         self.width = width
         self.height = height
         self.color = color
-        self.rect = pg.Rect(x, y, width, height)
-        self.window = window
+
+        self.pg_rect = pg.Rect(self.x, self.y, self.width, self.height)
 
     def draw(self) -> None:
         """
         Draw the rectangle
         """
-        pg.draw.rect(self.window.window, self.color, self.rect)
+        draw_rect(self.x, self.y, self.width, self.height, self.color)

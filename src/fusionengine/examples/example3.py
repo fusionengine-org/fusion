@@ -10,7 +10,7 @@ speed = 10
 
 @window.loop
 def loop():
-    fusion.set_background_color(window, fusion.WHITE)
+    fusion.set_background_color(fusion.WHITE)
 
     player.load_rect(fusion.AQUA)
 

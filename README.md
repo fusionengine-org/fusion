@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/dimkauzh/fusion-engine/assets/106883655/183ab172-2c3e-49b5-ba31-7c1ad63e564a" alt="logo">
+  <img src="icon/fusion-banner2.png" alt="logo">
 </p>
 
 <p align="center">
@@ -13,29 +13,22 @@
 </p>
 
 
-Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
+Fusion is a game engine for creating graphical applications using OpenGL and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
 ## 🗜️ Table of Contents
-
-- [Development](#development)
 - [Website](https://fusion-engine.tech/)
-- [Installation](#installation)
-- [Community](#community)
-- [Tutorials](<https://docs.fusion-engine.tech/>)
+- [Installation](#💾-installation)
+- [Community](#👥-community)
 - [Documentation](<https://docs.fusion-engine.tech/>)
-- [Wiki](<https://docs.fusion-engine.tech/>)
-- [Coming features](#coming-features)
-- [License](#license)
-- [About](#about)
+- [Coming features](#📯-coming-features)
+- [License](#🪪-license)
+- [About](#🗄️-about)
 
-## Website
-
-Our website is at this [link](<https://fusion-engine.tech/>)
 
 ## 💾 Installation
 
-### Using PyPi
+### ➡️ Using PyPi
 
 To install our package, run this:
 
@@ -45,7 +38,7 @@ To install our package, run this:
 
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
-### Install from source/devel
+### 🪲 Install from source/devel
 
 if you want to install the package from source and get the latest changes then you do it like this:
 
@@ -55,18 +48,18 @@ if you want to install the package from source and get the latest changes then y
  pip install .
 ```
 
-### Run example
+### 🏃‍♂️ Run example
 The examples are located [here](https://github.com/dimkauzh/fusion-engine/tree/main/src/fusionengine/examples)
 If you want to run the example, then follow these instructions:
 
-#### Fusion engine v4.2.1 and later
+#### 🆕 Fusion engine v4.2.1 and later
 First, make sure you have fusion engine installed. Then you can run the first example with the following command:
 ```bash
  python -m fusionengine.examples.example1
 ```
 For other examples, you can modify the command to run the other example. Just change the number of the example.
 
-#### Fusion engine v4.2.0 and earlier
+#### 🧓 Fusion engine v4.2.0 and earlier
 You will need to clone the Fusion engine repo to run the exampes. To do that run this command:
 ```bash
  git clone https://github.com/dimkauzh/fusion-engine.git
@@ -85,20 +78,15 @@ For different examples, you change the number to the number of the example file
 We have a discord server at this [link](<https://discord.gg/Smg3CK4ZMc>).
 Need to contact us? Just #dimkauzh in discord and he will try to react as fast as possible
 
-## Contributing
+## 💁‍♂️ Contributing
 Our community is just growing, so if you want to help us with the project,
 it will be very helpful! We are welcome to all people who want to contribute, but you do need to follow the [contribution rules](CONTRIBUTING.md)
 Special thanks to all the contributors, they made the project even better!
 And thanks to our community of course!
 
-## Tutorials
+## 🥎 Tutorials
 Are you exited to start with fusion engine but you dont know where to start? Then maybe its worth looking though one of our tutorials! We tried to make them as simple as possible but still very informative. You can find them [here](<https://docs.fusion-engine.tech/>)
 
-
-## 📃 Documentation And WIKI
-
-Do you need to figure out how to use a function or just want to know what it does? Then our wiki are perfect for you! But do you want to know if there is a specific function? Then the docs are perfect for you!
-See at [our websites docs/wiki section](<https://docs.fusion-engine.tech/>)
 
 ## 📯 Coming features
 
@@ -106,7 +94,7 @@ We are working hard to implement very basic and complex stuff so our engine beco
 
 💡 - If you have more ideas, please tell us them in our [discord server](<https://discord.gg/Smg3CK4ZMc>) or create an issue!
 
-## License
+## 🪪 License
 
 See [Licence here](LICENCE.md)
 

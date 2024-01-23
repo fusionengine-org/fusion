@@ -21,7 +21,6 @@ class Animation:
         """
         Draw the animation you made before
         """
-        # default_fps = self.window.get_fps()
         self.window.set_fps(self.speed)
 
         if self.frame >= len(self.anim):
@@ -32,4 +31,3 @@ class Animation:
         image.draw()
 
         self.frame += 1
-        # self.window.set_fps(default_fps)

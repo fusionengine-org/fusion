@@ -5,7 +5,7 @@ hide:
 ---
 
 <p align="center">
-  <img src="https://github.com/dimkauzh/fusion-engine/assets/106883655/183ab172-2c3e-49b5-ba31-7c1ad63e564a" alt="logo">
+  <img src="v5/assets/logo/fusion-banner.png" alt="logo" width="1000" height="800">
 </p>
 
 <p align="center">
@@ -18,88 +18,19 @@ hide:
 </p>
 
 
-Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
+Fusion is a game engine for creating graphical applications using OpenGL and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
-## Repo
-Our Github repo [is here](https://github.com/dimkauzh/fusion-engine)
+## 👋 Welcome
+Welcome to fusion engine documentation! We have seperated the documentation in two parts: wiki and tutorial. 
+Wiki is made if you need to know what a function does. And in tutorials we made some tutorials for you to better understand fusion!
+To get started, head over to the 'Getting Started' section in the navigation bar. You can also choose the wiki or tutorials section in the navigation bar. Or you can use these links
 
-## 🗜️ Table of Contents
-Welcome to fusion engine documentation! We have seperated the documentation in some parts: main, api, wiki and tutorial. 
-Wiki is made if you need to know what a function does.
-Api is made if you need to know if a function exist and what arguments it takes,
-and in tutorials we made some tutorials for you to better understand fusion!
+## Quick links
 
-## 💻 Setting up
-
-To install it run this:
-
-```bash
-  pip install fusion-engine
-```
-
-Then import:
-
-```python
-  import fusionengine as fusion
-```
-And your done!
+ - [Get started](get-started.md)
+ - [Tutorials](v5/tutorials/setup.md)
+ - [Wiki](v5/wiki/window.md)
+ - [Legacy docs](legacy/index.md)
 
 
-## Todo list and changelog
- - [v4](changelog/v4.md)
- - [v3](changelog/v3.md)
-
-### Wiki
- - [Setting up](#setting-up)
- - [Wiki](v4/wiki/index.md)
-
-
-### Tutorials
- - [Tutorials](v4/tutorials/index.md)
-
-# v3
-## About
-The wiki, api and tutorials to the old v3 version of fusion, which is not being under development
-
-### Wiki
- - [Setting up](#setting-up-v3)
- - [Wiki](v3/wiki/index.md)
-
-
-### Tutorials
- - [Tutorials](v3/tutorials/index.md)
- 
-
-## Api
-There pages aren't maintained anymore and won't be. Please head over to the Wiki pages, tutorials or examples.
-### Api
- - [Setting up](#setting-up)
- - [API](v4/api/api.md)
-
- 
-### V3 Api
- - [Setting up](#setting-up-v3)
- - [API](v3/api/api.md)
-
-
-
-## 💻 Setting up v3
-
-To install it run this:
-
-```bash
-  pip install fusion-engine
-```
-
-Then import:
-
-```python
-  import fusionengine as engine
-```
-
-And after that you need to create a object of our engine to run functions of it:
-
-```python
-  main = engine.Main()
-```

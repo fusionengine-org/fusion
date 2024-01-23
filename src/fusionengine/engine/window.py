@@ -1,7 +1,8 @@
 from fusionengine.engine.debug import DEBUGIMAGE
+import fusionengine.backend.gl as gl
+
 import pygame as pg
-import pygame_gui as gui
-from pygame.locals import DOUBLEBUF
+from pygame.locals import DOUBLEBUF, OPENGL
 
 
 class Window:
@@ -27,10 +28,8 @@ class Window:
         self.height = height
 
         try:
-            self.window = pg.display.set_mode((width, height), DOUBLEBUF, 16)
+            self.window = pg.display.set_mode((width, height), DOUBLEBUF | OPENGL)
             pg.display.set_caption(title)
-
-            self.manager = gui.UIManager((width, height))
 
             program_icon = pg.image.load(DEBUGIMAGE)
             pg.display.set_icon(program_icon)
@@ -39,6 +38,17 @@ class Window:
 
         except Exception:
             print("Error: Can't create a window.")
+
+        try:
+            gl.Ortho(0, width, height, 0, -1, 1)
+
+            gl.Enable(gl.BLEND)
+            gl.Enable(gl.TEXTURE_2D)
+
+            gl.BlendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+
+        except Exception:
+            print("Error: Can't setup OpenGL.")
 
     def change_icon(self, image_path: str) -> None:
         """
@@ -91,9 +101,9 @@ class Window:
 
         return self._fps
 
-    def force_quit(self) -> None:
+    def quit(self) -> None:
         """
-        Force quits the window. Specifically, stops and deletes window.
+        Quits the window. Specifically, stops and deletes window.
         """
         self._running = False
 
@@ -112,13 +122,10 @@ class Window:
 
         for event in pg.event.get():
             if event.type == pg.QUIT and self._quittable:
-                self._running = False
+                self.quit()
 
-            self.manager.process_events(event)
+        pg.display.flip()
+        pg.time.wait(10)
 
-        self.manager.update(self.DELTATIME)
-        self.manager.draw_ui(self.window)
-
-        pg.display.update()
-
-        self.window.fill((0, 0, 0))
+        gl.Clear(gl.DEPTH_BUFFER_BIT)
+        gl.Clear(gl.COLOR_BUFFER_BIT)

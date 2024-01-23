@@ -60,3 +60,13 @@ def key_down_once(key) -> bool:
         bool: Returns True once if the key is pressed down, Returns False if not.
     """
     return Key(key).key_down_once()
+
+
+def get_mouse_pos(self) -> tuple[int, int]:
+    """
+    Gets the mouse position.
+
+    Returns:
+        tuple: The mouse position
+    """
+    return pg.mouse.get_pos()
