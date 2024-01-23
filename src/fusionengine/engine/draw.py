@@ -5,7 +5,7 @@ import fusionengine.backend.gl as gl
 import pygame as pg
 
 
-def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: Color) -> None:
+def draw_line(x1: int, y1: int, x2: int, y2: int, color: Color) -> None:
     """
     Draw a line on the screen
 
@@ -30,7 +30,6 @@ def draw_line(window: Window, x1: int, y1: int, x2: int, y2: int, color: Color) 
 
 
 def draw_line_rect(
-    window: Window,
     x: int,
     y: int,
     width: int,
@@ -48,14 +47,13 @@ def draw_line_rect(
         height (int): Height of the rectangle
         color (Color): Color of the rectangle
     """
-    draw_line(window, x, y, x + width, y, color)
-    draw_line(window, x, y + height, x + width, y + height, color)
-    draw_line(window, x, y, x, y + height, color)
-    draw_line(window, x + width, y, x + width, y + height, color)
+    draw_line(x, y, x + width, y, color)
+    draw_line(x, y + height, x + width, y + height, color)
+    draw_line(x, y, x, y + height, color)
+    draw_line(x + width, y, x + width, y + height, color)
 
 
 def draw_rect(
-    window: Window,
     x: int,
     y: int,
     width: int,
@@ -85,7 +83,7 @@ def draw_rect(
     gl.End()
 
 
-def set_background_color(window: Window, color: Color) -> None:
+def set_background_color(color: Color) -> None:
     """
     Sets the background color of the screen.
 
@@ -97,7 +95,7 @@ def set_background_color(window: Window, color: Color) -> None:
 
 
 def draw_arbitrary_polygon_outline(
-    window: Window, corners: tuple[tuple[int, int]], color: Color
+    corners: tuple[tuple[int, int]], color: Color
 ) -> None:
     """
     Draw an arbitrary polygon outline.
@@ -111,10 +109,10 @@ def draw_arbitrary_polygon_outline(
 
     for i, (x1, y1) in enumerate(corners[:-1]):
         x2, y2 = corners[i + 1]
-        draw_line(window, x1, y1, x2, y2, color)
+        draw_line(x1, y1, x2, y2, color)
 
 
-def set_pixel(window: Window, x: int, y: int, color: Color) -> None:
+def set_pixel(x: int, y: int, color: Color) -> None:
     """
     Set a specific pixel on the window
 

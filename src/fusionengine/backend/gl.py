@@ -297,3 +297,10 @@ def TexParameter(target, pname, param):
         param: The value of the parameter
     """
     gl.glTexParameter(target, pname, param)
+
+
+def Flush():
+    """
+    Flush all commands.
+    """
+    gl.glFlush()

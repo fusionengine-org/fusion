@@ -6,7 +6,7 @@ class Example(fusion.SceneManager):
         self.window = fusion.Window("Example: 1", 600, 600)
         self.init(self.window)
 
-        self.image = fusion.Image(self.window, fusion.DEBUGIMAGE, 0, 0, 600, 600)
+        self.image = fusion.Image(fusion.DEBUGIMAGE, 0, 0, 600, 600)
 
         self.add_scene(fusion.Scene("image", self.draw_i))
         self.add_scene(fusion.Scene("rect", self.draw_r))
@@ -17,7 +17,7 @@ class Example(fusion.SceneManager):
         self.image.draw()
 
     def draw_r(self):
-        fusion.draw_rect(self.window, 0, 0, 50, 50, fusion.RED)
+        fusion.draw_rect(0, 0, 50, 50, fusion.RED)
 
     def loop(self):
         while self.window.running():

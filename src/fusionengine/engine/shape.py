@@ -8,7 +8,6 @@ from fusionengine.engine.draw import draw_rect
 class Rect:
     def __init__(
         self,
-        window: Window,
         x: int,
         y: int,
         width: int,
@@ -30,11 +29,12 @@ class Rect:
         self.y = y
         self.width = width
         self.height = height
-        self.window = window
         self.color = color
+
+        self.pg_rect = pg.Rect(self.x, self.y, self.width, self.height)
 
     def draw(self) -> None:
         """
         Draw the rectangle
         """
-        draw_rect(self.window, self.x, self.y, self.width, self.height, self.color)
+        draw_rect(self.x, self.y, self.width, self.height, self.color)

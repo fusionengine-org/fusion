@@ -1,14 +1,24 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
-from fusionengine.engine.color import Color
+from fusionengine.engine.color import Color, WHITE, BLACK, GRAY
 import fusionengine.backend.gl as gl
+from fusionengine.engine.debug import DEBUGFONT
 
 import pygame as pg
 import os
 
 
 class Button:
-    def __init__(self, rect: Rect, text: str) -> None:
+    def __init__(
+        self,
+        x: int,
+        y: int,
+        width: int,
+        height: int,
+        font_size: int,
+        text: str,
+        font: str = DEBUGFONT,
+    ) -> None:
         """
         Creates a button.
 
@@ -16,22 +26,63 @@ class Button:
             rect (Rect): The rect of the button (defines the shape of the button)
             text (str): The text of the button
         """
-        print("Not done yet, will be added soon.")
+        self.rect_color = GRAY
+        self.rect = Rect(x, y, 500, 500, self.rect_color)
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.input_text = text
+        self.font = font
+        self.font_size = font_size
 
-    def button_pressed(self) -> bool:
+        self.text = Text(text, x, y, font, font_size, WHITE)
+
+    def is_pressed(self) -> bool:
         """
         Returns true if the button is pressed.
 
         Returns:
             bool: If the button is pressed, returns True
         """
-        return False
+        mouse_x, mouse_y = pg.mouse.get_pos()
+        mouse_click = pg.mouse.get_pressed()
+
+        if self.rect.pg_rect.collidepoint(mouse_x, mouse_y) and mouse_click[0] == 1:
+            return True
+        else:
+            return False
+
+    def draw(self) -> None:
+        """
+        Draws the button.
+        """
+        self.rect.draw()
+        self.text.draw()
+
+    def set_button_color(self, color: Color) -> None:
+        """
+        Sets the color of the button.
+
+        Args:
+            color (Color): The color of the button
+        """
+        self.rect_color = color
+        self.rect.color = color
+
+    def set_text_color(self, color: Color) -> None:
+        """
+        Sets the color of the button text.
+
+        Args:
+            color (Color): The color of the button text
+        """
+        self.text.set_color(color)
 
 
 class Text:
     def __init__(
         self,
-        window: Window,
         text: str,
         x: int,
         y: int,
@@ -54,7 +105,6 @@ class Text:
 
         self.text = text
         self.color = color
-        self.window = window.window
         self.x = x
         self.y = y
 
@@ -63,39 +113,59 @@ class Text:
         else:
             self.font = pg.font.SysFont(font_path, font_size)
 
-    def draw(self) -> None:
-        """
-        Draws the loaded font using texture mapping
-        """
         render = self.font.render(self.text, True, self.color.tuple)
         text_surface = pg.image.tostring(render, "RGBA", False)
-        width, height = render.get_size()
+        self.width, self.height = render.get_size()
 
-        texture_id = gl.GenTextures(1)
-        gl.BindTexture(gl.TEXTURE_2D, texture_id)
-        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
-        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
+        self.texture_id = gl.GenTextures(1)
+
+        gl.BindTexture(gl.TEXTURE_2D, self.texture_id)
 
         gl.TexImage2D(
             gl.TEXTURE_2D,
             0,
             gl.RGBA,
-            width,
-            height,
+            self.width,
+            self.height,
             0,
             gl.RGBA,
             gl.UNSIGNED_BYTE,
             text_surface,
         )
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
 
-        gl.Enable(gl.TEXTURE_2D)
+        gl.BindTexture(gl.TEXTURE_2D, 0)
+
+    def set_color(self, color: Color):
+        """
+        Sets the color of the text.
+
+        Args:
+            color (tuple): The color of the text
+        """
+        self.color = color
+
+    def draw(self) -> None:
+        """
+        Draws the loaded font using texture mapping
+        """
+        gl.BindTexture(gl.TEXTURE_2D, self.texture_id)
+
         gl.Begin(gl.QUADS)
+
+        gl.Color4f(self.color.r, self.color.g, self.color.b, self.color.a)
+
         gl.TexCoord2f(0, 0)
         gl.Vertex2f(self.x, self.y)
         gl.TexCoord2f(1, 0)
-        gl.Vertex2f(self.x + width, self.y)
+        gl.Vertex2f(self.x + self.width, self.y)
         gl.TexCoord2f(1, 1)
-        gl.Vertex2f(self.x + width, self.y + height)
+        gl.Vertex2f(self.x + self.width, self.y + self.height)
         gl.TexCoord2f(0, 1)
-        gl.Vertex2f(self.x, self.y + height)
+        gl.Vertex2f(self.x, self.y + self.height)
         gl.End()
+
+        gl.BindTexture(gl.TEXTURE_2D, 0)

@@ -9,7 +9,6 @@ from PIL import Image as Imager
 class Image:
     def __init__(
         self,
-        window: Window,
         image_path: str,
         x: int,
         y: int,
@@ -30,7 +29,6 @@ class Image:
 
         self.x = x
         self.y = y
-        self.window = window
         self.width = width
         self.height = height
 
@@ -79,7 +77,7 @@ class Image:
         gl.BindTexture(gl.TEXTURE_2D, 0)
 
 
-def draw_image_file(window: Window, path: str, x: int, y: int, width: int, height: int):
+def draw_image(path: str, x: int, y: int, width: int, height: int):
     """
     Draws a image directly from provided path.
 
@@ -91,6 +89,4 @@ def draw_image_file(window: Window, path: str, x: int, y: int, width: int, heigh
         width (int): Width of the image (scaling allowed)
         height (int): Height of the image (scaling allowed)
     """
-    texture = pg.image.load(path)
-    texture = pg.transform.scale(texture, (width, height))
-    window.window.blit(texture, (x, y))
+    Image(path, x, y, width, height).draw()
