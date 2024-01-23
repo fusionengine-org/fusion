@@ -24,5 +24,13 @@ rendering graphics, and handling user input. It is and engine to create games fa
 ## 👋 Welcome
 Welcome to fusion engine documentation! We have seperated the documentation in two parts: wiki and tutorial. 
 Wiki is made if you need to know what a function does. And in tutorials we made some tutorials for you to better understand fusion!
-To get started, head over to the 'Getting Started' section in the navigation bar. You can also choose the wiki or tutorials section in the navigation bar.
+To get started, head over to the 'Getting Started' section in the navigation bar. You can also choose the wiki or tutorials section in the navigation bar. Or you can use these links
+
+## Quick links
+
+ - [Get started](get-started.md)
+ - [Tutorials](v5/tutorials/setup.md)
+ - [Wiki](v5/wiki/window.md)
+ - [Legacy docs](legacy/index.md)
+
 
