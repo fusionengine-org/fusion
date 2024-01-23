@@ -8,8 +8,8 @@
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - License" src="https://img.shields.io/pypi/l/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
-<a href="https://github.com/dimkauzh/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dimkauzh/fusion-engine?color=blue"></a>
-<a href="https://github.com/dimkauzh/fusion-engine"><img alt="Lines of code" src="https://www.aschey.tech/tokei/github/dimkauzh/fusion-engine"></a>
+<a href="https://github.com/fusionengine-org/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/fusionengine-org/fusion-engine?color=blue"></a>
+<a href="https://github.com/fusionengine-org/fusion-engine"><img alt="Lines of code" src="https://www.aschey.tech/tokei/github/fusionengine-org/fusion-engine"></a>
 </p>
 
 
@@ -49,29 +49,15 @@ if you want to install the package from source and get the latest changes then y
 ```
 
 ### 🏃‍♂️ Run example
-The examples are located [here](https://github.com/dimkauzh/fusion-engine/tree/main/src/fusionengine/examples)
+The examples are located [here](https://github.com/fusionengine-org/fusion-engine/tree/main/src/fusionengine/examples)
 If you want to run the example, then follow these instructions:
 
-#### 🆕 Fusion engine v4.2.1 and later
-First, make sure you have fusion engine installed. Then you can run the first example with the following command:
+1. First, make sure you have fusion engine installed.
+2. If fusion engine is installed, you can run the first example with the following command:
 ```bash
  python -m fusionengine.examples.example1
 ```
 For other examples, you can modify the command to run the other example. Just change the number of the example.
-
-#### 🧓 Fusion engine v4.2.0 and earlier
-You will need to clone the Fusion engine repo to run the exampes. To do that run this command:
-```bash
- git clone https://github.com/dimkauzh/fusion-engine.git
- cd fusion-engine
-```
-
-Then you can run the example with the following command:
-```bash
- python src/fusionengine/examples/example1.py
-```
-
-For different examples, you change the number to the number of the example file
 
 ## 👥 Community
 
@@ -104,11 +90,11 @@ This project began May 1, 2023. The original project began in C, but it's entire
 
 ### ⭐ Star History
 
-<a href="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&Timeline">
+<a href="https://api.star-history.com/svg?repos=fusionengine-org/fusion-engine&Timeline">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=dimkauzh/fusion-engine&type=Timeline" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fusionengine-org/fusion-engine&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=fusionengine-org/fusion-engine&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=fusionengine-org/fusion-engine&type=Timeline" />
   </picture>
 </a>
 
