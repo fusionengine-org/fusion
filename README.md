@@ -13,7 +13,7 @@
 </p>
 
 
-Fusion is a game engine for creating graphical applications using the Pygame library and the programming language Python. It provides a simple coding interface for creating windows,
+Fusion is a game engine for creating graphical applications using OpenGL and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
 ## 🗜️ Table of Contents

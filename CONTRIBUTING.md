@@ -14,7 +14,10 @@ So make sure that you followed [the rules](#contributing-rules)
 ## Some technologies we are using
 - PDM: We are using pdm for our main interaction with the library.
 - pyproject.toml: Pythons way for setting up a project. A replacement for setup.py
-- pygame-ce, pygame_gui and pymunk: We are using all three of these libraries to develop fusion engine.
+- pygame-ce: Used for windowing and events
+- PyOpenGL: Used for rendering everything
+- pillow (PIL): Used for loading images for PyOpenGL
+- pymunk: Will be used for physics
 - black: We are using black to format code
 
 ## How to setup the work environment

@@ -1,16 +1,17 @@
 # External tools
 
-## Using pygame
-If you cant find some function you need in this engine, the you could use pygame as the engine is build on pygame. You dont need to import pygame, as that can make some issues, you just use:
+## Using PyOpenGL
+If you cant find some function you need in this engine, the you could use PyOpenGL as the engine is build on PyOpenGL. You can import the PyOpenGL library or use the build in wrapper functions like this:
 ```python
-fusion.pg
+import fusionengine.backend.gl as gl
 ```
+Keep in mind that this will not have all functions you mind need as the wrapper only has functions that fusion requires. If you want, you can import PyOpenGL by yourself.
 
-## Using pygame-gui
-If you cant find some gui functions, you can use pygame gui, as the engine is using pygame_gui library. You dont need to import pygame gui, as that can make some issues, you just use:
-```python
-fusion.gui
-```
+### Where to put code
+All the rendering code should be placed inside the while loop, and fusion should render it for you.
+
+### Warning
+This is not tested. It may not work or work as expected. If you find any bugs, please create a issue on github. Thank you.
 
 ## Using Codon Compiler
 So you heard of [codon](https://docs.exaloop.io/codon/), a python compiler with can compile your python code to machine code, which makes your code a lot faster But how do you use it? Well, its easy! You just install it and then modify these things in your code:

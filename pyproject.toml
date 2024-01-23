@@ -5,7 +5,7 @@ build-backend = "pdm.backend"
 [project]
 name = "fusion-engine"
 dynamic = ["version"]
-description = "A custom open-source game engine on Python and Pygame, it's written in pure Python! It's easy and fast!"
+description = "A custom open-source game engine on OpenGL and Python, it’s written in pure Python! It’s easy and fast!"
 requires-python = ">=3.9"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { text = "GNU GPLv3" }

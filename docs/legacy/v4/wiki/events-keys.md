@@ -35,7 +35,7 @@ if fusion.Key(fusion.KEY_A).key_down_once():
 
 
 ## Keys
-We use Pygame for this, here are our key bindings to the sdl2 keys:
+We use Pygame for this, here are our key bindings to the pygame keys:
 ```python
   KEY_UNKNOWN = pg.K_UNKNOWN
   KEY_RETURN = pg.K_RETURN

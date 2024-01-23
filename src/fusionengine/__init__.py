@@ -28,9 +28,6 @@ from fusionengine.engine.storage import *
 # UI
 from fusionengine.engine.ui import *
 
-# Fonts
-from fusionengine.engine.fonts import *
-
 # Math
 from fusionengine.engine.vector import *
 from fusionengine.engine.math import *

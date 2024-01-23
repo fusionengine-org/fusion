@@ -26,29 +26,17 @@ def loop():
     my_text.draw()
 ```
 
-## Build in fonts
-There are no build in font anymore in fusion. Instead use system fonts or your own custom font.
+## Build-in fonts
+There are no build-in font anymore except the DEBUGFONT in fusion. This font is Nunito Light font, that you can use as you want. If not, you can always use your own font or the os build in font.
 
-## Rect class
-Now the rect class doesn't get the color argument for shape reasons. Instead, you pass the color argument to the draw method.
-The rect argument now works like this
-```python
-my_rect = fusion.Rect(
-                    your_window,
-                    10,
-                    10,
-                    100,
-                    100
-                    )
-
-@your_window.loop
-def loop():
-    my_rect.draw(fusion.BLUE)
-```
-If you don't pass the color argument, it will automatically use blue color instead.
 
 ## Drawing images
 
 ### draw_image_file
 This function has been renamed to draw_image.
 
+## Removal of pygame-gui and some aspects of pygame-ce
+### pygame-gui
+You can no longer use pygame-gui with fusion. Instead, you can use build in UI library
+### pygame-ce
+You can no longer use your own drawing code in pygame-ce with fusion, as fusion moved to PyOpenGL for rendering purposes. If you want to know how to use PyOpenGL with fusion, go to the external page of the wiki.
