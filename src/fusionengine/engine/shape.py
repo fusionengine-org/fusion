@@ -1,19 +1,12 @@
 import pygame as pg
 
 from fusionengine.engine.window import Window
-from fusionengine.engine.color import Color
+from fusionengine.engine.color import Color, BLUE
+from fusionengine.engine.draw import draw_rect
 
 
 class Rect:
-    def __init__(
-        self,
-        window: Window,
-        x: int,
-        y: int,
-        width: int,
-        height: int,
-        color: Color,
-    ) -> None:
+    def __init__(self, window: Window, x: int, y: int, width: int, height: int) -> None:
         """
         A class that creates a new rect shape.
 
@@ -29,12 +22,10 @@ class Rect:
         self.y = y
         self.width = width
         self.height = height
-        self.color = color.tuple
-        self.rect = pg.Rect(x, y, width, height)
         self.window = window
 
-    def draw(self) -> None:
+    def draw(self, color: Color = BLUE) -> None:
         """
         Draw the rectangle
         """
-        pg.draw.rect(self.window.window, self.color, self.rect)
+        draw_rect(self.window, self.x, self.y, self.width, self.height, color)

@@ -2,7 +2,6 @@ from fusionengine.engine.debug import DEBUGIMAGE
 import fusionengine.backend.gl as gl
 
 import pygame as pg
-import pygame_gui as gui
 from pygame.locals import DOUBLEBUF, OPENGL
 
 
@@ -32,13 +31,6 @@ class Window:
             self.window = pg.display.set_mode((width, height), DOUBLEBUF | OPENGL)
             pg.display.set_caption(title)
 
-            gl.MatrixMode(gl.PROJECTION)
-            gl.LoadIdentity()
-            gl.Ortho(0, width, height, 0, -1, 1)
-            gl.MatrixMode(gl.MODELVIEW)
-
-            self.manager = gui.UIManager((width, height))
-
             program_icon = pg.image.load(DEBUGIMAGE)
             pg.display.set_icon(program_icon)
 
@@ -46,6 +38,17 @@ class Window:
 
         except Exception:
             print("Error: Can't create a window.")
+
+        try:
+            gl.Ortho(0, width, height, 0, -1, 1)
+
+            gl.Enable(gl.BLEND)
+            gl.Enable(gl.TEXTURE_2D)
+
+            gl.BlendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+
+        except Exception:
+            print("Error: Can't setup OpenGL.")
 
     def change_icon(self, image_path: str) -> None:
         """

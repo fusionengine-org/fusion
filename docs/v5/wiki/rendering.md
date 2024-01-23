@@ -15,13 +15,13 @@ We have some predefined shapes that can be used and be drew on the screen. Here 
 Rectangle:
 
 ```python
-your_shape = fusion.Rect(window, x, y, width, height, color)
+your_shape = fusion.Rect(window, x, y, width, height)
 ```
 
 ### Drawing the shape
 To draw your shape, you use this:
 ```python
-your_shape.draw()
+your_shape.draw(color)
 ```
 
 - More shapes will be coming soon

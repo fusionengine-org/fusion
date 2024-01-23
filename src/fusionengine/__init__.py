@@ -50,7 +50,7 @@ from fusionengine.engine.animation import *
 
 
 import pygame as pg
-import pygame_gui as gui
+import OpenGL
 
 message = True
 
@@ -58,7 +58,7 @@ message = True
 if os.environ.get("FUSION_HIDE_PROMPT") is None:
     python_version = sys.version.split()[0]
     print(
-        f"Fusion Engine {__version__} (Pygame-ce {pg.version.ver}, Python {python_version})"
+        f"Fusion Engine {__version__} (PyOpenGL {OpenGL.__version__}, Pygame-ce {pg.version.ver}, Python {python_version})"
     )
     print(
         "Welcome to Fusion Engine! Check out our website at https://fusion-engine.tech/"

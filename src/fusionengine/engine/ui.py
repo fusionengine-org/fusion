@@ -1,9 +1,9 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
 from fusionengine.engine.color import Color
+import fusionengine.backend.gl as gl
 
 import pygame as pg
-import pygame_gui as gui
 import os
 
 
@@ -16,16 +16,7 @@ class Button:
             rect (Rect): The rect of the button (defines the shape of the button)
             text (str): The text of the button
         """
-        self.manager = rect.window.manager
-        self.text = text
-        self.x = rect.x
-        self.y = rect.y
-        self.width = rect.width
-        self.height = rect.height
-
-        self.button = gui.elements.UIButton(
-            relative_rect=rect.rect, text=text, manager=self.manager
-        )
+        print("Not done yet, will be added soon.")
 
     def button_pressed(self) -> bool:
         """
@@ -34,7 +25,7 @@ class Button:
         Returns:
             bool: If the button is pressed, returns True
         """
-        return self.button.check_pressed()
+        return False
 
 
 class Text:
@@ -74,7 +65,37 @@ class Text:
 
     def draw(self) -> None:
         """
-        Draws the loaded font
+        Draws the loaded font using texture mapping
         """
-        txtsurf = self.font.render(self.text, True, self.color.tuple)
-        self.window.blit(txtsurf, (self.x, self.y))
+        render = self.font.render(self.text, True, self.color.tuple)
+        text_surface = pg.image.tostring(render, "RGBA", False)
+        width, height = render.get_size()
+
+        texture_id = gl.GenTextures(1)
+        gl.BindTexture(gl.TEXTURE_2D, texture_id)
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
+        gl.TexParameter(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
+
+        gl.TexImage2D(
+            gl.TEXTURE_2D,
+            0,
+            gl.RGBA,
+            width,
+            height,
+            0,
+            gl.RGBA,
+            gl.UNSIGNED_BYTE,
+            text_surface,
+        )
+
+        gl.Enable(gl.TEXTURE_2D)
+        gl.Begin(gl.QUADS)
+        gl.TexCoord2f(0, 0)
+        gl.Vertex2f(self.x, self.y)
+        gl.TexCoord2f(1, 0)
+        gl.Vertex2f(self.x + width, self.y)
+        gl.TexCoord2f(1, 1)
+        gl.Vertex2f(self.x + width, self.y + height)
+        gl.TexCoord2f(0, 1)
+        gl.Vertex2f(self.x, self.y + height)
+        gl.End()
