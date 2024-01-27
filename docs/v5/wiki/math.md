@@ -19,7 +19,7 @@ This creates a 3d vector with the x, y and z being 10.
 ## Types of PI in Fusion Engine
 These are used for certain miscellaneous math things.
 
-Full version of pi (3.141592653589793238462643383279502884197):
+A larger version of PI (3.141592653589793238462643383279502884197):
 ```python
 	fusion.PI
 ```
@@ -27,12 +27,12 @@ A slightly smaller version that python's math library uses (3.141592653589793):
 ```python
 	fusion.SMALLERPI
 ```
-An extremely shortened version of pi (3.14):
+An extremely shortened version of PI (3.14):
 ```python
 	fusion.SMALLPI
 ```
 
-This allows you to get the floor value of a number.
+This allows you to get the floor value of a number with decimals at the end.
 ```python
   fusion.FLOOR(3.4)
 ```
