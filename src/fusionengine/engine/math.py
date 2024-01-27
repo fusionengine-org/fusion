@@ -1,5 +1,8 @@
 import math
 
+"""
+Self explantory, returns varitaions of PI and the euler number.
+"""
 
 PI = 3.141592653589793238462643383279502884197
 SMALLERPI = 3.141592653589793
