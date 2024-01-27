@@ -1,4 +1,4 @@
-| :exclamation:  It is recommened to switch to Fusion Engine v5 for a better experience. Click [here](https://docs.fusion-engine.tech/v5/wiki/v5-moving/) to learn how to migrate.    |
+| :exclamation:  It is recommened to switch to Fusion Engine v5 for a better experience. Click [here](https://docs.fusion-engine.tech/v5/wiki/v5-moving/) to learn how to migrate from v4 to v5!    |
 |-----------------------------------------|
 
 # Legacy
