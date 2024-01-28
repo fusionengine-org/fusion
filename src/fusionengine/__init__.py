@@ -44,6 +44,7 @@ from fusionengine.engine.debug import *
 
 # Animation
 from fusionengine.engine.animation import *
+from fusionengine.engine.spritesheets import *
 
 
 import pygame as pg
