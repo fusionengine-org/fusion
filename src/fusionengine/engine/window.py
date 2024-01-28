@@ -123,16 +123,16 @@ class Window:
 
     def get_screensafer_allowed(self) -> bool:
         """
-        Returns if the window is in fullscreen mode.
+        Returns if the window is in screensafer mode.
 
         Returns:
-            bool: True if fullscreen else false
+            bool: True if screensafer else false
         """
         return pg.display.get_allow_screensaver()
 
     def toggle_screensafer_allowed(self) -> None:
         """
-        Toggles if the window is in fullscreen mode.
+        Toggles screensafer mode.
         """
         self._screensafer = not self._screensafer
 
@@ -143,7 +143,7 @@ class Window:
         Returns if the window is in vsync mode.
 
         Returns:
-            bool: True if fullscreen else false
+            bool: True if vsync else false
         """
         return pg.display.is_vsync()
 
