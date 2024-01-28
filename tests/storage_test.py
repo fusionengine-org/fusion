@@ -1,6 +1,6 @@
 import os
 
-from fusionengine.files.storage import JsonStorage
+from fusionengine import JsonStorage
 
 
 def test_jsonstorage(cleanup):

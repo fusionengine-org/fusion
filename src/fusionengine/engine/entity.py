@@ -2,9 +2,11 @@ from fusionengine.engine.window import Window
 from fusionengine.engine.image import Image
 from fusionengine.engine.shape import Rect
 from fusionengine.engine.color import Color
+from fusionengine.backend.deprecations import deprecated
 
 
 class Entity:
+    @deprecated("5.0.0", "Entity class")
     def __init__(
         self,
         window: Window,
