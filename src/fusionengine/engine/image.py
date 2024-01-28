@@ -9,17 +9,17 @@ from PIL import Image as Imager
 class Image:
     def __init__(
         self,
-        image_path: str | Imager.Image,
+        image_path: str,
         x: int,
         y: int,
         width: int,
         height: int,
     ) -> None:
         """
-        Opens an image. Can be later rendered with draw method.
+        Opens an image. Can be later rendered with draw_image.
 
         Args:
-            image_path (str or Pillow Image): The path to the image | Pillow Image
+            image_path (str): The path to the image
             x (int): X coordinate of the image
             y (int): Y coordinate of the image
             width (int): Width of the image (scaling allowed)
@@ -31,13 +31,7 @@ class Image:
         self.width = width
         self.height = height
 
-        if isinstance(image_path, str):
-            self.image = Imager.open(str(image_path))
-        elif isinstance(image_path, Imager.Image):
-            self.image = image_path
-        else:
-            raise ValueError("Invalid image_path type")
-
+        self.image = Imager.open(image_path)
         image_data = self.image.tobytes("raw", "RGBA", 0, -1)
 
         self.texture = gl.GenTextures(1)
@@ -58,27 +52,6 @@ class Image:
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
-
-    def crop(self, left: int, right: int, top: int, bottom: int) -> "Image":
-        """
-        Crop the image based on the specified boundaries.
-
-        Args:
-            left (int): The left boundary of the crop area.
-            right (int): The right boundary of the crop area.
-            top (int): The top boundary of the crop area.
-            bottom (int): The bottom boundary of the crop area.
-
-        Returns:
-            Image: A new Image object representing the cropped image.
-        """
-        return Image(
-            self.image.crop((left, right, top, bottom)),
-            self.x,
-            self.y,
-            self.width,
-            self.height,
-        )
 
     def draw(self) -> None:
         """
