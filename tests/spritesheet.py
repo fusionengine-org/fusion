@@ -13,5 +13,5 @@ anim = fusion.Animation(window, spr)
 
 @window.loop
 def loop():
-    anim.play(0.5)
+    anim.play(0.1)
     main_image.draw()

@@ -5,7 +5,7 @@ from fusionengine.engine.spritesheets import SpriteSheet
 class Animation:
     def __init__(self, window: Window, images: tuple | SpriteSheet) -> None:
         """
-        The class to create a Animation.
+        The class to create an Animation.
 
         Args:
             window: Window
@@ -13,12 +13,14 @@ class Animation:
             Speed: Int (FPS)
         """
         self.frame = 0
+        self.prev_frame = 0
+
         if isinstance(images, SpriteSheet):
             self.frames = images.frames
         elif isinstance(images, tuple):
             self.frames = images
         else:
-            ValueError("Images must be a tuple of Images or a SpriteSheet")
+            raise ValueError("Images must be a tuple of Images or a SpriteSheet")
 
         self.window = window
 
@@ -26,12 +28,16 @@ class Animation:
         """
         Draw the animation you made before
         """
-        if isinstance(self.frame, int) or (
-            isinstance(self.frame, float) and self.frame.is_integer()
-        ):
-            if 0 <= int(self.frame) < len(self.frames):
+        if 0 <= int(self.frame) < len(self.frames):
+            if not (
+                isinstance(self.frame, int)
+                or (isinstance(self.frame, float) and self.frame.is_integer())
+            ):
+                self.frames[int(self.prev_frame)].draw()
+            else:
                 self.frames[int(self.frame)].draw()
 
+        self.prev_frame = self.frame
         self.frame += speed
 
         if self.frame >= len(self.frames):
