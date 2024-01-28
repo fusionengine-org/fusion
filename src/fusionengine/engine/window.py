@@ -140,7 +140,7 @@ class Window:
 
     def get_vsync_enabled(self) -> bool:
         """
-        Returns if the window is in fullscreen mode.
+        Returns if the window is in vsync mode.
 
         Returns:
             bool: True if fullscreen else false
