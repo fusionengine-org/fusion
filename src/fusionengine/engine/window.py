@@ -23,6 +23,9 @@ class Window:
         self._quittable = True
         self._clock = pg.time.Clock()
 
+        self._fullscreen = False
+        self._screensafer = False
+
         self.title = title
         self.width = width
         self.height = height
@@ -100,6 +103,76 @@ class Window:
         """
 
         return self._fps
+
+    def toggle_fullscreen(self) -> None:
+        """
+        Toggles fullscreen mode.
+        """
+        self._fullscreen = not self._fullscreen
+
+        pg.display.toggle_fullscreen()
+
+    def is_fullscreen(self) -> bool:
+        """
+        Returns if the window is in fullscreen mode.
+
+        Returns:
+            bool: True if fullscreen else false
+        """
+        return self._fullscreen
+
+    def get_screensafer_allowed(self) -> bool:
+        """
+        Returns if the window is in fullscreen mode.
+
+        Returns:
+            bool: True if fullscreen else false
+        """
+        return pg.display.get_allow_screensaver()
+
+    def toggle_screensafer_allowed(self) -> None:
+        """
+        Toggles if the window is in fullscreen mode.
+        """
+        self._screensafer = not self._screensafer
+
+        pg.display.set_allow_screensaver(self._screensafer)
+
+    def get_vsync_enabled(self) -> bool:
+        """
+        Returns if the window is in fullscreen mode.
+
+        Returns:
+            bool: True if fullscreen else false
+        """
+        return pg.display.is_vsync()
+
+    def get_screen_refresh_rate(self) -> int:
+        """
+        Returns the screen refresh rate.
+
+        Returns:
+            int: The screen refresh rate
+        """
+        return pg.display.get_current_refresh_rate()
+
+    def get_display_amount(self) -> int:
+        """
+        Returns the amount of displays.
+
+        Returns:
+            int: The amount of displays
+        """
+        return pg.display.get_num_displays()
+
+    def get_active(self) -> bool:
+        """
+        Returns if the window is active.
+
+        Returns:
+            bool: True if active else false
+        """
+        return pg.display.get_active()
 
     def quit(self) -> None:
         """
