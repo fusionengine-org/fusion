@@ -1,4 +1,4 @@
-# Scenes, Entities and animations
+# Scenes and Entities
 
 ## Scene manager
 See in [this example](https://github.com/dimkauzh/fusion-engine/blob/main/examples/example5.py) how to use the scene manager.
@@ -67,17 +67,3 @@ To draw current frame, use this function
 your_entity.draw_animation()
 ```
 
-## Animation system (Early stages)
-If you want to draw a animation, then you can do it this way
-
-### Loading the animations
-To load the animation, run
-```python
-my_anim = fusion.Animation(your_window, your_images: tuple, fps: int)
-```
-
-### Drawing animation
-To draw it then, run:
-```python
-my_anim.draw()
-```

@@ -10,23 +10,24 @@ nav:
   - Getting Started: 'get-started.md'
 
   - Wiki:
-    - Window with fusion: 'v5/wiki/window.md'
-    - Rendering with fusion: 'v5/wiki/rendering.md'
-    - Events and Keys: 'v5/wiki/events-keys.md'
-    - Color and colortools: 'v5/wiki/color.md'
-    - Managing sounds and music: 'v5/wiki/music.md'
-    - Scenes, entities and animations: 'v5/wiki/scene.md'
-    - Storage system: 'v5/wiki/storage.md'
-    - UI module: 'v5/wiki/ui.md'
-    - Math and Vectors: 'v5/wiki/math.md'
-    - Extra stuff: 'v5/wiki/extra.md'
-    - External tools: 'v5/wiki/external.md'
-    - Moving from v4 to v5: 'v5/wiki/v5-moving.md'
+    - Window with fusion: 'wiki/window.md'
+    - Rendering with fusion: 'wiki/rendering.md'
+    - Events and Keys: 'wiki/events-keys.md'
+    - Color and colortools: 'wiki/color.md'
+    - Managing sounds and music: 'wiki/music.md'
+    - Scenes and entities: 'wiki/scene.md'
+    - Storage system: 'wiki/storage.md'
+    - Animations and Spritesheets: 'wiki/animation.md'
+    - UI module: 'wiki/ui.md'
+    - Math and Vectors: 'wiki/math.md'
+    - Extra stuff: 'wiki/extra.md'
+    - External tools: 'wiki/external.md'
+    - Moving from v4 to v5: 'wiki/v5-moving.md'
 
   - Tutorials:
-    - Setting up Fusion Engine: 'v5/tutorials/setup.md'
-    - Basics of Fusion Engine: 'v5/tutorials/basics.md'
-    - Small moving character: 'v5/tutorials/character.md'
+    - Setting up Fusion Engine: 'tutorials/setup.md'
+    - Basics of Fusion Engine: 'tutorials/basics.md'
+    - Small moving character: 'tutorials/character.md'
 
     
   - Changelog:
@@ -90,8 +91,8 @@ nav:
 theme:
   name: material
 
-  logo: v5/assets/logo/fe.png
-  favicon: v5/assets/logo/fe.png
+  logo: assets/logo/fe.png
+  favicon: assets/logo/fe.png
 
   features:
     - navigation.path
