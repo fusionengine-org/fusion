@@ -30,13 +30,13 @@ nav:
 
     
   - Changelog:
-    - V5: 'changelog/v5.md'
-    - V4: 'changelog/v4.md'
-    - V3: 'changelog/v3.md'
+    - v5: 'changelog/v5.md'
+    - v4: 'changelog/v4.md'
+    - v3: 'changelog/v3.md'
 
   - Legacy:
     - Start: 'legacy/index.md'
-    - V3:
+    - v3:
       - Wiki:
         - Main page: 'legacy/v3/wiki/wiki.md'
         - Keys page: 'legacy/v3/wiki/keys.md'
@@ -59,7 +59,7 @@ nav:
         - Setup: 'legacy/v3/tutorials/setup.md'
         - Basics: 'legacy/v3/tutorials/basics.md'
 
-    - V4:
+    - v4:
       - Wiki:
         - Window with fusion: 'legacy/v4/wiki/window.md'
         - Rendering with fusion: 'legacy/v4/wiki/rendering.md'
