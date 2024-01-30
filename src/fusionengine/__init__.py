@@ -1,5 +1,5 @@
 __author__ = "Dimkauzh"
-__version__ = "5.0.0"
+__version__ = "5.1.0"
 
 import sys
 import os
@@ -44,6 +44,7 @@ from fusionengine.engine.debug import *
 
 # Animation
 from fusionengine.engine.animation import *
+from fusionengine.engine.spritesheets import *
 
 
 import pygame as pg

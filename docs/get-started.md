@@ -25,5 +25,5 @@ And your done!
 ## Next step
 After this, you can head into the section tutorials or wiki, to learn more about fusion engine. Have fun!
 
- - [Tutorials](v5/tutorials/setup.md)
- - [Wiki](v5/wiki/window.md)
+ - [Tutorials](tutorials/setup.md)
+ - [Wiki](wiki/window.md)

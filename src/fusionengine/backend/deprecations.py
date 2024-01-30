@@ -16,7 +16,7 @@ def compare_versions(version1: str, version2: str):
     return 0
 
 
-def deprecated(version=None):
+def deprecated(version=None, name=None):
     """
     This is a decorator which can be used to mark functions
     as deprecated. It will result in a warning being emitted
@@ -26,10 +26,15 @@ def deprecated(version=None):
     def decorator(func):
         @functools.wraps(func)
         def new_func(*args, **kwargs):
+            if name is None:
+                func_name = "function " + func.__name__
+            else:
+                func_name = name
+
             if version is None or compare_versions(__version__, version) >= 0:
                 warnings.simplefilter("always", DeprecationWarning)
                 warnings.warn(
-                    f"Call to deprecated function {func.__name__}.",
+                    f"Call to deprecated {func_name}.",
                     category=DeprecationWarning,
                     stacklevel=2,
                 )
