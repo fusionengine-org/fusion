@@ -27,7 +27,7 @@ pip install --user pdm
 ```
 PDM will manage everything for us, like virtual enviorments, packages and scripts.
 
-Then, fork [the repository](https://github.com/fusionengine-org/fusion-engine) to your profile.
+Then, fork [the repository](https://github.com/fusionengine-org/fusion) to your profile.
 
 Then, clone your forked github repository:
 ```bash

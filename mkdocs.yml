@@ -1,8 +1,8 @@
 site_name: Fusion Engine Documentation
 site_description: A custom open-source game engine on OpenGL and Python, it’s written in pure Python! It’s easy and fast!
 
-repo_name: fusion-engine
-repo_url: https://github.com/fusionengine-org/fusion-engine
+repo_name: fusionengine-org/fusion
+repo_url: https://github.com/fusionengine-org/fusion
 
 nav:
   - Home: 'index.md'
