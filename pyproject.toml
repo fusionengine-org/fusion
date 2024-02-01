@@ -57,6 +57,7 @@ includes = ["**/*.png", "**/*.ttf"]
 
 [tool.pdm]
 distribution = "true"
+ignore_package_warnings = ["numpy"]
 
 [tool.pdm.build]
 package-dir = "src"
