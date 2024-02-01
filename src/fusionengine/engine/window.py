@@ -1,6 +1,7 @@
 from fusionengine.engine.debug import DEBUGIMAGE
 import fusionengine.backend.gl as gl
 
+import pymunk as pm
 import pygame as pg
 from pygame.locals import DOUBLEBUF, OPENGL
 
@@ -15,8 +16,11 @@ class Window:
             width (int): The width of your window
             height (int): The height of your window
         """
+        try:
+            pg.init()
 
-        pg.init()
+        except Exception:
+            print("Error: Can't initialize pygame.")
 
         self._running = False
         self._fps = 60
@@ -52,6 +56,12 @@ class Window:
 
         except Exception:
             print("Error: Can't setup OpenGL.")
+
+        try:
+            self.space = pm.Space()
+
+        except Exception:
+            print("Error: Can't setup Pymunk")
 
     def change_icon(self, image_path: str) -> None:
         """

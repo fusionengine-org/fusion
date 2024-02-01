@@ -22,6 +22,10 @@ from fusionengine.engine.color import *
 # Entity
 from fusionengine.engine.entity import *
 
+# Node
+from fusionengine.engine.node import *
+from fusionengine.engine.physics import *
+
 # Storage
 from fusionengine.engine.storage import *
 

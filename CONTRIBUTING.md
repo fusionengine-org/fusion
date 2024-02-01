@@ -31,7 +31,7 @@ Then, fork [the repository](https://github.com/fusionengine-org/fusion) to your 
 
 Then, clone your forked github repository:
 ```bash
-git clone https://github.com/_your_username_/fusion-engine.git
+git clone https://github.com/_your_username_/fusion.git
 cd fusion-engine
 ```
 Then, change the branch to the dev branch to follow rule #1:
