@@ -1,34 +1,64 @@
-import OpenGL.GL as gl
-from OpenGL.constant import FloatConstant, IntConstant
+import ctypes
+import platform
+import os
 
-LINES = gl.GL_LINES
-QUADS = gl.GL_QUADS
-POINTS = gl.GL_POINTS
+from ctypes.util import find_library
+from warnings import warn
 
-SRC_ALPHA = gl.GL_SRC_ALPHA
-ONE_MINUS_SRC_ALPHA = gl.GL_ONE_MINUS_SRC_ALPHA
+system_platform = platform.system().lower()
+if system_platform == "windows":
+    library_name = "opengl32"
+elif system_platform == "darwin":
+    library_name = "OpenGL"
+elif system_platform == "linux":
+    library_name = "GL"
+else:
+    if os.environ.get("FUSION_HIDE_GL_PROMPT") is None:
+        warn(
+            "Your platform could not be resolved. Defaulting to OpenGL as GL. Rever to the documentation to learn about how to remove this warning.",
+            category=None,
+            stacklevel=1,
+        )
+    library_name = "GL"
 
-BLEND = gl.GL_BLEND
-TEXTURE_2D = gl.GL_TEXTURE_2D
-RGBA = gl.GL_RGBA
-UNSIGNED_BYTE = gl.GL_UNSIGNED_BYTE
+opengl_lib_path = find_library(library_name)
+if opengl_lib_path is None:
+    raise OSError(f"Could not find the OpenGL library for platform {system_platform}")
 
-TEXTURE_WRAP_S = gl.GL_TEXTURE_WRAP_S
-TEXTURE_WRAP_T = gl.GL_TEXTURE_WRAP_T
-TEXTURE_MIN_FILTER = gl.GL_TEXTURE_MIN_FILTER
-TEXTURE_MAG_FILTER = gl.GL_TEXTURE_MAG_FILTER
-CLAMP_TO_EDGE = gl.GL_CLAMP_TO_EDGE
+gl = ctypes.CDLL(opengl_lib_path)
 
-NEAREST = gl.GL_NEAREST
-REPEAT = gl.GL_REPEAT
-LINEAR_MIPMAP_LINEAR = gl.GL_LINEAR_MIPMAP_LINEAR
-LINEAR = gl.GL_LINEAR
+LINES = 0x0001
+QUADS = 0x0007
+POINTS = 0x0000
 
-COLOR_BUFFER_BIT = gl.GL_COLOR_BUFFER_BIT
-DEPTH_BUFFER_BIT = gl.GL_DEPTH_BUFFER_BIT
+SRC_ALPHA = 0x0302
+ONE_MINUS_SRC_ALPHA = 0x0303
 
-PROJECTION = gl.GL_PROJECTION
-MODELVIEW = gl.GL_MODELVIEW
+BLEND = 0x0BE2
+TEXTURE_2D = 0x0DE1
+RGBA = 0x1908
+UNSIGNED_BYTE = 0x1401
+
+TEXTURE_WRAP_S = 0x2802
+TEXTURE_WRAP_T = 0x2803
+TEXTURE_MIN_FILTER = 0x2801
+TEXTURE_MAG_FILTER = 0x2800
+CLAMP_TO_EDGE = 0x812F
+
+NEAREST = 0x2600
+REPEAT = 0x2901
+LINEAR_MIPMAP_LINEAR = 0x2703
+LINEAR = 0x2601
+
+COLOR_BUFFER_BIT = 0x4000
+DEPTH_BUFFER_BIT = 0x0100
+
+PROJECTION = 0x1701
+MODELVIEW = 0x1700
+
+GL_VERSION = 0x1F02
+GL_MAJOR_VERSION = 0x821B
+GL_MINOR_VERSION = 0x821C
 
 
 def Vertex2f(x, y):
@@ -36,10 +66,10 @@ def Vertex2f(x, y):
     Set a vertex on the screen.
 
     Args:
-        x: x coordinate of the vertex
-        y: Y coordinate of the vertex
+        x (float): x coordinate of the vertex
+        y (float): y coordinate of the vertex
     """
-    gl.glVertex2f(x, y)
+    gl.glVertex2f(ctypes.c_float(x), ctypes.c_float(y))
 
 
 def Begin(mode):
@@ -47,9 +77,9 @@ def Begin(mode):
     Begin drawing.
 
     Args:
-        mode: The mode of drawing
+        mode (int): The mode of drawing
     """
-    gl.glBegin(mode)
+    gl.glBegin(ctypes.c_uint(mode))
 
 
 def End():
@@ -64,12 +94,17 @@ def Color4f(r, g, b, a):
     Set the color of the next vertex.
 
     Args:
-        r: The red value of the color
-        g: The green value of the color
-        b: The blue value of the color
-        a: The alpha value of the color
+        r (float): The red value of the color
+        g (float): The green value of the color
+        b (float): The blue value of the color
+        a (float): The alpha value of the color
     """
-    gl.glColor4f(r / 255, g / 255, b / 255, a / 255)
+    gl.glColor4f(
+        ctypes.c_float(r / 255),
+        ctypes.c_float(g / 255),
+        ctypes.c_float(b / 255),
+        ctypes.c_float(a / 255),
+    )
 
 
 def ClearColor(r, g, b, a):
@@ -77,12 +112,17 @@ def ClearColor(r, g, b, a):
     Set the background color.
 
     Args:
-        r: The red value of the color
-        g: The green value of the color
-        b: The blue value of the color
-        a: The alpha value of the color
+        r (float): The red value of the color
+        g (float): The green value of the color
+        b (float): The blue value of the color
+        a (float): The alpha value of the color
     """
-    gl.glClearColor(r / 255, g / 255, b / 255, a / 255)
+    gl.glClearColor(
+        ctypes.c_float(r / 255),
+        ctypes.c_float(g / 255),
+        ctypes.c_float(b / 255),
+        ctypes.c_float(a / 255),
+    )
 
 
 def LineWidth(width):
@@ -90,9 +130,9 @@ def LineWidth(width):
     Set the width of the lines.
 
     Args:
-        width: The width of the lines
+        width (float): The width of the lines
     """
-    gl.glLineWidth(width)
+    gl.glLineWidth(ctypes.c_float(width))
 
 
 def GenTextures(n):
@@ -100,12 +140,14 @@ def GenTextures(n):
     Generate a texture.
 
     Args:
-        n: The amount of textures to generate
+        n (int): The amount of textures to generate
 
     Returns:
         int: The texture id
     """
-    return gl.glGenTextures(n)
+    texture_id = ctypes.c_uint(0)
+    gl.glGenTextures(1, ctypes.byref(texture_id))
+    return texture_id.value
 
 
 def BindTexture(target, texture):
@@ -113,10 +155,10 @@ def BindTexture(target, texture):
     Bind a texture.
 
     Args:
-        target: The target of the texture
-        texture: The texture id
+        target (int): The target of the texture
+        texture (int): The texture id
     """
-    gl.glBindTexture(target, texture)
+    gl.glBindTexture(ctypes.c_uint(target), ctypes.c_uint(texture))
 
 
 def TexImage2D(
@@ -126,18 +168,26 @@ def TexImage2D(
     Set the image of a texture.
 
     Args:
-        target: The target of the texture
-        level: The level of the texture
-        internalformat: The internal format of the texture
-        width: The width of the texture
-        height: The height of the texture
-        border: The border of the texture
-        format: The format of the texture
-        type: The type of the texture
-        pixels: The pixels of the texture
+        target (int): The target of the texture
+        level (int): The level of the texture
+        internalformat (int): The internal format of the texture
+        width (int): The width of the texture
+        height (int): The height of the texture
+        border (int): The border of the texture
+        format (int): The format of the texture
+        type (int): The type of the texture
+        pixels (ctypes.c_void_p): The pixels of the texture
     """
     gl.glTexImage2D(
-        target, level, internalformat, width, height, border, format, type, pixels
+        ctypes.c_uint(target),
+        ctypes.c_int(level),
+        ctypes.c_int(internalformat),
+        ctypes.c_int(width),
+        ctypes.c_int(height),
+        ctypes.c_int(border),
+        ctypes.c_uint(format),
+        ctypes.c_uint(type),
+        pixels,
     )
 
 
@@ -146,9 +196,9 @@ def GenerateMipmap(target):
     Generate mipmaps.
 
     Args:
-        target: The target of the texture
+        target (int): The target of the texture
     """
-    gl.glGenerateMipmap(target)
+    gl.glGenerateMipmap(ctypes.c_uint(target))
 
 
 def TexParameteri(target, pname, param):
@@ -156,11 +206,11 @@ def TexParameteri(target, pname, param):
     Set the parameters of a texture.
 
     Args:
-        target: The target of the texture
-        pname: The name of the parameter
-        param: The value of the parameter
+        target (int): The target of the texture
+        pname (int): The name of the parameter
+        param (int): The value of the parameter
     """
-    gl.glTexParameteri(target, pname, param)
+    gl.glTexParameteri(ctypes.c_uint(target), ctypes.c_uint(pname), ctypes.c_int(param))
 
 
 def TexParameterf(target, pname, param):
@@ -168,11 +218,13 @@ def TexParameterf(target, pname, param):
     Set the parameters of a texture.
 
     Args:
-        target: The target of the texture
-        pname: The name of the parameter
-        param: The value of the parameter
+        target (int): The target of the texture
+        pname (int): The name of the parameter
+        param (float): The value of the parameter
     """
-    gl.glTexParameterf(target, pname, param)
+    gl.glTexParameterf(
+        ctypes.c_uint(target), ctypes.c_uint(pname), ctypes.c_float(param)
+    )
 
 
 def Clear(buffer_mask):
@@ -180,9 +232,9 @@ def Clear(buffer_mask):
     Clear the screen.
 
     Args:
-        target: The target of the clear
+        buffer_mask (int): The target of the clear
     """
-    gl.glClear(buffer_mask)
+    gl.glClear(ctypes.c_uint(buffer_mask))
 
 
 def ViewPort(x, y, width, height):
@@ -190,12 +242,14 @@ def ViewPort(x, y, width, height):
     Set viewport.
 
     Args:
-        x: x
-        y: y
-        width: width
-        height: height
+        x (int): x
+        y (int): y
+        width (int): width
+        height (int): height
     """
-    gl.glViewport(x, y, width, height)
+    gl.glViewport(
+        ctypes.c_int(x), ctypes.c_int(y), ctypes.c_int(width), ctypes.c_int(height)
+    )
 
 
 def Ortho(left, right, bottom, top, near, far):
@@ -203,14 +257,21 @@ def Ortho(left, right, bottom, top, near, far):
     Set up an orthographic projection matrix.
 
     Args:
-        left: Coordinate of the left clipping plane.
-        right: Coordinate of the right clipping plane.
-        bottom: Coordinate of the bottom clipping plane.
-        top: Coordinate of the top clipping plane.
-        near: Distance to the near clipping plane.
-        far: Distance to the far clipping plane.
+        left (float): Coordinate of the left clipping plane.
+        right (float): Coordinate of the right clipping plane.
+        bottom (float): Coordinate of the bottom clipping plane.
+        top (float): Coordinate of the top clipping plane.
+        near (float): Distance to the near clipping plane.
+        far (float): Distance to the far clipping plane.
     """
-    gl.glOrtho(left, right, bottom, top, near, far)
+    gl.glOrtho(
+        ctypes.c_double(left),
+        ctypes.c_double(right),
+        ctypes.c_double(bottom),
+        ctypes.c_double(top),
+        ctypes.c_double(near),
+        ctypes.c_double(far),
+    )
 
 
 def MatrixMode(mode):
@@ -218,9 +279,9 @@ def MatrixMode(mode):
     Set the current matrix mode.
 
     Args:
-        mode: The matrix mode to set (e.g., GL_MODELVIEW, GL_PROJECTION).
+        mode (int): The matrix mode to set (e.g., GL_MODELVIEW, GL_PROJECTION).
     """
-    gl.glMatrixMode(mode)
+    gl.glMatrixMode(ctypes.c_uint(mode))
 
 
 def LoadIdentity():
@@ -235,10 +296,10 @@ def TexCoord2f(x, y):
     Set the texture coordinates.
 
     Args:
-        x: x coordinate of the texture
-        y: y coordinate of the texture
+        x (float): x coordinate of the texture
+        y (float): y coordinate of the texture
     """
-    gl.glTexCoord2f(x, y)
+    gl.glTexCoord2f(ctypes.c_float(x), ctypes.c_float(y))
 
 
 def Enable(cap):
@@ -246,9 +307,9 @@ def Enable(cap):
     Enable a capability.
 
     Args:
-        cap: The capability to enable
+        cap (int): The capability to enable
     """
-    gl.glEnable(cap)
+    gl.glEnable(ctypes.c_uint(cap))
 
 
 def BlendFunc(sfactor, dfactor):
@@ -256,10 +317,10 @@ def BlendFunc(sfactor, dfactor):
     Set the pixel blending factors.
 
     Args:
-        sfactor: The source blending factor
-        dfactor: The destination blending factor
+        sfactor (int): The source blending factor
+        dfactor (int): The destination blending factor
     """
-    gl.glBlendFunc(sfactor, dfactor)
+    gl.glBlendFunc(ctypes.c_uint(sfactor), ctypes.c_uint(dfactor))
 
 
 def RasterPos2d(sfactor, dfactor):
@@ -267,10 +328,10 @@ def RasterPos2d(sfactor, dfactor):
     Set the pixel blending factors.
 
     Args:
-        sfactor: The source blending factor
-        dfactor: The destination blending factor
+        sfactor (float): The source blending factor
+        dfactor (float): The destination blending factor
     """
-    gl.glRasterPos2d(sfactor, dfactor)
+    gl.glRasterPos2d(ctypes.c_double(sfactor), ctypes.c_double(dfactor))
 
 
 def DrawPixels(width, height, format, type, pixels):
@@ -278,13 +339,19 @@ def DrawPixels(width, height, format, type, pixels):
     Draw pixels.
 
     Args:
-        width: The width of the pixels
-        height: The height of the pixels
-        format: The format of the pixels
-        type: The type of the pixels
-        pixels: The pixels
+        width (int): The width of the pixels
+        height (int): The height of the pixels
+        format (int): The format of the pixels
+        type (int): The type of the pixels
+        pixels (ctypes.c_void_p): The pixels
     """
-    gl.glDrawPixels(width, height, format, type, pixels)
+    gl.glDrawPixels(
+        ctypes.c_int(width),
+        ctypes.c_int(height),
+        ctypes.c_uint(format),
+        ctypes.c_uint(type),
+        pixels,
+    )
 
 
 def TexParameter(target, pname, param):
@@ -292,11 +359,11 @@ def TexParameter(target, pname, param):
     Set the parameters of a texture.
 
     Args:
-        target: The target of the texture
-        pname: The name of the parameter
-        param: The value of the parameter
+        target (int): The target of the texture
+        pname (int): The name of the parameter
+        param (int): The value of the parameter
     """
-    gl.glTexParameter(target, pname, param)
+    gl.glTexParameter(ctypes.c_uint(target), ctypes.c_uint(pname), ctypes.c_int(param))
 
 
 def Flush():
@@ -304,3 +371,20 @@ def Flush():
     Flush all commands.
     """
     gl.glFlush()
+
+
+def GetString(type) -> bytes | None:
+    return ctypes.cast(gl.glGetString(GL_VERSION), ctypes.c_char_p).value
+
+
+def GetIntegerv(type) -> int:
+    integ = ctypes.c_int()
+    gl.glGetIntegerv(type, ctypes.byref(integ))
+    return int(integ.value)
+
+
+def GetVersion() -> str:
+    major_version = GetIntegerv(GL_MAJOR_VERSION)
+    minor_version = GetIntegerv(GL_MINOR_VERSION)
+
+    return str(major_version) + "." + str(minor_version)

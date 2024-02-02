@@ -53,11 +53,13 @@ dependencies = [
     "numpy>=1.24.0",
     "PyOpenGL-accelerate>=3.1.7",
 ]
-includes = ["**/*.png", "**/*.ttf"]
 
 [tool.pdm]
-distribution = "true"
+distribution = true
 ignore_package_warnings = ["numpy"]
+
+[tool.pdm.options]
+includes = ["**/*.png", "**/*.ttf"]
 
 [tool.pdm.build]
 package-dir = "src"
