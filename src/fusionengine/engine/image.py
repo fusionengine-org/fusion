@@ -1,15 +1,12 @@
-from fusionengine.engine.window import Window
-from fusionengine.engine.shape import Rect
 import fusionengine.backend.gl as gl
 
 import pygame as pg
-from PIL import Image as Imager
 
 
 class Image:
     def __init__(
         self,
-        image_path: str | Imager.Image,
+        image_path: str | pg.Surface,
         x: int,
         y: int,
         width: int,
@@ -19,7 +16,7 @@ class Image:
         Opens an image. Can be later rendered with draw method.
 
         Args:
-            image_path (str or Pillow Image): The path to the image | Pillow Image
+            image_path (str or Pygame Surface): The path to the image | Pygame Surface
             x (int): X coordinate of the image
             y (int): Y coordinate of the image
             width (int): Width of the image (scaling allowed)
@@ -32,13 +29,11 @@ class Image:
         self.height = height
 
         if isinstance(image_path, str):
-            self.image = Imager.open(str(image_path))
-        elif isinstance(image_path, Imager.Image):
+            self.image = pg.image.load(image_path)
+        elif isinstance(image_path, pg.Surface):
             self.image = image_path
         else:
             raise ValueError("Invalid image_path type")
-
-        image_data = self.image.tobytes("raw", "RGBA", 0, -1)
 
         self.texture = gl.GenTextures(1)
         gl.BindTexture(gl.TEXTURE_2D, self.texture)
@@ -46,12 +41,12 @@ class Image:
             gl.TEXTURE_2D,
             0,
             gl.RGBA,
-            self.image.width,
-            self.image.height,
+            self.image.get_width(),
+            self.image.get_height(),
             0,
             gl.RGBA,
             gl.UNSIGNED_BYTE,
-            image_data,
+            pg.image.tostring(self.image, "RGBA"),
         )
 
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
@@ -59,7 +54,16 @@ class Image:
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
         gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
 
-    def crop(self, left: int, right: int, top: int, bottom: int) -> "Image":
+    def get_image_size(self):
+        """
+        Returns the size of the image itself (not the set size).
+
+        Returns:
+            tuple: (width, height)
+        """
+        return self.image.get_width(), self.image.get_height()
+
+    def crop(self, x: int, y: int, width: int, height: int) -> "Image":
         """
         Crop the image based on the specified boundaries.
 
@@ -72,13 +76,8 @@ class Image:
         Returns:
             Image: A new Image object representing the cropped image.
         """
-        return Image(
-            self.image.crop((left, right, top, bottom)),
-            self.x,
-            self.y,
-            self.width,
-            self.height,
-        )
+        cropped_surface = self.image.subsurface((x, y, width, height))
+        return Image(cropped_surface, self.x, self.y, self.width, self.height)
 
     def draw(self) -> None:
         """

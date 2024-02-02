@@ -1,8 +1,6 @@
 from fusionengine.engine.debug import DEBUGIMAGE
 import fusionengine.backend.gl as gl
-from fusionengine import __version__
 
-import os, sys
 import pymunk as pm
 import pygame as pg
 from pygame.locals import DOUBLEBUF, OPENGL

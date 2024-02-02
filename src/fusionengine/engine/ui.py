@@ -1,6 +1,5 @@
-from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
-from fusionengine.engine.color import Color, WHITE, BLACK, GRAY
+from fusionengine.engine.color import Color, WHITE, GRAY
 import fusionengine.backend.gl as gl
 from fusionengine.engine.debug import DEBUGFONT
 

@@ -45,7 +45,10 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
     "Topic :: Multimedia :: Video",
 ]
-dependencies = ["pygame-ce>=2.4.0", "pymunk>=6.6.0", "pillow>=10.2.0"]
+dependencies = [
+    "pygame-ce>=2.4.0",
+    "pymunk>=6.6.0",
+]
 
 [tool.pdm]
 distribution = true

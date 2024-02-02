@@ -22,7 +22,7 @@ First, create your spritesheet. You can do it this way:
 ```python
 spr = fusion.SpriteSheet(fusion.DEBUGIMAGE, 100, 100)
 ```
-This will cut down your spritesheet in 100x100 pixels images. Then it will be places inside `spr.frames` as `Image` objects. The images are cut from corner down-left to down-right. Then it goes a row higher and cuts futher. 
+This will cut down your spritesheet in 100x100 pixels images. Then it will be places inside `spr.frames` as `Image` objects. The images are cut from corner up-left to up-right. Then it goes a row lower and cuts futher. 
 
 Then, set the size of each image and then set the coordinates. (This is required or else they will be automatically set to 0)
 Set the size:
