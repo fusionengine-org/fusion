@@ -54,3 +54,14 @@ from fusionengine.engine.spritesheets import *
 import fusionengine.backend.gl as gl
 
 import pygame as pg
+
+message = True
+
+if os.environ.get("FUSION_HIDE_PROMPT") is None or not message:
+    python_version = sys.version.split()[0]
+    print(
+        f"Fusion Engine {__version__} (OpenGL, Pygame-ce {pg.version.ver}, Python {python_version})"
+    )
+    print(
+        "Welcome to Fusion Engine! Check out our website at https://fusion-engine.tech/"
+    )

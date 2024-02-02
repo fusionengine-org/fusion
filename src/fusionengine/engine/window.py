@@ -49,18 +49,6 @@ class Window:
             print("Error: Can't create a window.")
 
         try:
-            if os.environ.get("FUSION_HIDE_PROMPT") is None:
-                python_version = sys.version.split()[0]
-                print(
-                    f"Fusion Engine {__version__} (OpenGL {gl.GetVersion()}, Pygame-ce {pg.version.ver}, Python {python_version})"
-                )
-                print(
-                    "Welcome to Fusion Engine! Check out our website at https://fusion-engine.tech/"
-                )
-        except Exception:
-            print("Could not send the default message")
-
-        try:
             gl.Ortho(0, width, height, 0, -1, 1)
 
             gl.Enable(gl.BLEND)
