@@ -1,3 +1,6 @@
+__author__ = "Fusion Engine Team"
+__version__ = "1.0.1"
+
 import ctypes
 import platform
 import os
