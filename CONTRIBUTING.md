@@ -15,8 +15,7 @@ So make sure that you followed [the rules](#contributing-rules)
 - PDM: We are using pdm for our main interaction with the library.
 - pyproject.toml: Pythons way for setting up a project. A replacement for setup.py
 - pygame-ce: Used for windowing and events
-- PyOpenGL: Used for rendering everything
-- pillow (PIL): Used for loading images for PyOpenGL
+- FusionGL (ctypes): Used for rendering everything. Its a custom wrapper around OpenGL for python
 - pymunk: Will be used for physics
 - black: We are using black to format code
 
@@ -31,7 +30,7 @@ Then, fork [the repository](https://github.com/fusionengine-org/fusion) to your 
 
 Then, clone your forked github repository:
 ```bash
-git clone https://github.com/_your_username_/fusion.git
+git clone https://github.com/your_username_/fusion.git
 cd fusion-engine
 ```
 Then, change the branch to the dev branch to follow rule #1:

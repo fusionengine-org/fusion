@@ -50,7 +50,7 @@ This function has been renamed to draw_image.
 ### pygame-gui
 You can no longer use pygame-gui with fusion. Instead, you can use build in UI library
 ### pygame-ce
-You can no longer use your own drawing code in pygame-ce with fusion, as fusion moved to PyOpenGL for rendering purposes. If you want to know how to use PyOpenGL with fusion, go to the external page of the wiki.
+You can no longer use your own drawing code in pygame-ce with fusion, as fusion moved to custom OpenGL bindings called FusionGL for rendering purposes. If you want to know how to use PyOpenGL with fusion, go to the external page of the wiki.
 
 ## Buttons
 Making button is now different than before. Now you don't pass a rect, instead you pass all of this:
