@@ -47,7 +47,6 @@ classifiers = [
 ]
 dependencies = [
     "pygame-ce>=2.4.0",
-    "pymunk>=6.6.0",
 ]
 
 [tool.pdm]

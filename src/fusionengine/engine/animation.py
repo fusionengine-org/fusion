@@ -3,7 +3,9 @@ from fusionengine.engine.spritesheets import SpriteSheet
 
 
 class Animation:
-    def __init__(self, window: Window, images: tuple | SpriteSheet) -> None:
+    def __init__(
+        self, window: Window, images: tuple | SpriteSheet, speed: float
+    ) -> None:
         """
         The class to create an Animation.
 
@@ -14,6 +16,7 @@ class Animation:
         """
         self.frame = 0
         self.prev_frame = 0
+        self.speed = speed
 
         if isinstance(images, SpriteSheet):
             self.frames = images.frames
@@ -24,7 +27,7 @@ class Animation:
 
         self.window = window
 
-    def play(self, speed: float) -> None:
+    def play(self) -> None:
         """
         Draw the animation you made before
         """
@@ -38,7 +41,7 @@ class Animation:
                 self.frames[int(self.frame)].draw()
 
         self.prev_frame = self.frame
-        self.frame += speed
+        self.frame += self.speed
 
         if self.frame >= len(self.frames):
             self.frame = 0
