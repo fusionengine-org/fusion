@@ -1,8 +1,10 @@
-__author__ = "Dimkauzh"
+__author__ = "Fusion Engine Org"
 __version__ = "5.2.0"
 
 import sys
 import os
+import warnings
+import platform
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
@@ -24,7 +26,6 @@ from fusionengine.engine.entity import *
 
 # Node
 from fusionengine.engine.node import *
-from fusionengine.engine.physics import *
 
 # Storage
 from fusionengine.engine.storage import *
@@ -51,7 +52,7 @@ from fusionengine.engine.animation import *
 from fusionengine.engine.spritesheets import *
 
 # GL
-import fusionengine.backend.gl as gl
+import fusionengine.fusiongl as gl
 
 import pygame as pg
 
@@ -65,3 +66,6 @@ if os.environ.get("FUSION_HIDE_PROMPT") is None or not message:
     print(
         "Welcome to Fusion Engine! Check out our website at https://fusion-engine.tech/"
     )
+
+if platform.system().lower() == "linux":
+    warnings.filterwarnings("ignore", message="PyGame seems to be running through X11 on top of wayland")

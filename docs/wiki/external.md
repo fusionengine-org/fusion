@@ -1,7 +1,7 @@
 # External tools
 
 ## Using OpenGL
-Fusion is build on its own custom OpenGL binding using CTypes (fusionengine.backend.gl). If you want to use GL for yourself, you can try to use our own wrapper, but keep in mind that our own implementation only has the functions we need. Use it like this: `fusionengine.gl`
+Fusion is build on its own custom OpenGL binding using CTypes (FusionGL). If you want to use GL for yourself, you can try to use our own wrapper, but keep in mind that our own implementation only has the functions we need. Use it like this: `fusionengine.fusiongl`
 
 If you want to use PyOpenGL, you should be able to do that without any problems.
 

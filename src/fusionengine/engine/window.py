@@ -1,5 +1,5 @@
 from fusionengine.engine.debug import DEBUGIMAGE
-import fusionengine.backend.gl as gl
+import fusionengine.fusiongl as gl
 
 import pygame as pg
 from pygame.locals import DOUBLEBUF, OPENGL

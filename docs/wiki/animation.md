@@ -6,13 +6,13 @@ If you want to draw a animation, then you can do it this way
 ### Loading the animations
 To load the animation, run
 ```python
-my_anim = fusion.Animation(your_window: Window, your_images: tuple | Spritesheet)
+my_anim = fusion.Animation(your_window: Window, your_images: tuple | Spritesheet, frames: int)
 ```
 
 ### Drawing animation
 To draw it then, run:
 ```python
-my_anim.draw(frames: int)
+my_anim.draw()
 ```
 The frames specify the number of frames to draw each time. It can be as low as you like, or as high as you like, depending on the speed of the animation that you want.
 

@@ -1,4 +1,4 @@
-import fusionengine.backend.gl as gl
+import fusionengine.fusiongl as gl
 
 import pygame as pg
 
