@@ -1,5 +1,4 @@
 from fusionengine.engine.image import Image
-import pygame as pg
 
 
 class SpriteSheet:

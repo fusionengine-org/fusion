@@ -1,6 +1,6 @@
 from fusionengine.engine.window import Window
 from fusionengine.engine.color import Color
-import fusionengine.backend.gl as gl
+import fusionengine.fusiongl as gl
 
 import pygame as pg
 

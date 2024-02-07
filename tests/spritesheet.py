@@ -8,9 +8,9 @@ spr = fusion.SpriteSheet(fusion.DEBUGIMAGE, 100, 100)
 spr.frame_size(100, 100)
 spr.frame_pos(50, 50)
 
-anim = fusion.Animation(window, spr)
+anim = fusion.Animation(window, spr, 0.1)
 
 
 @window.loop
 def loop():
-    anim.play(0.1)
+    anim.play()

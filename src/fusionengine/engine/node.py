@@ -1,4 +1,3 @@
-from typing_extensions import Doc
 from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
 from fusionengine.engine.image import Image
