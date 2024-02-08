@@ -84,7 +84,6 @@ See [Licence here](LICENCE.md)
 This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project. But after some time, the community has grown, and fusion had a lot of big releases. It was becoming a big project with a giant codebase.
 
 ### ⭐ Star History
-
 <a href="https://api.star-history.com/svg?repos=fusionengine-org/fusion&Timeline">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fusionengine-org/fusion&type=Timeline&theme=dark" />
