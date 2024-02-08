@@ -72,7 +72,6 @@ Are you exited to start with fusion engine but you dont know where to start? The
 
 
 ## 📯 Coming features
-
 We are working hard to implement very basic and complex stuff so our engine becomes more rigid. To see our changelog and todo list, please go [to our docs](<https://docs.fusion-engine.tech/>)
 
 💡 - If you have more ideas, please tell us them in our [discord server](<https://discord.gg/Smg3CK4ZMc>) or create an issue!
