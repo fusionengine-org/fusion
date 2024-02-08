@@ -80,7 +80,6 @@ We are working hard to implement very basic and complex stuff so our engine beco
 See [Licence here](LICENCE.md)
 
 ## 🗄️ About
-
 This project began May 1, 2023. The original project began in C, but it's entirely rewritten in Python for it's big userbase and ease of use (productivity). This is actually also my EuroPython 2023 project. But after some time, the community has grown, and fusion had a lot of big releases. It was becoming a big project with a giant codebase.
 
 ### ⭐ Star History
