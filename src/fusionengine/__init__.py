@@ -68,4 +68,4 @@ if os.environ.get("FUSION_HIDE_PROMPT") is None or not message:
     )
 
 if platform.system().lower() == "linux":
-    warnings.filterwarnings("ignore", message="PyGame seems to be running through X11 on top of wayland")
+    warnings.filterwarnings("ignore", message="Pygame-ce seems to be running through X11 on top of wayland")
