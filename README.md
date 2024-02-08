@@ -29,7 +29,6 @@ rendering graphics, and handling user input. It is and engine to create games fa
 ## 💾 Installation
 
 ### ➡️ Using PyPi
-
 To install our package, run this:
 
 ```bash
@@ -39,7 +38,6 @@ To install our package, run this:
 Our PyPI package is at this [link](<https://pypi.org/project/fusion-engine/>)
 
 ### 🪲 Install from source/devel
-
 if you want to install the package from source and get the latest changes then you do it like this:
 
 ```bash
