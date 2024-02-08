@@ -58,7 +58,6 @@ If you want to run the example, then follow these instructions:
 For other examples, you can modify the command to run the other example. Just change the number of the example.
 
 ## 👥 Community
-
 We have a discord server at this [link](<https://discord.gg/Smg3CK4ZMc>).
 Need to contact us? Just #dimkauzh in discord and he will try to react as fast as possible
 
