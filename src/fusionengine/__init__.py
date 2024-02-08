@@ -1,4 +1,4 @@
-__author__ = "Fusion Engine Org"
+__author__ = "Fusion Engine Team"
 __version__ = "5.2.0"
 
 import sys
