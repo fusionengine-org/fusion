@@ -92,7 +92,6 @@ This project began May 1, 2023. The original project began in C, but it's entire
 </a>
 
 ### 🇺🇦 Ukraine
-
 We as fusion team support Ukraine and we hope it will win. Fusion engine is dedicated to Ukraine fighting the Russian invasion.
 🇺🇦 Please support Ukraine! 🇺🇦
 
