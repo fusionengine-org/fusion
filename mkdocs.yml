@@ -27,7 +27,6 @@ nav:
   - Tutorials:
     - Setting up Fusion Engine: 'tutorials/setup.md'
     - Basics of Fusion Engine: 'tutorials/basics.md'
-    - Small moving character: 'tutorials/character.md'
 
     
   - Changelog:

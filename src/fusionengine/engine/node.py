@@ -91,3 +91,5 @@ class Node:
                 draw.play()
             else:
                 draw.draw()
+
+        self.to_draw = []
