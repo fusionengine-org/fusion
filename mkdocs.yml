@@ -1,8 +1,8 @@
 site_name: Fusion Engine Documentation
 site_description: A custom open-source game engine on OpenGL and Python, it’s written in pure Python! It’s easy and fast!
 
-repo_name: fusion-engine
-repo_url: https://github.com/fusionengine-org/fusion-engine
+repo_name: fusionengine-org/fusion
+repo_url: https://github.com/fusionengine-org/fusion
 
 nav:
   - Home: 'index.md'
@@ -15,7 +15,7 @@ nav:
     - Events and Keys: 'wiki/events-keys.md'
     - Color and colortools: 'wiki/color.md'
     - Managing sounds and music: 'wiki/music.md'
-    - Scenes and entities: 'wiki/scene.md'
+    - Nodes and Scenes: 'wiki/node.md'
     - Storage system: 'wiki/storage.md'
     - Animations and Spritesheets: 'wiki/animation.md'
     - UI module: 'wiki/ui.md'
@@ -27,7 +27,6 @@ nav:
   - Tutorials:
     - Setting up Fusion Engine: 'tutorials/setup.md'
     - Basics of Fusion Engine: 'tutorials/basics.md'
-    - Small moving character: 'tutorials/character.md'
 
     
   - Changelog:

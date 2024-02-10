@@ -1,5 +1,5 @@
 from fusionengine.engine.debug import DEBUGIMAGE
-import fusionengine.backend.gl as gl
+import fusionengine.fusiongl as gl
 
 import pygame as pg
 from pygame.locals import DOUBLEBUF, OPENGL
@@ -15,8 +15,11 @@ class Window:
             width (int): The width of your window
             height (int): The height of your window
         """
+        try:
+            pg.init()
 
-        pg.init()
+        except Exception:
+            print("Error: Can't initialize pygame.")
 
         self._running = False
         self._fps = 60

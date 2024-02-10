@@ -1,14 +1,12 @@
 # External tools
 
-## Using PyOpenGL
-If you cant find some function you need in this engine, the you could use PyOpenGL as the engine is build on PyOpenGL. You can import the PyOpenGL library or use the build in wrapper functions like this:
-```python
-import fusionengine.backend.gl as gl
-```
-Keep in mind that this will not have all functions you mind need as the wrapper only has functions that fusion requires. If you want, you can import PyOpenGL by yourself.
+## Using OpenGL
+Fusion is build on its own custom OpenGL binding using CTypes (FusionGL). If you want to use GL for yourself, you can try to use our own wrapper, but keep in mind that our own implementation only has the functions we need. Use it like this: `fusionengine.fusiongl`
+
+If you want to use PyOpenGL, you should be able to do that without any problems.
 
 ### Where to put code
-All the rendering code should be placed inside the while loop, and fusion should render it for you.
+All the rendering code should be placed inside the while loop, and fusion should render it for you. Do not clear the screen as that will be automatically done for you.
 
 ### Warning
 This is not tested. It may not work or work as expected. If you find any bugs, please create a issue on github. Thank you.

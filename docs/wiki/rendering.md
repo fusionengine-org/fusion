@@ -62,7 +62,7 @@ You first need to create a variable with your image and image data:
 your_image = fusion.Image(window, fusion.DEBUGIMAGE, 100, 100, 400, 400)
 ```
 
-`fusion.DEBUGIMAGE` is an image that is included with the engine, so you can use it freely. You can pass your own image path or a Pillow (PIL) image.
+`fusion.DEBUGIMAGE` is an image that is included with the engine, so you can use it freely. You can pass your own image path or a Pygame image/surface.
 Then you need to render it (In the best situation this will happen in your loop):
 
 ```python

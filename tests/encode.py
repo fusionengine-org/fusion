@@ -1,4 +1,5 @@
 import base64
+import fusionengine
 
 
 def image_to_base64(image_path):
@@ -7,7 +8,6 @@ def image_to_base64(image_path):
         return encoded_image.decode("utf-8")
 
 
-image_path = "src/fusionengine/debugfiles/fe.png"
-base64_image = image_to_base64(image_path)
+base64_image = image_to_base64(fusionengine.DEBUGIMAGE)
 
 print(base64_image)

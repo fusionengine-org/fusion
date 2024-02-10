@@ -1,7 +1,6 @@
-from fusionengine.engine.window import Window
 from fusionengine.engine.shape import Rect
-from fusionengine.engine.color import Color, WHITE, BLACK, GRAY
-import fusionengine.backend.gl as gl
+from fusionengine.engine.color import Color, WHITE, GRAY
+import fusionengine.fusiongl as gl
 from fusionengine.engine.debug import DEBUGFONT
 
 import pygame as pg

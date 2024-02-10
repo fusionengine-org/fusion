@@ -6,13 +6,13 @@ If you want to draw a animation, then you can do it this way
 ### Loading the animations
 To load the animation, run
 ```python
-my_anim = fusion.Animation(your_window: Window, your_images: tuple | Spritesheet)
+my_anim = fusion.Animation(your_window: Window, your_images: tuple | Spritesheet, frames: int)
 ```
 
 ### Drawing animation
 To draw it then, run:
 ```python
-my_anim.draw(frames: int)
+my_anim.draw()
 ```
 The frames specify the number of frames to draw each time. It can be as low as you like, or as high as you like, depending on the speed of the animation that you want.
 
@@ -22,7 +22,7 @@ First, create your spritesheet. You can do it this way:
 ```python
 spr = fusion.SpriteSheet(fusion.DEBUGIMAGE, 100, 100)
 ```
-This will cut down your spritesheet in 100x100 pixels images. Then it will be places inside `spr.frames` as `Image` objects. The images are cut from corner down-left to down-right. Then it goes a row higher and cuts futher. 
+This will cut down your spritesheet in 100x100 pixels images. Then it will be places inside `spr.frames` as `Image` objects. The images are cut from corner up-left to up-right. Then it goes a row lower and cuts futher. 
 
 Then, set the size of each image and then set the coordinates. (This is required or else they will be automatically set to 0)
 Set the size:

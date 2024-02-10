@@ -5,7 +5,7 @@ hide:
 ---
 
 <p align="center">
-  <img src="v5/assets/logo/fusion-banner.png" alt="logo" width="1000" height="800">
+  <img src="assets/logo/fusion-banner.png" alt="logo" width="1000" height="800">
 </p>
 
 
@@ -15,8 +15,8 @@ hide:
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - License" src="https://img.shields.io/pypi/l/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/fusion-engine?color=blue"></a>
 <a href="https://pypi.org/project/fusion-engine"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/fusion-engine?color=blue"></a>
-<a href="https://github.com/fusionengine-org/fusion-engine/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/fusionengine-org/fusion-engine?color=blue"></a>
-<a href="https://github.com/fusionengine-org/fusion-engine"><img alt="Lines of code" src="https://www.aschey.tech/tokei/github/fusionengine-org/fusion-engine"></a>
+<a href="https://github.com/fusionengine-org/fusion/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/fusionengine-org/fusion?color=blue"></a>
+<a href="https://github.com/fusionengine-org/fusion"><img alt="Lines of code" src="https://www.aschey.tech/tokei/github/fusionengine-org/fusion"></a>
 </p>
 
 
