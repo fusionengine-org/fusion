@@ -16,6 +16,8 @@
 Fusion is a game engine for creating graphical applications using OpenGL and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
+**We also recommend a Go Game Engine called [Vuelto, which is a fast and lightweight Game Engine, made with usabillity in mind. It is a better alternative to Fusion.] (https://github.com/vuelto-org/vuelto)**
+
 ## 🗜️ Table of Contents
 - [Website](https://fusion-engine.tech/)
 - [Installation](#💾-installation)
