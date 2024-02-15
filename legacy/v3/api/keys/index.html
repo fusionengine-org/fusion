@@ -1,0 +1,2504 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A custom open-source game engine on OpenGL and Python, it’s written in pure Python! It’s easy and fast!">
+      
+      
+      
+      
+        <link rel="prev" href="../color/">
+      
+      
+        <link rel="next" href="../fonts/">
+      
+      
+      <link rel="icon" href="../../../../assets/logo/fe.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Keys page - Fusion Engine Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#keys-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Fusion Engine Documentation" class="md-header__button md-logo" aria-label="Fusion Engine Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/logo/fe.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fusion Engine Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Keys page
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fusionengine-org/fusion" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fusionengine-org/fusion
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../get-started/" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../wiki/window/" class="md-tabs__link">
+          
+  
+  Wiki
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../tutorials/setup/" class="md-tabs__link">
+          
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../changelog/v5/" class="md-tabs__link">
+          
+  
+  Changelog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  Legacy
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Fusion Engine Documentation" class="md-nav__button md-logo" aria-label="Fusion Engine Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/logo/fe.png" alt="logo">
+
+    </a>
+    Fusion Engine Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fusionengine-org/fusion" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fusionengine-org/fusion
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../get-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Wiki
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Window with fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendering with fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/events-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events and Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/color/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color and colortools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing sounds and music
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nodes and Scenes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/animation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Animations and Spritesheets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math and Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extra stuff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/v5-moving/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moving from v4 to v5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up Fusion Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Fusion Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Changelog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../changelog/v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    V5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../changelog/v4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    V4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../changelog/v3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    V3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Legacy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            V3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_1" id="__nav_6_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wiki
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/wiki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/color/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonts page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wiki/external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_2" id="__nav_6_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Api
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../color/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Keys page
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Keys page
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mainkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.keys
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonts page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    V4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            V4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_1" id="__nav_6_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Wiki
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/window/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Window with fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendering with fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/events-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events and Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/color/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color and colortools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing sounds and music
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/scene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scenes, entities and animations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Math and Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build in Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extra stuff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/wiki/external/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/tutorials/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/tutorials/basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/api/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Api Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/api/color/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/api/keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v4/api/fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonts Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mainkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      main.keys
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="keys-api">Keys API<a class="headerlink" href="#keys-api" title="Permanent link">&para;</a></h1>
+<h2 id="mainkeys">main.keys<a class="headerlink" href="#mainkeys" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">KEY_UNKNOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_UNKNOWN</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">KEY_RETURN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RETURN</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">KEY_ESCAPE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_ESCAPE</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">KEY_BACKSPACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_BACKSPACE</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">KEY_TAB</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_TAB</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">KEY_SPACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SPACE</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">KEY_EXCLAIM</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_EXCLAIM</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">KEY_QUOTEDBL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_QUOTEDBL</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">KEY_HASH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_HASH</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">KEY_PERCENT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PERCENT</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">KEY_DOLLAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_DOLLAR</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">KEY_AMPERSAND</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AMPERSAND</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">KEY_QUOTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_QUOTE</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">KEY_LEFTPAREN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LEFTPAREN</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">KEY_RIGHTPAREN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RIGHTPAREN</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">KEY_ASTERISK</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_ASTERISK</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">KEY_PLUS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PLUS</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">KEY_COMMA</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_COMMA</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">KEY_MINUS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MINUS</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">KEY_PERIOD</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PERIOD</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">KEY_SLASH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SLASH</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">KEY_0</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_0</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">KEY_1</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_1</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="n">KEY_2</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_2</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">KEY_3</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_3</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="n">KEY_4</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_4</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">KEY_5</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_5</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">KEY_6</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_6</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="n">KEY_7</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_7</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="n">KEY_8</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_8</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="n">KEY_9</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_9</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="n">KEY_COLON</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_COLON</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">KEY_SEMICOLON</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SEMICOLON</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="n">KEY_LESS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LESS</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">KEY_EQUALS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_EQUALS</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="n">KEY_GREATER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_GREATER</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="n">KEY_QUESTION</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_QUESTION</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="n">KEY_AT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AT</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="n">KEY_LEFTBRACKET</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LEFTBRACKET</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="n">KEY_BACKSLASH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_BACKSLASH</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="n">KEY_RIGHTBRACKET</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RIGHTBRACKET</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="n">KEY_CARET</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CARET</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    <span class="n">KEY_UNDERSCORE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_UNDERSCORE</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="n">KEY_BACKQUOTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_BACKQUOTE</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="n">KEY_a</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_a</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="n">KEY_b</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_b</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="n">KEY_c</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_c</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="n">KEY_d</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_d</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    <span class="n">KEY_e</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_e</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="n">KEY_f</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_f</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="n">KEY_g</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_g</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    <span class="n">KEY_h</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_h</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    <span class="n">KEY_i</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_i</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="n">KEY_j</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_j</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    <span class="n">KEY_k</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_k</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="n">KEY_l</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_l</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="n">KEY_m</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_m</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="n">KEY_n</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_n</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    <span class="n">KEY_o</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_o</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="n">KEY_p</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_p</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="n">KEY_q</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_q</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    <span class="n">KEY_r</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_r</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">KEY_s</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_s</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="n">KEY_t</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_t</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    <span class="n">KEY_u</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_u</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    <span class="n">KEY_v</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_v</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    <span class="n">KEY_w</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_w</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    <span class="n">KEY_x</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_x</span>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>    <span class="n">KEY_y</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_y</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>    <span class="n">KEY_z</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_z</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>    <span class="n">KEY_CAPSLOCK</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CAPSLOCK</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>    <span class="n">KEY_F1</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F1</span>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>    <span class="n">KEY_F2</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F2</span>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>    <span class="n">KEY_F3</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F3</span>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    <span class="n">KEY_F4</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F4</span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    <span class="n">KEY_F5</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F5</span>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>    <span class="n">KEY_F6</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F6</span>
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>    <span class="n">KEY_F7</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F7</span>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>    <span class="n">KEY_F8</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F8</span>
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>    <span class="n">KEY_F9</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F9</span>
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>    <span class="n">KEY_F10</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F10</span>
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>    <span class="n">KEY_F11</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F11</span>
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>    <span class="n">KEY_F12</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F12</span>
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>    <span class="n">KEY_PRINTSCREEN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PRINTSCREEN</span>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    <span class="n">KEY_SCROLLLOCK</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SCROLLLOCK</span>
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>    <span class="n">KEY_PAUSE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PAUSE</span>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>    <span class="n">KEY_INSERT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_INSERT</span>
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>    <span class="n">KEY_HOME</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_HOME</span>
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>    <span class="n">KEY_PAGEUP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PAGEUP</span>
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>    <span class="n">KEY_DELETE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_DELETE</span>
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>    <span class="n">KEY_END</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_END</span>
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>    <span class="n">KEY_PAGEDOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PAGEDOWN</span>
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>    <span class="n">KEY_RIGHT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RIGHT</span>
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>    <span class="n">KEY_LEFT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LEFT</span>
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>    <span class="n">KEY_DOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_DOWN</span>
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>    <span class="n">KEY_UP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_UP</span>
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>    <span class="n">KEY_NUMLOCKCLEAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_NUMLOCKCLEAR</span>
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>    <span class="n">KEY_KP_DIVIDE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_DIVIDE</span>
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    <span class="n">KEY_KP_MULTIPLY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MULTIPLY</span>
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>    <span class="n">KEY_KP_MINUS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MINUS</span>
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>    <span class="n">KEY_KP_PLUS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_PLUS</span>
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>    <span class="n">KEY_KP_ENTER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_ENTER</span>
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>    <span class="n">KEY_KP_1</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_1</span>
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>    <span class="n">KEY_KP_2</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_2</span>
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>    <span class="n">KEY_KP_3</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_3</span>
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>    <span class="n">KEY_KP_4</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_4</span>
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>    <span class="n">KEY_KP_5</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_5</span>
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>    <span class="n">KEY_KP_6</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_6</span>
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>    <span class="n">KEY_KP_7</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_7</span>
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>    <span class="n">KEY_KP_8</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_8</span>
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>    <span class="n">KEY_KP_9</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_9</span>
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>    <span class="n">KEY_KP_0</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_0</span>
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>    <span class="n">KEY_KP_PERIOD</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_PERIOD</span>
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>    <span class="n">KEY_APPLICATION</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_APPLICATION</span>
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>    <span class="n">KEY_POWER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_POWER</span>
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>    <span class="n">KEY_KP_EQUALS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_EQUALS</span>
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>    <span class="n">KEY_F13</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F13</span>
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>    <span class="n">KEY_F14</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F14</span>
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>    <span class="n">KEY_F15</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F15</span>
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>    <span class="n">KEY_F16</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F16</span>
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>    <span class="n">KEY_F17</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F17</span>
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>    <span class="n">KEY_F18</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F18</span>
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>    <span class="n">KEY_F19</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F19</span>
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>    <span class="n">KEY_F20</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F20</span>
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>    <span class="n">KEY_F21</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F21</span>
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>    <span class="n">KEY_F22</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F22</span>
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>    <span class="n">KEY_F23</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F23</span>
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>    <span class="n">KEY_F24</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_F24</span>
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>    <span class="n">KEY_EXECUTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_EXECUTE</span>
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>    <span class="n">KEY_HELP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_HELP</span>
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>    <span class="n">KEY_MENU</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MENU</span>
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>    <span class="n">KEY_SELECT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SELECT</span>
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>    <span class="n">KEY_STOP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_STOP</span>
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>    <span class="n">KEY_AGAIN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AGAIN</span>
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>    <span class="n">KEY_UNDO</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_UNDO</span>
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a>    <span class="n">KEY_CUT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CUT</span>
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>    <span class="n">KEY_COPY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_COPY</span>
+</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>    <span class="n">KEY_PASTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PASTE</span>
+</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>    <span class="n">KEY_FIND</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_FIND</span>
+</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>    <span class="n">KEY_MUTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MUTE</span>
+</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>    <span class="n">KEY_VOLUMEUP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_VOLUMEUP</span>
+</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>    <span class="n">KEY_VOLUMEDOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_VOLUMEDOWN</span>
+</span><span id="__span-0-143"><a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>    <span class="n">KEY_KP_COMMA</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_COMMA</span>
+</span><span id="__span-0-144"><a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>    <span class="n">KEY_KP_EQUALSAS400</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_EQUALSAS400</span>
+</span><span id="__span-0-145"><a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>    <span class="n">KEY_ALTERASE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_ALTERASE</span>
+</span><span id="__span-0-146"><a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>    <span class="n">KEY_SYSREQ</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SYSREQ</span>
+</span><span id="__span-0-147"><a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>    <span class="n">KEY_CANCEL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CANCEL</span>
+</span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>    <span class="n">KEY_CLEAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CLEAR</span>
+</span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>    <span class="n">KEY_PRIOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_PRIOR</span>
+</span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>    <span class="n">KEY_RETURN2</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RETURN2</span>
+</span><span id="__span-0-151"><a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a>    <span class="n">KEY_SEPARATOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SEPARATOR</span>
+</span><span id="__span-0-152"><a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>    <span class="n">KEY_OUT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_OUT</span>
+</span><span id="__span-0-153"><a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a>    <span class="n">KEY_OPER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_OPER</span>
+</span><span id="__span-0-154"><a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a>    <span class="n">KEY_CLEARAGAIN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CLEARAGAIN</span>
+</span><span id="__span-0-155"><a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>    <span class="n">KEY_CRSEL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CRSEL</span>
+</span><span id="__span-0-156"><a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a>    <span class="n">KEY_EXSEL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_EXSEL</span>
+</span><span id="__span-0-157"><a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>    <span class="n">KEY_KP_00</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_00</span>
+</span><span id="__span-0-158"><a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a>    <span class="n">KEY_KP_000</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_000</span>
+</span><span id="__span-0-159"><a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>    <span class="n">KEY_THOUSANDSSEPARATOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_THOUSANDSSEPARATOR</span>
+</span><span id="__span-0-160"><a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a>    <span class="n">KEY_DECIMALSEPARATOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_DECIMALSEPARATOR</span>
+</span><span id="__span-0-161"><a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>    <span class="n">KEY_CURRENCYUNIT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CURRENCYUNIT</span>
+</span><span id="__span-0-162"><a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>    <span class="n">KEY_CURRENCYSUBUNIT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CURRENCYSUBUNIT</span>
+</span><span id="__span-0-163"><a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>    <span class="n">KEY_KP_LEFTPAREN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_LEFTPAREN</span>
+</span><span id="__span-0-164"><a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>    <span class="n">KEY_KP_RIGHTPAREN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_RIGHTPAREN</span>
+</span><span id="__span-0-165"><a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>    <span class="n">KEY_KP_LEFTBRACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_LEFTBRACE</span>
+</span><span id="__span-0-166"><a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>    <span class="n">KEY_KP_RIGHTBRACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_RIGHTBRACE</span>
+</span><span id="__span-0-167"><a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>    <span class="n">KEY_KP_TAB</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_TAB</span>
+</span><span id="__span-0-168"><a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>    <span class="n">KEY_KP_BACKSPACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_BACKSPACE</span>
+</span><span id="__span-0-169"><a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>    <span class="n">KEY_KP_A</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_A</span>
+</span><span id="__span-0-170"><a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>    <span class="n">KEY_KP_B</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_B</span>
+</span><span id="__span-0-171"><a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>    <span class="n">KEY_KP_C</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_C</span>
+</span><span id="__span-0-172"><a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>    <span class="n">KEY_KP_D</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_D</span>
+</span><span id="__span-0-173"><a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>    <span class="n">KEY_KP_E</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_E</span>
+</span><span id="__span-0-174"><a id="__codelineno-0-174" name="__codelineno-0-174" href="#__codelineno-0-174"></a>    <span class="n">KEY_KP_F</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_F</span>
+</span><span id="__span-0-175"><a id="__codelineno-0-175" name="__codelineno-0-175" href="#__codelineno-0-175"></a>    <span class="n">KEY_KP_XOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_XOR</span>
+</span><span id="__span-0-176"><a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a>    <span class="n">KEY_KP_POWER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_POWER</span>
+</span><span id="__span-0-177"><a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a>    <span class="n">KEY_KP_PERCENT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_PERCENT</span>
+</span><span id="__span-0-178"><a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a>    <span class="n">KEY_KP_LESS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_LESS</span>
+</span><span id="__span-0-179"><a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a>    <span class="n">KEY_KP_GREATER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_GREATER</span>
+</span><span id="__span-0-180"><a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a>    <span class="n">KEY_KP_AMPERSAND</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_AMPERSAND</span>
+</span><span id="__span-0-181"><a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a>    <span class="n">KEY_KP_DBLAMPERSAND</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_DBLAMPERSAND</span>
+</span><span id="__span-0-182"><a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a>    <span class="n">KEY_KP_VERTICALBAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_VERTICALBAR</span>
+</span><span id="__span-0-183"><a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>    <span class="n">KEY_KP_DBLVERTICALBAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_DBLVERTICALBAR</span>
+</span><span id="__span-0-184"><a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a>    <span class="n">KEY_KP_COLON</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_COLON</span>
+</span><span id="__span-0-185"><a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a>    <span class="n">KEY_KP_HASH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_HASH</span>
+</span><span id="__span-0-186"><a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a>    <span class="n">KEY_KP_SPACE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_SPACE</span>
+</span><span id="__span-0-187"><a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a>    <span class="n">KEY_KP_AT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_AT</span>
+</span><span id="__span-0-188"><a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a>    <span class="n">KEY_KP_EXCLAM</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_EXCLAM</span>
+</span><span id="__span-0-189"><a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a>    <span class="n">KEY_KP_MEMSTORE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMSTORE</span>
+</span><span id="__span-0-190"><a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a>    <span class="n">KEY_KP_MEMRECALL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMRECALL</span>
+</span><span id="__span-0-191"><a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a>    <span class="n">KEY_KP_MEMCLEAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMCLEAR</span>
+</span><span id="__span-0-192"><a id="__codelineno-0-192" name="__codelineno-0-192" href="#__codelineno-0-192"></a>    <span class="n">KEY_KP_MEMADD</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMADD</span>
+</span><span id="__span-0-193"><a id="__codelineno-0-193" name="__codelineno-0-193" href="#__codelineno-0-193"></a>    <span class="n">KEY_KP_MEMSUBTRACT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMSUBTRACT</span>
+</span><span id="__span-0-194"><a id="__codelineno-0-194" name="__codelineno-0-194" href="#__codelineno-0-194"></a>    <span class="n">KEY_KP_MEMMULTIPLY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMMULTIPLY</span>
+</span><span id="__span-0-195"><a id="__codelineno-0-195" name="__codelineno-0-195" href="#__codelineno-0-195"></a>    <span class="n">KEY_KP_MEMDIVIDE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_MEMDIVIDE</span>
+</span><span id="__span-0-196"><a id="__codelineno-0-196" name="__codelineno-0-196" href="#__codelineno-0-196"></a>    <span class="n">KEY_KP_PLUSMINUS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_PLUSMINUS</span>
+</span><span id="__span-0-197"><a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a>    <span class="n">KEY_KP_CLEAR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_CLEAR</span>
+</span><span id="__span-0-198"><a id="__codelineno-0-198" name="__codelineno-0-198" href="#__codelineno-0-198"></a>    <span class="n">KEY_KP_CLEARENTRY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_CLEARENTRY</span>
+</span><span id="__span-0-199"><a id="__codelineno-0-199" name="__codelineno-0-199" href="#__codelineno-0-199"></a>    <span class="n">KEY_KP_BINARY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_BINARY</span>
+</span><span id="__span-0-200"><a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a>    <span class="n">KEY_KP_OCTAL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_OCTAL</span>
+</span><span id="__span-0-201"><a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a>    <span class="n">KEY_KP_DECIMAL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_DECIMAL</span>
+</span><span id="__span-0-202"><a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a>    <span class="n">KEY_KP_HEXADECIMAL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KP_HEXADECIMAL</span>
+</span><span id="__span-0-203"><a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a>    <span class="n">KEY_LCTRL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LCTRL</span>
+</span><span id="__span-0-204"><a id="__codelineno-0-204" name="__codelineno-0-204" href="#__codelineno-0-204"></a>    <span class="n">KEY_LSHIFT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LSHIFT</span>
+</span><span id="__span-0-205"><a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a>    <span class="n">KEY_LALT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LALT</span>
+</span><span id="__span-0-206"><a id="__codelineno-0-206" name="__codelineno-0-206" href="#__codelineno-0-206"></a>    <span class="n">KEY_LGUI</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_LGUI</span>
+</span><span id="__span-0-207"><a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a>    <span class="n">KEY_RCTRL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RCTRL</span>
+</span><span id="__span-0-208"><a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a>    <span class="n">KEY_RSHIFT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RSHIFT</span>
+</span><span id="__span-0-209"><a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a>    <span class="n">KEY_RALT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RALT</span>
+</span><span id="__span-0-210"><a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a>    <span class="n">KEY_RGUI</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_RGUI</span>
+</span><span id="__span-0-211"><a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a>    <span class="n">KEY_MODE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MODE</span>
+</span><span id="__span-0-212"><a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a>    <span class="n">KEY_AUDIONEXT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AUDIONEXT</span>
+</span><span id="__span-0-213"><a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a>    <span class="n">KEY_AUDIOPREV</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AUDIOPREV</span>
+</span><span id="__span-0-214"><a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a>    <span class="n">KEY_AUDIOSTOP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AUDIOSTOP</span>
+</span><span id="__span-0-215"><a id="__codelineno-0-215" name="__codelineno-0-215" href="#__codelineno-0-215"></a>    <span class="n">KEY_AUDIOPLAY</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AUDIOPLAY</span>
+</span><span id="__span-0-216"><a id="__codelineno-0-216" name="__codelineno-0-216" href="#__codelineno-0-216"></a>    <span class="n">KEY_AUDIOMUTE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AUDIOMUTE</span>
+</span><span id="__span-0-217"><a id="__codelineno-0-217" name="__codelineno-0-217" href="#__codelineno-0-217"></a>    <span class="n">KEY_MEDIASELECT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MEDIASELECT</span>
+</span><span id="__span-0-218"><a id="__codelineno-0-218" name="__codelineno-0-218" href="#__codelineno-0-218"></a>    <span class="n">KEY_WWW</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_WWW</span>
+</span><span id="__span-0-219"><a id="__codelineno-0-219" name="__codelineno-0-219" href="#__codelineno-0-219"></a>    <span class="n">KEY_MAIL</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_MAIL</span>
+</span><span id="__span-0-220"><a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a>    <span class="n">KEY_CALCULATOR</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_CALCULATOR</span>
+</span><span id="__span-0-221"><a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a>    <span class="n">KEY_COMPUTER</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_COMPUTER</span>
+</span><span id="__span-0-222"><a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a>    <span class="n">KEY_AC_SEARCH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_SEARCH</span>
+</span><span id="__span-0-223"><a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a>    <span class="n">KEY_AC_HOME</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_HOME</span>
+</span><span id="__span-0-224"><a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a>    <span class="n">KEY_AC_BACK</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_BACK</span>
+</span><span id="__span-0-225"><a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a>    <span class="n">KEY_AC_FORWARD</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_FORWARD</span>
+</span><span id="__span-0-226"><a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a>    <span class="n">KEY_AC_STOP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_STOP</span>
+</span><span id="__span-0-227"><a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a>    <span class="n">KEY_AC_REFRESH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_REFRESH</span>
+</span><span id="__span-0-228"><a id="__codelineno-0-228" name="__codelineno-0-228" href="#__codelineno-0-228"></a>    <span class="n">KEY_AC_BOOKMARKS</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_AC_BOOKMARKS</span>
+</span><span id="__span-0-229"><a id="__codelineno-0-229" name="__codelineno-0-229" href="#__codelineno-0-229"></a>    <span class="n">KEY_BRIGHTNESSDOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_BRIGHTNESSDOWN</span>
+</span><span id="__span-0-230"><a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a>    <span class="n">KEY_BRIGHTNESSUP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_BRIGHTNESSUP</span>
+</span><span id="__span-0-231"><a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a>    <span class="n">KEY_DISPLAYSWITCH</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_DISPLAYSWITCH</span>
+</span><span id="__span-0-232"><a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a>    <span class="n">KEY_KBDILLUMTOGGLE</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KBDILLUMTOGGLE</span>
+</span><span id="__span-0-233"><a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a>    <span class="n">KEY_KBDILLUMDOWN</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KBDILLUMDOWN</span>
+</span><span id="__span-0-234"><a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a>    <span class="n">KEY_KBDILLUMUP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_KBDILLUMUP</span>
+</span><span id="__span-0-235"><a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a>    <span class="n">KEY_EJECT</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_EJECT</span>
+</span><span id="__span-0-236"><a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a>    <span class="n">KEY_SLEEP</span> <span class="o">=</span> <span class="n">sdl2</span><span class="o">.</span><span class="n">SDLK_SLEEP</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.expand", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
