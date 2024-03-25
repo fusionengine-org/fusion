@@ -1,5 +1,5 @@
 __author__ = "Fusion Engine Team"
-__version__ = "5.2.0"
+__version__ = "5.2.1"
 
 import sys
 import os

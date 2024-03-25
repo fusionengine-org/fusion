@@ -56,6 +56,33 @@ class Window:
         except Exception:
             print("Error: Can't setup OpenGL.")
 
+    def resize(self, new_width: int, new_height: int):
+        """
+        Resize the window to the specified dimensions and update OpenGL viewport accordingly.
+
+        Args:
+            new_width (int): The new width of the window.
+            new_height (int): The new height of the window.
+        """
+        try:
+            self.window = pg.display.set_mode((new_width, new_height), DOUBLEBUF | OPENGL)
+            pg.display.set_caption(self.title)
+
+            program_icon = pg.image.load(DEBUGIMAGE)
+            pg.display.set_icon(program_icon)
+
+            self._running = True
+
+        except Exception:
+            print("Error: Can't resize a window.")
+
+        try:
+            gl.ViewPort(0, 0, new_width, new_width)
+
+        except Exception:
+            print("Error: Can't resize the GL")
+
+
     def change_icon(self, image_path: str) -> None:
         """
         Changes icon of the window.

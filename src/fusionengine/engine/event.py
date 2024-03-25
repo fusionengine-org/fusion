@@ -62,7 +62,7 @@ def key_down_once(key) -> bool:
     return Key(key).key_down_once()
 
 
-def get_mouse_pos(self) -> tuple[int, int]:
+def get_mouse_pos() -> tuple[int, int]:
     """
     Gets the mouse position.
 
