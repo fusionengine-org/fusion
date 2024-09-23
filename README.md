@@ -1,3 +1,14 @@
+
+> ### Status of this project
+> This project is dead. There probably will not be any commits, although pull request are welcome. Discord server is also completely dead.
+> We also recommend a Go Game Engine called [Vuelto, which is a fast and lightweight Game Engine, made with usabillity in mind. It is a better alternative to Fusion.](http://vuelto-org.github.io/vuelto)
+
+> [!WARNING]
+> Website is down, and wont be brought up. The links here are not updated.
+
+> ### The search of a maintainer
+> If u like this project and want to work on it, we would happily accept you, but keep in mind that most of the infrastructure is dead or needs maintainance. Feel free to open an issue and tag @dimkauzh for further discussion.
+
 <p align="center">
   <img src="icon/fusion-banner2.png" alt="logo">
 </p>
@@ -12,11 +23,9 @@
 <a href="https://github.com/fusionengine-org/fusion"><img alt="Lines of code" src="https://www.aschey.tech/tokei/github/fusionengine-org/fusion"></a>
 </p>
 
-
 Fusion is a game engine for creating graphical applications using OpenGL and the programming language Python. It provides a simple coding interface for creating windows,
 rendering graphics, and handling user input. It is and engine to create games fast and easy!
 
-### **We also recommend a Go Game Engine called [Vuelto, which is a fast and lightweight Game Engine, made with usabillity in mind. It is a better alternative to Fusion.](https://github.com/vuelto-org/vuelto)**
 
 ## 🗜️ Table of Contents
 - [Website](https://fusion-engine.tech/)
